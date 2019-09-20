@@ -1,3 +1,10 @@
+class ObjectClass {
+  objName: string;
+  tabID: string;
+  cache: string;
+  labelName: string;
+}
+
 export class SpreadsheetIDs {
   // tabURLStart = 'https://spreadsheets.google.com/feeds/list/';
   // allTabsURLStart = 'https://spreadsheets.google.com/feeds/worksheets/';
@@ -8,7 +15,7 @@ export class SpreadsheetIDs {
   spreadsheetID = '';
   urlEnd = 'sheet-export.json';
 
-  dataObjects = [
+  dataObjects: ObjectClass[] = [
     {
       // object name
       objName: 'events',
@@ -18,6 +25,10 @@ export class SpreadsheetIDs {
       labelName: 'Event'
     },
   ];
+
+  getObjNames(): string[] {
+    return this.dataObjects.map(obj => obj.objName);
+  }
 
   getTabURL(whichTab: string): string {
     return this.tabURLStart + this.spreadsheetID + '/' +

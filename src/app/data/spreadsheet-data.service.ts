@@ -21,7 +21,7 @@ export class SpreadsheetDS {
 
   constructor(public http: HttpClient) {
     // initial loads
-    this.loadEvents('events');
+    this.refreshAll();
     setInterval( () => { this.refreshStaleData(); }, this.refreshHowOften);
   }
 
@@ -52,7 +52,9 @@ export class SpreadsheetDS {
   }
 
   refreshAll() {
-    this.loadEvents('Events');
+    this.ssIDs.getObjNames().forEach(objName => {
+      this.loadEvents(objName);
+    });
     this.lastUpdated = new Date();
   }
 
