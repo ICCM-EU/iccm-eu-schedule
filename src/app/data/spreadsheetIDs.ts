@@ -10,11 +10,12 @@ export class SpreadsheetIDs {
 
   dataObjects = [
     {
+      // object name
       objName: 'Events',
       // tabID: 'omyavzt',
       tabID: '',
-      cache: 'dogsCache',
-      labelName: 'Dog'
+      cache: 'eventsCache',
+      labelName: 'Event'
     },
   ];
 

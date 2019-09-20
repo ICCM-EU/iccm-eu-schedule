@@ -4,10 +4,8 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 
 export interface TheEvent {
-  Name: string;
-  Breed: string;
-  Birthdate: Date;
-  CurrentAge: number;
+  Title: string;
+  Schedule: Date;
 }
 @Component({
   selector: 'app-events',
@@ -23,7 +21,7 @@ export class EventsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   // the column order
-  displayedColumns: string[] = ['Name', 'Breed', 'Birthdate', 'CurrentAge'];
+  displayedColumns: string[] = ['Title', 'Schedule'];
 
   constructor(public sds: SpreadsheetDS) {
 
@@ -35,8 +33,8 @@ export class EventsComponent implements OnInit {
 
         this.events.sortingDataAccessor = (item, property) => {
           switch (property) {
-            case 'Birthdate':
-              return new Date(item.Birthdate);
+            case 'Schedule':
+              return new Date(item.Schedule);
             default:
               return item[property];
           }

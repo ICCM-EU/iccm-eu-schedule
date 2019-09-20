@@ -36,7 +36,9 @@ export class SpreadsheetDS {
 
   // google sheets
   getHTTPData_SS(whatTab: string): Observable<Array<any>> {
-    // console.log('Getting data from the ' + whatTab + ' spreadsheet tab');
+    // TODO: Remove console log
+    console.log('Getting data from the ' + whatTab + ' spreadsheet tab');
+    console.log('URL: ' + this.ssIDs.getTabURL(whatTab));
     return this.http.get<any>(this.ssIDs.getTabURL(whatTab))
       .pipe(map(obj => obj.feed.entry));
   }
@@ -57,7 +59,6 @@ export class SpreadsheetDS {
     let events: Array<any> = [];
     this.events$ = this.getHTTPData_SS(objName);
     this.events$.subscribe(next => {
-
       if (next != null) {
         // transform the JSON returned to make it more usable
         events = this.transformEvents(next);
@@ -75,10 +76,8 @@ export class SpreadsheetDS {
     const tempArray: Array<any> = [];
     for (const i of dataReceived) {
       tempArray.push({
-        Name: i.gsx$name.$t,
-        Breed: i.gsx$breed.$t,
-        Birthdate: i.gsx$birthdate.$t,
-        CurrentAge: i.gsx$currentage.$t
+        Title: i.gsx$Session.$t,
+        Schedule: i.gsx$DateTime.$t,
       });
     }
     return tempArray;
