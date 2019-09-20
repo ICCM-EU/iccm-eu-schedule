@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { Injectable, EventEmitter } from '@angular/core';
 
 import { SpreadsheetIDs } from './spreadsheetIDs';
@@ -21,7 +21,7 @@ export class SpreadsheetDS {
 
   constructor(public http: HttpClient) {
     // initial loads
-    this.loadEvents('Events');
+    this.loadEvents('events');
     setInterval( () => { this.refreshStaleData(); }, this.refreshHowOften);
   }
 
@@ -37,10 +37,12 @@ export class SpreadsheetDS {
   // google sheets
   getHTTPData_SS(whatTab: string): Observable<Array<any>> {
     // TODO: Remove console log
-    console.log('Getting data from the ' + whatTab + ' spreadsheet tab');
+    console.log('Getting data from the "' + whatTab + '" objects spreadsheet tab');
     console.log('URL: ' + this.ssIDs.getTabURL(whatTab));
-    return this.http.get<any>(this.ssIDs.getTabURL(whatTab))
-      .pipe(map(obj => obj.feed.entry));
+    // TODO: Return back to ggogle sheets notation
+    // return this.http.get<any>(this.ssIDs.getTabURL(whatTab))
+    //   .pipe(map(obj => obj.feed.entry));
+    return from(this.http.get<any>(this.ssIDs.getTabURL(whatTab)));
   }
 
   getHTTPData_Tabs(): Observable<Array<any>> {
@@ -69,15 +71,17 @@ export class SpreadsheetDS {
       this.eventsUpdated.emit(events);
 
     });
-
   }
 
   transformEvents(dataReceived: Array<any>): Array<any> {
     const tempArray: Array<any> = [];
     for (const i of dataReceived) {
       tempArray.push({
-        Title: i.gsx$Session.$t,
-        Schedule: i.gsx$DateTime.$t,
+        // TODO: Roll back for google sheet
+        // Title: i.gsx$Session.$t,
+        // Schedule: i.gsx$DateTime.$t,
+        Title: i.session,
+        Schedule: i.datetime,
       });
     }
     return tempArray;

@@ -11,7 +11,7 @@ export class SpreadsheetIDs {
   dataObjects = [
     {
       // object name
-      objName: 'Events',
+      objName: 'events',
       // tabID: 'omyavzt',
       tabID: '',
       cache: 'eventsCache',

@@ -15,7 +15,7 @@ export interface TheEvent {
 export class EventsComponent implements OnInit {
 
   events: MatTableDataSource<TheEvent>;
-  objName = 'Event';
+  objName = 'events';
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
