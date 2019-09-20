@@ -10,7 +10,7 @@ export interface TheEvent {
   CurrentAge: number;
 }
 @Component({
-  selector: 'events',
+  selector: 'app-events',
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
 })
@@ -35,8 +35,10 @@ export class EventsComponent implements OnInit {
 
         this.events.sortingDataAccessor = (item, property) => {
           switch (property) {
-            case 'Birthdate': return new Date(item.Birthdate);
-            default: return item[property];
+            case 'Birthdate':
+              return new Date(item.Birthdate);
+            default:
+              return item[property];
           }
         };
       }

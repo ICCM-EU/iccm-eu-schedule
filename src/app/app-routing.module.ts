@@ -5,7 +5,7 @@ import { HomeComponent } from './core/home/home.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'events', loadChildren: './events/dvents.module#DogsModule' },
+  { path: 'events', loadChildren: './events/events.module#EventsModule' },
   { path: '404', loadChildren: './page-not-found/page-not-found.module#PageNotFoundModule' },
   { path: '**', redirectTo: '/404'}
 ];
