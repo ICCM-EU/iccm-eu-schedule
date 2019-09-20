@@ -83,7 +83,7 @@ export class SpreadsheetDS {
         // Title: i.gsx$Session.$t,
         // Schedule: i.gsx$DateTime.$t,
         Title: i.session,
-        Schedule: i.datetime,
+        Schedule: i.dateTime,
       });
     }
     return tempArray;
