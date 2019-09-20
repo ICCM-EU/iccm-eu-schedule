@@ -6,6 +6,7 @@ import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 export interface TheEvent {
   Title: string;
   Schedule: Date;
+  Time: string;
 }
 @Component({
   selector: 'app-events',
@@ -21,7 +22,7 @@ export class EventsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   // the column order
-  displayedColumns: string[] = ['Title', 'Schedule'];
+  displayedColumns: string[] = ['Title', 'Time', 'Schedule'];
 
   constructor(public sds: SpreadsheetDS) {
 
@@ -34,6 +35,7 @@ export class EventsComponent implements OnInit {
         this.events.sortingDataAccessor = (item, property) => {
           switch (property) {
             case 'Schedule':
+            case 'Time':
               return new Date(item.Schedule);
             default:
               return item[property];

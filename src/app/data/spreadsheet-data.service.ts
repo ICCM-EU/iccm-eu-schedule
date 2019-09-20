@@ -84,6 +84,7 @@ export class SpreadsheetDS {
         // Schedule: i.gsx$DateTime.$t,
         Title: i.session,
         Schedule: i.dateTime,
+        Time: i.time,
       });
     }
     return tempArray;
