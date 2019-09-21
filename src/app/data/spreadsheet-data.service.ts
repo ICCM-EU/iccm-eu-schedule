@@ -77,7 +77,14 @@ export class SpreadsheetDS {
 
   transformEvents(dataReceived: Array<any>): Array<any> {
     const tempArray: Array<any> = [];
+    const now = new Date;
+
     for (const i of dataReceived) {
+      let upcoming = true;
+      const schedule = new Date(i.dateTime);
+      if (schedule <= now) {
+        upcoming = false;
+      }
       tempArray.push({
         // TODO: Roll back for google sheet
         // Title: i.gsx$Session.$t,
@@ -87,6 +94,7 @@ export class SpreadsheetDS {
         Time: i.time,
         Room: i.room,
         Speaker: i.speakerspeakersname,
+        Upcoming: upcoming,
       });
     }
     return tempArray;
