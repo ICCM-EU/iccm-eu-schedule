@@ -7,6 +7,7 @@ export interface TheEvent {
   Title: string;
   Schedule: Date;
   Time: string;
+  Room: string;
 }
 @Component({
   selector: 'app-events',
@@ -22,7 +23,7 @@ export class EventsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   // the column order
-  displayedColumns: string[] = ['Title', 'Time', 'Schedule'];
+  displayedColumns: string[] = ['Title', 'Room', 'Speaker', 'Time', 'Schedule'];
 
   constructor(public sds: SpreadsheetDS) {
 

@@ -37,8 +37,8 @@ export class SpreadsheetDS {
   // google sheets
   getHTTPData_SS(whatTab: string): Observable<Array<any>> {
     // TODO: Remove console log
-    console.log('Getting data from the "' + whatTab + '" objects spreadsheet tab');
-    console.log('URL: ' + this.ssIDs.getTabURL(whatTab));
+    // console.log('Getting data from the "' + whatTab + '" objects spreadsheet tab');
+    // console.log('URL: ' + this.ssIDs.getTabURL(whatTab));
     // TODO: Return back to ggogle sheets notation
     // return this.http.get<any>(this.ssIDs.getTabURL(whatTab))
     //   .pipe(map(obj => obj.feed.entry));
@@ -85,6 +85,8 @@ export class SpreadsheetDS {
         Title: i.session,
         Schedule: i.dateTime,
         Time: i.time,
+        Room: i.room,
+        Speaker: i.speakerspeakersname,
       });
     }
     return tempArray;

@@ -19,6 +19,16 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
       <td mat-cell *matCellDef="let record"> {{record.Title}} </td>
     </ng-container>
+    <!-- Room Column -->
+    <ng-container matColumnDef="Room">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Room</th>
+      <td mat-cell *matCellDef="let record"> {{record.Room}} </td>
+    </ng-container>
+    <!-- Speaker Column -->
+    <ng-container matColumnDef="Speaker">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Speaker</th>
+      <td mat-cell *matCellDef="let record"> {{record.Speaker}} </td>
+    </ng-container>
     <!-- Time Column -->
     <ng-container matColumnDef="Time">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Time</th>
