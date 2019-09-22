@@ -17,15 +17,28 @@ export interface TheEvent {
 export class EventsComponent implements OnInit {
 
   events: MatTableDataSource<TheEvent>;
-  objName = 'events';
+  objName: string = 'events';
+  toggleName: string;
+  onlyUpcoming: boolean;
+  // the column order
+  displayedColumns: string[];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  // the column order
-  displayedColumns: string[] = ['Title', 'Room', 'Speaker', 'Time', 'Schedule', 'Upcoming'];
-
   constructor(public sds: SpreadsheetDS) {
+    // the column order
+    this.displayedColumns = [
+      'Title',
+      'Room',
+      'Speaker',
+      'Time',
+      'Schedule',
+      'Upcoming',
+    ];
+    this.objName = 'events';
+    this.toggleName = 'Show Upcoming';
+    this.onlyUpcoming = false;
 
     this.sds.eventsUpdated.subscribe(
       (newData: any) => {
@@ -58,6 +71,16 @@ export class EventsComponent implements OnInit {
     this.sds.loadEvents(this.objName);
   }
 
+  toggleUpcoming() {
+    if (this.onlyUpcoming) {
+      this.onlyUpcoming = false;
+      this.toggleName = 'Show Upcoming';
+    } else {
+      this.onlyUpcoming = true;
+      this.toggleName = 'Show All';
+    }
+  }
+
   applyFilter(filterValue: string) {
     this.events.filter = filterValue.trim().toLowerCase();
 
@@ -65,5 +88,4 @@ export class EventsComponent implements OnInit {
       this.events.paginator.firstPage();
     }
   }
-
 }
