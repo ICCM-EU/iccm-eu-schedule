@@ -18,33 +18,44 @@
     <!-- Title Column -->
     <ng-container matColumnDef="Title">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
-      <td mat-cell *matCellDef="let record"> {{record.Title}} </td>
+      <ng-container *matCellDef="let record">
+        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Title}} </td>
+      </ng-container>
     </ng-container>
     <!-- Room Column -->
     <ng-container matColumnDef="Room">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Room</th>
-      <td mat-cell *matCellDef="let record"> {{record.Room}} </td>
+      <ng-container *matCellDef="let record">
+        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Room}} </td>
+      </ng-container>
     </ng-container>
     <!-- Speaker Column -->
     <ng-container matColumnDef="Speaker">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Speaker</th>
-      <td mat-cell *matCellDef="let record"> {{record.Speaker}} </td>
+      <ng-container *matCellDef="let record">
+        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Speaker}} </td>
+      </ng-container>
     </ng-container>
     <!-- Time Column -->
     <ng-container matColumnDef="Time">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Time</th>
-      <td mat-cell *matCellDef="let record"> {{record.Time}} </td>
+      <ng-container *matCellDef="let record">
+        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Time}} </td>
+      </ng-container>
     </ng-container>
     <!-- Schedule Column -->
     <ng-container matColumnDef="Schedule">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
-      <td mat-cell *matCellDef="let record"> {{record.Schedule | date:'dd.MM.yyyy'}} </td>
+      <ng-container *matCellDef="let record">
+        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Schedule | date:'dd.MM.yyyy'}} </td>
+      </ng-container>
     </ng-container>
     <!-- Upcoming Column -->
     <ng-container matColumnDef="Upcoming">
       <th mat-header-cell *matHeaderCellDef>Upcoming</th>
-      <td mat-cell *matCellDef="let record"> {{record.Upcoming ? 'yes' : 'no'}} </td>
-      <!-- <td mat-cell *matCellDef="let record"> {{record.Upcoming}} </td> -->
+      <ng-container *matCellDef="let record">
+        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Upcoming ? 'yes' : 'no'}} </td>
+      </ng-container>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
