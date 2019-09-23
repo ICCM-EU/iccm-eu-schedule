@@ -1,5 +1,6 @@
 .container {
   margin-left: 30px;
+  margin-right: 30px;
 }
 
 .event {
@@ -8,8 +9,8 @@
   border-style: solid;
   margin: 5px;
   padding: 5px;
-  width: 90%;
-  min-width: 300px;
+  width: 100%;
+  min-width: 300px !important;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -94,6 +95,10 @@
 
 /* .event-head-row {
 } */
+
+.events-list {
+  font-size: xx-large;
+}
 
 .event-title {
   font-weight: bold;
