@@ -28,6 +28,11 @@
   float: right;
 }
 
+.event-description {
+  color: rgb(120, 120, 120);
+  font-style: italic;
+}
+
 .room-ajax-room {
   border-left-width: 3px;
   border-left-color: rgb(0, 255, 0);
