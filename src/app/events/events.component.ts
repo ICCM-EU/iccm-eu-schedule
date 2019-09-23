@@ -84,33 +84,43 @@ export class EventsComponent implements OnInit {
     if (i >= this.events.length) {
       return 'No event scheduled';
     } else {
-      let negative = '';
       const thenTime = then.getTime();
       // refresh for more precision
       const nowTime = new Date().getTime();
-      let timediff: number = thenTime - nowTime;
+      const timediff: number = thenTime - nowTime;
+
       if (timediff < 0) {
-        negative = '-';
-        timediff = -timediff;
-        // now wait for refresh interval scheduled in sds class - or rather refresh now:
+        // refresh now, the event has just passed:
         this.sds.refreshAll();
       } else {
         // schedule a refresh when it is time to update the next event
-        setTimeout(() => { this.sds.refreshAll(); }, timediff);
+        if (timediff < this.sds.refreshIntervalMin) {
+          setTimeout(() => { this.sds.refreshAll(); }, timediff);
+        }
       }
-
-      const days: number = timediff / (1000 * 60 * 60 * 24);
-      let rest: number = timediff % (1000 * 60 * 60 * 24);
-
-      const hours: number = rest / (1000 * 60 * 60);
-      rest = rest % (1000 * 60 * 60);
-
-      const minutes: number = rest / (1000 * 60);
-      rest = rest % (1000 * 60);
-
-      const seconds = rest / (1000);
-      return 'Next Event in: ' + negative + sprintf('%dd %02d:%02d:%02d', days, hours, minutes, seconds)
+      return this.getNextEventString(timediff)
         + ' (at ' + nextEvent.Schedule + ')';
     }
+  }
+
+  getNextEventString(timediff: number) {
+    let negative = '';
+
+    if (timediff < 0) {
+      negative = '-';
+      timediff = -timediff;
+    }
+
+    const days: number = timediff / (1000 * 60 * 60 * 24);
+    let rest: number = timediff % (1000 * 60 * 60 * 24);
+
+    const hours: number = rest / (1000 * 60 * 60);
+    rest = rest % (1000 * 60 * 60);
+
+    const minutes: number = rest / (1000 * 60);
+    rest = rest % (1000 * 60);
+
+    const seconds = rest / (1000);
+    return 'Next Event in: ' + negative + sprintf('%dd %02d:%02d:%02d', days, hours, minutes, seconds);
   }
 }
