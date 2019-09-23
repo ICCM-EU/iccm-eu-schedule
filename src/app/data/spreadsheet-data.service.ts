@@ -11,9 +11,9 @@ export class SpreadsheetDS {
 
   ssIDs: SpreadsheetIDs = new SpreadsheetIDs;
   lastUpdated = new Date();
-  // refreshHowOften = (36e5 * 6); // 6 hours
-  // refreshHowOften = (60e3 * 5); // 5 Minutes
-  refreshHowOften = (60e3 * 1); // 1 Minutes
+  // refreshIntervalMin = (36e5 * 6); // 6 hours
+  refreshIntervalMin = (60e3 * 5); // 5 Minutes
+  // refreshIntervalMin = (60e3 * 1); // 1 Minutes
 
   events$: Observable<Array<any>>;
 
@@ -24,15 +24,15 @@ export class SpreadsheetDS {
   constructor(public http: HttpClient) {
     // initial loads
     this.refreshAll();
-    setInterval( () => { this.refreshStaleData(); }, this.refreshHowOften);
+    setInterval( () => { this.refreshStaleData(); }, this.refreshIntervalMin);
   }
 
-  public static setLocal(whatData: any, cacheName: string) {
+  public static setLocal(whatData: any, cacheName: string): void {
     // writes data to local storage
     localStorage[cacheName] = JSON.stringify(whatData);
   }
 
-  refreshStaleData() {
+  refreshStaleData(): void {
     this.refreshAll();
   }
 
@@ -47,14 +47,14 @@ export class SpreadsheetDS {
     return from(this.http.get<any>(this.ssIDs.getTabURL(whatTab)));
   }
 
-  refreshAll() {
+  refreshAll(): void {
     this.ssIDs.getObjNames().forEach(objName => {
       this.loadEvents(objName);
     });
     this.lastUpdated = new Date();
   }
 
-  loadEvents(objName: string) {
+  loadEvents(objName: string): void {
     let eventsCount = 0;
     let events: Array<any> = [];
     this.events$ = this.getHTTPData_SS(objName);
@@ -67,7 +67,6 @@ export class SpreadsheetDS {
       SpreadsheetDS.setLocal(events, this.ssIDs.getCacheName(objName));
       this.eventsLabel = this.buildLabel(eventsCount, objName);
       this.eventsUpdated.emit(events);
-
     });
   }
 

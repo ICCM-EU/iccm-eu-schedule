@@ -1,7 +1,7 @@
 [
     {
         "session": "Termin 0",
-        "dateTime": "2019-09-23T14:40:00.000Z",
+        "dateTime": "2019-09-23T15:00:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -11,7 +11,7 @@
     },
     {
         "session": "Termin 1",
-        "dateTime": "2019-09-23T14:41:00.000Z",
+        "dateTime": "2019-09-23T15:01:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -21,7 +21,7 @@
     },
     {
         "session": "Termin 2",
-        "dateTime": "2019-09-23T14:42:00.000Z",
+        "dateTime": "2019-09-23T15:02:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -31,7 +31,7 @@
     },
     {
         "session": "Termin 3",
-        "dateTime": "2019-09-23T14:43:00.000Z",
+        "dateTime": "2019-09-23T15:03:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -41,7 +41,7 @@
     },
     {
         "session": "Termin 4",
-        "dateTime": "2019-09-23T14:45:00.000Z",
+        "dateTime": "2019-09-23T15:04:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -51,7 +51,7 @@
     },
     {
         "session": "Termin 5",
-        "dateTime": "2019-09-23T14:46:00.000Z",
+        "dateTime": "2019-09-23T15:05:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -61,7 +61,7 @@
     },
     {
         "session": "Termin 6",
-        "dateTime": "2019-09-23T14:47:00.000Z",
+        "dateTime": "2019-09-23T15:06:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -71,7 +71,7 @@
     },
     {
         "session": "Termin 7",
-        "dateTime": "2019-09-23T14:48:00.000Z",
+        "dateTime": "2019-09-23T15:07:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -81,7 +81,17 @@
     },
     {
         "session": "Termin 8",
-        "dateTime": "2019-09-23T14:49:00.000Z",
+        "dateTime": "2019-09-23T15:08:00.000Z",
+        "room": "Dining Hall",
+        "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
+        "category": "Refreshment and 1-to-1",
+        "time": "30th at 18:00",
+        "categorycategoryname": "Refreshment and 1-to-1",
+        "roomvenuename": "Dining Hall"
+    },
+    {
+        "session": "Termin 9",
+        "dateTime": "2019-09-23T15:09:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",

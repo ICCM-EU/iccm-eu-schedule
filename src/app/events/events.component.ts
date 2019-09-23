@@ -84,11 +84,19 @@ export class EventsComponent implements OnInit {
     if (i >= this.events.length) {
       return 'No event scheduled';
     } else {
-      let timediff: number = then.getTime() - now.getTime();
       let negative = '';
+      const thenTime = then.getTime();
+      // refresh for more precision
+      const nowTime = new Date().getTime();
+      let timediff: number = thenTime - nowTime;
       if (timediff < 0) {
         negative = '-';
         timediff = -timediff;
+        // now wait for refresh interval scheduled in sds class - or rather refresh now:
+        this.sds.refreshAll();
+      } else {
+        // schedule a refresh when it is time to update the next event
+        setTimeout(() => { this.sds.refreshAll(); }, timediff);
       }
 
       const days: number = timediff / (1000 * 60 * 60 * 24);
