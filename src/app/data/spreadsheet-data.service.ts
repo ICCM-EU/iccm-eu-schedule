@@ -12,7 +12,8 @@ export class SpreadsheetDS {
   ssIDs: SpreadsheetIDs = new SpreadsheetIDs;
   lastUpdated = new Date();
   // refreshHowOften = (36e5 * 6); // 6 hours
-  refreshHowOften = (60e3 * 5); // 5 Minutes
+  // refreshHowOften = (60e3 * 5); // 5 Minutes
+  refreshHowOften = (60e3 * 1); // 1 Minutes
 
   events$: Observable<Array<any>>;
 
