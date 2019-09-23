@@ -1,66 +1,25 @@
 <div class="container">
-  <h1>{{ sds.eventsLabel }}</h1>
+  <p>{{ sds.eventsLabel }}</p>
 
   <p>
-    <button class="mat-stroked-button" (click)="toggleUpcoming()">{{ toggleName }}</button>
-    <button class="mat-stroked-button" (click)="refresh()">Refresh Events</button>
+    <button (click)="refresh()">Refresh Events</button>
+    <button (click)="toggleUpcoming()">{{ toggleName }}</button>
   </p>
 
-  <!-- 
-  <mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter Rows">
-  </mat-form-field>
-   -->
-
-  <table mat-table [dataSource]="events" class="mat-elevation-z8" matSort matSortActive="created" matSortDisableClear
-    matSortDirection="asc">
-
-    <!-- Title Column -->
-    <ng-container matColumnDef="Title">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
-      <ng-container *matCellDef="let record">
-        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Title}} </td>
-      </ng-container>
+  <ul class="events-list">
+    <ng-container *ngFor="let record of events">
+      <li *ngIf="!onlyUpcoming || record.Upcoming" class="event">
+        <div class="event-head-row">
+          <span>{{ record.Title }}</span>:
+          <span>{{ record.Room }}</span>
+          <span *ngIf="record.Speaker">({{ record.Speaker }})</span>
+        </div>
+        <div class="event-details-row">
+          <span>{{ record.Time}}</span>
+          <span> ({{ record.Schedule | date:'EEE., yyyy-MM-dd, HH:mm' }})</span>
+          <span> ({{ record.Upcoming ? 'upcoming' : 'old' }})</span>
+        </div>
+      </li>
     </ng-container>
-    <!-- Room Column -->
-    <ng-container matColumnDef="Room">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Room</th>
-      <ng-container *matCellDef="let record">
-        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Room}} </td>
-      </ng-container>
-    </ng-container>
-    <!-- Speaker Column -->
-    <ng-container matColumnDef="Speaker">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Speaker</th>
-      <ng-container *matCellDef="let record">
-        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Speaker}} </td>
-      </ng-container>
-    </ng-container>
-    <!-- Time Column -->
-    <ng-container matColumnDef="Time">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Time</th>
-      <ng-container *matCellDef="let record">
-        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Time}} </td>
-      </ng-container>
-    </ng-container>
-    <!-- Schedule Column -->
-    <ng-container matColumnDef="Schedule">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
-      <ng-container *matCellDef="let record">
-        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Schedule | date:'dd.MM.yyyy'}} </td>
-      </ng-container>
-    </ng-container>
-    <!-- Upcoming Column -->
-    <ng-container matColumnDef="Upcoming">
-      <th mat-header-cell *matHeaderCellDef>Upcoming</th>
-      <ng-container *matCellDef="let record">
-        <td mat-cell *ngIf="!onlyUpcoming || record.Upcoming"> {{record.Upcoming ? 'yes' : 'no'}} </td>
-      </ng-container>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-  </table>
-  <!-- <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator> -->
+  </ul>
 </div>
