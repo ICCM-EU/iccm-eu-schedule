@@ -2,31 +2,29 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { isUndefined, isBoolean } from 'util';
+import { EventInterface } from '../eventinterface';
 
-export interface TheEvent {
-  Title: string;
-  Schedule: Date;
-  Time: string;
-  Room: string;
-}
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
-  events: TheEvent[];
+  events: EventInterface[];
   objName: string;
   toggleName: string;
+  toggleDescriptionsName: string;
   onlyUpcoming: boolean;
+  showDescriptions: boolean;
 
   constructor(public sds: SpreadsheetDS) {
     this.objName = 'events';
 
     this.toggleUpcoming(true);
+    this.toggleDescriptions(true);
 
     this.sds.eventsUpdated.subscribe(
-      (newData: any) => {
+      (newData: EventInterface[]) => {
         this.events = newData;
       }
     );
@@ -53,5 +51,17 @@ export class EventsComponent implements OnInit {
       this.toggleName = 'Show All';
     }
     this.onlyUpcoming = ! this.onlyUpcoming;
+  }
+
+  toggleDescriptions(init?: boolean) {
+    if (!isUndefined(init) && isBoolean(init)) {
+      this.showDescriptions = !init;
+    }
+    if (this.showDescriptions) {
+      this.toggleDescriptionsName = 'Show Descriptions';
+    } else {
+      this.toggleDescriptionsName = 'Hide Descriptions';
+    }
+    this.showDescriptions = ! this.showDescriptions;
   }
 }

@@ -4,22 +4,26 @@
   <p>
     <button (click)="refresh()">Refresh Events</button>
     <button (click)="toggleUpcoming()">{{ toggleName }}</button>
+    <button (click)="toggleDescriptions()">{{ toggleDescriptionsName }}</button>
   </p>
 
-  <ul class="events-list">
+  <div class="events-list">
     <ng-container *ngFor="let record of events">
-      <li *ngIf="!onlyUpcoming || record.Upcoming" class="event">
+      <div *ngIf="!onlyUpcoming || record.Upcoming" class="event {{record.cssClassRoom}}">
         <div class="event-head-row">
-          <span>{{ record.Title }}</span>:
-          <span>{{ record.Room }}</span>
-          <span *ngIf="record.Speaker"> ({{ record.Speaker }})</span>
+          <span class="event-title">{{ record.Title }}</span>
+          <span *ngIf="record.Speaker" class="event-speaker"> ({{ record.Speaker }})</span>
+          <span class="event-room"> {{ record.Room }}</span>
         </div>
         <div class="event-details-row">
           <span>{{ record.Time}}</span>
-          <span> ({{ record.Schedule | date:'EEE., yyyy-MM-dd, HH:mm' }})</span>
+          <span> ({{ record.Schedule | date:'EE., yyyy-MM-dd, HH:mm' }})</span>
           <span> ({{ record.Upcoming ? 'upcoming' : 'old' }})</span>
         </div>
-      </li>
+        <div class="event-details-row" *ngIf="showDescriptions && record.Description">
+          <div class="event-description">{{ record.Description }}</div>
+        </div>
+      </div>
     </ng-container>
-  </ul>
+  </div>
 </div>

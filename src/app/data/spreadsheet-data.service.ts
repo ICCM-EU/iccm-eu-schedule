@@ -4,6 +4,7 @@ import { Observable, from } from 'rxjs';
 import { Injectable, EventEmitter } from '@angular/core';
 
 import { SpreadsheetIDs } from './spreadsheetIDs';
+import { EventInterface } from '../eventinterface';
 
 @Injectable()
 export class SpreadsheetDS {
@@ -76,12 +77,13 @@ export class SpreadsheetDS {
   }
 
   transformEvents(dataReceived: Array<any>): Array<any> {
-    const tempArray: Array<any> = [];
+    const tempArray: EventInterface[] = [];
     const now = new Date;
 
     for (const i of dataReceived) {
-      let upcoming = true;
+      const cssClassRoom: string = 'room-' + i.room.toLowerCase().replace(/[^a-z0-9-]/g, '-');
       const schedule = new Date(i.dateTime);
+      let upcoming = true;
       if (schedule <= now) {
         upcoming = false;
       }
@@ -95,6 +97,8 @@ export class SpreadsheetDS {
         Room: i.room,
         Speaker: i.speakerspeakersname,
         Upcoming: upcoming,
+        cssClassRoom: cssClassRoom,
+        Description: i.description,
       });
     }
     return tempArray;
