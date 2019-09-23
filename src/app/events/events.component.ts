@@ -28,6 +28,7 @@ export class EventsComponent implements OnInit {
     this.sds.eventsUpdated.subscribe(
       (newData: EventInterface[]) => {
         this.events = newData;
+        this.nextEventTimeOffset = this.getNextEventTimeOffset();
       }
     );
 
@@ -38,7 +39,6 @@ export class EventsComponent implements OnInit {
       // use the local storage if there until HTTP call retrieves something
       JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
     );
-    this.nextEventTimeOffset = this.getNextEventTimeOffset();
   }
 
   refresh() {

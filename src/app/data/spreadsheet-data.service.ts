@@ -47,12 +47,6 @@ export class SpreadsheetDS {
     return from(this.http.get<any>(this.ssIDs.getTabURL(whatTab)));
   }
 
-  getHTTPData_Tabs(): Observable<Array<any>> {
-    // console.log('Getting all tabs in the spreadsheet');
-    return this.http.get<any>(this.ssIDs.getAllTabsURL())
-      .pipe(map(obj => obj.feed.entry));
-  }
-
   refreshAll() {
     this.ssIDs.getObjNames().forEach(objName => {
       this.loadEvents(objName);
