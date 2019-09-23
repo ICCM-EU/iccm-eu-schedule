@@ -21,9 +21,11 @@ export class EventsComponent implements OnInit {
   nextEvent: EventInterface;
   nextEventTimeDiff: number;
   nextEventTimeString: string;
+  countdownCssClass: string;
 
   constructor(public sds: SpreadsheetDS) {
     this.objName = 'events';
+    this.countdownCssClass = '';
 
     this.toggleUpcoming(true);
     this.toggleDescriptions(true);
@@ -147,18 +149,58 @@ export class EventsComponent implements OnInit {
 
     const seconds = rest / (1000);
 
-    if (timediff < 0) {
-      this.nextEventTimeString = 'Next event is now.';
+    if (timediff < 1) {
       timediff = -timediff;
+      this.nextEventTimeString = 'Next event is now.';
+      this.countdownCssClass = 'countdown-10s-uneven';
+    } else if (timediff <  2 * 1000) {
+      this.nextEventTimeString = 'Next event is now.';
+      this.countdownCssClass = 'countdown-10s-uneven';
+    } else if (timediff <  3 * 1000) {
+      this.nextEventTimeString = 'Next event is in two seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-even';
+    } else if (timediff <  4 * 1000) {
+      this.nextEventTimeString = 'Next event is in three seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-uneven';
+    } else if (timediff <  5 * 1000) {
+      this.nextEventTimeString = 'Next event is in four seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-even';
+    } else if (timediff <  6 * 1000) {
+      this.nextEventTimeString = 'Next event is in five seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-uneven';
+    } else if (timediff <  7 * 1000) {
+      this.nextEventTimeString = 'Next event is in six seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-even';
+    } else if (timediff <  8 * 1000) {
+      this.nextEventTimeString = 'Next event is in seven seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-uneven';
+    } else if (timediff <  9 * 1000) {
+      this.nextEventTimeString = 'Next event is in eight seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-even';
     } else if (timediff < 10 * 1000) {
-      this.nextEventTimeString = 'Next event is a few seconds (' + sprintf('%02d', seconds) + 's).';
+      this.nextEventTimeString = 'Next event is in nine seconds  (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-uneven';
+    } else if (timediff < 11 * 1000) {
+      this.nextEventTimeString = 'Next event is in ten seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-10s-even';
     } else if (timediff < 30 * 1000) {
-      this.nextEventTimeString = 'Next event is some seconds (' + sprintf('%02d', seconds) + 's).';
-    } else if (timediff < 60 * 1000) {
-      this.nextEventTimeString = 'Next event is a minute (' + sprintf('%02d', seconds) + 's).';
-    } else {
-      this.nextEventTimeString = 'Next Event in: ' + sprintf('%dd %02d:%02d:%02d', days, hours, minutes, seconds)
-        + ' (at ' + this.nextEvent.Schedule + ')';
+      this.nextEventTimeString = 'Next event is in a few seconds (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-30s';
+    } else if (timediff < 60 * 1000) { // coming to less than a minute
+      this.nextEventTimeString = 'Next event is in a minute (' + sprintf('%02d', seconds) + 's).';
+      this.countdownCssClass = 'countdown-1m';
+    } else if (timediff < 3 * 60 * 1000) { // 3 Minutes
+      this.nextEventTimeString = 'Next Event in: ' + sprintf('%02d:%02d', minutes, seconds);
+      this.countdownCssClass = 'countdown-3m';
+    } else if (timediff < 5 * 60 * 1000) { // 5 Minutes
+      this.nextEventTimeString = 'Next Event in: ' + sprintf('%02d:%02d', minutes, seconds);
+      this.countdownCssClass = 'countdown-5m';
+    } else if (timediff < 60 * 60 * 1000) { // hours and a bit; less than a day
+      this.nextEventTimeString = 'Next Event in: ' + sprintf('%02dh %02dm', hours, minutes);
+      this.countdownCssClass = 'countdown-long';
+    } else { // days and hours (and some minutes)
+      this.nextEventTimeString = 'Next Event in: ' + sprintf('%dd %02dh %02dm', days, hours, minutes);
+      this.countdownCssClass = 'countdown-long';
     }
   }
 }

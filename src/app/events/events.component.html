@@ -1,11 +1,14 @@
 <div class="container">
-  <p>{{ sds.eventsLabel }} - {{ nextEventTimeString }}</p>
+  <div class="toprow">
+    <div class="toprow-label">{{ sds.eventsLabel }} ({{ countdownCssClass }})</div>
+    <div class="toprow-buttons">
+      <button (click)="refresh()">Refresh Events</button>
+      <button (click)="toggleUpcoming()">{{ toggleName }}</button>
+      <button (click)="toggleDescriptions()">{{ toggleDescriptionsName }}</button>
+    </div>
+    <div class="toprow-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
+  </div>
 
-  <p>
-    <button (click)="refresh()">Refresh Events</button>
-    <button (click)="toggleUpcoming()">{{ toggleName }}</button>
-    <button (click)="toggleDescriptions()">{{ toggleDescriptionsName }}</button>
-  </p>
 
   <div class="events-list">
     <ng-container *ngFor="let record of events">
