@@ -4,6 +4,7 @@ import { sprintf } from 'sprintf-js';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { isUndefined, isBoolean } from 'util';
 import { EventInterface } from '../eventinterface';
+import { isNull } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-events',
@@ -17,7 +18,9 @@ export class EventsComponent implements OnInit {
   toggleDescriptionsName: string;
   onlyUpcoming: boolean;
   showDescriptions: boolean;
-  nextEventTimeOffset: string;
+  nextEvent: EventInterface;
+  nextEventTimeDiff: number;
+  nextEventTimeString: string;
 
   constructor(public sds: SpreadsheetDS) {
     this.objName = 'events';
@@ -28,10 +31,13 @@ export class EventsComponent implements OnInit {
     this.sds.eventsUpdated.subscribe(
       (newData: EventInterface[]) => {
         this.events = newData;
-        this.nextEventTimeOffset = this.getNextEventTimeOffset();
+        // Initialize
+        this.getNextEvent();
       }
     );
 
+    // Let the timer run
+    setInterval(() => { this.updateNextEventString(); }, 1000);
   }
 
   ngOnInit() {
@@ -69,12 +75,13 @@ export class EventsComponent implements OnInit {
     this.showDescriptions = !this.showDescriptions;
   }
 
-  getNextEventTimeOffset(): string {
+  getNextEvent(): void {
     let i = 0;
     let nextEvent: EventInterface;
     const now = new Date();
     let then: Date;
 
+    // Identify the time to the next event
     do {
       nextEvent = this.events[i];
       then = new Date(nextEvent.Schedule);
@@ -82,32 +89,50 @@ export class EventsComponent implements OnInit {
     } while (i < this.events.length && then <= now);
 
     if (i >= this.events.length) {
-      return 'No event scheduled';
+      this.nextEvent = null;
     } else {
-      const thenTime = then.getTime();
-      // refresh for more precision
-      const nowTime = new Date().getTime();
-      const timediff: number = thenTime - nowTime;
-
-      if (timediff < 0) {
-        // refresh now, the event has just passed:
-        this.sds.refreshAll();
-      } else {
-        // schedule a refresh when it is time to update the next event
-        if (timediff < this.sds.refreshIntervalMin) {
-          setTimeout(() => { this.sds.refreshAll(); }, timediff);
-        }
-      }
-      return this.getNextEventString(timediff)
-        + ' (at ' + nextEvent.Schedule + ')';
+      this.nextEvent = nextEvent;
     }
+
+    this.updateNextEventString();
   }
 
-  getNextEventString(timediff: number) {
-    let negative = '';
+  /**
+   * Calculate the timediff to the next event
+   * @param nextEvent The event to calculate the time diff for
+   */
+  updateTimediff(): void {
+    if (!this.nextEvent) {
+      this.nextEventTimeDiff = 0;
+      return;
+    }
+    // Calculate / update the time value
+    const thenTime = new Date(this.nextEvent.Schedule).getTime();
+    // refresh for more precision
+    const nowTime = new Date().getTime();
+    const timediff: number = thenTime - nowTime;
+
+    if (timediff <= 0) {
+      // refresh now, the event has just passed:
+      this.sds.refreshAll();
+      // } else {
+      //   // schedule a refresh when it is time to update the next event
+      //   if (timediff < this.sds.refreshIntervalMin) {
+      //     setTimeout(() => { this.sds.refreshAll(); }, timediff);
+      //   }
+    }
+
+    this.nextEventTimeDiff = timediff;
+  }
+
+  updateNextEventString(): void {
+    let timediff: number;
+
+    this.updateTimediff();
+
+    timediff = this.nextEventTimeDiff;
 
     if (timediff < 0) {
-      negative = '-';
       timediff = -timediff;
     }
 
@@ -121,6 +146,19 @@ export class EventsComponent implements OnInit {
     rest = rest % (1000 * 60);
 
     const seconds = rest / (1000);
-    return 'Next Event in: ' + negative + sprintf('%dd %02d:%02d:%02d', days, hours, minutes, seconds);
+
+    if (timediff < 0) {
+      this.nextEventTimeString = 'Next event is now.';
+      timediff = -timediff;
+    } else if (timediff < 10 * 1000) {
+      this.nextEventTimeString = 'Next event is a few seconds (' + sprintf('%02d', seconds) + 's).';
+    } else if (timediff < 30 * 1000) {
+      this.nextEventTimeString = 'Next event is some seconds (' + sprintf('%02d', seconds) + 's).';
+    } else if (timediff < 60 * 1000) {
+      this.nextEventTimeString = 'Next event is a minute (' + sprintf('%02d', seconds) + 's).';
+    } else {
+      this.nextEventTimeString = 'Next Event in: ' + sprintf('%dd %02d:%02d:%02d', days, hours, minutes, seconds)
+        + ' (at ' + this.nextEvent.Schedule + ')';
+    }
   }
 }
