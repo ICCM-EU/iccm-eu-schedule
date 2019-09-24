@@ -152,10 +152,10 @@ export class CountdownTimerComponent implements OnInit {
 
     if (timediff < 1) {
       timediff = -timediff;
-      this.nextEventTimeString = 'Next event is now.';
+      this.nextEventTimeString = 'NOW';
       this.countdownCssClass = 'countdown-10s-uneven';
     } else if (timediff <  2 * 1000) {
-      this.nextEventTimeString = 'Next event is now.';
+      this.nextEventTimeString = 'NOW';
       this.countdownCssClass = 'countdown-10s-uneven';
     } else if (timediff <  3 * 1000) {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);

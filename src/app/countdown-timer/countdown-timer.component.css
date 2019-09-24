@@ -96,7 +96,7 @@
   color: lightgrey;
   vertical-align: middle;
   text-align: center;
-  font-size: 32px;
+  font-size: 48px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -115,7 +115,7 @@
   width: 100%;
   text-align: center;
   vertical-align: middle;
-  font-size: 120px;
+  font-size: 240px;
 }
 
 .mat-raised-button {
