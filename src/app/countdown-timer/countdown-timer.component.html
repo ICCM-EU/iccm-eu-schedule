@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="toprow">
+    <div class="toprow-buttons">
+      <a href="/" class="btn btn-primary" mat-raised-button>List</a>
+      <button mat-raised-button class="md-raised md-cornered" (click)="refresh()">Refresh Events</button>
+    </div>
+  </div>
+
+  <div class="counter">
+      <div class="central-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
+      <div *ngIf="nextEvent" class="event-details">
+        <div class="event-details">
+          <span class="event-title"> {{ nextEvent.Title }}</span>
+          <span class="event-time"> at {{ nextEvent.Schedule | date:'HH:mm' }}</span>
+        </div>
+      </div>
+  </div>
+</div>
