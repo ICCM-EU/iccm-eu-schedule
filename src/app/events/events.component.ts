@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { sprintf } from 'sprintf-js';
 
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
@@ -22,7 +22,7 @@ export class EventsComponent implements OnInit {
   nextEventTimeString: string;
   countdownCssClass: string;
 
-  constructor(public sds: SpreadsheetDS) {
+  constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
     this.countdownCssClass = '';
 
@@ -39,6 +39,8 @@ export class EventsComponent implements OnInit {
 
     // Let the timer run
     setInterval(() => { this.updateNextEventString(); }, 1000);
+
+    this.renderer.setStyle(document.body, 'background-color', 'white');
   }
 
   ngOnInit() {
