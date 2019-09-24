@@ -200,7 +200,7 @@ export class CountdownTimerComponent implements OnInit {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
       this.countdownCssClass = 'countdown-long';
     } else if (timediff < 24 * 60 * 60 * 1000) {
-      this.nextEventTimeString = sprintf('%dd %02dm %02ds', days, minutes, seconds);
+      this.nextEventTimeString = sprintf('%02dh %02dm %02ds', hours, minutes, seconds);
       this.countdownCssClass = 'countdown-long';
     } else { // days and hours (and some minutes)
       this.nextEventTimeString = sprintf('%dd %02dh %02dm', days, hours, minutes);
