@@ -5,8 +5,6 @@
       <button mat-raised-button (click)="refresh()">Refresh Events</button>
       <button mat-raised-button (click)="toggleUpcoming()">{{ toggleName }}</button>
       <button mat-raised-button (click)="toggleDescriptions()">{{ toggleDescriptionsName }}</button>
-      <a routerLink="/countdown" class="btn btn-primary" mat-raised-button >Countdown</a>
-      <a routerLink="/by-room" class="btn btn-primary" mat-raised-button >By Room</a>
     </div>
     <div class="toprow-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
   </div>
