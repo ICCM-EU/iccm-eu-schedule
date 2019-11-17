@@ -1,14 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 import { Observable, from } from 'rxjs';
 import { Injectable, EventEmitter } from '@angular/core';
 
 import { SpreadsheetIDs } from './spreadsheetIDs';
 import { EventInterface } from '../eventinterface';
+import { EventRoomInterface } from '../eventRoomInterface';
 
 @Injectable()
 export class SpreadsheetDS {
-
   ssIDs: SpreadsheetIDs = new SpreadsheetIDs;
   lastUpdated = new Date();
   // refreshIntervalMin = (36e5 * 6); // 6 hours
@@ -19,7 +18,8 @@ export class SpreadsheetDS {
 
   eventsLabel = 'Events';
 
-  eventsUpdated = new EventEmitter<Array<any>>();
+  eventsUpdated = new EventEmitter<Array<EventInterface>>();
+  byRoomUpdated = new EventEmitter<Array<EventRoomInterface>>();
 
   constructor(public http: HttpClient) {
     // initial loads
@@ -56,17 +56,37 @@ export class SpreadsheetDS {
 
   loadEvents(objName: string): void {
     let eventsCount = 0;
-    let events: Array<any> = [];
+    let events: Array<EventInterface> = [];
+    const byRoom: Array<EventRoomInterface> = [];
     this.events$ = this.getHTTPData_SS(objName);
     this.events$.subscribe(next => {
       if (next != null) {
         // transform the JSON returned to make it more usable
         events = this.transformEvents(next);
         eventsCount = events.length;
+        // Loop through the events and add rooms and events into the rooms
+        events.forEach(currentEvent => {
+          const currentRoomName: string = currentEvent.Room;
+          const roomInArray: EventRoomInterface = byRoom.find(search => search.name === currentRoomName);
+          if (roomInArray === undefined) {
+            const newRoom: EventRoomInterface = {
+              name: currentRoomName,
+              events: [
+                currentEvent,
+              ],
+            };
+            byRoom.push(newRoom);
+          } else {
+            roomInArray.events.push(currentEvent);
+          }
+        });
       }
       SpreadsheetDS.setLocal(events, this.ssIDs.getCacheName(objName));
+      SpreadsheetDS.setLocal(byRoom, this.ssIDs.getCacheByRoomName(objName));
       this.eventsLabel = this.buildLabel(eventsCount, objName);
+
       this.eventsUpdated.emit(events);
+      this.byRoomUpdated.emit(byRoom);
     });
   }
 

@@ -1,3 +1,18 @@
+div.table {
+  display: table;
+  border-collapse: collapse;
+}
+
+div.tr {
+  display: table-row;
+}
+
+div.td {
+  display: table-cell;
+  border: thin solid red;
+  padding: 5px;
+}
+
 .container {
   margin-top: 0px;
   margin-left: 10px;
@@ -26,7 +41,7 @@
   margin: 9px;
 }
 
-.toprow-counter{
+.toprow-counter {
   float: right;
   min-width: 35ex;
   text-align: right;
@@ -157,4 +172,3 @@
   border-left-style: solid;
   background: rgba(255, 255, 255, 0.1);
 }
-
