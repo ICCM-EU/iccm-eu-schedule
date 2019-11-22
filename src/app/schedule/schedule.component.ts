@@ -23,7 +23,8 @@ const users = [
 
 @Component({
   selector: 'app-schedule-component',
-  templateUrl: 'template.html'
+  templateUrl: 'template.html',
+  styleUrls: ['./styles.scss'],
 })
 export class ScheduleComponent {
   viewDate = new Date();
