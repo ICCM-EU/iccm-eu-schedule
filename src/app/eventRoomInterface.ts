@@ -1,4 +1,4 @@
-import { EventInterface } from './eventinterface';
+import { EventInterface } from './eventInterface';
 
 export interface EventRoomInterface {
   name: string;

@@ -7,19 +7,18 @@ import {
   addHours,
   startOfDay,
 } from 'date-fns';
+import { CalendarUsersDictionary } from './calendarUsersDictionary';
 
-const users = [
-  {
-    id: 0,
-    name: 'John smith',
-    color: colors.yellow
+const users: CalendarUsersDictionary = {
+  'John Smith': {
+    name: 'John Smith',
+    colors: colors.yellow,
   },
-  {
-    id: 1,
+  'Jane Doe': {
     name: 'Jane Doe',
-    color: colors.blue
+    colors: colors.blue,
   }
-];
+};
 
 @Component({
   selector: 'app-schedule-component',
@@ -32,10 +31,10 @@ export class ScheduleComponent {
   events: CalendarEvent[] = [
     {
       title: 'An event',
-      color: users[0].color,
+      color: users['John Smith'].colors,
       start: addHours(startOfDay(new Date()), 5),
       meta: {
-        user: users[0]
+        user: users['John Smith'],
       },
       resizable: {
         beforeStart: false,
@@ -45,10 +44,10 @@ export class ScheduleComponent {
     },
     {
       title: 'Another event',
-      color: users[1].color,
+      color: users['Jane Doe'].colors,
       start: addHours(startOfDay(new Date()), 2),
       meta: {
-        user: users[1]
+        user: users['Jane Doe'],
       },
       resizable: {
         beforeStart: false,
@@ -58,10 +57,10 @@ export class ScheduleComponent {
     },
     {
       title: 'An 3rd event',
-      color: users[0].color,
+      color: users['John Smith'].colors,
       start: addHours(startOfDay(new Date()), 7),
       meta: {
-        user: users[0]
+        user: users['John Smith'],
       },
       resizable: {
         beforeStart: false,

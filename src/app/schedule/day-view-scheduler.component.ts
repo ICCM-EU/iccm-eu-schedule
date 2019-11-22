@@ -39,7 +39,7 @@ export class DayViewSchedulerCalendarUtils extends CalendarUtils {
 
 @Component({
   // tslint:disable-line max-classes-per-file
-  selector: 'mwl-day-view-scheduler',
+  selector: 'app-day-view-scheduler',
   styles: [
     `
       .day-view-column-headers {

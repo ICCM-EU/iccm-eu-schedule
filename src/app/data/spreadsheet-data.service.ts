@@ -3,7 +3,7 @@ import { Observable, from } from 'rxjs';
 import { Injectable, EventEmitter } from '@angular/core';
 
 import { SpreadsheetIDs } from './spreadsheetIDs';
-import { EventInterface } from '../eventinterface';
+import { EventInterface } from '../eventInterface';
 import { EventRoomInterface } from '../eventRoomInterface';
 
 @Injectable()

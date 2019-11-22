@@ -1,13 +1,15 @@
-export const colors: any = {
-  red: {
+import { CalendarColorsDictionary } from './calendarColorsDictionary';
+
+export const colors: CalendarColorsDictionary = {
+  'red': {
     primary: '#ad2121',
     secondary: '#FAE3E3'
   },
-  blue: {
+  'blue': {
     primary: '#1e90ff',
     secondary: '#D1E8FF'
   },
-  yellow: {
+  'yellow': {
     primary: '#e3bc08',
     secondary: '#FDF1BA'
   }
