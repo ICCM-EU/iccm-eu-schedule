@@ -6,6 +6,7 @@ const appRoutes: Routes = [
   // { path: '', loadChildren: './countdown-timer/countdown-timer.module#CountdownTimerModule' },
   { path: 'countdown', loadChildren: './countdown-timer/countdown-timer.module#CountdownTimerModule' },
   { path: 'by-room', loadChildren: './by-room/by-room.module#ByRoomModule' },
+  { path: 'schedule', loadChildren: './schedule/schedule.module#ScheduleModule' },
   { path: '404', loadChildren: './page-not-found/page-not-found.module#PageNotFoundModule' },
   { path: '', loadChildren: './events/events.module#EventsModule' },
   { path: '**', redirectTo: '/404'}

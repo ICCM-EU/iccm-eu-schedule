@@ -107,6 +107,7 @@ export class SpreadsheetDS {
         // Schedule: i.gsx$DateTime.$t,
         Title: i.session,
         Schedule: i.dateTime,
+        End: i.endDateTime,
         Time: i.time,
         Room: i.room,
         Speaker: i.speakerspeakersname,

@@ -13,7 +13,7 @@ import { OrderModule } from 'ngx-order-pipe';
   imports: [
     ByRoomRoutingModule,
     SharedModule,
-    OrderModule
+    OrderModule,
   ]
 })
 export class ByRoomModule { }

@@ -2,6 +2,7 @@
     {
         "session": "Session 0",
         "dateTime": "2019-09-24T16:00:00.000Z",
+        "endDateTime": "2019-09-24T17:00:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -12,6 +13,7 @@
     {
         "session": "Session 1",
         "dateTime": "2019-09-24T16:01:00.000Z",
+        "endDateTime": "2019-09-24T17:01:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -22,6 +24,7 @@
     {
         "session": "Session 2",
         "dateTime": "2019-09-24T16:02:00.000Z",
+        "endDateTime": "2019-09-24T17:02:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -32,6 +35,7 @@
     {
         "session": "Session 3",
         "dateTime": "2019-09-24T16:03:00.000Z",
+        "endDateTime": "2019-09-24T17:03:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -42,6 +46,7 @@
     {
         "session": "Session 4",
         "dateTime": "2019-09-24T16:04:00.000Z",
+        "endDateTime": "2019-09-24T17:04:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -52,6 +57,7 @@
     {
         "session": "Session 5",
         "dateTime": "2019-09-24T16:05:00.000Z",
+        "endDateTime": "2019-09-24T17:05:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -62,6 +68,7 @@
     {
         "session": "Session 6",
         "dateTime": "2019-09-24T16:06:00.000Z",
+        "endDateTime": "2019-09-24T17:06:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -72,6 +79,7 @@
     {
         "session": "Session 7",
         "dateTime": "2019-09-24T16:07:00.000Z",
+        "endDateTime": "2019-09-24T17:07:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -82,6 +90,7 @@
     {
         "session": "Session 8",
         "dateTime": "2019-09-24T16:08:00.000Z",
+        "endDateTime": "2019-09-24T17:08:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -92,6 +101,7 @@
     {
         "session": "Session 9",
         "dateTime": "2019-09-24T16:09:00.000Z",
+        "endDateTime": "2019-09-24T17:09:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -102,6 +112,7 @@
     {
         "session": "🍲 Pre-Conference Evening Meal",
         "dateTime": "2020-02-05T02:00:00.000Z",
+        "endDateTime": "2020-02-05T03:00:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -112,6 +123,7 @@
     {
         "session": "⌨ Pre-Conference: Workshop",
         "dateTime": "2020-02-05T03:45:00.000Z",
+        "endDateTime": "2020-02-05T04:45:00.000Z",
         "room": "BASIC Room",
         "parallel": "Pre-Conference 1",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt=media",
@@ -125,6 +137,7 @@
     {
         "session": "⌨ Pre-Conference: Hackathon",
         "dateTime": "2020-02-05T03:45:00.000Z",
+        "endDateTime": "2020-02-05T04:45:00.000Z",
         "room": "COBOL Room",
         "speaker": "James Doc",
         "parallel": "Pre-Conference 1",
@@ -139,6 +152,7 @@
     {
         "session": "🥐 Pre-Conference Breakfast",
         "dateTime": "2020-02-05T16:00:00.000Z",
+        "endDateTime": "2020-02-05T17:00:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F2acac0.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -149,6 +163,7 @@
     {
         "session": "⌨ Pre-Conference: Workshop",
         "dateTime": "2020-02-05T16:30:00.000Z",
+        "endDateTime": "2020-02-05T17:30:00.000Z",
         "room": "BASIC Room",
         "parallel": "Pre-Conference 2",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt=media",
@@ -161,6 +176,7 @@
     {
         "session": "⌨ Pre-Conference: Hackathon",
         "dateTime": "2020-02-05T16:30:00.000Z",
+        "endDateTime": "2020-02-05T17:30:00.000Z",
         "room": "COBOL Room",
         "speaker": "James Doc",
         "parallel": "Pre-Conference 2",
@@ -175,6 +191,7 @@
     {
         "session": "☕ Pre-Conference Coffee Break",
         "dateTime": "2020-02-05T18:15:00.000Z",
+        "endDateTime": "2020-02-05T19:15:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -185,6 +202,7 @@
     {
         "session": "⌨ Pre-Conference: Workshop",
         "dateTime": "2020-02-05T18:45:00.000Z",
+        "endDateTime": "2020-02-05T19:45:00.000Z",
         "room": "BASIC Room",
         "parallel": "Pre-Conference 3",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt=media",
@@ -197,6 +215,7 @@
     {
         "session": "⌨ Pre-Conference: Hackathon",
         "dateTime": "2020-02-05T18:45:00.000Z",
+        "endDateTime": "2020-02-05T19:45:00.000Z",
         "room": "COBOL Room",
         "speaker": "James Doc",
         "parallel": "Pre-Conference 3",
@@ -211,6 +230,7 @@
     {
         "session": "🍞 Pre-Conference Lunch",
         "dateTime": "2020-02-05T20:00:00.000Z",
+        "endDateTime": "2020-02-05T21:00:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F8fa131.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -221,6 +241,7 @@
     {
         "session": "⌨ Pre-Conference: Workshop",
         "dateTime": "2020-02-05T21:00:00.000Z",
+        "endDateTime": "2020-02-05T22:00:00.000Z",
         "room": "BASIC Room",
         "parallel": "Pre-Conference 4",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt=media",
@@ -233,6 +254,7 @@
     {
         "session": "⌨ Pre-Conference: Hackathon",
         "dateTime": "2020-02-05T21:00:00.000Z",
+        "endDateTime": "2020-02-05T22:00:00.000Z",
         "room": "COBOL Room",
         "speaker": "James Doc",
         "parallel": "Pre-Conference 4",
@@ -247,6 +269,7 @@
     {
         "session": "💁‍♂️ Arrival and Registration",
         "dateTime": "2020-02-05T23:00:00.000Z",
+        "endDateTime": "2020-02-05T23:10:00.000Z",
         "room": "Espresso Room",
         "description": "Please register when you arrive.",
         "parallel": "Pre-Conference 4",
@@ -260,6 +283,7 @@
     {
         "session": "☕ Coffee Break",
         "dateTime": "2020-02-05T23:15:00.000Z",
+        "endDateTime": "2020-02-05T23:25:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -270,6 +294,7 @@
     {
         "session": "⌨ Pre-Conference: Workshop",
         "dateTime": "2020-02-05T23:45:00.000Z",
+        "endDateTime": "2020-02-05T23:45:00.000Z",
         "room": "BASIC Room",
         "parallel": "Pre-Conference 5",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt=media",
@@ -282,6 +307,7 @@
     {
         "session": "⌨ Pre-Conference: Hackathon",
         "dateTime": "2020-02-05T23:45:00.000Z",
+        "endDateTime": "2020-02-05T23:45:00.000Z",
         "room": "COBOL Room",
         "speaker": "James Doc",
         "parallel": "Pre-Conference 5",
@@ -296,6 +322,7 @@
     {
         "session": "🍲 Evening Meal",
         "dateTime": "2020-02-06T02:00:00.000Z",
+        "endDateTime": "2020-02-06T02:00:00.000Z",
         "room": "Dining Hall",
         "description": "Suggestion: Sit next to someone you don't know.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
@@ -307,6 +334,7 @@
     {
         "session": "🗨 Official Welcome",
         "dateTime": "2020-02-06T03:45:00.000Z",
+        "endDateTime": "2020-02-06T03:45:00.000Z",
         "room": "AJAX Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa156bc.jpeg?alt=media",
         "category": "Common Sessions",
@@ -317,6 +345,7 @@
     {
         "session": "🗨 Introductions",
         "dateTime": "2020-02-06T04:15:00.000Z",
+        "endDateTime": "2020-02-06T04:15:00.000Z",
         "room": "AJAX Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
         "category": "Common Sessions",
@@ -327,6 +356,7 @@
     {
         "session": "🔑 Introduction of Keynote Speaker",
         "dateTime": "2020-02-06T05:30:00.000Z",
+        "endDateTime": "2020-02-06T05:30:00.000Z",
         "room": "AJAX Room",
         "speaker": "Corey K",
         "description": "Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses.",
@@ -340,6 +370,7 @@
     {
         "session": "🗨 BOF Topic Entry and TFM Introduction",
         "dateTime": "2020-02-06T05:45:00.000Z",
+        "endDateTime": "2020-02-06T05:45:00.000Z",
         "room": "AJAX Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
         "category": "Birds of a Feather (BOF)",
@@ -350,6 +381,7 @@
     {
         "session": "🍕 Social Gathering",
         "dateTime": "2020-02-06T06:00:00.000Z",
+        "endDateTime": "2020-02-06T06:00:00.000Z",
         "room": "Espresso Room",
         "description": "Free time with snacks and drinks provided. Get to know one another, play games, and have fun!",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F987873.jpeg?alt=media",
@@ -361,6 +393,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-06T06:00:00.000Z",
+        "endDateTime": "2020-02-06T06:00:00.000Z",
         "room": "Espresso Room",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt=media",
@@ -372,6 +405,7 @@
     {
         "session": "🥐 Breakfast",
         "dateTime": "2020-02-06T16:00:00.000Z",
+        "endDateTime": "2020-02-06T16:00:00.000Z",
         "room": "Dining Hall",
         "description": "The most important meal of the day (AKA Coffee).",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0bf0cb.jpeg?alt=media",
@@ -383,6 +417,7 @@
     {
         "session": "🎹 Devotions & Worship",
         "dateTime": "2020-02-06T17:00:00.000Z",
+        "endDateTime": "2020-02-06T17:00:00.000Z",
         "room": "AJAX Room",
         "speaker": "Rob Hazel",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt=media",
@@ -395,6 +430,7 @@
     {
         "session": "📢 Announcements & Intro to Prayer Pals",
         "dateTime": "2020-02-06T17:45:00.000Z",
+        "endDateTime": "2020-02-06T17:45:00.000Z",
         "room": "AJAX Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
         "category": "Prayer and Worship",
@@ -405,6 +441,7 @@
     {
         "session": "🙏 Prayer Pals Part 1",
         "dateTime": "2020-02-06T18:00:00.000Z",
+        "endDateTime": "2020-02-06T18:00:00.000Z",
         "room": "AJAX Room",
         "description": "Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt=media",
@@ -416,6 +453,7 @@
     {
         "session": "📢 Notice: BOF Submissions End at Noon",
         "dateTime": "2020-02-06T18:45:00.000Z",
+        "endDateTime": "2020-02-06T18:45:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
         "category": "Birds of a Feather (BOF)",
@@ -426,6 +464,7 @@
     {
         "session": "☕ Coffee Break",
         "dateTime": "2020-02-06T18:30:00.000Z",
+        "endDateTime": "2020-02-06T18:30:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -436,6 +475,7 @@
     {
         "session": "🔑 Keynote Speaker",
         "dateTime": "2020-02-06T18:45:00.000Z",
+        "endDateTime": "2020-02-06T18:45:00.000Z",
         "room": "AJAX Room",
         "speaker": "Corey K",
         "description": "Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses.",
@@ -449,6 +489,7 @@
     {
         "session": "🗨 60-Second Workshop Previews",
         "dateTime": "2020-02-06T19:45:00.000Z",
+        "endDateTime": "2020-02-06T19:45:00.000Z",
         "room": "AJAX Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
         "category": "Common Sessions",
@@ -459,6 +500,7 @@
     {
         "session": "📸 Group Photo",
         "dateTime": "2020-02-06T20:00:00.000Z",
+        "endDateTime": "2020-02-06T20:00:00.000Z",
         "room": "AJAX Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F01541b.jpeg?alt=media",
         "category": "Common Sessions",
@@ -469,6 +511,7 @@
     {
         "session": "🍞 Lunch",
         "dateTime": "2020-02-06T20:00:00.000Z",
+        "endDateTime": "2020-02-06T20:00:00.000Z",
         "room": "Dining Hall",
         "description": "Table discussion question: Which session looks the most interesting?",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F570305.jpeg?alt=media",
@@ -480,6 +523,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-06T20:00:00.000Z",
+        "endDateTime": "2020-02-06T20:00:00.000Z",
         "room": "Espresso Room",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt=media",
@@ -491,6 +535,7 @@
     {
         "session": "👍 1a Biblical Ethics and Morality in IT Decision Making",
         "dateTime": "2020-02-06T21:00:00.000Z",
+        "endDateTime": "2020-02-06T21:00:00.000Z",
         "room": "AJAX Room",
         "speaker": "Y",
         "description": "In the past, have you ever bought pirated software or cheated Microsoft licensing restrictions and usage, while on the field? In your office, are you on top of your software licensing, EULAs, data protection and other requirements relating to your digital data? Have you taken into account the corporate reputation or ethics of your secular IT software, hardware or service provider, before using their offerings?When it comes down to the use of cheap and cheerful IT products, highly convenient solutions, or the unavoidable secular giants of the IT Cloud world, we seem to have distanced ourselves from our Biblical ethics and morality. The unpleasant thought of spending more money, more time or more resources to come up with an alternative solution, dulls the reality that many secular IT corporations, are using practices that are in direct conflict with our Biblical worldview. It's not a secret that Western corporate greed for profit and control is a cancer to our society, leading to scandals in the news when they are exposed, and involving many of our IT providers.In this workshop, we will look at what the Bible and related readings have to say, in order to help us choose an ethical and moral approach to our decision-making process. We will also reflect on the challenges to implementing an uncompromising biblical position when dealing with secular IT providers.",
@@ -506,6 +551,7 @@
     {
         "session": "🔨 1b Introducing Adobe XD",
         "dateTime": "2020-02-06T21:00:00.000Z",
+        "endDateTime": "2020-02-06T21:00:00.000Z",
         "room": "BASIC Room",
         "speaker": "Jeff Gage",
         "description": "Adobe XD is a cross-platform tool for rapidly creating wireframes and interactive prototypes. In May, 2018, Adobe made this product completely free and it is quickly becoming the standard tool for designers and prototype makers around the world.Jeff has been using Adobe XD since he first started using in 2017 at a hackathon in London. He was amazed at how quickly he could create prototype wireframes. This workshop will be a brief overview of its features, including some tips and tricks and even a few best practices.",
@@ -521,6 +567,7 @@
     {
         "session": "🔬 1c Increasing your Endpoint Visibility: An Introduction to Osquery",
         "dateTime": "2020-02-06T21:00:00.000Z",
+        "endDateTime": "2020-02-06T21:00:00.000Z",
         "room": "COBOL Room",
         "speaker": "Dirk K.",
         "description": "Osquery (osquery.io) is an open source, cross-platform (MacOS/Windows/Linux) app that gives you a high level of visibility into your endpoints. In this session, we will walk through the basics of using osquery and how to practically use it to find malicious activity or software on your systems. This will be a hands-on workshop, so bring your Windows 10, MacOS or Linux laptop. Save time by installing osquery before we start: https://osquery.io/downloads.",
@@ -536,6 +583,7 @@
     {
         "session": "🚶 Transition",
         "dateTime": "2020-02-06T22:00:00.000Z",
+        "endDateTime": "2020-02-06T22:00:00.000Z",
         "room": "Espresso Room",
         "description": "Time to move to and set up for the next workshop. No coffee served.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F59b9e9.jpeg?alt=media",
@@ -547,6 +595,7 @@
     {
         "session": "🔭 2a GDPR Implementation Tips",
         "dateTime": "2020-02-06T22:15:00.000Z",
+        "endDateTime": "2020-02-06T22:15:00.000Z",
         "room": "AJAX Room",
         "speaker": "Melanie Rissler",
         "description": "Are you having trouble implementing a GDPR policy in your charity? Do you need help creating an action plan to become 100% compliant? If you have answered 'yes' to these questions, please consider attending this workshop. Melanie is a member of a GDPR working group for her charity in the UK and has been involved in the GDPR training of the charity volunteers. Melanie will share from the point of view of implementation of GDPR and will provide templates, examples of policies, action plans and other related documents to aid in the analysis and implementation of GDPR.",
@@ -562,6 +611,7 @@
     {
         "session": "🌍 2b Hands-On: Building a Mini Interactive Web App with React",
         "dateTime": "2020-02-06T22:15:00.000Z",
+        "endDateTime": "2020-02-06T22:15:00.000Z",
         "room": "BASIC Room",
         "speaker": "Lars Gunnarsson",
         "description": "We will experiment with some of the core features of React JS, but previous programming experience will not be necessary. React is the fastest growing framework and nowadays the most asked for skill for web app developers. Although, in fact, it is not a framework, but rather a library of reusable components. All components, small or big, are reusable, even across different projects. The functional JavaScript model and the one-way data flow improves the readability of all components and makes it easier to design re-usability.",
@@ -577,6 +627,7 @@
     {
         "session": "☕ Coffee Break",
         "dateTime": "2020-02-06T23:15:00.000Z",
+        "endDateTime": "2020-02-06T23:15:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -587,6 +638,7 @@
     {
         "session": "🔨 3a Digital Threat Profile",
         "dateTime": "2020-02-07T00:00:00.000Z",
+        "endDateTime": "2020-02-07T00:00:00.000Z",
         "room": "AJAX Room",
         "speaker": "JB",
         "description": "There is no one-size-fits-all when it comes to cybersecurity. Learn how to help your field staff assess their digital security needs based on their ministry context and apply practical risk reduction steps. This will include a walkthrough of a couple new tools, developed specifically for our community to help assess the security of our devices.",
@@ -602,6 +654,7 @@
     {
         "session": "🔭 3b Tactical vs Strategic",
         "dateTime": "2020-02-07T00:00:00.000Z",
+        "endDateTime": "2020-02-07T00:00:00.000Z",
         "room": "BASIC Room",
         "speaker": "Courtney R",
         "description": "As a leader, we have a lot of things wanting our attention. Being able to prioritize our time appropriately is a key skill. Understanding what action items are tactical vs strategic (and even what is visionary) play a role in not only making sure we're doing what we should be doing but also helps those we lead in focusing on what they are to be doing.",
@@ -617,6 +670,7 @@
     {
         "session": "🌍 3c Programmatic Design Patterns",
         "dateTime": "2020-02-07T00:00:00.000Z",
+        "endDateTime": "2020-02-07T00:00:00.000Z",
         "room": "COBOL Room",
         "speaker": "Victor Norman",
         "description": "Design Patterns are well-defined and well-studied relationships between classes, interfaces, and objects. They have been proven to help developers design and implement more robust software -- software that adapts gracefully to changing requirements and environments. In this talk, I will introduce some of the most common and useful design patterns, with examples. I will also speak about the underlying Design Principles that motivate the creation and use of patterns.",
@@ -632,6 +686,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-07T01:00:00.000Z",
+        "endDateTime": "2020-02-07T01:00:00.000Z",
         "room": "Dining Hall",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt=media",
@@ -643,6 +698,7 @@
     {
         "session": "💻 Lab Time",
         "dateTime": "2020-02-07T01:00:00.000Z",
+        "endDateTime": "2020-02-07T01:00:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -653,6 +709,7 @@
     {
         "session": "🗨 BOF Voting Ends at 17:30.",
         "dateTime": "2020-02-07T01:00:00.000Z",
+        "endDateTime": "2020-02-07T01:00:00.000Z",
         "room": "Dining Hall",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
         "category": "Birds of a Feather (BOF)",
@@ -663,6 +720,7 @@
     {
         "session": "🍲 Evening Meal",
         "dateTime": "2020-02-07T01:30:00.000Z",
+        "endDateTime": "2020-02-07T01:30:00.000Z",
         "room": "Dining Hall",
         "description": "Table discussion question: What is your favorite restaurant and what would you recommend there?",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
@@ -674,6 +732,7 @@
     {
         "session": "🛠 ICCM TFM Contest",
         "dateTime": "2020-02-07T03:00:00.000Z",
+        "endDateTime": "2020-02-07T03:00:00.000Z",
         "room": "AJAX Room",
         "description": "TFM voting ends at 12:45 on Thursday.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
@@ -685,6 +744,7 @@
     {
         "session": "📢 Explain BOF's ('Birds of a Feather' Sessions)",
         "dateTime": "2020-02-07T04:00:00.000Z",
+        "endDateTime": "2020-02-07T04:00:00.000Z",
         "room": "AJAX Room",
         "description": "There are a lot of technical and management subjects that need attention, but not all of these can be planned as a workshop. Birds Of a Feather, or BOF sessions, bring people with similar interests together to meet and discuss these topics. The topics are agreed by the attendees on the first day of the conference and then the session times and locations are publicised.English Idiom: Birds of a feather flock together.Explanation: Just as bird species flock together, people with similar interests tend to congregate with one another.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
@@ -696,6 +756,7 @@
     {
         "session": "🐧 BOF 1a: Subject To Vote",
         "dateTime": "2020-02-07T04:10:00.000Z",
+        "endDateTime": "2020-02-07T04:10:00.000Z",
         "room": "AJAX Room",
         "parallel": "BOFs 1",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt=media",
@@ -708,6 +769,7 @@
     {
         "session": "🐧 BOF 1b: Subject To Vote",
         "dateTime": "2020-02-07T04:10:00.000Z",
+        "endDateTime": "2020-02-07T04:10:00.000Z",
         "room": "BASIC Room",
         "parallel": "BOFs 1",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt=media",
@@ -720,6 +782,7 @@
     {
         "session": "🐧 BOF 1c: Subject To Vote",
         "dateTime": "2020-02-07T04:10:00.000Z",
+        "endDateTime": "2020-02-07T04:10:00.000Z",
         "room": "COBOL Room",
         "parallel": "BOFs 1",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt=media",
@@ -732,6 +795,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-07T04:10:00.000Z",
+        "endDateTime": "2020-02-07T04:10:00.000Z",
         "room": "Dining Hall",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "parallel": "BOFs 1",
@@ -745,6 +809,7 @@
     {
         "session": "💻 Lab Time",
         "dateTime": "2020-02-07T04:10:00.000Z",
+        "endDateTime": "2020-02-07T04:10:00.000Z",
         "room": "Espresso Room",
         "parallel": "BOFs 1",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt=media",
@@ -757,6 +822,7 @@
     {
         "session": "🐧 BOF 2a: Subject To Vote",
         "dateTime": "2020-02-07T05:00:00.000Z",
+        "endDateTime": "2020-02-07T05:00:00.000Z",
         "room": "AJAX Room",
         "parallel": "BOFs 2",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt=media",
@@ -769,6 +835,7 @@
     {
         "session": "🐧 BOF 2b: Subject To Vote",
         "dateTime": "2020-02-07T05:00:00.000Z",
+        "endDateTime": "2020-02-07T05:00:00.000Z",
         "room": "BASIC Room",
         "parallel": "BOFs 2",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt=media",
@@ -781,6 +848,7 @@
     {
         "session": "🐧 BOF 2c: Subject To Vote",
         "dateTime": "2020-02-07T05:00:00.000Z",
+        "endDateTime": "2020-02-07T05:00:00.000Z",
         "room": "COBOL Room",
         "parallel": "BOFs 2",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt=media",
@@ -793,6 +861,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-07T05:00:00.000Z",
+        "endDateTime": "2020-02-07T05:00:00.000Z",
         "room": "Dining Hall",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "parallel": "BOFs 2",
@@ -806,6 +875,7 @@
     {
         "session": "💻 Lab Time",
         "dateTime": "2020-02-07T05:00:00.000Z",
+        "endDateTime": "2020-02-07T05:00:00.000Z",
         "room": "Espresso Room",
         "parallel": "BOFs 2",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt=media",
@@ -818,6 +888,7 @@
     {
         "session": "🌭 Social Gathering",
         "dateTime": "2020-02-07T06:00:00.000Z",
+        "endDateTime": "2020-02-07T06:00:00.000Z",
         "room": "Espresso Room",
         "description": "Free time with snacks and drinks provided. Get to know one another, play games, and have fun!",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F1a8b3f.jpeg?alt=media",
@@ -829,6 +900,7 @@
     {
         "session": "🥐 Breakfast",
         "dateTime": "2020-02-07T16:00:00.000Z",
+        "endDateTime": "2020-02-07T16:00:00.000Z",
         "room": "Dining Hall",
         "description": "Table discussion question: What is your idea of a \"balanced breakfast\"?",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa864a2.jpeg?alt=media",
@@ -840,6 +912,7 @@
     {
         "session": "🎹 Devotions & Worship",
         "dateTime": "2020-02-07T17:00:00.000Z",
+        "endDateTime": "2020-02-07T17:00:00.000Z",
         "room": "AJAX Room",
         "speaker": "Rob Hazel",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt=media",
@@ -852,6 +925,7 @@
     {
         "session": "📢 Announcements & Intro to Prayer Pals",
         "dateTime": "2020-02-07T17:45:00.000Z",
+        "endDateTime": "2020-02-07T17:45:00.000Z",
         "room": "AJAX Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
         "category": "Common Sessions",
@@ -862,6 +936,7 @@
     {
         "session": "🙏 Prayer Pals Part 2",
         "dateTime": "2020-02-07T18:00:00.000Z",
+        "endDateTime": "2020-02-07T18:00:00.000Z",
         "room": "AJAX Room",
         "description": "Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt=media",
@@ -873,6 +948,7 @@
     {
         "session": "☕ Coffee Break",
         "dateTime": "2020-02-07T18:30:00.000Z",
+        "endDateTime": "2020-02-07T18:30:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -883,6 +959,7 @@
     {
         "session": "🔑 Keynote Speaker",
         "dateTime": "2020-02-07T18:45:00.000Z",
+        "endDateTime": "2020-02-07T18:45:00.000Z",
         "room": "AJAX Room",
         "speaker": "Corey K",
         "description": "Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses.",
@@ -896,6 +973,7 @@
     {
         "session": "🗨 60-Second Workshop Previews",
         "dateTime": "2020-02-07T19:45:00.000Z",
+        "endDateTime": "2020-02-07T19:45:00.000Z",
         "room": "AJAX Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
         "category": "Common Sessions",
@@ -906,6 +984,7 @@
     {
         "session": "🍞 Lunch",
         "dateTime": "2020-02-07T20:00:00.000Z",
+        "endDateTime": "2020-02-07T20:00:00.000Z",
         "room": "Dining Hall",
         "description": "Table discussion question: What has been the most interesting so far?",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F8fa131.jpeg?alt=media",
@@ -917,6 +996,7 @@
     {
         "session": "🔭 4a Cybersecurity & Nationals",
         "dateTime": "2020-02-07T21:00:00.000Z",
+        "endDateTime": "2020-02-07T21:00:00.000Z",
         "room": "AJAX Room",
         "speaker": "Dirk K.",
         "description": "Working with nationals out on the field and within their countries is a requirement for most ministries. As expats, we usually do a good job of taking care of our own ministry’s internal digital security. But what about when we work with nationals? Are there differences? Do we need to have them at the same standard as our own ministry’s levels? This workshop will look into what considerations and protocols we should be looking at when working with nationals.",
@@ -932,6 +1012,7 @@
     {
         "session": "👍 4b What Christian Virtues Does Your Code Exhibit?",
         "dateTime": "2020-02-07T21:00:00.000Z",
+        "endDateTime": "2020-02-07T21:00:00.000Z",
         "room": "BASIC Room",
         "speaker": "Victor Norman",
         "description": "In this talk, we will investigate the relationship between virtues and the act (and art) of computer programming, and how computer code can exhibit these virtues. the virtues we will investigate are hospitality, humility, and integrity (and creativity, stewardship, and diligence, as time permits).",
@@ -947,6 +1028,7 @@
     {
         "session": "🔨 4c Using OpenPetra for Your Small Charity",
         "dateTime": "2020-02-07T21:00:00.000Z",
+        "endDateTime": "2020-02-07T21:00:00.000Z",
         "room": "COBOL Room",
         "speaker": "Timotheus",
         "description": "OpenPetra is an administration tool for charities, and the workshop will show how it helps you to manage your contacts' addresses, lists for newsletters, and the donations.In the past year, OpenPetra has been partly rewritten to now run in the web browser and can be used from everywhere. It is open source and can be hosted by yourself, or you can use the service at https://www.openpetra.com.This workshop shows how you can manage your addresses, and how you can import your bank statements and match regular and new donations to the donors so that you can print an annual receipt for the donors which they can give to their tax office.We currently don't target big organisations, but the small charity or church bookkeeper that manages the addresses and finances in his/her spare time.",
@@ -962,6 +1044,7 @@
     {
         "session": "🚶 Transition",
         "dateTime": "2020-02-07T22:00:00.000Z",
+        "endDateTime": "2020-02-07T22:00:00.000Z",
         "room": "Espresso Room",
         "description": "Time to move to and set up for the next workshop. No coffee served.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F59b9e9.jpeg?alt=media",
@@ -973,6 +1056,7 @@
     {
         "session": "🔬 5a Simple & Affordable Security Awareness",
         "dateTime": "2020-02-07T22:15:00.000Z",
+        "endDateTime": "2020-02-07T22:15:00.000Z",
         "room": "AJAX Room",
         "speaker": "Hilton",
         "description": "Basic visibility of network and security events can be time-consuming and expensive to deploy. This session will demonstrate how to quickly and easily deploy an affordable & open-source embedded security system to store events for long-term storage, hunting, and analysis.",
@@ -988,6 +1072,7 @@
     {
         "session": "🌍 5b Developing extensions for MS Dynamics NAV 2018",
         "dateTime": "2020-02-07T22:15:00.000Z",
+        "endDateTime": "2020-02-07T22:15:00.000Z",
         "room": "BASIC Room",
         "speaker": "Timotheus and Andreas",
         "description": "Your organisation is already using an older version of Dynamics NAV, and you want to know where Dynamics NAV is going? Or are you considering Dynamics NAV as a future alternative to your existing ERP System?We will present the possibilities you have as developer with coding in AL and developing extensions for Dynamics NAV. We will show the development with Visual Code, and managing your code in Git, show situations where you still have to make changes in C/AL, how to manage your own data model for your extensions, and how to develop assistants. We can tell you which issues you must watch out for from our own experience. You can try our examples at home on a free Docker image of Dynamics NAV.",
@@ -1003,6 +1088,7 @@
     {
         "session": "👍 5c Erasing Worry from Our Lives",
         "dateTime": "2020-02-07T22:15:00.000Z",
+        "endDateTime": "2020-02-07T22:15:00.000Z",
         "room": "COBOL Room",
         "speaker": "Dana Cherry",
         "description": "We all worry from time to time. We may worry about:financesa jobthe health of parents or childrenfailing to make much impact for God in the role that He has given us on earthour relationship with God, as we pray and God seems unwilling, or unable, to answer and provideIn this workshop, we will explore Christ's words in Matthew 6:34 as the means to eliminate worry from our lives. In the midst of this workshop, we will take time to commit our worries to the Lord, laying our requests before our Father in heaven.",
@@ -1018,6 +1104,7 @@
     {
         "session": "☕ Coffee Break",
         "dateTime": "2020-02-07T23:15:00.000Z",
+        "endDateTime": "2020-02-07T23:15:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -1028,6 +1115,7 @@
     {
         "session": "🔭 6b Leading 2nd Career Workers - Panel Discussion",
         "dateTime": "2020-02-08T00:00:00.000Z",
+        "endDateTime": "2020-02-08T00:00:00.000Z",
         "room": "BASIC Room",
         "speaker": "Courtney R",
         "description": "Leading people who started off their careers in other areas of the IT industry but then started working in full-time ministries comes with its own set of challenges. Come to this panel discussion where you'll hear from people who lead as well as some who are these \"2nd Career\" workers.",
@@ -1043,6 +1131,7 @@
     {
         "session": "🔨 6c Using Salesforce in Missions - Panel Discussion",
         "dateTime": "2020-02-08T00:00:00.000Z",
+        "endDateTime": "2020-02-08T00:00:00.000Z",
         "room": "COBOL Room",
         "speaker": "Timotheus",
         "description": "You have heard about Salesforce and you are wondering if that is something useful for your organisation? We have people with real experience of using Salesforce in Missions, and we will discuss the benefits and risks of using Salesforce.We will talk about what Salesforce is really good at, and how not to use Salesforce. How to extend it yourself, and how to integrate it with your other software systems.",
@@ -1058,6 +1147,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-08T00:00:00.000Z",
+        "endDateTime": "2020-02-08T00:00:00.000Z",
         "room": "Dining Hall",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "parallel": "Workshops 6",
@@ -1071,6 +1161,7 @@
     {
         "session": "💻 Lab Time",
         "dateTime": "2020-02-08T00:00:00.000Z",
+        "endDateTime": "2020-02-08T00:00:00.000Z",
         "room": "Espresso Room",
         "parallel": "Workshops 6",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt=media",
@@ -1083,6 +1174,7 @@
     {
         "session": "🥛 Break",
         "dateTime": "2020-02-08T01:00:00.000Z",
+        "endDateTime": "2020-02-08T01:00:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fbaac57.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -1093,6 +1185,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-08T01:00:00.000Z",
+        "endDateTime": "2020-02-08T01:00:00.000Z",
         "room": "Dining Hall",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt=media",
@@ -1104,6 +1197,7 @@
     {
         "session": "💻 Lab Time",
         "dateTime": "2020-02-08T01:00:00.000Z",
+        "endDateTime": "2020-02-08T01:00:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -1114,6 +1208,7 @@
     {
         "session": "🍲 Evening Meal",
         "dateTime": "2020-02-08T02:00:00.000Z",
+        "endDateTime": "2020-02-08T02:00:00.000Z",
         "room": "Dining Hall",
         "description": "Table discussion question: What was your first computer?",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt=media",
@@ -1125,6 +1220,7 @@
     {
         "session": "🐧 BOF 3a: Subject To Vote",
         "dateTime": "2020-02-08T03:00:00.000Z",
+        "endDateTime": "2020-02-08T03:00:00.000Z",
         "room": "Espresso Room",
         "description": "In espresso Room to facilitate the Fermate setup.",
         "parallel": "BOFs 3",
@@ -1138,6 +1234,7 @@
     {
         "session": "🐧 BOF 3b: Subject To Vote",
         "dateTime": "2020-02-08T03:00:00.000Z",
+        "endDateTime": "2020-02-08T03:00:00.000Z",
         "room": "BASIC Room",
         "parallel": "BOFs 3",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt=media",
@@ -1150,6 +1247,7 @@
     {
         "session": "🐧 BOF 3c: Subject To Vote",
         "dateTime": "2020-02-08T03:00:00.000Z",
+        "endDateTime": "2020-02-08T03:00:00.000Z",
         "room": "COBOL Room",
         "parallel": "BOFs 3",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt=media",
@@ -1162,6 +1260,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-08T03:00:00.000Z",
+        "endDateTime": "2020-02-08T03:00:00.000Z",
         "room": "Dining Hall",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "parallel": "BOFs 3",
@@ -1175,6 +1274,7 @@
     {
         "session": "🎤 Evening Entertainment",
         "dateTime": "2020-02-08T04:30:00.000Z",
+        "endDateTime": "2020-02-08T04:30:00.000Z",
         "room": "AJAX Room",
         "speaker": "Fermate",
         "description": "The fermata is a symbol from the music theory. Just as it indicates to the musician to pause, to quit the previous measure, and to hold the note as long as the conductor instructs, fermate wants to stimulate with songs to pause and meditate. Such time-outs enrich everyday life and set valuable accents in life.",
@@ -1188,6 +1288,7 @@
     {
         "session": "🍦 Social Gathering",
         "dateTime": "2020-02-08T06:00:00.000Z",
+        "endDateTime": "2020-02-08T06:00:00.000Z",
         "room": "Espresso Room",
         "description": "Free time with snacks and drinks provided. Get to know one another, play games, and have fun!",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F987873.jpeg?alt=media",
@@ -1199,6 +1300,7 @@
     {
         "session": "🥐 Breakfast",
         "dateTime": "2020-02-08T16:00:00.000Z",
+        "endDateTime": "2020-02-08T16:00:00.000Z",
         "room": "Dining Hall",
         "description": "Table discussion question: What are you most looking forward too at home?",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F590a50.jpeg?alt=media",
@@ -1210,6 +1312,7 @@
     {
         "session": "🎹 Devotions & Worship",
         "dateTime": "2020-02-08T16:45:00.000Z",
+        "endDateTime": "2020-02-08T16:45:00.000Z",
         "room": "AJAX Room",
         "speaker": "Rob Hazel",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt=media",
@@ -1222,6 +1325,7 @@
     {
         "session": "🔑 Keynote Speaker",
         "dateTime": "2020-02-08T17:15:00.000Z",
+        "endDateTime": "2020-02-08T17:15:00.000Z",
         "room": "AJAX Room",
         "speaker": "Corey K",
         "description": "Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses.",
@@ -1235,6 +1339,7 @@
     {
         "session": "🙏 Prayer Pals Part 3",
         "dateTime": "2020-02-08T17:45:00.000Z",
+        "endDateTime": "2020-02-08T17:45:00.000Z",
         "room": "AJAX Room",
         "description": "Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt=media",
@@ -1246,6 +1351,7 @@
     {
         "session": "☕ Coffee Break",
         "dateTime": "2020-02-08T18:00:00.000Z",
+        "endDateTime": "2020-02-08T18:00:00.000Z",
         "room": "Espresso Room",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt=media",
         "category": "Refreshment and 1-to-1",
@@ -1256,6 +1362,7 @@
     {
         "session": "🔥 What's Hot, What's Not",
         "dateTime": "2020-02-08T18:30:00.000Z",
+        "endDateTime": "2020-02-08T18:30:00.000Z",
         "room": "AJAX Room",
         "description": "What’s Hot, What’s Not is a humorous and interactive presentation of the current state of technology and how it interacts with your organizations. We will review the current Gartner Hype Cycle, discuss technology in the news, and share what technologies we are currently using. Bring your smart phones, tablets, or laptops so you can join in on the interactive poll.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
@@ -1267,6 +1374,7 @@
     {
         "session": "🗨 Final Matters, TFM Contest Awards, and Testimonies about ICCM",
         "dateTime": "2020-02-08T19:30:00.000Z",
+        "endDateTime": "2020-02-08T19:30:00.000Z",
         "room": "AJAX Room",
         "description": "TFM voting ends at 12:45 on Thursday.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt=media",
@@ -1278,6 +1386,7 @@
     {
         "session": "🎹 Worship and Close of Conference",
         "dateTime": "2020-02-08T20:00:00.000Z",
+        "endDateTime": "2020-02-08T20:00:00.000Z",
         "room": "AJAX Room",
         "speaker": "Rob Hazel",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt=media",
@@ -1290,6 +1399,7 @@
     {
         "session": "🍞 Lunch",
         "dateTime": "2020-02-08T20:30:00.000Z",
+        "endDateTime": "2020-02-08T20:30:00.000Z",
         "room": "Dining Hall",
         "description": "Say good bye to friends new and old!",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F570305.jpeg?alt=media",
@@ -1301,6 +1411,7 @@
     {
         "session": "👥 One-2-One",
         "dateTime": "2020-02-08T20:30:00.000Z",
+        "endDateTime": "2020-02-08T20:30:00.000Z",
         "room": "Espresso Room",
         "description": "An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session.",
         "photo": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt=media",
