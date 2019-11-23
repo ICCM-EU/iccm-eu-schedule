@@ -1,5 +1,5 @@
-import { CalendarColorsInterface } from './calendarColorsInterface';
+import { EventColor } from 'calendar-utils';
 
 export interface CalendarColorsDictionary {
-  [index: string]: CalendarColorsInterface;
+  [index: string]: EventColor;
 }

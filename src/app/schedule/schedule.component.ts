@@ -4,6 +4,7 @@ import { colors } from './colors';
 import { addHours, startOfDay } from 'date-fns';
 import { CalendarUsersDictionary } from './calendarUsersDictionary';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
+import { EventRoomInterface } from '../eventRoomInterface';
 import { EventInterface } from '../eventInterface';
 
 @Component({
@@ -17,14 +18,21 @@ export class ScheduleComponent implements OnInit {
   viewDate = new Date();
   objName: string;
   events: CalendarEvent[];
+  eventRooms: EventRoomInterface[];
+  loadedEvents: EventInterface[];
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
 
+    this.sds.byRoomUpdated.subscribe(
+      (newData: EventRoomInterface[]) => {
+        this.eventRooms = newData;
+      }
+    );
+
     this.sds.eventsUpdated.subscribe(
       (newData: EventInterface[]) => {
-        let loadedEvents: EventInterface[];
-        loadedEvents = newData;
+        this.loadedEvents = newData;
         // TODO: Get list of rooms and their properties
         this.users = {
           'John Smith': {
@@ -58,6 +66,10 @@ export class ScheduleComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.sds.byRoomUpdated.emit(
+      // use the local storage if there until HTTP call retrieves something
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]')
+    );
     this.sds.eventsUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
       JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
