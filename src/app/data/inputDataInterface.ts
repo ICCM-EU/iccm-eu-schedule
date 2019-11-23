@@ -1,7 +1,7 @@
 export interface InputDataInterface {
   session: string;
-  dateTime: Date;
-  endDateTime: Date;
+  dateTime: string;
+  endDateTime: string;
   room?: string;
   photo?: string;
   category?: string;

@@ -16,6 +16,7 @@ export class ScheduleComponent implements OnInit {
   objName: string;
 
   users: CalendarUsersDictionary;
+  roomCount: number;
   events: CalendarEvent[];
   viewDate: Date;
 
@@ -32,6 +33,7 @@ export class ScheduleComponent implements OnInit {
           };
         }
         this.users = tempArray;
+        this.roomCount = Object.keys(this.users).length;
       });
 
     // Set Start Date

@@ -118,8 +118,8 @@ export class SpreadsheetDS {
     for (const i of dataReceived) {
       tempArray.push({
         title: i.session,
-        start: i.dateTime,
-        end: i.endDateTime,
+        start: new Date(i.dateTime),
+        end: new Date(i.endDateTime),
         // color: ,
         meta: {
           user: i.room,
@@ -150,8 +150,8 @@ export class SpreadsheetDS {
           // Title: i.gsx$Session.$t,
           // Schedule: i.gsx$DateTime.$t,
           Title: i.session,
-          Schedule: i.dateTime,
-          End: i.endDateTime,
+          Schedule: new Date(i.dateTime),
+          End: new Date(i.endDateTime),
           Time: i.time,
           Room: i.room,
           Speaker: i.speakerspeakersname,
