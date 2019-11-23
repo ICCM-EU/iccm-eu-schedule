@@ -1,8 +1,8 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { sprintf } from 'sprintf-js';
 
-import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { isUndefined, isBoolean } from 'util';
+import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { EventInterface } from '../eventInterface';
 
 @Component({
