@@ -7,7 +7,7 @@ import { EventInterface } from '../eventInterface';
 import { EventRoomInterface } from '../eventRoomInterface';
 import { CalendarEvent } from 'angular-calendar';
 import { InputDataInterface } from './inputDataInterface';
-import { isDefined } from '@angular/compiler/src/util';
+import { isDefined } from '@angular/util';
 
 @Injectable()
 export class SpreadsheetDS {
