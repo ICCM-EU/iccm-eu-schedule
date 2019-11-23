@@ -1,12 +1,11 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { colors } from './colors';
-import { addHours, startOfDay } from 'date-fns';
+import { startOfDay } from 'date-fns';
 import { CalendarUsersDictionary } from './calendarUsersDictionary';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { EventRoomInterface } from '../eventRoomInterface';
 import { EventInterface } from '../eventInterface';
-import { isDefined } from '@angular/util';
 
 @Component({
   selector: 'app-schedule-component',
@@ -38,9 +37,10 @@ export class ScheduleComponent implements OnInit {
     // Set Start Date
     this.sds.eventsUpdated.subscribe(
       (newData: EventInterface[]) => {
-        if (isDefined(this.sds.nextEvent)) {
+        if (undefined !== this.sds.nextEvent) {
           this.viewDate = startOfDay(new Date(this.sds.nextEvent.Schedule));
         } else {
+          // Fallback to today
           this.viewDate = startOfDay(new Date());
         }
 

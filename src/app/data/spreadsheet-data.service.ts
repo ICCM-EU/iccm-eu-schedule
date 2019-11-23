@@ -7,7 +7,6 @@ import { EventInterface } from '../eventInterface';
 import { EventRoomInterface } from '../eventRoomInterface';
 import { CalendarEvent } from 'angular-calendar';
 import { InputDataInterface } from './inputDataInterface';
-import { isDefined } from '@angular/util';
 
 @Injectable()
 export class SpreadsheetDS {
@@ -82,7 +81,7 @@ export class SpreadsheetDS {
           // Check if the current event is in the future
           if (currentSchedule >= now) {
             // Check if the event is nearer than the current or replaces an undefined value.
-            if (isDefined(this.nextEvent)) {
+            if (undefined !== this.nextEvent) {
               const nextSchedule = new Date(this.nextEvent.Schedule);
               if (currentSchedule < nextSchedule) {
                 this.nextEvent = currentEvent;
@@ -91,7 +90,7 @@ export class SpreadsheetDS {
               this.nextEvent = currentEvent;
             }
           }
-          if (roomInArray === undefined) {
+          if (undefined === roomInArray) {
             const newRoom: EventRoomInterface = {
               name: currentRoomName,
               events: [
@@ -137,7 +136,9 @@ export class SpreadsheetDS {
 
     for (const i of dataReceived) {
       // Check if mandatory items are filled.
-      if (isDefined(i.session) && isDefined(i.dateTime) && isDefined(i.endDateTime)) {
+      if (undefined !== i.session &&
+        undefined !== i.dateTime &&
+        undefined !== i.endDateTime) {
         const cssClassRoom: string = 'room-' + i.room.toLowerCase().replace(/[^a-z0-9-]/g, '-');
         const schedule = new Date(i.dateTime);
         let upcoming = true;
