@@ -2,7 +2,7 @@ import { EventColor } from 'calendar-utils';
 
 interface UsersInterface {
   name: string;
-  colors: EventColor;
+  colors?: EventColor;
 }
 
 export interface CalendarUsersDictionary {

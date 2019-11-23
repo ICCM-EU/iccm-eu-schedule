@@ -136,26 +136,29 @@ export class SpreadsheetDS {
     const now = new Date;
 
     for (const i of dataReceived) {
-      const cssClassRoom: string = 'room-' + i.room.toLowerCase().replace(/[^a-z0-9-]/g, '-');
-      const schedule = new Date(i.dateTime);
-      let upcoming = true;
-      if (schedule <= now) {
-        upcoming = false;
+      // Check if mandatory items are filled.
+      if (isDefined(i.session) && isDefined(i.dateTime) && isDefined(i.endDateTime)) {
+        const cssClassRoom: string = 'room-' + i.room.toLowerCase().replace(/[^a-z0-9-]/g, '-');
+        const schedule = new Date(i.dateTime);
+        let upcoming = true;
+        if (schedule <= now) {
+          upcoming = false;
+        }
+        tempArray.push({
+          // TODO: Roll back for google sheet
+          // Title: i.gsx$Session.$t,
+          // Schedule: i.gsx$DateTime.$t,
+          Title: i.session,
+          Schedule: i.dateTime,
+          End: i.endDateTime,
+          Time: i.time,
+          Room: i.room,
+          Speaker: i.speakerspeakersname,
+          Upcoming: upcoming,
+          cssClassRoom: cssClassRoom,
+          Description: i.description,
+        });
       }
-      tempArray.push({
-        // TODO: Roll back for google sheet
-        // Title: i.gsx$Session.$t,
-        // Schedule: i.gsx$DateTime.$t,
-        Title: i.session,
-        Schedule: i.dateTime,
-        End: i.endDateTime,
-        Time: i.time,
-        Room: i.room,
-        Speaker: i.speakerspeakersname,
-        Upcoming: upcoming,
-        cssClassRoom: cssClassRoom,
-        Description: i.description,
-      });
     }
     return tempArray;
   }
