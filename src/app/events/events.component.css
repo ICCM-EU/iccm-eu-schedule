@@ -121,40 +121,7 @@
   color: rgb(120, 120, 120);
   font-style: italic;
 }
-
-.room-ajax-room {
+.room {
   border-left-width: 5px;
-  border-left-color: rgb(0, 255, 0);
   border-left-style: solid;
-  background: rgba(0, 255, 0, 0.1);
 }
-
-.room-basic-room {
-  border-left-width: 5px;
-  border-left-color: rgb(255, 255, 0);
-  border-left-style: solid;
-  background: rgba(255, 255, 0, 0.1);
-}
-
-.room-cobol-room {
-  border-left-width: 5px;
-  border-left-color: rgb(255, 0, 0);
-  border-left-style: solid;
-  background-color: rgba(255, 0, 0, 0.1);
-}
-
-.room-delphi-room {
-  border-left-width: 5px;
-  border-left-color: rgb(200, 0, 255);
-  border-left-style: solid;
-  background-color: rgba(200, 0, 255, 0.1);
-}
-
-.room-dining-hall,
-.room-espresso-room {
-  border-left-width: 5px;
-  border-left-color: rgb(205, 205, 205);
-  border-left-style: solid;
-  background: rgba(255, 255, 255, 0.1);
-}
-

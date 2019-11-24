@@ -3,7 +3,7 @@ import { sprintf } from 'sprintf-js';
 
 import { isUndefined, isBoolean } from 'util';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
-import { EventInterface } from '../eventInterface';
+import { EventInterface } from '../data/eventInterface';
 
 @Component({
   selector: 'app-events',

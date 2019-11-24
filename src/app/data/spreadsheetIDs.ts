@@ -3,6 +3,7 @@ class ObjectClass {
   tabID: string;
   cache: string;
   cacheByRoom: string;
+  cacheForCalEvents: string;
   labelName: string;
 }
 
@@ -24,6 +25,7 @@ export class SpreadsheetIDs {
       tabID: '',
       cache: 'eventsCache',
       cacheByRoom: 'eventsByRoomCache',
+      cacheForCalEvents: 'eventsForCalCache',
       labelName: 'Event'
     },
   ];
@@ -42,6 +44,9 @@ export class SpreadsheetIDs {
   }
   getCacheByRoomName(whichTab: string): string {
     return this.dataObjects.find(myObj => myObj.objName === whichTab).cacheByRoom;
+  }
+  getCacheForCalEvents(whichTab: string): string {
+    return this.dataObjects.find(myObj => myObj.objName === whichTab).cacheForCalEvents;
   }
   getLabelName(whichTab: string): string {
     return this.dataObjects.find(myObj => myObj.objName === whichTab).labelName;

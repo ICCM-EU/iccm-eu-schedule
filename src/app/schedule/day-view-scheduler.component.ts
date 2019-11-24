@@ -2,7 +2,7 @@ import { Component, EventEmitter, Injectable, Output } from '@angular/core';
 import { CalendarUtils, CalendarWeekViewComponent } from 'angular-calendar';
 import { WeekView, GetWeekViewArgs } from 'calendar-utils';
 
-// TODO: Calculate it from number of user columns
+// Calculate it from number of user columns
 const EVENT_WIDTH = (150 > (window.innerWidth - 70) / 5) ? 150 : ((window.innerWidth - 70) / 5);
 
 interface DayViewScheduler extends WeekView {

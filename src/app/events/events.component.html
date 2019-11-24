@@ -5,27 +5,28 @@
       <button mat-raised-button (click)="refresh()">Refresh Events</button>
       <button mat-raised-button (click)="toggleUpcoming()">{{ toggleName }}</button>
       <button mat-raised-button (click)="toggleDescriptions()">{{ toggleDescriptionsName }}</button>
-      <a routerLink="/countdown" class="btn btn-primary" mat-raised-button >Countdown</a>
-      <a routerLink="/by-room" class="btn btn-primary" mat-raised-button >By Room</a>
-      <a routerLink="/schedule" class="btn btn-primary" mat-raised-button >Schedule</a>
+      <a routerLink="/countdown" class="btn btn-primary" mat-raised-button>Countdown</a>
+      <a routerLink="/by-room" class="btn btn-primary" mat-raised-button>By Room</a>
+      <a routerLink="/schedule" class="btn btn-primary" mat-raised-button>Schedule</a>
     </div>
     <div class="toprow-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
   </div>
 
-
   <div class="events-list">
     <ng-container *ngFor="let record of events">
-      <div *ngIf="!onlyUpcoming || record.Upcoming" class="event {{record.cssClassRoom}}">
+      <div *ngIf="!onlyUpcoming || record.Upcoming" class="event room"
+        [style.border-left-color]="record.Room.colors.primary"
+        [style.background-color]="record.Room.colors.secondary">
         <div class="event-head-row">
           <span> {{ record.Schedule | date:'EE., HH:mm' }}:</span>
           <span class="event-title"> {{ record.Title }}</span>
           <span *ngIf="record.Speaker" class="event-speaker"> ({{ record.Speaker }})</span>
-          <span class="event-room"> {{ record.Room }}</span>
+          <span class="event-room"> {{ record.Room.name }}</span>
         </div>
         <!-- <div class="event-details-row"> -->
-          <!-- <span>{{ record.Time}}</span> -->
-          <!-- <span> ({{ record.Schedule | date:'EE., yyyy-MM-dd, HH:mm' }})</span> -->
-          <!-- <span> ({{ record.Upcoming ? 'upcoming' : 'old' }})</span> -->
+        <!-- <span>{{ record.Time}}</span> -->
+        <!-- <span> ({{ record.Schedule | date:'EE., yyyy-MM-dd, HH:mm' }})</span> -->
+        <!-- <span> ({{ record.Upcoming ? 'upcoming' : 'old' }})</span> -->
         <!-- </div> -->
         <div class="event-details-row" *ngIf="showDescriptions && record.Description">
           <div class="event-description">{{ record.Description }}</div>

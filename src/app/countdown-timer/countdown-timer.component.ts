@@ -3,7 +3,7 @@ import { sprintf } from 'sprintf-js';
 
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { isUndefined, isBoolean } from 'util';
-import { EventInterface } from '../eventInterface';
+import { EventInterface } from '../data/eventInterface';
 
 @Component({
   selector: 'app-countdown-timer',

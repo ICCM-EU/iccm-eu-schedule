@@ -1,11 +1,8 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
-import { colors } from '../data/colors';
 import { startOfDay } from 'date-fns';
-import { CalendarUsersDictionary } from './calendarUsersDictionary';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
-import { EventRoomInterface } from '../eventRoomInterface';
-import { EventInterface } from '../eventInterface';
+import { RoomsDictionary } from '../data/roomsDictionary';
 
 @Component({
   selector: 'app-schedule-component',
@@ -15,7 +12,7 @@ import { EventInterface } from '../eventInterface';
 export class ScheduleComponent implements OnInit {
   objName: string;
 
-  users: CalendarUsersDictionary;
+  users: RoomsDictionary;
   roomCount: number;
   events: CalendarEvent[];
   viewDate: Date;
@@ -23,50 +20,20 @@ export class ScheduleComponent implements OnInit {
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
 
-    this.sds.byRoomUpdated.subscribe((newData: EventRoomInterface[]) => {
-        const tempArray: CalendarUsersDictionary = {};
-        for (const i of newData) {
-          tempArray[i.name] = {
-            name: i.name,
-            // TODO: Iterate colors
-            colors: colors.yellow,
-          };
-        }
-        this.users = tempArray;
-        this.roomCount = Object.keys(this.users).length;
-      });
+    this.sds.calEventsUpdated.subscribe(
+      (newData: CalendarEvent[]) => {
+        this.events = newData;
 
-    // Set Start Date
-    this.sds.eventsUpdated.subscribe(
-      (newData: EventInterface[]) => {
+        this.users = this.sds.roomsDictionary;
+        this.roomCount = Object.keys(this.users).length;
+
         if (undefined !== this.sds.nextEvent) {
-          this.viewDate = startOfDay(new Date(this.sds.nextEvent.Schedule));
+          this.viewDate = startOfDay(this.sds.nextEvent.Schedule);
         } else {
           // Fallback to today
           this.viewDate = startOfDay(new Date());
         }
-
-        // Convert events into event view data model
-        const tempArray: CalendarEvent[] = [];
-        for (const i of newData) {
-          tempArray.push({
-            title: i.Title,
-            color: this.users[i.Room].colors,
-            start: i.Schedule,
-            end: i.End,
-            meta: {
-              user: this.users[i.Room],
-            },
-            resizable: {
-              beforeStart: false,
-              afterEnd: false,
-            },
-            draggable: false,
-          });
-        }
-        this.events = tempArray;
-      }
-    );
+      });
 
     this.renderer.setStyle(document.body, 'background-color', 'white');
   }

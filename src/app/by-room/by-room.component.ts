@@ -2,7 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { isUndefined, isBoolean } from 'util';
-import { EventRoomInterface } from '../eventRoomInterface';
+import { EventRoomInterface } from '../data/eventRoomInterface';
 
 @Component({
   selector: 'app-by-room',
