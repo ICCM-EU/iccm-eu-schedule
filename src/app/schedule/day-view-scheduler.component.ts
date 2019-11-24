@@ -74,6 +74,16 @@ export class DayViewSchedulerComponent extends CalendarWeekViewComponent {
   daysInWeek = 1;
   hourSegmentHeight = 30;
   dayStartHour = 8;
+  // tooltipTemplate = './tooltip.html';
+  /**
+   * Whether to append tooltips to the body or next to the trigger element
+   */
+  // tooltipAppendToBody: boolean;
+  /**
+   * The delay in milliseconds before the tooltip should be displayed. If not provided the tooltip
+   * will be displayed immediately.
+   */
+  // tooltipDelay: number | null;
 
   eventWidth = EVENT_WIDTH;
 }
