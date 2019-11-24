@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
-import { colors } from './colors';
+import { colors } from '../data/colors';
 import { startOfDay } from 'date-fns';
 import { CalendarUsersDictionary } from './calendarUsersDictionary';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
