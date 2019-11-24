@@ -18,8 +18,8 @@
           <div class="events-list">
             <ng-container *ngFor="let record of room.events">
               <div *ngIf="!onlyUpcoming || record.Upcoming" class="event room"
-                [style.border-left-color]="record.Room.colors.primary"
-                [style.background-color]="record.Room.colors.secondary">
+                [style.border-left-color]="record.Room.color.primary"
+                [style.background-color]="record.Room.color.secondary">
                 <div class="event-head-row">
                   <span> {{ record.Schedule | date:'EE., HH:mm' }}:</span>
                   <span class="event-title"> {{ record.Title }}</span>
