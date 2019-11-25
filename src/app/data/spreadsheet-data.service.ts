@@ -91,17 +91,20 @@ export class SpreadsheetDS {
           const currentRoomName: string = currentEvent.Room.name;
           const roomInArray: EventRoomInterface = byRoom[currentRoomName];
           const currentSchedule = currentEvent.Schedule;
+          if (undefined === this.nextEvent) {
+            // Keep at least one event in the list.
+            this.nextEvent = currentEvent;
+          }
           // Check if the current event is in the future
+          const nextSchedule = this.nextEvent.Schedule;
           if (currentSchedule >= now) {
             // Check if the event is nearer than the current or replaces an undefined value.
-            if (undefined !== this.nextEvent) {
-              const nextSchedule = this.nextEvent.Schedule;
-              if (currentSchedule < nextSchedule) {
-                this.nextEvent = currentEvent;
-              }
-            } else {
+            if (currentSchedule < nextSchedule) {
               this.nextEvent = currentEvent;
             }
+          } else if (currentSchedule > nextSchedule) {
+            // if this event is not in the future but later than the currently saved next event
+            this.nextEvent = currentEvent;
           }
           if (undefined !== roomInArray) {
             roomInArray.events.push(currentEvent);
