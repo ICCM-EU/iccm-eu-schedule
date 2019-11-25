@@ -13,9 +13,9 @@ export class ScheduleComponent implements OnInit {
   objName: string;
 
   users: RoomsDictionary;
-  roomCount: number;
-  events: CalendarEvent[];
-  viewDate: Date;
+  roomCount = 0;
+  events: CalendarEvent[] = [];
+  viewDate: Date = new Date();
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';

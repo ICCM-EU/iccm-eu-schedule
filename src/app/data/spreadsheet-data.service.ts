@@ -85,31 +85,30 @@ export class SpreadsheetDS {
 
         eventsCount = events.length;
         // Loop through the events and add rooms and events into the rooms
+        let lastEvent: EventInterface;
         this.nextEvent = undefined;
 
         events.forEach(currentEvent => {
           const currentRoomName: string = currentEvent.Room.name;
           const roomInArray: EventRoomInterface = byRoom[currentRoomName];
-          const currentSchedule = currentEvent.Schedule;
-          if (undefined === this.nextEvent) {
-            // Keep at least one event in the list.
-            this.nextEvent = currentEvent;
-          }
           // Check if the current event is in the future
-          const nextSchedule = this.nextEvent.Schedule;
-          if (currentSchedule >= now) {
+          if (undefined === lastEvent || currentEvent.Schedule < lastEvent.Schedule) {
+            lastEvent = currentEvent;
+          }
+          if (currentEvent.Schedule >= now) {
             // Check if the event is nearer than the current or replaces an undefined value.
-            if (currentSchedule < nextSchedule) {
+            if (undefined === this.nextEvent || currentEvent.Schedule < this.nextEvent.Schedule) {
               this.nextEvent = currentEvent;
             }
-          } else if (currentSchedule > nextSchedule) {
-            // if this event is not in the future but later than the currently saved next event
-            this.nextEvent = currentEvent;
           }
           if (undefined !== roomInArray) {
             roomInArray.events.push(currentEvent);
           }
         });
+        if (undefined === this.nextEvent) {
+          // Keep at least one event in the list.
+          this.nextEvent = lastEvent;
+        }
       }
 
       SpreadsheetDS.setLocal(events, this.ssIDs.getCacheName(objName));
