@@ -1,12 +1,12 @@
 import { RoomInterface } from './roomInterface';
 
 export interface EventInterface {
-  Title: string;
-  Schedule: Date;
-  End: Date;
-  Time: string;
-  Speaker: string;
-  Room: RoomInterface;
-  Upcoming: boolean;
-  Description: string;
+  title: string;
+  schedule: Date;
+  end: Date;
+  time: string;
+  speaker: string;
+  room: RoomInterface;
+  upcoming: boolean;
+  description: string;
 }

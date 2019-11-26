@@ -14,22 +14,22 @@
 
   <div class="events-list">
     <ng-container *ngFor="let record of events">
-      <div *ngIf="!onlyUpcoming || record.Upcoming" class="event room"
-        [style.border-left-color]="record.Room.color.primary"
-        [style.background-color]="record.Room.color.secondary">
+      <div *ngIf="!onlyUpcoming || record.upcoming" class="event room"
+        [style.border-left-color]="record.room.color.primary"
+        [style.background-color]="record.room.color.secondary">
         <div class="event-head-row">
-          <span> {{ record.Schedule | date:'EE., HH:mm' }}:</span>
-          <span class="event-title"> {{ record.Title }}</span>
-          <span *ngIf="record.Speaker" class="event-speaker"> ({{ record.Speaker }})</span>
-          <span class="event-room"> {{ record.Room.name }}</span>
+          <span> {{ record.schedule | date:'EE., HH:mm' }}:</span>
+          <span class="event-title"> {{ record.title }}</span>
+          <span *ngIf="record.speaker" class="event-speaker"> ({{ record.speaker }})</span>
+          <span class="event-room"> {{ record.room.name }}</span>
         </div>
         <!-- <div class="event-details-row"> -->
         <!-- <span>{{ record.Time}}</span> -->
         <!-- <span> ({{ record.Schedule | date:'EE., yyyy-MM-dd, HH:mm' }})</span> -->
         <!-- <span> ({{ record.Upcoming ? 'upcoming' : 'old' }})</span> -->
         <!-- </div> -->
-        <div class="event-details-row" *ngIf="showDescriptions && record.Description">
-          <div class="event-description">{{ record.Description }}</div>
+        <div class="event-details-row" *ngIf="showDescriptions && record.description">
+          <div class="event-description">{{ record.description }}</div>
         </div>
       </div>
     </ng-container>

@@ -19,7 +19,7 @@ export class SpreadsheetDS {
   refreshIntervalMin = (60e3 * 5); // 5 Minutes
   // refreshIntervalMin = (60e3 * 1); // 1 Minutes
 
-  events$: Observable<Array<any>>;
+  events$: Observable<Array<InputDataInterface>>;
   eventsLabel = 'Events';
 
   nextEvent: EventInterface;
@@ -28,7 +28,7 @@ export class SpreadsheetDS {
   byRoomUpdated = new EventEmitter<Array<EventRoomInterface>>();
   calEventsUpdated = new EventEmitter<Array<CalendarEvent>>();
 
-  roomsDictionary: RoomsDictionary = {};
+  rooms: RoomsDictionary = {};
 
   constructor(public http: HttpClient) {
     // initial loads
@@ -89,20 +89,21 @@ export class SpreadsheetDS {
         this.nextEvent = undefined;
 
         events.forEach(currentEvent => {
-          const currentRoomName: string = currentEvent.Room.name;
-          const roomInArray: EventRoomInterface = byRoom[currentRoomName];
-          // Check if the current event is in the future
-          if (undefined === lastEvent || currentEvent.Schedule < lastEvent.Schedule) {
-            lastEvent = currentEvent;
-          }
-          if (currentEvent.Schedule >= now) {
-            // Check if the event is nearer than the current or replaces an undefined value.
-            if (undefined === this.nextEvent || currentEvent.Schedule < this.nextEvent.Schedule) {
-              this.nextEvent = currentEvent;
+          if (undefined !== currentEvent) {
+            const roomInArray: EventRoomInterface = byRoom[currentEvent.room.name];
+            // Check if the current event is in the future
+            if (undefined === lastEvent || currentEvent.schedule < lastEvent.schedule) {
+              lastEvent = currentEvent;
             }
-          }
-          if (undefined !== roomInArray) {
-            roomInArray.events.push(currentEvent);
+            if (currentEvent.schedule >= now) {
+              // Check if the event is nearer than the current or replaces an undefined value.
+              if (undefined === this.nextEvent || currentEvent.schedule < this.nextEvent.schedule) {
+                this.nextEvent = currentEvent;
+              }
+            }
+            if (undefined !== roomInArray) {
+              roomInArray.events.push(currentEvent);
+            }
           }
         });
         if (undefined === this.nextEvent) {
@@ -116,7 +117,7 @@ export class SpreadsheetDS {
       SpreadsheetDS.setLocal(calEvents, this.ssIDs.getCacheForCalEvents(objName));
       this.eventsLabel = this.buildLabel(eventsCount, objName);
 
-      this.roomsDictionary = roomsDictionary;
+      this.rooms = roomsDictionary;
 
       this.eventsUpdated.emit(events);
       this.byRoomUpdated.emit(byRoom);
@@ -130,11 +131,12 @@ export class SpreadsheetDS {
     let colorIndex = 0;
 
     for (const i of dataReceived) {
-      if (undefined === tempArray[i.room]) {
+      if ((undefined !== i.room) && (undefined === tempArray[i.room])) {
         const newRoom: RoomInterface = {
           name: i.room,
           color: colors[colorKeys[colorIndex]],
         };
+        // console.log('Adding Room ' + i.room);
         tempArray[i.room] = newRoom;
         colorIndex++;
         if (colorIndex >= colorKeys.length) {
@@ -142,6 +144,7 @@ export class SpreadsheetDS {
         }
       }
     }
+    // console.log('Found ' + Object.keys(tempArray).length + ' rooms.');
     return tempArray;
   }
 
@@ -199,14 +202,14 @@ export class SpreadsheetDS {
       // TODO: Roll back for google sheet
       // Title: i.gsx$Session.$t,
       // Schedule: i.gsx$DateTime.$t,
-      Title: i.session,
-      Schedule: new Date(i.dateTime),
-      End: new Date(i.endDateTime),
-      Time: i.time,
-      Room: roomsDictionary[i.room],
-      Speaker: i.speakerspeakersname,
-      Upcoming: upcoming,
-      Description: i.description,
+      title: i.session,
+      schedule: new Date(i.dateTime),
+      end: new Date(i.endDateTime),
+      time: i.time,
+      room: roomsDictionary[i.room],
+      speaker: i.speakerspeakersname,
+      upcoming: upcoming,
+      description: i.description,
     };
     return event;
   }
@@ -221,7 +224,8 @@ export class SpreadsheetDS {
         end: new Date(i.endDateTime),
         color: roomsDictionary[i.room].color,
         meta: {
-          user: i.room,
+          // TODO: Fix conversion of meta data (relection)
+          user: roomsDictionary[i.room].name,
         },
         resizable: {
           beforeStart: false,

@@ -87,7 +87,7 @@ export class EventsComponent implements OnInit {
       return;
     }
     // Calculate / update the time value
-    const thenTime = new Date(this.sds.nextEvent.Schedule).getTime();
+    const thenTime = new Date(this.sds.nextEvent.schedule).getTime();
     // refresh for more precision
     const nowTime = new Date().getTime();
     const timediff: number = thenTime - nowTime;

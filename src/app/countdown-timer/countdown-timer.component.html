@@ -10,8 +10,8 @@
       <div class="central-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
       <div *ngIf="nextEvent" class="event-details">
         <div class="event-details">
-          <span class="event-time">{{ nextEvent.Schedule | date:'HH:mm' }}:</span>
-          <span class="event-title"> {{ nextEvent.Title }}</span>
+          <span class="event-time">{{ nextEvent.schedule | date:'HH:mm' }}:</span>
+          <span class="event-title"> {{ nextEvent.title }}</span>
         </div>
       </div>
   </div>

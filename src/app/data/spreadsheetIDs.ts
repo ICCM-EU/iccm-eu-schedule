@@ -39,17 +39,33 @@ export class SpreadsheetIDs {
       this.dataObjects.find(myObj => myObj.objName === whichTab).tabID +
       this.urlEnd;
   }
-  getCacheName(whichTab: string): string {
-    return this.dataObjects.find(myObj => myObj.objName === whichTab).cache;
+  getCacheName(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.cache;
   }
-  getCacheByRoomName(whichTab: string): string {
-    return this.dataObjects.find(myObj => myObj.objName === whichTab).cacheByRoom;
+  getCacheByRoomName(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.cacheByRoom;
   }
-  getCacheForCalEvents(whichTab: string): string {
-    return this.dataObjects.find(myObj => myObj.objName === whichTab).cacheForCalEvents;
+  getCacheForCalEvents(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.cacheForCalEvents;
   }
-  getLabelName(whichTab: string): string {
-    return this.dataObjects.find(myObj => myObj.objName === whichTab).labelName;
+  getLabelName(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.labelName;
   }
   getAllTabsURL(): string {
     return this.allTabsURLStart + this.spreadsheetID + this.urlEnd;
