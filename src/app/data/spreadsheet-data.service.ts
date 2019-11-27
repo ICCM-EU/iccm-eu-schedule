@@ -220,7 +220,6 @@ export class SpreadsheetDS {
         end: new Date(i.endDateTime),
         color: roomsDictionary[i.room].color,
         meta: {
-          // TODO: Fix conversion of meta data (relection)
           user: roomsDictionary[i.room],
         },
         resizable: {
