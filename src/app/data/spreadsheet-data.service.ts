@@ -16,9 +16,7 @@ import { CalEventEmitterInterface } from './calEventEmitterInterface';
 export class SpreadsheetDS {
   ssIDs: SpreadsheetIDs = new SpreadsheetIDs;
   lastUpdated = new Date();
-  // refreshIntervalMin = (36e5 * 6); // 6 hours
   refreshIntervalMin = (60e3 * 5); // 5 Minutes
-  // refreshIntervalMin = (60e3 * 1); // 1 Minutes
 
   events$: Observable<Array<InputDataInterface>>;
   eventsLabel = 'Events';
