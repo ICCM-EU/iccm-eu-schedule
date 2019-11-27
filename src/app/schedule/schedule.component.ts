@@ -3,8 +3,7 @@ import { CalendarEvent } from 'angular-calendar';
 import { startOfDay } from 'date-fns';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { RoomsDictionary } from '../data/roomsDictionary';
-
-import { colors } from '../data/colors';
+import { CalEventEmitterInterface } from '../data/calEventEmitterInterface';
 
 @Component({
   selector: 'app-schedule-component',
@@ -14,32 +13,9 @@ import { colors } from '../data/colors';
 export class ScheduleComponent implements OnInit {
   objName: string;
 
-  // users: RoomsDictionary = {};
-  users: RoomsDictionary = {
-    'AJAX Room': {
-      name: 'AJAX Room',
-      color: colors.yellow,
-    },
-    'BASIC Room': {
-      name: 'BASIC Room',
-      color: colors.yellow,
-    },
-    'COBOL Room': {
-      name: 'COBOL Room',
-      color: colors.yellow,
-    },
-    'Dining Hall': {
-      name: 'Dining Hall',
-      color: colors.yellow,
-    },
-    'Espresso Room': {
-      name: 'Espresso Room',
-      color: colors.yellow,
-    },
-  };
-
-  roomCount = 0;
   events: CalendarEvent[] = [];
+  users: RoomsDictionary = {};
+  roomCount = 0;
 
   initialViewDate: Date = new Date();
   viewDate: Date = new Date();
@@ -48,23 +24,25 @@ export class ScheduleComponent implements OnInit {
     this.objName = 'events';
 
     this.sds.calEventsUpdated.subscribe(
-      (newData: CalendarEvent[]) => {
-        this.events = newData;
+      (next: Array<CalEventEmitterInterface>) => {
+        if (next != null) {
+          for (const data of next) {
+            if (data != null) {
+              this.events = data.events;
+              this.users = data.rooms;
 
-        for (const event of this.events) {
-          event.meta.user = this.users[event.meta.user];
-        }
+              this.roomCount = Object.keys(this.users).length;
 
-        // this.users = this.sds.rooms;
-        this.roomCount = Object.keys(this.users).length;
-
-        if (undefined !== this.sds.nextEvent) {
-          this.viewDate = startOfDay(this.sds.nextEvent.schedule);
-          this.initialViewDate = startOfDay(this.sds.nextEvent.schedule);
-        } else {
-          // Fallback to today
-          this.viewDate = startOfDay(new Date());
-          this.initialViewDate = startOfDay(new Date());
+              if (undefined !== this.sds.nextEvent) {
+                this.viewDate = startOfDay(this.sds.nextEvent.schedule);
+                this.initialViewDate = startOfDay(this.sds.nextEvent.schedule);
+              } else {
+                // Fallback to today
+                this.viewDate = startOfDay(new Date());
+                this.initialViewDate = startOfDay(new Date());
+              }
+            }
+          }
         }
       });
 
@@ -72,13 +50,9 @@ export class ScheduleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sds.byRoomUpdated.emit(
+    this.sds.calEventsUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]')
-    );
-    this.sds.eventsUpdated.emit(
-      // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheForCalEvents(this.objName)] || '[]')
     );
   }
 

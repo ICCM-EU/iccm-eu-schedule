@@ -10,6 +10,7 @@ import { CalendarEvent } from 'angular-calendar';
 import { InputDataInterface } from './inputDataInterface';
 import { colors } from './colors';
 import { RoomsDictionary } from './roomsDictionary';
+import { CalEventEmitterInterface } from './calEventEmitterInterface';
 
 @Injectable()
 export class SpreadsheetDS {
@@ -26,9 +27,7 @@ export class SpreadsheetDS {
 
   eventsUpdated = new EventEmitter<Array<EventInterface>>();
   byRoomUpdated = new EventEmitter<Array<EventRoomInterface>>();
-  calEventsUpdated = new EventEmitter<Array<CalendarEvent>>();
-
-  rooms: RoomsDictionary = {};
+  calEventsUpdated = new EventEmitter<Array<CalEventEmitterInterface>>();
 
   constructor(public http: HttpClient) {
     // initial loads
@@ -66,11 +65,12 @@ export class SpreadsheetDS {
   loadEvents(objName: string): void {
     let eventsCount = 0;
 
-    let roomsDictionary: RoomsDictionary = {};
-
     let events: Array<EventInterface> = [];
     let byRoom: Array<EventRoomInterface> = [];
-    let calEvents: Array<CalendarEvent> = [];
+    const calEvents: CalEventEmitterInterface = {
+      events: [],
+      rooms: {},
+    };
 
     this.events$ = this.getHTTPData_SS(objName);
     this.events$.subscribe(next => {
@@ -78,10 +78,10 @@ export class SpreadsheetDS {
         const now = new Date();
 
         // transform the JSON returned to make it more usable
-        roomsDictionary = this.initializeRoomDictionary(next);
-        byRoom = this.initializeByRooms(next, roomsDictionary);
-        events = this.transformEvents(next, roomsDictionary);
-        calEvents = this.transformToCalEvents(next, roomsDictionary);
+        calEvents.rooms = this.initializeRoomDictionary(next);
+        byRoom = this.initializeByRooms(next, calEvents.rooms);
+        events = this.transformEvents(next, calEvents.rooms);
+        calEvents.events = this.transformToCalEvents(next, calEvents.rooms);
 
         eventsCount = events.length;
         // Loop through the events and add rooms and events into the rooms
@@ -117,11 +117,9 @@ export class SpreadsheetDS {
       SpreadsheetDS.setLocal(calEvents, this.ssIDs.getCacheForCalEvents(objName));
       this.eventsLabel = this.buildLabel(eventsCount, objName);
 
-      this.rooms = roomsDictionary;
-
       this.eventsUpdated.emit(events);
       this.byRoomUpdated.emit(byRoom);
-      this.calEventsUpdated.emit(calEvents);
+      this.calEventsUpdated.emit([calEvents]);
     });
   }
 
@@ -136,7 +134,6 @@ export class SpreadsheetDS {
           name: i.room,
           color: colors[colorKeys[colorIndex]],
         };
-        // console.log('Adding Room ' + i.room);
         tempArray[i.room] = newRoom;
         colorIndex++;
         if (colorIndex >= colorKeys.length) {
@@ -144,7 +141,6 @@ export class SpreadsheetDS {
         }
       }
     }
-    // console.log('Found ' + Object.keys(tempArray).length + ' rooms.');
     return tempArray;
   }
 
@@ -225,7 +221,7 @@ export class SpreadsheetDS {
         color: roomsDictionary[i.room].color,
         meta: {
           // TODO: Fix conversion of meta data (relection)
-          user: roomsDictionary[i.room].name,
+          user: roomsDictionary[i.room],
         },
         resizable: {
           beforeStart: false,
