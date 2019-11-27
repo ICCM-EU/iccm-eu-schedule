@@ -1,9 +1,9 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { sprintf } from 'sprintf-js';
 
-import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { isUndefined, isBoolean } from 'util';
-import { EventInterface } from '../eventinterface';
+import { SpreadsheetDS } from '../data/spreadsheet-data.service';
+import { EventInterface } from '../data/eventInterface';
 
 @Component({
   selector: 'app-events',
@@ -17,7 +17,6 @@ export class EventsComponent implements OnInit {
   toggleDescriptionsName: string;
   onlyUpcoming: boolean;
   showDescriptions: boolean;
-  nextEvent: EventInterface;
   nextEventTimeDiff: number;
   nextEventTimeString: string;
   countdownCssClass: string;
@@ -33,7 +32,7 @@ export class EventsComponent implements OnInit {
       (newData: EventInterface[]) => {
         this.events = newData;
         // Initialize
-        this.getNextEvent();
+        this.updateNextEventString();
       }
     );
 
@@ -78,39 +77,17 @@ export class EventsComponent implements OnInit {
     this.showDescriptions = !this.showDescriptions;
   }
 
-  getNextEvent(): void {
-    let i = 0;
-    let nextEvent: EventInterface;
-    const now = new Date();
-    let then: Date;
-
-    // Identify the time to the next event
-    do {
-      nextEvent = this.events[i];
-      then = new Date(nextEvent.Schedule);
-      i++;
-    } while (i < this.events.length && then <= now);
-
-    if (i >= this.events.length) {
-      this.nextEvent = null;
-    } else {
-      this.nextEvent = nextEvent;
-    }
-
-    this.updateNextEventString();
-  }
-
   /**
    * Calculate the timediff to the next event
    * @param nextEvent The event to calculate the time diff for
    */
   updateTimediff(): void {
-    if (!this.nextEvent) {
+    if (!this.sds.nextEvent) {
       this.nextEventTimeDiff = 0;
       return;
     }
     // Calculate / update the time value
-    const thenTime = new Date(this.nextEvent.Schedule).getTime();
+    const thenTime = new Date(this.sds.nextEvent.schedule).getTime();
     // refresh for more precision
     const nowTime = new Date().getTime();
     const timediff: number = thenTime - nowTime;

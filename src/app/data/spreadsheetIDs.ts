@@ -2,29 +2,48 @@ class ObjectClass {
   objName: string;
   tabID: string;
   cache: string;
+  cacheByRoom: string;
+  cacheForCalEvents: string;
   labelName: string;
 }
 
 export class SpreadsheetIDs {
-  // tabURLStart = 'https://spreadsheets.google.com/feeds/list/';
-  // allTabsURLStart = 'https://spreadsheets.google.com/feeds/worksheets/';
-  // spreadsheetID = '1bPW98SzQ5SRsincyVGdP3ctM8ey3oSpncnyo9ASFUDM';
-  // urlEnd = '/public/full?alt=json';
-  tabURLStart = '/assets';
-  allTabsURLStart = '';
-  spreadsheetID = '';
-  urlEnd = 'sheet-export.json';
+  tabURLStart: string;
+  allTabsURLStart: string;
+  spreadsheetID: string;
+  urlEnd: string;
 
-  dataObjects: ObjectClass[] = [
-    {
-      // object name
-      objName: 'events',
-      // tabID: 'omyavzt',
-      tabID: '',
-      cache: 'eventsCache',
-      labelName: 'Event'
-    },
-  ];
+  dataObjects: ObjectClass[] = [];
+
+  constructor() {
+    if (true) {
+      this.tabURLStart = 'https://spreadsheets.google.com/feeds/list/';
+      this.allTabsURLStart = 'https://spreadsheets.google.com/feeds/worksheets/';
+      this.spreadsheetID = '1bPW98SzQ5SRsincyVGdP3ctM8ey3oSpncnyo9ASFUDM';
+      this.urlEnd = '/public/full?alt=json';
+      this.dataObjects.push({
+        tabID: 'omyavzt',
+        objName: 'events',
+        cache: 'eventsCache',
+        cacheByRoom: 'eventsByRoomCache',
+        cacheForCalEvents: 'eventsForCalCache',
+        labelName: 'Event'
+      });
+    } else {
+      // this.tabURLStart = '/assets';
+      // this.allTabsURLStart = '';
+      // this.spreadsheetID = '';
+      // this.urlEnd = 'sheet-export.json';
+      // this.dataObjects.push({
+      //   tabID: '',
+      //   objName: 'events',
+      //   cache: 'eventsCache',
+      //   cacheByRoom: 'eventsByRoomCache',
+      //   cacheForCalEvents: 'eventsForCalCache',
+      //   labelName: 'Event'
+      // });
+    }
+  }
 
   getObjNames(): string[] {
     return this.dataObjects.map(obj => obj.objName);
@@ -35,11 +54,33 @@ export class SpreadsheetIDs {
       this.dataObjects.find(myObj => myObj.objName === whichTab).tabID +
       this.urlEnd;
   }
-  getCacheName(whichTab: string): string {
-    return this.dataObjects.find(myObj => myObj.objName === whichTab).cache;
+  getCacheName(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.cache;
   }
-  getLabelName(whichTab: string): string {
-    return this.dataObjects.find(myObj => myObj.objName === whichTab).labelName;
+  getCacheByRoomName(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.cacheByRoom;
+  }
+  getCacheForCalEvents(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.cacheForCalEvents;
+  }
+  getLabelName(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.labelName;
   }
   getAllTabsURL(): string {
     return this.allTabsURLStart + this.spreadsheetID + this.urlEnd;

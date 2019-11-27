@@ -1,3 +1,18 @@
+div.table {
+  display: table;
+  border-collapse: collapse;
+}
+
+div.tr {
+  display: table-row;
+}
+
+div.td {
+  display: table-cell;
+  /* border: thin solid red; */
+  padding: 1px;
+}
+
 .container {
   margin-top: 0px;
   margin-left: 10px;
@@ -26,7 +41,7 @@
   margin: 9px;
 }
 
-.toprow-counter{
+.toprow-counter {
   float: right;
   min-width: 35ex;
   text-align: right;
@@ -89,7 +104,7 @@
 } */
 
 .events-list {
-  font-size: xx-large;
+  font-size: large;
 }
 
 .event {
@@ -104,6 +119,11 @@
   border-left-color: lightgray;
   border-left-style: solid;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.room-name {
+  font-size: large;
+  font-weight: bold;
 }
 
 .event-title {
@@ -121,7 +141,39 @@
   color: rgb(120, 120, 120);
   font-style: italic;
 }
-.room {
+
+.room-ajax-room {
   border-left-width: 5px;
+  border-left-color: rgb(0, 255, 0);
   border-left-style: solid;
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.room-basic-room {
+  border-left-width: 5px;
+  border-left-color: rgb(255, 255, 0);
+  border-left-style: solid;
+  background: rgba(255, 255, 0, 0.1);
+}
+
+.room-cobol-room {
+  border-left-width: 5px;
+  border-left-color: rgb(255, 0, 0);
+  border-left-style: solid;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.room-delphi-room {
+  border-left-width: 5px;
+  border-left-color: rgb(200, 0, 255);
+  border-left-style: solid;
+  background-color: rgba(200, 0, 255, 0.1);
+}
+
+.room-dining-hall,
+.room-espresso-room {
+  border-left-width: 5px;
+  border-left-color: rgb(205, 205, 205);
+  border-left-style: solid;
+  background: rgba(255, 255, 255, 0.1);
 }

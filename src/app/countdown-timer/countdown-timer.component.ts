@@ -3,7 +3,7 @@ import { sprintf } from 'sprintf-js';
 
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { isUndefined, isBoolean } from 'util';
-import { EventInterface } from '../eventinterface';
+import { EventInterface } from '../data/eventInterface';
 
 @Component({
   selector: 'app-countdown-timer',
@@ -87,7 +87,7 @@ export class CountdownTimerComponent implements OnInit {
     // Identify the time to the next event
     do {
       nextEvent = this.events[i];
-      then = new Date(nextEvent.Schedule);
+      then = new Date(nextEvent.schedule);
       i++;
     } while (i < this.events.length && then <= now);
 
@@ -110,7 +110,7 @@ export class CountdownTimerComponent implements OnInit {
       return;
     }
     // Calculate / update the time value
-    const thenTime = new Date(this.nextEvent.Schedule).getTime();
+    const thenTime = new Date(this.nextEvent.schedule).getTime();
     // refresh for more precision
     const nowTime = new Date().getTime();
     const timediff: number = thenTime - nowTime;
