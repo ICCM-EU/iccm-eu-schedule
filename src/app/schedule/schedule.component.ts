@@ -56,6 +56,10 @@ export class ScheduleComponent implements OnInit {
     );
   }
 
+  setToStart() {
+    this.viewDate = this.initialViewDate;
+  }
+
   refresh() {
     this.sds.loadEvents(this.objName);
   }
