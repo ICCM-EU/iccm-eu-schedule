@@ -23,7 +23,7 @@ export class SpreadsheetIDs {
       this.spreadsheetID = '11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI';
       this.urlEnd = '/public/full?alt=json';
       this.dataObjects.push({
-        //tabID: 'omyavzt',
+        // tabID: 'omyavzt',
         tabID: '262858790',
         objName: 'events',
         cache: 'eventsCache',
@@ -46,7 +46,7 @@ export class SpreadsheetIDs {
       // });
     }
     console.log('All Tabs URL: ' + this.getAllTabsURL());
-    console.log('Tab URL: ' + this.getTabURL('events');
+    console.log('Tab URL: ' + this.getTabURL('events'));
   }
 
   getObjNames(): string[] {
