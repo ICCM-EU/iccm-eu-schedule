@@ -40,7 +40,9 @@ export class CountdownTimerComponent implements OnInit {
       (newData: EventInterface[]) => {
         this.events = newData;
         // Initialize
-        this.getNextEvent();
+        if (undefined === this.filterByRoom || '' === this.filterByRoom) {
+          this.getNextEvent();
+        }
       }
     );
     this.sds.eventsUpdated.emit(
@@ -52,7 +54,9 @@ export class CountdownTimerComponent implements OnInit {
         if (undefined !== newData) {
           this.roomList = newData;
           // Initialize
-          this.getNextEvent();
+          if (undefined !== this.filterByRoom && '' !== this.filterByRoom) {
+            this.getNextEvent();
+          }
         }
       }
     );
@@ -100,15 +104,15 @@ export class CountdownTimerComponent implements OnInit {
       const room = this.roomList.find(obj => obj.name === this.filterByRoom);
       if (undefined !== room) {
         events = room.events;
-        // console.log('filterByRoom is "' + this.filterByRoom + '"');
+        console.log('filterByRoom is "' + this.filterByRoom + '"');
       } else {
-        // console.log('filterByRoom is "' + this.filterByRoom + '" but not found in roomList');
+        console.log('filterByRoom is "' + this.filterByRoom + '" but not found in roomList');
       }
     } else {
       events = this.events;
-      // console.log('filterByRoom is empty, using this.events');
+      console.log('filterByRoom is empty, using this.events');
     }
-    // console.log('Found ' + events.length + ' events');
+    console.log('Found ' + events.length + ' events');
 
     // Identify the next event
     this.nextEvent = this.sds.getNextEvent(events);

@@ -22,8 +22,6 @@ export class SpreadsheetDS {
   events$: Observable<Array<InputEventInterface>>;
   eventsLabel = 'Events';
 
-  nextEvent: EventInterface;
-
   eventsUpdated = new EventEmitter<Array<EventInterface>>();
   byRoomUpdated = new EventEmitter<Array<EventRoomInterface>>();
   calEventsUpdated = new EventEmitter<Array<CalEventEmitterInterface>>();
@@ -91,12 +89,6 @@ export class SpreadsheetDS {
             }
           }
         });
-
-        this.nextEvent = this.getNextEvent(events);
-        if (undefined === this.nextEvent) {
-          // Keep at least one event in the list.
-          this.nextEvent = lastEvent;
-        }
       }
 
       SpreadsheetDS.setLocal(events, this.ssIDs.getCacheName(objName));

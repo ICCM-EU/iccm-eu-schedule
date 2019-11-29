@@ -18,6 +18,7 @@ export class EventsComponent implements OnInit {
   toggleDescriptionsName: string;
   onlyUpcoming: boolean;
   showDescriptions: boolean;
+  nextEvent: EventInterface;
   nextEventTimeDiff: number;
   nextEventTimeString: string;
   countdownCssClass: string;
@@ -41,7 +42,11 @@ export class EventsComponent implements OnInit {
       (newData: EventInterface[]) => {
         this.events = newData;
         // Initialize
-        this.updateNextEventString();
+        if (undefined === this.filterByRoom || '' === this.filterByRoom) {
+          this.getNextEvent();
+          // Initialize
+          this.updateNextEventString();
+        }
       }
     );
     this.sds.eventsUpdated.emit(
@@ -52,6 +57,12 @@ export class EventsComponent implements OnInit {
       (newData: EventRoomInterface[]) => {
         if (undefined !== newData) {
           this.roomList = newData;
+          // Initialize
+          if (undefined !== this.filterByRoom && '' !== this.filterByRoom) {
+            this.getNextEvent();
+            // Initialize
+            this.updateNextEventString();
+          }
         }
       }
     );
@@ -66,6 +77,29 @@ export class EventsComponent implements OnInit {
 
   refresh() {
     this.sds.loadEvents(this.objName);
+  }
+
+  getNextEvent(): void {
+    let events: Array<EventInterface>;
+
+    if (undefined !== this.filterByRoom && '' !== this.filterByRoom) {
+      const room = this.roomList.find(obj => obj.name === this.filterByRoom);
+      if (undefined !== room) {
+        events = room.events;
+        console.log('filterByRoom is "' + this.filterByRoom + '"');
+      } else {
+        console.log('filterByRoom is "' + this.filterByRoom + '" but not found in roomList');
+      }
+    } else {
+      events = this.events;
+      console.log('filterByRoom is empty, using this.events');
+    }
+    console.log('Found ' + events.length + ' events');
+
+    // Identify the next event
+    this.nextEvent = this.sds.getNextEvent(events);
+
+    this.updateNextEventString();
   }
 
   toggleUpcoming(init?: boolean) {
@@ -97,12 +131,12 @@ export class EventsComponent implements OnInit {
    * @param nextEvent The event to calculate the time diff for
    */
   updateTimediff(): void {
-    if (!this.sds.nextEvent) {
+    if (!this.nextEvent) {
       this.nextEventTimeDiff = 0;
       return;
     }
     // Calculate / update the time value
-    const thenTime = new Date(this.sds.nextEvent.schedule).getTime();
+    const thenTime = new Date(this.nextEvent.schedule).getTime();
     // refresh for more precision
     const nowTime = new Date().getTime();
     const timediff: number = thenTime - nowTime;

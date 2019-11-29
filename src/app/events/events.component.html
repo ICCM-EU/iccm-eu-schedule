@@ -9,11 +9,10 @@
       <!-- <a routerLink="/by-room" class="btn btn-primary" mat-raised-button>By Room</a> -->
       <a routerLink="/schedule" class="btn btn-primary" mat-raised-button>Schedule</a>
       <mat-form-field>
-        <mat-select placeholder="Selected Room" [(ngModel)]="this.filterByRoom" name="roomFilter">
+        <mat-select placeholder="Selected Room" [(ngModel)]="this.filterByRoom" (valueChange)="this.getNextEvent()"
+          name="roomFilter">
           <mat-option [value]="">All Rooms</mat-option>
-          <mat-option
-            *ngFor="let room of this.roomList"
-            [style.background-color]="room.color.secondary"
+          <mat-option *ngFor="let room of this.roomList" [style.background-color]="room.color.secondary"
             [value]="room.name">
             {{ room.name }}
           </mat-option>
