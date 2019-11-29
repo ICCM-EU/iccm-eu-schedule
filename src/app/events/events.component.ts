@@ -37,10 +37,6 @@ export class EventsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sds.eventsUpdated.emit(
-      // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
-    );
     this.sds.eventsUpdated.subscribe(
       (newData: EventInterface[]) => {
         this.events = newData;
@@ -54,6 +50,10 @@ export class EventsComponent implements OnInit {
           this.roomList = newData;
         }
       }
+    );
+    this.sds.eventsUpdated.emit(
+      // use the local storage if there until HTTP call retrieves something
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
     );
 
     // Let the timer run
