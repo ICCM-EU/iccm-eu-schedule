@@ -4,7 +4,8 @@
       <a routerLink="/" class="btn btn-primary" mat-raised-button>List</a>
       <button mat-raised-button class="md-raised md-cornered" (click)="refresh()">Refresh Events</button>
       <mat-form-field>
-        <mat-select placeholder="Selected Room" [(ngModel)]="this.filterByRoom" name="roomFilter">
+        <mat-select placeholder="Selected Room" [(ngModel)]="this.filterByRoom" name="roomFilter"
+          (valueChange)="this.getNextEvent()">
           <mat-option [value]="">All Rooms</mat-option>
           <mat-option *ngFor="let room of this.roomList" [style.background-color]="room.color.secondary"
             [value]="room.name">

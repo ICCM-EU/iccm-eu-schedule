@@ -44,6 +44,10 @@ export class EventsComponent implements OnInit {
         this.updateNextEventString();
       }
     );
+    this.sds.eventsUpdated.emit(
+      // use the local storage if there until HTTP call retrieves something
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
+    );
     this.sds.byRoomUpdated.subscribe(
       (newData: EventRoomInterface[]) => {
         if (undefined !== newData) {
@@ -51,9 +55,9 @@ export class EventsComponent implements OnInit {
         }
       }
     );
-    this.sds.eventsUpdated.emit(
+    this.sds.byRoomUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]')
     );
 
     // Let the timer run

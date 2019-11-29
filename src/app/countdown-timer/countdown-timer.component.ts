@@ -43,6 +43,10 @@ export class CountdownTimerComponent implements OnInit {
         this.getNextEvent();
       }
     );
+    this.sds.eventsUpdated.emit(
+      // use the local storage if there until HTTP call retrieves something
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
+    );
     this.sds.byRoomUpdated.subscribe(
       (newData: EventRoomInterface[]) => {
         if (undefined !== newData) {
@@ -52,9 +56,9 @@ export class CountdownTimerComponent implements OnInit {
         }
       }
     );
-    this.sds.eventsUpdated.emit(
+    this.sds.byRoomUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]')
     );
 
     // Let the timer run
@@ -90,32 +94,24 @@ export class CountdownTimerComponent implements OnInit {
   }
 
   getNextEvent(): void {
-    let i = 0;
-    let nextEvent: EventInterface;
-    const now = new Date();
-    let then: Date;
     let events: Array<EventInterface>;
 
     if (undefined !== this.filterByRoom && '' !== this.filterByRoom) {
-      if (undefined !== this.roomList[this.filterByRoom]) {
-        events = this.roomList[this.filterByRoom].events;
+      const room = this.roomList.find(obj => obj.name === this.filterByRoom);
+      if (undefined !== room) {
+        events = room.events;
+        // console.log('filterByRoom is "' + this.filterByRoom + '"');
+      } else {
+        // console.log('filterByRoom is "' + this.filterByRoom + '" but not found in roomList');
       }
     } else {
       events = this.events;
+      // console.log('filterByRoom is empty, using this.events');
     }
+    // console.log('Found ' + events.length + ' events');
 
-    // Identify the time to the next event
-    do {
-      nextEvent = events[i];
-      then = new Date(nextEvent.schedule);
-      i++;
-    } while (i < events.length && then <= now);
-
-    if (i >= events.length) {
-      this.nextEvent = null;
-    } else {
-      this.nextEvent = nextEvent;
-    }
+    // Identify the next event
+    this.nextEvent = this.sds.getNextEvent(events);
 
     this.updateNextEventString();
   }

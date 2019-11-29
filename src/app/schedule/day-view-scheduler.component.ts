@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Injectable, Output, ChangeDetectorRef, } from '@angular/core';
+import { Component, EventEmitter, Injectable, Output } from '@angular/core';
 import { CalendarUtils, CalendarWeekViewComponent } from 'angular-calendar';
-import { DateAdapter } from 'angular-calendar/date-adapters/date-adapter';
 import { WeekView, GetWeekViewArgs } from 'calendar-utils';
 
 // Calculate it from number of user columns

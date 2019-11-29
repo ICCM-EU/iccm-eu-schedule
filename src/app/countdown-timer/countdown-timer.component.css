@@ -9,8 +9,6 @@
 }
 
 .toprow {
-  border: 1px;
-  border-color: lightgrey;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
   width: 100%;
@@ -20,6 +18,16 @@
 .toprow-buttons {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
+  border: 1px;
+  border-color: lightgrey;
+  color: lightgrey;
+}
+
+mat-form-field, {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px;
+  border-color: lightgrey;
+  color: lightgrey;
 }
 
 .counter {
