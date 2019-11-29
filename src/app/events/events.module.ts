@@ -10,7 +10,7 @@ import { EventsRoutingModule } from './events-routing.module';
   ],
   imports: [
     EventsRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class EventsModule { }

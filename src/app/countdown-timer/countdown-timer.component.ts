@@ -4,6 +4,7 @@ import { sprintf } from 'sprintf-js';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { isUndefined, isBoolean } from 'util';
 import { EventInterface } from '../data/eventInterface';
+import { EventRoomInterface } from '../data/eventRoomInterface';
 
 @Component({
   selector: 'app-countdown-timer',
@@ -11,7 +12,7 @@ import { EventInterface } from '../data/eventInterface';
   styleUrls: ['./countdown-timer.component.css']
 })
 export class CountdownTimerComponent implements OnInit {
-  events: EventInterface[];
+  events: Array<EventInterface>;
   objName: string;
   toggleName: string;
   toggleDescriptionsName: string;
@@ -21,6 +22,8 @@ export class CountdownTimerComponent implements OnInit {
   nextEventTimeDiff: number;
   nextEventTimeString: string;
   countdownCssClass: string;
+  filterByRoom: string;
+  roomList: Array<EventRoomInterface>;
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
@@ -28,17 +31,6 @@ export class CountdownTimerComponent implements OnInit {
 
     this.toggleUpcoming(true);
     this.toggleDescriptions(true);
-
-    this.sds.eventsUpdated.subscribe(
-      (newData: EventInterface[]) => {
-        this.events = newData;
-        // Initialize
-        this.getNextEvent();
-      }
-    );
-
-    // Let the timer run
-    setInterval(() => { this.updateNextEventString(); }, 1000);
 
     this.renderer.setStyle(document.body, 'background-color', 'black');
   }
@@ -48,6 +40,25 @@ export class CountdownTimerComponent implements OnInit {
       // use the local storage if there until HTTP call retrieves something
       JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
     );
+    this.sds.eventsUpdated.subscribe(
+      (newData: EventInterface[]) => {
+        this.events = newData;
+        // Initialize
+        this.getNextEvent();
+      }
+    );
+    this.sds.byRoomUpdated.subscribe(
+      (newData: EventRoomInterface[]) => {
+        if (undefined !== newData) {
+          this.roomList = newData;
+          // Initialize
+          this.getNextEvent();
+        }
+      }
+    );
+
+    // Let the timer run
+    setInterval(() => { this.updateNextEventString(); }, 1000);
   }
 
   refresh() {
@@ -83,15 +94,24 @@ export class CountdownTimerComponent implements OnInit {
     let nextEvent: EventInterface;
     const now = new Date();
     let then: Date;
+    let events: Array<EventInterface>;
+
+    if (undefined !== this.filterByRoom && '' !== this.filterByRoom) {
+      if (undefined !== this.roomList[this.filterByRoom]) {
+        events = this.roomList[this.filterByRoom].events;
+      }
+    } else {
+      events = this.events;
+    }
 
     // Identify the time to the next event
     do {
-      nextEvent = this.events[i];
+      nextEvent = events[i];
       then = new Date(nextEvent.schedule);
       i++;
-    } while (i < this.events.length && then <= now);
+    } while (i < events.length && then <= now);
 
-    if (i >= this.events.length) {
+    if (i >= events.length) {
       this.nextEvent = null;
     } else {
       this.nextEvent = nextEvent;
@@ -104,13 +124,13 @@ export class CountdownTimerComponent implements OnInit {
    * Calculate the timediff to the next event
    * @param nextEvent The event to calculate the time diff for
    */
-  updateTimediff(): void {
-    if (!this.nextEvent) {
+  updateTimediff(nextEvent: EventInterface): void {
+    if (!nextEvent) {
       this.nextEventTimeDiff = 0;
       return;
     }
     // Calculate / update the time value
-    const thenTime = new Date(this.nextEvent.schedule).getTime();
+    const thenTime = new Date(nextEvent.schedule).getTime();
     // refresh for more precision
     const nowTime = new Date().getTime();
     const timediff: number = thenTime - nowTime;
@@ -130,8 +150,9 @@ export class CountdownTimerComponent implements OnInit {
 
   updateNextEventString(): void {
     let timediff: number;
+    const nextEvent: EventInterface = this.nextEvent;
 
-    this.updateTimediff();
+    this.updateTimediff(nextEvent);
 
     timediff = this.nextEventTimeDiff;
 
@@ -154,28 +175,28 @@ export class CountdownTimerComponent implements OnInit {
       timediff = -timediff;
       this.nextEventTimeString = 'NOW';
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  2 * 1000) {
+    } else if (timediff < 2 * 1000) {
       this.nextEventTimeString = 'NOW';
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  3 * 1000) {
+    } else if (timediff < 3 * 1000) {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
       this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff <  4 * 1000) {
+    } else if (timediff < 4 * 1000) {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  5 * 1000) {
+    } else if (timediff < 5 * 1000) {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
       this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff <  6 * 1000) {
+    } else if (timediff < 6 * 1000) {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  7 * 1000) {
+    } else if (timediff < 7 * 1000) {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
       this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff <  8 * 1000) {
+    } else if (timediff < 8 * 1000) {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  9 * 1000) {
+    } else if (timediff < 9 * 1000) {
       this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
       this.countdownCssClass = 'countdown-10s-even';
     } else if (timediff < 10 * 1000) {

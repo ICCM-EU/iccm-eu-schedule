@@ -4,6 +4,7 @@ import { sprintf } from 'sprintf-js';
 import { isUndefined, isBoolean } from 'util';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { EventInterface } from '../data/eventInterface';
+import { EventRoomInterface } from '../data/eventRoomInterface';
 
 @Component({
   selector: 'app-events',
@@ -20,6 +21,8 @@ export class EventsComponent implements OnInit {
   nextEventTimeDiff: number;
   nextEventTimeString: string;
   countdownCssClass: string;
+  filterByRoom: string;
+  roomList: Array<EventRoomInterface>;
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
@@ -28,16 +31,7 @@ export class EventsComponent implements OnInit {
     this.toggleUpcoming(true);
     this.toggleDescriptions(true);
 
-    this.sds.eventsUpdated.subscribe(
-      (newData: EventInterface[]) => {
-        this.events = newData;
-        // Initialize
-        this.updateNextEventString();
-      }
-    );
-
-    // Let the timer run
-    setInterval(() => { this.updateNextEventString(); }, 1000);
+    this.filterByRoom = '';
 
     this.renderer.setStyle(document.body, 'background-color', 'white');
   }
@@ -47,6 +41,23 @@ export class EventsComponent implements OnInit {
       // use the local storage if there until HTTP call retrieves something
       JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
     );
+    this.sds.eventsUpdated.subscribe(
+      (newData: EventInterface[]) => {
+        this.events = newData;
+        // Initialize
+        this.updateNextEventString();
+      }
+    );
+    this.sds.byRoomUpdated.subscribe(
+      (newData: EventRoomInterface[]) => {
+        if (undefined !== newData) {
+          this.roomList = newData;
+        }
+      }
+    );
+
+    // Let the timer run
+    setInterval(() => { this.updateNextEventString(); }, 1000);
   }
 
   refresh() {
@@ -131,28 +142,28 @@ export class EventsComponent implements OnInit {
       timediff = -timediff;
       this.nextEventTimeString = 'Next event is now.';
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  2 * 1000) {
+    } else if (timediff < 2 * 1000) {
       this.nextEventTimeString = 'Next event is now.';
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  3 * 1000) {
+    } else if (timediff < 3 * 1000) {
       this.nextEventTimeString = 'Next event is in two seconds (' + sprintf('%02d', seconds) + 's).';
       this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff <  4 * 1000) {
+    } else if (timediff < 4 * 1000) {
       this.nextEventTimeString = 'Next event is in three seconds (' + sprintf('%02d', seconds) + 's).';
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  5 * 1000) {
+    } else if (timediff < 5 * 1000) {
       this.nextEventTimeString = 'Next event is in four seconds (' + sprintf('%02d', seconds) + 's).';
       this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff <  6 * 1000) {
+    } else if (timediff < 6 * 1000) {
       this.nextEventTimeString = 'Next event is in five seconds (' + sprintf('%02d', seconds) + 's).';
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  7 * 1000) {
+    } else if (timediff < 7 * 1000) {
       this.nextEventTimeString = 'Next event is in six seconds (' + sprintf('%02d', seconds) + 's).';
       this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff <  8 * 1000) {
+    } else if (timediff < 8 * 1000) {
       this.nextEventTimeString = 'Next event is in seven seconds (' + sprintf('%02d', seconds) + 's).';
       this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff <  9 * 1000) {
+    } else if (timediff < 9 * 1000) {
       this.nextEventTimeString = 'Next event is in eight seconds (' + sprintf('%02d', seconds) + 's).';
       this.countdownCssClass = 'countdown-10s-even';
     } else if (timediff < 10 * 1000) {

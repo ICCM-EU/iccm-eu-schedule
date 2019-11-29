@@ -232,15 +232,15 @@ export class SpreadsheetDS {
 
     switch (eventsCount) {
       case 0: {
-        label = 'No ' + eventName + 's: List';
+        label = 'No ' + eventName + 's';
         break;
       }
       case 1: {
-        label = '1 ' + eventName + ': List';
+        label = '1 ' + eventName;
         break;
       }
       default: {
-        label = eventsCount + ' ' + eventName + 's: List';
+        label = eventsCount + ' ' + eventName + 's';
         break;
       }
     }

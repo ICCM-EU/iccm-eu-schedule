@@ -6,17 +6,28 @@
       <button mat-raised-button (click)="toggleUpcoming()">{{ toggleName }}</button>
       <button mat-raised-button (click)="toggleDescriptions()">{{ toggleDescriptionsName }}</button>
       <a routerLink="/countdown" class="btn btn-primary" mat-raised-button>Countdown</a>
-      <a routerLink="/by-room" class="btn btn-primary" mat-raised-button>By Room</a>
+      <!-- <a routerLink="/by-room" class="btn btn-primary" mat-raised-button>By Room</a> -->
       <a routerLink="/schedule" class="btn btn-primary" mat-raised-button>Schedule</a>
+      <mat-form-field>
+        <mat-select placeholder="Selected Room" [(ngModel)]="this.filterByRoom" name="roomFilter">
+          <mat-option [value]="">All Rooms</mat-option>
+          <mat-option
+            *ngFor="let room of this.roomList"
+            [style.background-color]="room.color.secondary"
+            [value]="room.name">
+            {{ room.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
     <div class="toprow-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
   </div>
 
   <div class="events-list">
     <ng-container *ngFor="let record of events">
-      <div *ngIf="!onlyUpcoming || record.upcoming" class="event room"
-        [style.border-left-color]="record.room.color.primary"
-        [style.background-color]="record.room.color.secondary">
+      <div *ngIf="(!onlyUpcoming || record.upcoming) &&
+       (undefined === filterByRoom || filterByRoom == '' || filterByRoom == record.room.name)" class="event room"
+        [style.border-left-color]="record.room.color.primary" [style.background-color]="record.room.color.secondary">
         <div class="event-head-row">
           <span> {{ record.schedule | date:'EE., HH:mm' }}:</span>
           <span class="event-title"> {{ record.title }}</span>
