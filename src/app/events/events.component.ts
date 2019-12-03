@@ -56,14 +56,11 @@ export class EventsComponent implements OnInit {
     );
 
     this.sds.nextEventUpdated.subscribe(
-      (newData: Array<EventInterface>) => {
-        newData.forEach(nextEvent => {
-          if (undefined !== nextEvent) {
-            this.updateNextEventString(nextEvent);
-          }
-        });
-      }
-    );
+      (nextEvent: EventInterface) => {
+        if (undefined !== nextEvent) {
+          this.updateNextEventString(nextEvent);
+        }
+      });
     this.sds.nextEventUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
       JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]')
@@ -115,7 +112,7 @@ export class EventsComponent implements OnInit {
       console.log('updateTimediff: nextEvent is undefined');
       return;
     }
-    console.log('updateTimediff: "' + nextEvent.title + '" at ' + nextEvent.schedule.toDateString());
+    console.log('updateTimediff: "' + nextEvent.title + '" at ' + nextEvent.schedule);
 
     // Calculate / update the time value
     const thenTime = new Date(nextEvent.schedule).getTime();

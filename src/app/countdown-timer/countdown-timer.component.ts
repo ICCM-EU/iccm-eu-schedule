@@ -55,14 +55,11 @@ export class CountdownTimerComponent implements OnInit {
       JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]')
     );
     this.sds.nextEventUpdated.subscribe(
-      (newData: Array<EventInterface>) => {
-        newData.forEach(nextEvent => {
-          if (undefined !== nextEvent) {
-            this.updateNextEventString(nextEvent);
-          }
-        });
-      }
-    );
+      (nextEvent: EventInterface) => {
+        if (undefined !== nextEvent) {
+          this.updateNextEventString(nextEvent);
+        }
+      });
     this.sds.nextEventUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
       JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]')

@@ -256,12 +256,12 @@ export class SpreadsheetDS {
 
   updateFilter(filter: string, objName: string) {
     this.filterByRoom = filter;
-    const nextEvent = this.updateNextEvent(this.filterByRoom, this.events, this.byRoom);
+    this.nextEvent = this.updateNextEvent(this.filterByRoom, this.events, this.byRoom);
 
-    SpreadsheetDS.setLocal(nextEvent, this.ssIDs.getCacheForNextEvent(objName));
+    SpreadsheetDS.setLocal(this.nextEvent, this.ssIDs.getCacheForNextEvent(objName));
     this.eventsLabel = this.buildLabel(this.eventsCount, objName);
 
-    this.nextEventUpdated.emit([nextEvent]);
+    this.nextEventUpdated.emit([this.nextEvent]);
   }
 
   private updateNextEvent(filter: string, events: Array<EventInterface>, byRoom: Array<EventRoomInterface>): EventInterface {
@@ -290,7 +290,7 @@ export class SpreadsheetDS {
       if (undefined !== currentEvent) {
         // Check if the current event is in the future
         // console.log('getNextEvent: Comparing ' + now.toDateString() + ' to event ' + currentEvent.schedule.toDateString());
-        console.log('getNextEvent: ' + typeof (currentEvent).toString());
+        // console.log('getNextEvent: ' + typeof (currentEvent).toString());
         if (currentEvent.schedule >= now) {
           // console.log('getNextEvent: currentEvent accepted as future: ' + currentEvent.title);
           // Check if the event is nearer than the current or replaces an undefined value.
