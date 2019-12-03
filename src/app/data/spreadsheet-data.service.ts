@@ -15,6 +15,8 @@ import { CalEventEmitterInterface } from './calEventEmitterInterface';
 
 @Injectable()
 export class SpreadsheetDS {
+  static timerStarted = false;
+
   ssIDs: SpreadsheetIDs = new SpreadsheetIDs;
   lastUpdated = new Date();
   refreshIntervalMin = (60e3 * 5); // 5 Minutes
@@ -22,11 +24,21 @@ export class SpreadsheetDS {
   events$: Observable<Array<InputEventInterface>>;
   eventsLabel = 'Events';
 
+  events: Array<EventInterface> = [];
+  byRoom: Array<EventRoomInterface> = [];
+  nextEvent: EventInterface;
+  filterByRoom = '';
+  eventsCount = 0;
+
   eventsUpdated = new EventEmitter<Array<EventInterface>>();
   byRoomUpdated = new EventEmitter<Array<EventRoomInterface>>();
   calEventsUpdated = new EventEmitter<Array<CalEventEmitterInterface>>();
+  filterUpdated = new EventEmitter<Array<string>>();
+  nextEventUpdated = new EventEmitter<Array<EventInterface>>();
 
   constructor(public http: HttpClient) {
+    this.filterByRoom = '';
+
     // initial loads
     this.refreshAll();
     setInterval(() => { this.refreshStaleData(); }, this.refreshIntervalMin);
@@ -35,6 +47,16 @@ export class SpreadsheetDS {
   public static setLocal(whatData: any, cacheName: string): void {
     // writes data to local storage
     localStorage[cacheName] = JSON.stringify(whatData);
+  }
+
+  public startTimer() {
+    if (!SpreadsheetDS.timerStarted) {
+      // Let the timer run
+      setInterval(() => {
+        this.nextEventUpdated.emit([this.nextEvent]);
+      }, 1000);
+      SpreadsheetDS.timerStarted = true;
+    }
   }
 
   refreshStaleData(): void {
@@ -55,10 +77,6 @@ export class SpreadsheetDS {
   }
 
   loadEvents(objName: string): void {
-    let eventsCount = 0;
-
-    let events: Array<EventInterface> = [];
-    let byRoom: Array<EventRoomInterface> = [];
     const calEvents: CalEventEmitterInterface = {
       events: [],
       rooms: {},
@@ -69,17 +87,18 @@ export class SpreadsheetDS {
       if (undefined !== data) {
         // transform the JSON returned to make it more usable
         calEvents.rooms = this.initializeRoomDictionary(data);
-        byRoom = this.initializeByRooms(data, calEvents.rooms);
-        events = this.transformEvents(data, calEvents.rooms);
+        this.byRoom = this.initializeByRooms(data, calEvents.rooms);
+        this.events = this.transformEvents(data, calEvents.rooms);
         calEvents.events = this.transformToCalEvents(data, calEvents.rooms);
+        this.nextEvent = this.updateNextEvent(this.filterByRoom, this.events, this.byRoom);
 
-        eventsCount = events.length;
+        this.eventsCount = this.events.length;
         // Loop through the events and add rooms and events into the rooms
         let lastEvent: EventInterface;
 
-        events.forEach(currentEvent => {
+        this.events.forEach(currentEvent => {
           if (undefined !== currentEvent) {
-            const roomInArray: EventRoomInterface = byRoom[currentEvent.room.name];
+            const roomInArray: EventRoomInterface = this.byRoom[currentEvent.room.name];
             // Check if the current event is in the future
             if (undefined === lastEvent || currentEvent.schedule < lastEvent.schedule) {
               lastEvent = currentEvent;
@@ -91,34 +110,17 @@ export class SpreadsheetDS {
         });
       }
 
-      SpreadsheetDS.setLocal(events, this.ssIDs.getCacheName(objName));
-      SpreadsheetDS.setLocal(byRoom, this.ssIDs.getCacheByRoomName(objName));
+      SpreadsheetDS.setLocal(this.events, this.ssIDs.getCacheName(objName));
+      SpreadsheetDS.setLocal(this.byRoom, this.ssIDs.getCacheByRoomName(objName));
       SpreadsheetDS.setLocal(calEvents, this.ssIDs.getCacheForCalEvents(objName));
-      this.eventsLabel = this.buildLabel(eventsCount, objName);
+      SpreadsheetDS.setLocal(this.nextEvent, this.ssIDs.getCacheForNextEvent(objName));
+      this.eventsLabel = this.buildLabel(this.eventsCount, objName);
 
-      this.eventsUpdated.emit(events);
-      this.byRoomUpdated.emit(byRoom);
+      this.eventsUpdated.emit(this.events);
+      this.byRoomUpdated.emit(this.byRoom);
       this.calEventsUpdated.emit([calEvents]);
+      this.nextEventUpdated.emit([this.nextEvent]);
     });
-  }
-
-  getNextEvent(events: Array<EventInterface>): EventInterface {
-    const now = new Date();
-    let nextEvent: EventInterface;
-
-    events.forEach(currentEvent => {
-      if (undefined !== currentEvent) {
-        // Check if the current event is in the future
-        if (currentEvent.schedule >= now) {
-          // Check if the event is nearer than the current or replaces an undefined value.
-          if (undefined === nextEvent || currentEvent.schedule < nextEvent.schedule) {
-            nextEvent = currentEvent;
-          }
-        }
-      }
-    });
-
-    return nextEvent;
   }
 
   initializeRoomDictionary(dataReceived: Array<InputEventInterface>): RoomsDictionary {
@@ -250,5 +252,61 @@ export class SpreadsheetDS {
     }
 
     return label;
+  }
+
+  updateFilter(filter: string, objName: string) {
+    this.filterByRoom = filter;
+    const nextEvent = this.updateNextEvent(this.filterByRoom, this.events, this.byRoom);
+
+    SpreadsheetDS.setLocal(nextEvent, this.ssIDs.getCacheForNextEvent(objName));
+    this.eventsLabel = this.buildLabel(this.eventsCount, objName);
+
+    this.nextEventUpdated.emit([nextEvent]);
+  }
+
+  private updateNextEvent(filter: string, events: Array<EventInterface>, byRoom: Array<EventRoomInterface>): EventInterface {
+    if (undefined !== filter && '' !== filter) {
+      const room = byRoom.find(obj => obj.name === filter);
+      if (undefined !== room) {
+        console.log('filterByRoom is "' + filter + '"');
+        return this.getNextEvent(room.events);
+      } else {
+        console.log('filterByRoom is "' + filter + '" but not found in roomList');
+        return null;
+      }
+    } else {
+      console.log('filterByRoom is empty, using this.events (' + events.length + ')');
+      return this.getNextEvent(events);
+    }
+  }
+
+  getNextEvent(events: Array<EventInterface>): EventInterface {
+    const now = new Date();
+    let nextEvent: EventInterface;
+
+    console.log('getNextEvent: Working on ' + events.length + ' events.');
+    console.log('getNextEvent: Type: ' + typeof (events).toString());
+    events.forEach(currentEvent => {
+      if (undefined !== currentEvent) {
+        // Check if the current event is in the future
+        // console.log('getNextEvent: Comparing ' + now.toDateString() + ' to event ' + currentEvent.schedule.toDateString());
+        console.log('getNextEvent: ' + typeof (currentEvent).toString());
+        if (currentEvent.schedule >= now) {
+          // console.log('getNextEvent: currentEvent accepted as future: ' + currentEvent.title);
+          // Check if the event is nearer than the current or replaces an undefined value.
+          if (undefined === nextEvent || currentEvent.schedule < nextEvent.schedule) {
+            // console.log('getNextEvent: Accepted as nextEvent');
+            nextEvent = currentEvent;
+          }
+        }
+      }
+    });
+    if (undefined !== nextEvent) {
+      console.log('getNextEvent: Found event: "' + nextEvent.title + '" at ' + nextEvent.schedule.toDateString());
+    } else {
+      console.log('getNextEvent: No event found in loop.');
+    }
+
+    return nextEvent;
   }
 }

@@ -18,11 +18,9 @@ export class CountdownTimerComponent implements OnInit {
   toggleDescriptionsName: string;
   onlyUpcoming: boolean;
   showDescriptions: boolean;
-  nextEvent: EventInterface;
   nextEventTimeDiff: number;
   nextEventTimeString: string;
   countdownCssClass: string;
-  filterByRoom: string;
   roomList: Array<EventRoomInterface>;
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
@@ -39,10 +37,6 @@ export class CountdownTimerComponent implements OnInit {
     this.sds.eventsUpdated.subscribe(
       (newData: EventInterface[]) => {
         this.events = newData;
-        // Initialize
-        if (undefined === this.filterByRoom || '' === this.filterByRoom) {
-          this.getNextEvent();
-        }
       }
     );
     this.sds.eventsUpdated.emit(
@@ -53,10 +47,6 @@ export class CountdownTimerComponent implements OnInit {
       (newData: EventRoomInterface[]) => {
         if (undefined !== newData) {
           this.roomList = newData;
-          // Initialize
-          if (undefined !== this.filterByRoom && '' !== this.filterByRoom) {
-            this.getNextEvent();
-          }
         }
       }
     );
@@ -64,9 +54,22 @@ export class CountdownTimerComponent implements OnInit {
       // use the local storage if there until HTTP call retrieves something
       JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]')
     );
+    this.sds.nextEventUpdated.subscribe(
+      (newData: Array<EventInterface>) => {
+        newData.forEach(nextEvent => {
+          if (undefined !== nextEvent) {
+            this.updateNextEventString(nextEvent);
+          }
+        });
+      }
+    );
+    this.sds.nextEventUpdated.emit(
+      // use the local storage if there until HTTP call retrieves something
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]')
+    );
 
     // Let the timer run
-    setInterval(() => { this.updateNextEventString(); }, 1000);
+    this.sds.startTimer();
   }
 
   refresh() {
@@ -97,27 +100,8 @@ export class CountdownTimerComponent implements OnInit {
     this.showDescriptions = !this.showDescriptions;
   }
 
-  getNextEvent(): void {
-    let events: Array<EventInterface>;
-
-    if (undefined !== this.filterByRoom && '' !== this.filterByRoom) {
-      const room = this.roomList.find(obj => obj.name === this.filterByRoom);
-      if (undefined !== room) {
-        events = room.events;
-        console.log('filterByRoom is "' + this.filterByRoom + '"');
-      } else {
-        console.log('filterByRoom is "' + this.filterByRoom + '" but not found in roomList');
-      }
-    } else {
-      events = this.events;
-      console.log('filterByRoom is empty, using this.events');
-    }
-    console.log('Found ' + events.length + ' events');
-
-    // Identify the next event
-    this.nextEvent = this.sds.getNextEvent(events);
-
-    this.updateNextEventString();
+  updateFilter(updatedValue: string): void {
+    this.sds.updateFilter(updatedValue, this.objName);
   }
 
   /**
@@ -148,9 +132,8 @@ export class CountdownTimerComponent implements OnInit {
     this.nextEventTimeDiff = timediff;
   }
 
-  updateNextEventString(): void {
+  updateNextEventString(nextEvent: EventInterface): void {
     let timediff: number;
-    const nextEvent: EventInterface = this.nextEvent;
 
     this.updateTimediff(nextEvent);
 

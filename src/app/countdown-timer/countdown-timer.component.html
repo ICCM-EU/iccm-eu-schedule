@@ -4,8 +4,8 @@
       <a routerLink="/" class="btn btn-primary" mat-raised-button>List</a>
       <button mat-raised-button class="md-raised md-cornered" (click)="refresh()">Refresh Events</button>
       <mat-form-field>
-        <mat-select placeholder="Selected Room" [(ngModel)]="this.filterByRoom" name="roomFilter"
-          (valueChange)="this.getNextEvent()">
+        <mat-select placeholder="Selected Room" name="roomFilter"
+          (selectionChange)="this.updateFilter($event.value)">
           <mat-option [value]="">All Rooms</mat-option>
           <mat-option *ngFor="let room of this.roomList" [style.background-color]="room.color.secondary"
             [value]="room.name">
@@ -18,10 +18,10 @@
 
   <div class="counter">
     <div class="central-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
-    <div *ngIf="nextEvent" class="event-details">
+    <div *ngIf="this.sds.nextEvent" class="event-details">
       <div class="event-details">
-        <span class="event-time">{{ nextEvent.schedule | date:'HH:mm' }}:</span>
-        <span class="event-title"> {{ nextEvent.title }}</span>
+        <span class="event-time">{{ this.sds.nextEvent.schedule | date:'HH:mm' }}:</span>
+        <span class="event-title"> {{ this.sds.nextEvent.title }}</span>
       </div>
     </div>
   </div>

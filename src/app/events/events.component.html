@@ -9,8 +9,8 @@
       <!-- <a routerLink="/by-room" class="btn btn-primary" mat-raised-button>By Room</a> -->
       <a routerLink="/schedule" class="btn btn-primary" mat-raised-button>Schedule</a>
       <mat-form-field>
-        <mat-select placeholder="Selected Room" [(ngModel)]="this.filterByRoom" (valueChange)="this.getNextEvent()"
-          name="roomFilter">
+        <mat-select placeholder="Selected Room"
+          (selectionChange)="this.updateFilter($event.value)" name="roomFilter">
           <mat-option [value]="">All Rooms</mat-option>
           <mat-option *ngFor="let room of this.roomList" [style.background-color]="room.color.secondary"
             [value]="room.name">
@@ -25,7 +25,7 @@
   <div class="events-list">
     <ng-container *ngFor="let record of events">
       <div *ngIf="(!onlyUpcoming || record.upcoming) &&
-       (undefined === filterByRoom || filterByRoom == '' || filterByRoom == record.room.name)" class="event room"
+       (undefined === this.sds.filterByRoom || this.sds.filterByRoom == '' || this.sds.filterByRoom == record.room.name)" class="event room"
         [style.border-left-color]="record.room.color.primary" [style.background-color]="record.room.color.secondary">
         <div class="event-head-row">
           <span> {{ record.schedule | date:'EE., HH:mm' }}:</span>
