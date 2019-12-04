@@ -109,17 +109,17 @@ export class SpreadsheetDS {
           }
         });
       }
+      
+      this.eventsLabel = this.buildLabel(this.eventsCount, objName);
 
       SpreadsheetDS.setLocal(this.events, this.ssIDs.getCacheName(objName));
       SpreadsheetDS.setLocal(this.byRoom, this.ssIDs.getCacheByRoomName(objName));
-      SpreadsheetDS.setLocal(calEvents, this.ssIDs.getCacheForCalEvents(objName));
-      SpreadsheetDS.setLocal(this.nextEvent, this.ssIDs.getCacheForNextEvent(objName));
-      this.eventsLabel = this.buildLabel(this.eventsCount, objName);
+      SpreadsheetDS.setLocal([calEvents], this.ssIDs.getCacheForCalEvents(objName));
+      SpreadsheetDS.setLocal([this.nextEvent], this.ssIDs.getCacheForNextEvent(objName));
 
       this.eventsUpdated.emit(this.events);
       this.byRoomUpdated.emit(this.byRoom);
       this.calEventsUpdated.emit([calEvents]);
-      console.log('loadEvents: Emitting this.nextEvent: ' + this.nextEvent.title);
       this.nextEventUpdated.emit([this.nextEvent]);
     });
   }
@@ -262,7 +262,7 @@ export class SpreadsheetDS {
     SpreadsheetDS.setLocal(this.nextEvent, this.ssIDs.getCacheForNextEvent(objName));
     this.eventsLabel = this.buildLabel(this.eventsCount, objName);
 
-    console.log('updateFilter: Emitting this.nextEvent: ' + this.nextEvent.title);
+    SpreadsheetDS.setLocal([this.nextEvent], this.ssIDs.getCacheForNextEvent(objName));
     this.nextEventUpdated.emit([this.nextEvent]);
   }
 
@@ -270,14 +270,11 @@ export class SpreadsheetDS {
     if (undefined !== filter && '' !== filter) {
       const room = byRoom.find(obj => obj.name === filter);
       if (undefined !== room) {
-        console.log('filterByRoom is "' + filter + '"');
         return this.getNextEvent(room.events);
       } else {
-        console.log('filterByRoom is "' + filter + '" but not found in roomList');
         return null;
       }
     } else {
-      console.log('filterByRoom is empty, using this.events (' + events.length + ')');
       return this.getNextEvent(events);
     }
   }
@@ -286,29 +283,47 @@ export class SpreadsheetDS {
     const now = new Date();
     let nextEvent: EventInterface;
 
-    console.log('getNextEvent: Working on ' + events.length + ' events.');
-    console.log('getNextEvent: Type: ' + typeof (events).toString());
     events.forEach(currentEvent => {
       if (undefined !== currentEvent) {
         // Check if the current event is in the future
-        // console.log('getNextEvent: Comparing ' + now.toDateString() + ' to event ' + currentEvent.schedule.toDateString());
-        // console.log('getNextEvent: ' + typeof (currentEvent).toString());
-        if (currentEvent.schedule >= now) {
-          // console.log('getNextEvent: currentEvent accepted as future: ' + currentEvent.title);
+        if (new Date(currentEvent.schedule) >= now) {
           // Check if the event is nearer than the current or replaces an undefined value.
-          if (undefined === nextEvent || currentEvent.schedule < nextEvent.schedule) {
-            // console.log('getNextEvent: Accepted as nextEvent');
+          if (undefined === nextEvent ||
+            new Date(currentEvent.schedule) < new Date(nextEvent.schedule)) {
             nextEvent = currentEvent;
           }
         }
       }
     });
-    if (undefined !== nextEvent) {
-      console.log('getNextEvent: Found event: "' + nextEvent.title + '" at ' + nextEvent.schedule.toDateString());
-    } else {
-      console.log('getNextEvent: No event found in loop.');
-    }
 
     return nextEvent;
+  }
+
+  transformJsonToEventInterfaceArray(events: Array<EventInterface>): Array<EventInterface> {
+    events.forEach(event => {
+      event.schedule = new Date(event.schedule);
+      event.end = new Date(event.end);
+    });
+    return events;
+  }
+
+  transformJsonToEventRoomInterfaceArray(rooms: Array<EventRoomInterface>): Array<EventRoomInterface> {
+    rooms.forEach(room => {
+      room.events.forEach(event => {
+        event.schedule = new Date(event.schedule);
+        event.end = new Date(event.end);
+      });
+    });
+    return rooms;
+  }
+
+  transformJsonToCalEventEmitterInterface(items: Array<CalEventEmitterInterface>): Array<CalEventEmitterInterface> {
+    items.forEach(item => {
+      item.events.forEach(event => {
+        event.start = new Date(event.start);
+        event.end = new Date(event.end);
+      });
+    });
+    return items;
   }
 }

@@ -41,7 +41,8 @@ export class EventsComponent implements OnInit {
     );
     this.sds.eventsUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
+      this.sds.transformJsonToEventInterfaceArray(
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]'))
     );
     this.sds.byRoomUpdated.subscribe(
       (newData: EventRoomInterface[]) => {
@@ -52,7 +53,8 @@ export class EventsComponent implements OnInit {
     );
     this.sds.byRoomUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]')
+      this.sds.transformJsonToEventRoomInterfaceArray(
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]'))
     );
 
     this.sds.nextEventUpdated.subscribe(
@@ -68,7 +70,8 @@ export class EventsComponent implements OnInit {
     );
     this.sds.nextEventUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]')
+      this.sds.transformJsonToEventInterfaceArray(
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]'))
     );
 
     // Let the timer run
@@ -114,13 +117,11 @@ export class EventsComponent implements OnInit {
   updateTimediff(nextEvent: EventInterface): void {
     if (!nextEvent) {
       this.nextEventTimeDiff = 0;
-      console.log('updateTimediff: nextEvent is undefined');
       return;
     }
-    console.log('updateTimediff: "' + nextEvent.title + '" at ' + nextEvent.schedule);
 
     // Calculate / update the time value
-    const thenTime = new Date(nextEvent.schedule).getTime();
+    const thenTime = nextEvent.schedule.getTime();
     // refresh for more precision
     const nowTime = new Date().getTime();
     const timediff: number = thenTime - nowTime;
@@ -140,7 +141,6 @@ export class EventsComponent implements OnInit {
 
   updateNextEventString(nextEvent: EventInterface): void {
     let timediff: number;
-    console.log('updateNextEventString');
 
     this.updateTimediff(nextEvent);
 

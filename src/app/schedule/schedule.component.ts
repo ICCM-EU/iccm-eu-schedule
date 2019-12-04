@@ -38,7 +38,8 @@ export class ScheduleComponent implements OnInit {
     );
     this.sds.eventsUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
+      this.sds.transformJsonToEventInterfaceArray(
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]'))
     );
 
     this.sds.calEventsUpdated.subscribe(
@@ -64,7 +65,8 @@ export class ScheduleComponent implements OnInit {
       });
     this.sds.calEventsUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheForCalEvents(this.objName)] || '[]')
+      this.sds.transformJsonToCalEventEmitterInterface(
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheForCalEvents(this.objName)] || '[]'))
     );
   }
 

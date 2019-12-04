@@ -41,7 +41,8 @@ export class CountdownTimerComponent implements OnInit {
     );
     this.sds.eventsUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]')
+      this.sds.transformJsonToEventInterfaceArray(
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheName(this.objName)] || '[]'))
     );
     this.sds.byRoomUpdated.subscribe(
       (newData: EventRoomInterface[]) => {
@@ -52,7 +53,8 @@ export class CountdownTimerComponent implements OnInit {
     );
     this.sds.byRoomUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]')
+      this.sds.transformJsonToEventRoomInterfaceArray(
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]'))
     );
     this.sds.nextEventUpdated.subscribe(
       (next: Array<EventInterface>) => {
@@ -67,7 +69,8 @@ export class CountdownTimerComponent implements OnInit {
     );
     this.sds.nextEventUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]')
+      this.sds.transformJsonToEventInterfaceArray(
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]'))
     );
 
     // Let the timer run
@@ -116,7 +119,7 @@ export class CountdownTimerComponent implements OnInit {
       return;
     }
     // Calculate / update the time value
-    const thenTime = new Date(nextEvent.schedule).getTime();
+    const thenTime = nextEvent.schedule.getTime();
     // refresh for more precision
     const nowTime = new Date().getTime();
     const timediff: number = thenTime - nowTime;
