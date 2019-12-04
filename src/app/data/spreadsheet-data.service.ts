@@ -52,9 +52,9 @@ export class SpreadsheetDS {
   public startTimer() {
     if (!SpreadsheetDS.timerStarted) {
       // Let the timer run
-      setInterval(() => {
-        this.nextEventUpdated.emit([this.nextEvent]);
-      }, 1000);
+      // setInterval(() => {
+      //   this.nextEventUpdated.emit([this.nextEvent]);
+      // }, 1000);
       SpreadsheetDS.timerStarted = true;
     }
   }
@@ -119,6 +119,7 @@ export class SpreadsheetDS {
       this.eventsUpdated.emit(this.events);
       this.byRoomUpdated.emit(this.byRoom);
       this.calEventsUpdated.emit([calEvents]);
+      console.log('loadEvents: Emitting this.nextEvent: ' + this.nextEvent.title);
       this.nextEventUpdated.emit([this.nextEvent]);
     });
   }
@@ -261,6 +262,7 @@ export class SpreadsheetDS {
     SpreadsheetDS.setLocal(this.nextEvent, this.ssIDs.getCacheForNextEvent(objName));
     this.eventsLabel = this.buildLabel(this.eventsCount, objName);
 
+    console.log('updateFilter: Emitting this.nextEvent: ' + this.nextEvent.title);
     this.nextEventUpdated.emit([this.nextEvent]);
   }
 

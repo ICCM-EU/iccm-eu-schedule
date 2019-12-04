@@ -56,11 +56,16 @@ export class EventsComponent implements OnInit {
     );
 
     this.sds.nextEventUpdated.subscribe(
-      (nextEvent: EventInterface) => {
-        if (undefined !== nextEvent) {
-          this.updateNextEventString(nextEvent);
+      (next: Array<EventInterface>) => {
+        if (next != null) {
+          for (const nextEvent of next) {
+            if (nextEvent != null) {
+              this.updateNextEventString(nextEvent);
+            }
+          }
         }
-      });
+      }
+    );
     this.sds.nextEventUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
       JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]')
