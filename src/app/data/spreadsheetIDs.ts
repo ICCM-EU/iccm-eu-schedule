@@ -15,8 +15,8 @@ export class SpreadsheetIDs {
 
   dataObjects: ObjectClass[] = [];
 
-  constructor() {
-    if (true) {
+  constructor(useTestData: boolean) {
+    if (useTestData) {
       // https://spreadsheets.google.com/feeds/list/YOURGOOGLESHEETCODE/SHEETPAGENUMBER/public/full?alt=json
       this.tabURLStart = 'https://spreadsheets.google.com/feeds/list/';
       this.spreadsheetID = '11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI';
@@ -31,17 +31,18 @@ export class SpreadsheetIDs {
         labelName: 'Event'
       });
     } else {
-      // this.tabURLStart = '/assets';
-      // this.spreadsheetID = '';
-      // this.urlEnd = 'sheet-export.json';
-      // this.dataObjects.push({
-      //   tabID: '',
-      //   objName: 'events',
-      //   cache: 'eventsCache',
-      //   cacheByRoom: 'eventsByRoomCache',
-      //   cacheForCalEvents: 'eventsForCalCache',
-      //   labelName: 'Event'
-      // });
+      this.tabURLStart = '/assets';
+      this.spreadsheetID = '';
+      this.urlEnd = 'sheet-export.json';
+      this.dataObjects.push({
+        tabID: '',
+        objName: 'events',
+        cache: 'eventsCache',
+        cacheByRoom: 'eventsByRoomCache',
+        cacheForCalEvents: 'eventsForCalCache',
+        cacheForNextEvent: 'eventsNextEventCache',
+        labelName: 'Event'
+      });
     }
     // console.log('Tab URL: ' + this.getTabURL('events'));
   }

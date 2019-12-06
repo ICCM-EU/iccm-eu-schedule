@@ -13,11 +13,13 @@ import { colors } from './colors';
 import { RoomsDictionary } from './roomsDictionary';
 import { CalEventEmitterInterface } from './calEventEmitterInterface';
 
+const USE_LOCAL_TEST_DATA = true;
+
 @Injectable()
 export class SpreadsheetDS {
   static timerStarted = false;
 
-  ssIDs: SpreadsheetIDs = new SpreadsheetIDs;
+  ssIDs: SpreadsheetIDs = new SpreadsheetIDs(USE_LOCAL_TEST_DATA);
   lastUpdated = new Date();
   refreshIntervalMin = (60e3 * 5); // 5 Minutes
 
