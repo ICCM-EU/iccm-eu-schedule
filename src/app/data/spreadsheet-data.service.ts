@@ -111,7 +111,7 @@ export class SpreadsheetDS {
           }
         });
       }
-      
+
       this.eventsLabel = this.buildLabel(this.eventsCount, objName);
 
       SpreadsheetDS.setLocal(this.events, this.ssIDs.getCacheName(objName));
