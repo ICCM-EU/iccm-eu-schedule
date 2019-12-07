@@ -53,7 +53,7 @@ export class ScheduleComponent implements OnInit {
               this.roomCount = Object.keys(this.users).length;
               if (undefined !== this.nextEvent) {
                 this.viewDate = startOfDay(this.nextEvent.schedule);
-                this.initialViewDate = startOfDay(this.nextEvent.schedule);
+                this.initialViewDate = this.viewDate;
               } else {
                 // Fallback to today
                 this.viewDate = startOfDay(new Date());

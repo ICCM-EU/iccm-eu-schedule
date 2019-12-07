@@ -17,17 +17,17 @@ export class DayViewSchedulerCalendarUtils extends CalendarUtils {
       users: []
     };
     view.hourColumns[0].events.forEach(({ event }) => {
-      // assumes user objects are the same references,
-      // if 2 users have the same structure but different object references this will fail
-      if (!view.users.includes(event.meta.user)) {
+      if (!view.users.find(user => user.name === event.meta.user.name)) {
         view.users.push(event.meta.user);
       }
     });
+
     // sort the users by their names
     view.users.sort((user1, user2) => user1.name.localeCompare(user2.name));
     view.hourColumns[0].events = view.hourColumns[0].events.map(
       dayViewEvent => {
-        const index = view.users.indexOf(dayViewEvent.event.meta.user);
+        const userObj = view.users.find(entry => entry.name === dayViewEvent.event.meta.user.name);
+        const index = view.users.indexOf(userObj);
         dayViewEvent.left = index * EVENT_WIDTH; // change the column of the event
         dayViewEvent.width = EVENT_WIDTH;
         return dayViewEvent;
