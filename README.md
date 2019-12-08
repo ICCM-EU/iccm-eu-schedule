@@ -1,19 +1,21 @@
-# MyPets (Angular)
+# ICCM Conference Schedule View (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+
+It represents different views on a schedule stored in a google sheet
+which is also connected to a conference app, made with https://glideapps.com/
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --port=4200 --live-reload=true` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Build for production
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng build --prod --output-path docs --base-href /iccm-eu-2020` to build the project. The build artifacts will be stored in the `docs/` directory.
 
-## Build
+Copy docs/index.html to docs/404.html to allow all content to be provided on github.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
+Access the production pages at https://hjtappe.github.io/iccm-eu-2020/
 
 ## Further help
 
