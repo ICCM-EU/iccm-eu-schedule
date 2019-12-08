@@ -1,6 +1,6 @@
 # Reference commands for publishing.
 
-GITHUB_PROJECT_NAME="iccm-eu-2020"
+GITHUB_PROJECT_NAME=iccm-eu-2020
 
 all:
 	ng build --prod --output-path docs --base-href /$(GITHUB_PROJECT_NAME)
