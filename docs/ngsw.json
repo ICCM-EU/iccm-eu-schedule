@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "index": "/iccm-eu-2020/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/iccm-eu-2020/1.821303ce83eaed7dbfbc.js",
+        "/iccm-eu-2020/2.d503d9662bab92a4a21b.js",
+        "/iccm-eu-2020/3.45ad665023872acc8c40.js",
+        "/iccm-eu-2020/4.ee8908d14ba5738d55fb.js",
+        "/iccm-eu-2020/5.ff3bdbf5cdb806f73405.js",
+        "/iccm-eu-2020/6.975361be2b12b69bffe0.js",
+        "/iccm-eu-2020/common.27f31bee465628427e13.js",
+        "/iccm-eu-2020/favicon.ico",
+        "/iccm-eu-2020/index.html",
+        "/iccm-eu-2020/main.9b105102347342feda57.js",
+        "/iccm-eu-2020/polyfills.389c83b2b7194ef323f4.js",
+        "/iccm-eu-2020/runtime.3da85dbe4d5fcbd98224.js",
+        "/iccm-eu-2020/styles.4c6deb9d0b800c675200.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/iccm-eu-2020/assets/icons/icon-128x128.png",
+        "/iccm-eu-2020/assets/icons/icon-144x144.png",
+        "/iccm-eu-2020/assets/icons/icon-152x152.png",
+        "/iccm-eu-2020/assets/icons/icon-192x192.png",
+        "/iccm-eu-2020/assets/icons/icon-384x384.png",
+        "/iccm-eu-2020/assets/icons/icon-512x512.png",
+        "/iccm-eu-2020/assets/icons/icon-72x72.png",
+        "/iccm-eu-2020/assets/icons/icon-96x96.png",
+        "/iccm-eu-2020/assets/sheet-export.json"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/iccm-eu-2020/1.821303ce83eaed7dbfbc.js": "ab8a46eab88243a83f9f89e595a326c251cf9a87",
+    "/iccm-eu-2020/2.d503d9662bab92a4a21b.js": "8ff23864d07ad8884e4454ea8dee8911af432b3c",
+    "/iccm-eu-2020/3.45ad665023872acc8c40.js": "e62ec26289eb594eb76f719b2ab11ef91ef71545",
+    "/iccm-eu-2020/4.ee8908d14ba5738d55fb.js": "fb0514fc020a902cb09e9c8dc3c78ecab65d0743",
+    "/iccm-eu-2020/5.ff3bdbf5cdb806f73405.js": "8eeb39820ba3377d64e725899bbad4e9c037b759",
+    "/iccm-eu-2020/6.975361be2b12b69bffe0.js": "28b6340bf4453510d1977307de6a4cd8ad57e3c8",
+    "/iccm-eu-2020/assets/icons/icon-128x128.png": "cfdecd14e5b436106a19a1e6656661a0cdd22299",
+    "/iccm-eu-2020/assets/icons/icon-144x144.png": "c2c87e553494cbb0226bdc643f8037d9e151da01",
+    "/iccm-eu-2020/assets/icons/icon-152x152.png": "121d4853c1e70df065db659065f0c245d63f409d",
+    "/iccm-eu-2020/assets/icons/icon-192x192.png": "0b330ab4d9d7c611ba0758cde8be87969a26ec73",
+    "/iccm-eu-2020/assets/icons/icon-384x384.png": "875c203a8c98c4c16d8a22df3a8f304c6e487ed1",
+    "/iccm-eu-2020/assets/icons/icon-512x512.png": "1705c7ad8588bbbcb48cd7ecbeaa6d23b63adfbb",
+    "/iccm-eu-2020/assets/icons/icon-72x72.png": "eb0f0de58b6fccc394c67e234be211e6575e3381",
+    "/iccm-eu-2020/assets/icons/icon-96x96.png": "84be8cda34892f4853f38a0dafe523f2d5d145ce",
+    "/iccm-eu-2020/assets/sheet-export.json": "3523dfa3a6e0ba40b3266e3ac85b6b2f353fd165",
+    "/iccm-eu-2020/common.27f31bee465628427e13.js": "97337a7eaed3b44dc1da99fb3f009137aed84b92",
+    "/iccm-eu-2020/favicon.ico": "0cbf3ab920f5d5d6ab8f3ae55c13edb3f33e3239",
+    "/iccm-eu-2020/index.html": "249bd986e45dc3567df91f0c5d57b69173dc4f64",
+    "/iccm-eu-2020/main.9b105102347342feda57.js": "f6dceb3e742b18523ac2a01d8f24783fa83d2c89",
+    "/iccm-eu-2020/polyfills.389c83b2b7194ef323f4.js": "6156b4bcd17024cdc5b869d03d09f93cae16fa47",
+    "/iccm-eu-2020/runtime.3da85dbe4d5fcbd98224.js": "8ab51a7bed95070ae7b9f840cadad791809b4b0b",
+    "/iccm-eu-2020/styles.4c6deb9d0b800c675200.css": "213af0a40112f4b235c7b2bca3404dbc0aa6c342"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

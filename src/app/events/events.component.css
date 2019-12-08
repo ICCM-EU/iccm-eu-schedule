@@ -1,3 +1,127 @@
 .container {
-  margin-left: 30px;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 0px;
+}
+
+.toprow {
+  border: 1px;
+  border-color: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  width: 100%;
+  min-width: 300px;
+}
+
+.toprow-label {
+  display: inline-block;
+  padding: 3px;
+  margin: 9px;
+}
+
+.toprow-buttons {
+  display: inline-block;
+  padding: 3px;
+  margin: 9px;
+}
+
+.toprow-counter{
+  float: right;
+  min-width: 35ex;
+  text-align: right;
+  font-size: larger;
+  padding: 3px;
+  margin: 5px;
+  vertical-align: top;
+}
+
+.countdown-10s-uneven {
+  border: 4px;
+  border-color: red;
+  border-style: solid;
+  background-color: rgba(255, 100, 100, 0.5);
+}
+
+.countdown-10s-even {
+  border: 4px;
+  border-color: red;
+  border-style: dashed;
+  background-color: rgba(255, 100, 100, 0.5);
+}
+
+.countdown-30s {
+  border: 4px;
+  border-color: white;
+  border-style: solid;
+  background-color: rgba(255, 155, 0, 0.7);
+}
+
+.countdown-1m {
+  border: 4px;
+  border-color: white;
+  border-style: solid;
+  background-color: rgba(255, 205, 0, 0.5);
+}
+
+.countdown-3m {
+  border: 4px;
+  border-color: white;
+  border-style: solid;
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+.countdown-5m {
+  border: 4px;
+  border-color: white;
+  border-style: solid;
+  background-color: rgba(100, 255, 100, 0.1);
+}
+
+.countdown-long {
+  border: 4px;
+  border-color: white;
+  border-style: solid;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* .event-head-row {
+} */
+
+.events-list {
+  font-size: xx-large;
+}
+
+.event {
+  border: 1px;
+  border-color: lightgray;
+  border-style: solid;
+  margin: 5px;
+  padding: 5px;
+  min-width: 300px !important;
+  font-family: Arial, Helvetica, sans-serif;
+  border-left-width: 5px;
+  border-left-color: lightgray;
+  border-left-style: solid;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.event-title {
+  font-weight: bold;
+}
+
+/* .event-speaker{
+} */
+
+.event-room {
+  float: right;
+}
+
+.event-description {
+  color: rgb(120, 120, 120);
+  font-style: italic;
+}
+.room {
+  border-left-width: 5px;
+  border-left-style: solid;
 }

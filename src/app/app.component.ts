@@ -4,10 +4,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: []
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
 
 }

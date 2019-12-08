@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="btn-group">
+      <a routerLink="/"><div class="btn btn-outline-secondary">
+        List
+      </div></a>
+      <div class="btn btn-primary" mwlCalendarPreviousView [view]="'day'" [(viewDate)]="viewDate">
+        Previous
+      </div>
+      <div class="btn btn-outline-secondary" (click)="setToStart()">
+        Upcoming
+      </div>
+      <div class="btn btn-primary" mwlCalendarNextView [view]="'day'" [(viewDate)]="viewDate">
+        Next
+      </div>
+      <div class="btn btn-outline-secondary" (click)="refresh()">
+        Refresh
+      </div>
+      <!-- <div>(Found {{ events.length }} events in {{ roomCount }} rooms)</div> -->
+    </div>
+  </div>
+  <div class="col-md-6 text-right">
+    <h3>{{ viewDate | calendarDate:('dayViewTitle') }}</h3>
+  </div>
+</div>
+<!-- <br /> -->
+
+<app-day-view-scheduler [viewDate]="viewDate" [events]="events">
+</app-day-view-scheduler>
