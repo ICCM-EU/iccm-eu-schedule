@@ -5,6 +5,7 @@ class ObjectClass {
   cacheByRoom: string;
   cacheForCalEvents: string;
   cacheForNextEvent: string;
+  cacheForFilter: string;
   labelName: string;
 }
 
@@ -28,6 +29,7 @@ export class SpreadsheetIDs {
         cacheByRoom: 'eventsByRoomCache',
         cacheForCalEvents: 'eventsForCalCache',
         cacheForNextEvent: 'eventsNextEventCache',
+        cacheForFilter: 'filterCache',
         labelName: 'Event'
       });
     } else {
@@ -41,6 +43,7 @@ export class SpreadsheetIDs {
         cacheByRoom: 'eventsByRoomCache',
         cacheForCalEvents: 'eventsForCalCache',
         cacheForNextEvent: 'eventsNextEventCache',
+        cacheForFilter: 'filterCache',
         labelName: 'Event'
       });
     }
@@ -83,6 +86,13 @@ export class SpreadsheetIDs {
       console.log('Failed to find cache for "' + objName + '"');
     }
     return cache.cacheForNextEvent;
+  }
+  getCacheForFilter(objName: string): string {
+    const cache = this.dataObjects.find(myObj => myObj.objName === objName);
+    if (undefined === cache) {
+      console.log('Failed to find cache for "' + objName + '"');
+    }
+    return cache.cacheForFilter;
   }
   getLabelName(objName: string): string {
     const cache = this.dataObjects.find(myObj => myObj.objName === objName);

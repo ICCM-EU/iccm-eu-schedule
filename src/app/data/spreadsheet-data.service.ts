@@ -29,7 +29,7 @@ export class SpreadsheetDS {
   events: Array<EventInterface> = [];
   byRoom: Array<EventRoomInterface> = [];
   nextEvent: EventInterface;
-  filterByRoom = '';
+  filterByRoom: string;
   eventsCount = 0;
 
   eventsUpdated = new EventEmitter<Array<EventInterface>>();
@@ -39,8 +39,6 @@ export class SpreadsheetDS {
   nextEventUpdated = new EventEmitter<Array<EventInterface>>();
 
   constructor(public http: HttpClient) {
-    this.filterByRoom = '';
-
     // initial loads
     this.refreshAll();
     setInterval(() => { this.refreshStaleData(); }, this.refreshIntervalMin);
@@ -118,11 +116,13 @@ export class SpreadsheetDS {
       SpreadsheetDS.setLocal(this.byRoom, this.ssIDs.getCacheByRoomName(objName));
       SpreadsheetDS.setLocal([calEvents], this.ssIDs.getCacheForCalEvents(objName));
       SpreadsheetDS.setLocal([this.nextEvent], this.ssIDs.getCacheForNextEvent(objName));
+      SpreadsheetDS.setLocal([this.filterByRoom], this.ssIDs.getCacheForFilter(objName));
 
       this.eventsUpdated.emit(this.events);
       this.byRoomUpdated.emit(this.byRoom);
       this.calEventsUpdated.emit([calEvents]);
       this.nextEventUpdated.emit([this.nextEvent]);
+      this.filterUpdated.emit([this.filterByRoom]);
     });
   }
 
@@ -261,11 +261,13 @@ export class SpreadsheetDS {
     this.filterByRoom = filter;
     this.nextEvent = this.updateNextEvent(this.filterByRoom, this.events, this.byRoom);
 
-    SpreadsheetDS.setLocal(this.nextEvent, this.ssIDs.getCacheForNextEvent(objName));
     this.eventsLabel = this.buildLabel(this.eventsCount, objName);
 
     SpreadsheetDS.setLocal([this.nextEvent], this.ssIDs.getCacheForNextEvent(objName));
     this.nextEventUpdated.emit([this.nextEvent]);
+
+    SpreadsheetDS.setLocal([this.filterByRoom], this.ssIDs.getCacheForFilter(objName));
+    this.filterUpdated.emit([this.filterByRoom]);
   }
 
   private updateNextEvent(filter: string, events: Array<EventInterface>, byRoom: Array<EventRoomInterface>): EventInterface {

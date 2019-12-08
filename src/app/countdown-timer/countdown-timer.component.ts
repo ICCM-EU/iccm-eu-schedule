@@ -22,10 +22,12 @@ export class CountdownTimerComponent implements OnInit {
   nextEventTimeString: string;
   countdownCssClass: string;
   roomList: Array<EventRoomInterface>;
+  filterstring: string;
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
     this.countdownCssClass = '';
+    this.filterstring = '';
 
     this.toggleUpcoming(true);
     this.toggleDescriptions(true);
@@ -71,6 +73,23 @@ export class CountdownTimerComponent implements OnInit {
       // use the local storage if there until HTTP call retrieves something
       this.sds.transformJsonToEventInterfaceArray(
         JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]'))
+    );
+    this.sds.filterUpdated.subscribe(
+      (next: Array<string>) => {
+        if (next != null) {
+          for (const filterString of next) {
+            if (filterString != null && filterString !== '') {
+              this.filterstring = filterString;
+            } else {
+              this.filterstring = 'All Rooms';
+            }
+          }
+        }
+      }
+    );
+    this.sds.filterUpdated.emit(
+      // use the local storage if there until HTTP call retrieves something
+        JSON.parse(localStorage[this.sds.ssIDs.getCacheForFilter(this.objName)] || '[]')
     );
 
     // Let the timer run

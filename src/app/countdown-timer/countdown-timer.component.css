@@ -23,11 +23,12 @@
   color: lightgrey;
 }
 
-mat-form-field, {
+.toprow-room {
+  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
-  border: 1px;
-  border-color: lightgrey;
   color: lightgrey;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .counter {
