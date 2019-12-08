@@ -13,7 +13,7 @@ import { colors } from './colors';
 import { RoomsDictionary } from './roomsDictionary';
 import { CalEventEmitterInterface } from './calEventEmitterInterface';
 
-const USE_LOCAL_TEST_DATA = true;
+const USE_LOCAL_TEST_DATA = false;
 
 @Injectable()
 export class SpreadsheetDS {

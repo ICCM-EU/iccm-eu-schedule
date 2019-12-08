@@ -17,7 +17,7 @@ export class SpreadsheetIDs {
   dataObjects: ObjectClass[] = [];
 
   constructor(useTestData: boolean) {
-    if (useTestData) {
+    if (!useTestData) {
       // https://spreadsheets.google.com/feeds/list/YOURGOOGLESHEETCODE/SHEETPAGENUMBER/public/full?alt=json
       this.tabURLStart = 'https://spreadsheets.google.com/feeds/list/';
       this.spreadsheetID = '11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI';
