@@ -32,11 +32,13 @@
     "date-fns": "^2.7.0",
     "flatpickr": "^4.6.3",
     "font-awesome": "^4.7.0",
+    "highlight.js": "^9.16.2",
     "ngx-order-pipe": "^2.0.4",
     "ngx-perfect-scrollbar": "^8.0.0",
     "rxjs": "^6.2.2",
     "rxjs-tslint": "^0.1.7",
     "serialize-javascript": "^2.1.1",
+    "sprintf-js": "^1.1.2",
     "tar-fs": "^2.0.0",
     "zone.js": "^0.9.1"
   },
