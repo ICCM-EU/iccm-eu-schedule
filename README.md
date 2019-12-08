@@ -11,7 +11,7 @@ Run `ng serve --port=4200 --live-reload=true` for a dev server. Navigate to `htt
 
 ## Build for production
 
-Run `ng build --prod --output-path docs --base-href /iccm-eu-2020` to build the project. The build artifacts will be stored in the `docs/` directory.
+Run `ng build --prod --output-path docs --base-href /iccm-eu-2020/` to build the project. The build artifacts will be stored in the `docs/` directory.
 
 Copy docs/index.html to docs/404.html to allow all content to be provided on github.
 
