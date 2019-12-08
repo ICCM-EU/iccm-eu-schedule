@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 
-import {
-  MatButtonModule,
-  MatSelectModule,
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   imports: [
