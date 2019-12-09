@@ -5,6 +5,13 @@ import { DayViewSchedulerInterface } from './dayViewSchedulerInterface';
 
 @Injectable()
 export class DayViewSchedulerCalendarUtils extends CalendarUtils {
+  public static getDayStartHour(): number {
+    return 8;
+  }
+
+  public static getDayEndHour(): number {
+    return 24;
+  }
 
   public static getColumnWidth(): number {
     // Calculate it from number of user columns
@@ -14,7 +21,7 @@ export class DayViewSchedulerCalendarUtils extends CalendarUtils {
 
   public static gethourSegmentHeight(): number {
     // Calculate it from number of user columns
-    const hourCount = 16;
+    const hourCount = DayViewSchedulerCalendarUtils.getDayEndHour() - DayViewSchedulerCalendarUtils.getDayStartHour();
     return (15 > (window.innerHeight - 70) / (hourCount * 2)) ? 15 : ((window.innerHeight - 70) / (hourCount * 2));
   }
 

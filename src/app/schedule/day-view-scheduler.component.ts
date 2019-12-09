@@ -12,7 +12,6 @@ import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
         margin-left: 70px;
       }
       .day-view-column-header {
-        width: ` + DayViewSchedulerCalendarUtils.getColumnWidth() + `px;
         border: solid 1px black;
         text-align: center;
       }
@@ -38,7 +37,8 @@ export class DayViewSchedulerComponent extends CalendarWeekViewComponent {
   view: DayViewSchedulerInterface;
   daysInWeek = 1;
   hourSegmentHeight = DayViewSchedulerCalendarUtils.gethourSegmentHeight();
-  dayStartHour = 8;
+  dayStartHour = DayViewSchedulerCalendarUtils.getDayStartHour();
+  dayEndHour = DayViewSchedulerCalendarUtils.getDayEndHour();
   // tooltipTemplate = './tooltip.html';
   /**
    * Whether to append tooltips to the body or next to the trigger element
@@ -51,4 +51,5 @@ export class DayViewSchedulerComponent extends CalendarWeekViewComponent {
   // tooltipDelay: number | null;
 
   eventWidth = DayViewSchedulerCalendarUtils.getColumnWidth();
+  eventWidthPx = DayViewSchedulerCalendarUtils.getColumnWidth() + 'px';
 }

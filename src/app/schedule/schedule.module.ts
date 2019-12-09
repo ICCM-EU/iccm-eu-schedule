@@ -21,8 +21,8 @@ import { DayViewSchedulerComponent } from './day-view-scheduler.component';
     OrderModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
-      useFactory: adapterFactory
+      useFactory: adapterFactory,
     })
-  ]
+  ],
 })
 export class ScheduleModule { }
