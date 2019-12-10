@@ -6,9 +6,11 @@ import { ScheduleRoutingModule } from './schedule-routing.module';
 
 import { OrderModule } from 'ngx-order-pipe';
 
-import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { CalendarModule, DateAdapter, CalendarDateFormatter, CalendarNativeDateFormatter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { DayViewSchedulerComponent } from './day-view-scheduler.component';
+import { CustomDateFormatter } from './customDateFormatter';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,21 @@ import { DayViewSchedulerComponent } from './day-view-scheduler.component';
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
-    })
+    },
+      {
+        dateFormatter: {
+          provide: CalendarDateFormatter,
+          useClass: CustomDateFormatter
+        }
+      }
+    ),
+    CalendarModule,
+  ],
+  providers: [
+    {
+      provide: CalendarNativeDateFormatter,
+      useClass: CustomDateFormatter,
+    }
   ],
 })
 export class ScheduleModule { }

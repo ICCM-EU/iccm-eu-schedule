@@ -22,7 +22,10 @@ export class ScheduleComponent implements OnInit {
   initialViewDate: Date = new Date();
   viewDate: Date = new Date();
 
-  constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
+  constructor(
+    public sds: SpreadsheetDS,
+    private renderer: Renderer2
+  ) {
     this.objName = 'events';
 
     this.renderer.setStyle(document.body, 'background-color', 'white');

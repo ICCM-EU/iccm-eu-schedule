@@ -27,7 +27,7 @@ import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
     {
       provide: CalendarUtils,
       useClass: DayViewSchedulerCalendarUtils
-    }
+    },
   ],
   templateUrl: 'day-view-scheduler.component.html'
 })
