@@ -52,9 +52,9 @@ export class SpreadsheetDS {
   public startTimer() {
     if (!SpreadsheetDS.timerStarted) {
       // Let the timer run
-      // setInterval(() => {
-      //   this.nextEventUpdated.emit([this.nextEvent]);
-      // }, 1000);
+      setInterval(() => {
+        this.nextEventUpdated.emit([this.nextEvent]);
+      }, 1000);
       SpreadsheetDS.timerStarted = true;
     }
   }
