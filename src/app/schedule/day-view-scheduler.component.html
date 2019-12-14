@@ -1,6 +1,8 @@
-<div class="cal-week-view" role="grid">
+<div class="cal-week-view" role="grid" (window:resize)="onResize($event.target)">
   <div class="day-view-column-headers">
-    <div class="day-view-column-header" [style.width]="eventWidthPx" *ngFor="let user of view?.users">
+    <div class="day-view-column-header" [style.width]="eventWidthPx"
+    [style.background-color]="user.color?.secondary"
+    *ngFor="let user of view?.users">
       {{ user.name }}
     </div>
   </div>
@@ -70,12 +72,6 @@
             [eventTitleTemplate]="eventTitleTemplate"
             [eventActionsTemplate]="eventActionsTemplate"
             [column]="column"
-            (eventClicked)="
-              eventClicked.emit({
-                event: timeEvent.event,
-                sourceEvent: $event.sourceEvent
-              })
-            "
           >
           </mwl-calendar-week-view-event>
           <div

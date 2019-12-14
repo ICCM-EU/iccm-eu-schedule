@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { CalendarUtils, CalendarWeekViewComponent } from 'angular-calendar';
+import { Component, EventEmitter, Output, ChangeDetectorRef, OnInit } from '@angular/core';
+import { CalendarUtils, CalendarWeekViewComponent, DateAdapter } from 'angular-calendar';
 import { DayViewSchedulerInterface } from './dayViewSchedulerInterface';
 import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
 
@@ -31,25 +31,41 @@ import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
   ],
   templateUrl: 'day-view-scheduler.component.html'
 })
-export class DayViewSchedulerComponent extends CalendarWeekViewComponent {
+export class DayViewSchedulerComponent extends CalendarWeekViewComponent implements OnInit {
   @Output() userChanged = new EventEmitter();
 
   view: DayViewSchedulerInterface;
-  daysInWeek = 1;
-  hourSegmentHeight = DayViewSchedulerCalendarUtils.gethourSegmentHeight();
-  dayStartHour = DayViewSchedulerCalendarUtils.getDayStartHour();
-  dayEndHour = DayViewSchedulerCalendarUtils.getDayEndHour();
-  // tooltipTemplate = './tooltip.html';
-  /**
-   * Whether to append tooltips to the body or next to the trigger element
-   */
-  // tooltipAppendToBody: boolean;
-  /**
-   * The delay in milliseconds before the tooltip should be displayed. If not provided the tooltip
-   * will be displayed immediately.
-   */
-  // tooltipDelay: number | null;
+  eventWidth: number;
+  eventWidthPx: string;
 
-  eventWidth = DayViewSchedulerCalendarUtils.getColumnWidth();
-  eventWidthPx = DayViewSchedulerCalendarUtils.getColumnWidth() + 'px';
+  constructor(cdr: ChangeDetectorRef, utils: CalendarUtils, dateAdapter: DateAdapter) {
+    super(cdr, utils, '', dateAdapter);
+
+    this.daysInWeek = 1;
+    this.hourSegmentHeight = DayViewSchedulerCalendarUtils.gethourSegmentHeight(window.innerHeight);
+    this.dayStartHour = DayViewSchedulerCalendarUtils.getDayStartHour();
+    this.dayEndHour = DayViewSchedulerCalendarUtils.getDayEndHour();
+    // this.tooltipTemplate = './tooltip.html';
+    /**
+     * Whether to append tooltips to the body or next to the trigger element
+     */
+    // this.tooltipAppendToBody: boolean;
+    /**
+     * The delay in milliseconds before the tooltip should be displayed. If not provided the tooltip
+     * will be displayed immediately.
+     */
+    // this.tooltipDelay: number | null;
+  }
+
+  ngOnInit() {
+    this.eventWidth = DayViewSchedulerCalendarUtils.getColumnWidth(window.innerWidth, this.view.users.length);
+    this.eventWidthPx = DayViewSchedulerCalendarUtils.getColumnWidth(window.innerWidth, this.view.users.length) + 'px';
+  }
+
+  onResize(window: Window) {
+    this.hourSegmentHeight = DayViewSchedulerCalendarUtils.gethourSegmentHeight(window.innerHeight);
+    this.eventWidth = DayViewSchedulerCalendarUtils.getColumnWidth(window.innerWidth, this.view.users.length);
+    this.eventWidthPx = this.eventWidth + 'px';
+    this.view.hourColumns[0].events = DayViewSchedulerCalendarUtils.arrangeDayEventsInView(this.view);
+  }
 }
