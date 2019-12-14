@@ -92,22 +92,32 @@ export class CountdownTimerComponent implements OnInit {
     );
     this.sds.filterUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-        JSON.parse(localStorage[this.sds.ssIDs.getCacheForFilter(this.objName)] || '[]')
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheForFilter(this.objName)] || '[]')
     );
 
     // Let the timer run
     this.sds.startTimer();
 
-    this.counterFontSize = this.getCounterFontSize();
+    this.counterFontSize = this.getCounterFontSize(window.innerWidth);
   }
 
   refresh() {
     this.sds.loadEvents(this.objName);
   }
 
-  getCounterFontSize(): string {
+  onResize(innerWidth: number) {
+    this.counterFontSize = this.getCounterFontSize(innerWidth);
+  }
+
+  getCounterFontSize(innerWidth: number): string {
+    // Number of characters expected in maximum case
     const numChars = 12;
-    let innerWidth = window.innerWidth - 70;
+
+    // defensife for browser-supplied values
+    if (!innerWidth) {
+      innerWidth = 0;
+    }
+    innerWidth = innerWidth - 70;
     if (innerWidth < numChars * 8) {
       innerWidth = numChars * 8;
     }
