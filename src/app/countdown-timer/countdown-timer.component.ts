@@ -23,6 +23,7 @@ export class CountdownTimerComponent implements OnInit {
   countdownCssClass: string;
   roomList: Array<EventRoomInterface>;
   filterstring: string;
+  counterFontSize: string;
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
@@ -33,6 +34,8 @@ export class CountdownTimerComponent implements OnInit {
     this.toggleDescriptions(true);
 
     this.renderer.setStyle(document.body, 'background-color', 'black');
+
+    this.counterFontSize = '180px';
   }
 
   ngOnInit() {
@@ -94,10 +97,22 @@ export class CountdownTimerComponent implements OnInit {
 
     // Let the timer run
     this.sds.startTimer();
+
+    this.counterFontSize = this.getCounterFontSize();
   }
 
   refresh() {
     this.sds.loadEvents(this.objName);
+  }
+
+  getCounterFontSize(): string {
+    const numChars = 12;
+    let innerWidth = window.innerWidth - 70;
+    if (innerWidth < numChars * 8) {
+      innerWidth = numChars * 8;
+    }
+    // font-size is height, but we calculated width; apply factor character height to width to window width.
+    return Math.floor(innerWidth * (3 / 2) / numChars) + 'px';
   }
 
   toggleUpcoming(init?: boolean) {
