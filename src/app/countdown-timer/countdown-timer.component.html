@@ -10,7 +10,8 @@
   </div>
 
   <div class="counter">
-    <div class="central-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
+    <div class="central-counter {{ countdownCssClass }}" [style.font-size]="counterFontSize"
+      (window:resize)="onResize($event.target?.innerWidth)">{{ nextEventTimeString }}</div>
     <div *ngIf="this.sds.nextEvent" class="event-details">
       <div class="event-details">
         <span class="event-time">{{ this.sds.nextEvent.schedule | date:'HH:mm' }}:</span>

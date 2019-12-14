@@ -23,6 +23,7 @@ export class CountdownTimerComponent implements OnInit {
   countdownCssClass: string;
   roomList: Array<EventRoomInterface>;
   filterstring: string;
+  counterFontSize: string;
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
@@ -33,6 +34,8 @@ export class CountdownTimerComponent implements OnInit {
     this.toggleDescriptions(true);
 
     this.renderer.setStyle(document.body, 'background-color', 'black');
+
+    this.counterFontSize = '180px';
   }
 
   ngOnInit() {
@@ -89,15 +92,37 @@ export class CountdownTimerComponent implements OnInit {
     );
     this.sds.filterUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-        JSON.parse(localStorage[this.sds.ssIDs.getCacheForFilter(this.objName)] || '[]')
+      JSON.parse(localStorage[this.sds.ssIDs.getCacheForFilter(this.objName)] || '[]')
     );
 
     // Let the timer run
     this.sds.startTimer();
+
+    this.counterFontSize = this.getCounterFontSize(window.innerWidth);
   }
 
   refresh() {
     this.sds.loadEvents(this.objName);
+  }
+
+  onResize(innerWidth: number) {
+    this.counterFontSize = this.getCounterFontSize(innerWidth);
+  }
+
+  getCounterFontSize(innerWidth: number): string {
+    // Number of characters expected in maximum case
+    const numChars = 12;
+
+    // defensife for browser-supplied values
+    if (!innerWidth) {
+      innerWidth = 0;
+    }
+    innerWidth = innerWidth - 70;
+    if (innerWidth < numChars * 8) {
+      innerWidth = numChars * 8;
+    }
+    // font-size is height, but we calculated width; apply factor character height to width to window width.
+    return Math.floor(innerWidth * (3 / 2) / numChars) + 'px';
   }
 
   toggleUpcoming(init?: boolean) {

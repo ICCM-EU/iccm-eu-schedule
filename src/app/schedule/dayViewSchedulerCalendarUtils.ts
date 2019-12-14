@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CalendarUtils } from 'angular-calendar';
-import { GetWeekViewArgs } from 'calendar-utils';
+import { GetWeekViewArgs, WeekViewTimeEvent } from 'calendar-utils';
 import { DayViewSchedulerInterface } from './dayViewSchedulerInterface';
 
 @Injectable()
@@ -13,16 +13,27 @@ export class DayViewSchedulerCalendarUtils extends CalendarUtils {
     return 24;
   }
 
-  public static getColumnWidth(): number {
-    // Calculate it from number of user columns
-    const userCount = 5;
-    return (150 > (window.innerWidth - 70) / userCount) ? 150 : ((window.innerWidth - 70) / userCount);
+  public static getColumnWidth(innerWidth: number, userCount: number): number {
+    return (150 > (innerWidth - 70) / userCount) ? 150 : ((innerWidth - 70) / userCount);
   }
 
-  public static gethourSegmentHeight(): number {
+  public static gethourSegmentHeight(innerHeight: number): number {
     // Calculate it from number of user columns
     const hourCount = DayViewSchedulerCalendarUtils.getDayEndHour() - DayViewSchedulerCalendarUtils.getDayStartHour();
-    return (15 > (window.innerHeight - 70) / (hourCount * 2)) ? 15 : ((window.innerHeight - 70) / (hourCount * 2));
+    return (15 > (innerHeight - 70) / (hourCount * 2)) ? 15 : ((innerHeight - 70) / (hourCount * 2));
+  }
+
+  public static arrangeDayEventsInView(view: DayViewSchedulerInterface): Array<WeekViewTimeEvent> {
+    return view.hourColumns[0].events.map(
+      dayViewEvent => {
+        const userObj = view.users.find(entry => entry.name === dayViewEvent.event.meta.user.name);
+        const index = view.users.indexOf(userObj);
+        const eventWidth = DayViewSchedulerCalendarUtils.getColumnWidth(window.innerWidth, view.users.length);
+        dayViewEvent.left = index * eventWidth; // change the column of the event
+        dayViewEvent.width = eventWidth;
+        return dayViewEvent;
+      }
+    );
   }
 
   getWeekView(args: GetWeekViewArgs): DayViewSchedulerInterface {
@@ -38,16 +49,8 @@ export class DayViewSchedulerCalendarUtils extends CalendarUtils {
 
     // sort the users by their names
     view.users.sort((user1, user2) => user1.name.localeCompare(user2.name));
-    view.hourColumns[0].events = view.hourColumns[0].events.map(
-      dayViewEvent => {
-        const userObj = view.users.find(entry => entry.name === dayViewEvent.event.meta.user.name);
-        const index = view.users.indexOf(userObj);
-        const eventWidth = DayViewSchedulerCalendarUtils.getColumnWidth();
-        dayViewEvent.left = index * eventWidth; // change the column of the event
-        dayViewEvent.width = eventWidth;
-        return dayViewEvent;
-      }
-    );
+    view.hourColumns[0].events = DayViewSchedulerCalendarUtils.arrangeDayEventsInView(view);
+
     return view;
   }
 }
