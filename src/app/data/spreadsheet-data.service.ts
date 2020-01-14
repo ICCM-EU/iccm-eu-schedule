@@ -224,6 +224,8 @@ export class SpreadsheetDS {
         color: roomsDictionary[i.gsx$room.$t].color,
         meta: {
           user: roomsDictionary[i.gsx$room.$t],
+          speaker: i.gsx$speaker.$t,
+          description: i.gsx$description.$t,
         },
         resizable: {
           beforeStart: false,
