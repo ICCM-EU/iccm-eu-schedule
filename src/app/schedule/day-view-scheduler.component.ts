@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Output, ChangeDetectorRef, OnInit } from '@angular/core';
-import { CalendarUtils, CalendarWeekViewComponent, DateAdapter } from 'angular-calendar';
+import { CalendarUtils, CalendarWeekViewComponent, DateAdapter, CalendarEventTitleFormatter } from 'angular-calendar';
 import { DayViewSchedulerInterface } from './dayViewSchedulerInterface';
 import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
+import { CustomEventTitleFormatter } from './customEventTitleFormatter';
 
 @Component({
   selector: 'app-day-view-scheduler',
@@ -27,6 +28,10 @@ import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
     {
       provide: CalendarUtils,
       useClass: DayViewSchedulerCalendarUtils
+    },
+    {
+      provide: CalendarEventTitleFormatter,
+      useClass: CustomEventTitleFormatter
     },
   ],
   templateUrl: 'day-view-scheduler.component.html',
