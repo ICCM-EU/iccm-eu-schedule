@@ -1,7 +1,10 @@
 import { Component, EventEmitter, Output, ChangeDetectorRef, OnInit } from '@angular/core';
-import { CalendarUtils, CalendarWeekViewComponent, DateAdapter } from 'angular-calendar';
+import { CalendarUtils, CalendarWeekViewComponent, DateAdapter, CalendarEventTitleFormatter, CalendarEvent } from 'angular-calendar';
 import { DayViewSchedulerInterface } from './dayViewSchedulerInterface';
 import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
+import { CustomEventTitleFormatter } from './customEventTitleFormatter';
+import { TextManager } from '../data/textManager';
+
 
 @Component({
   selector: 'app-day-view-scheduler',
@@ -28,12 +31,17 @@ import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
       provide: CalendarUtils,
       useClass: DayViewSchedulerCalendarUtils
     },
+    {
+      provide: CalendarEventTitleFormatter,
+      useClass: CustomEventTitleFormatter
+    },
   ],
-  templateUrl: 'day-view-scheduler.component.html'
+  templateUrl: 'day-view-scheduler.component.html',
 })
 export class DayViewSchedulerComponent extends CalendarWeekViewComponent implements OnInit {
   @Output() userChanged = new EventEmitter();
 
+  txtMgr = new TextManager();
   view: DayViewSchedulerInterface;
   eventWidth: number;
   eventWidthPx: string;
@@ -45,16 +53,16 @@ export class DayViewSchedulerComponent extends CalendarWeekViewComponent impleme
     this.hourSegmentHeight = DayViewSchedulerCalendarUtils.gethourSegmentHeight(window.innerHeight);
     this.dayStartHour = DayViewSchedulerCalendarUtils.getDayStartHour();
     this.dayEndHour = DayViewSchedulerCalendarUtils.getDayEndHour();
-    // this.tooltipTemplate = './tooltip.html';
+    // this.tooltipTemplate = new TemplateRef('customEventTooltipTemplate');
     /**
      * Whether to append tooltips to the body or next to the trigger element
      */
-    // this.tooltipAppendToBody: boolean;
+    this.tooltipAppendToBody = false;
     /**
      * The delay in milliseconds before the tooltip should be displayed. If not provided the tooltip
      * will be displayed immediately.
      */
-    // this.tooltipDelay: number | null;
+    this.tooltipDelay = 300;
   }
 
   ngOnInit() {
@@ -67,5 +75,16 @@ export class DayViewSchedulerComponent extends CalendarWeekViewComponent impleme
     this.eventWidth = DayViewSchedulerCalendarUtils.getColumnWidth(window.innerWidth, this.view.users.length);
     this.eventWidthPx = this.eventWidth + 'px';
     this.view.hourColumns[0].events = DayViewSchedulerCalendarUtils.arrangeDayEventsInView(this.view);
+  }
+
+  getTooltipText(event: CalendarEvent): string {
+    let output = event.title;
+    if (event.meta.speaker && event.meta.speaker !== '') {
+      output += '<br/>(' + event.meta.speaker + ')';
+    }
+    if (event.meta.description && event.meta.description !== '') {
+      output += '<br/><hr/>' + TextManager.cropTextAfter(event.meta.description, 120);
+    }
+    return output;
   }
 }

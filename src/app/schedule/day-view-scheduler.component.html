@@ -1,102 +1,85 @@
 <div class="cal-week-view" role="grid" (window:resize)="onResize($event.target)">
   <div class="day-view-column-headers">
-    <div class="day-view-column-header" [style.width]="eventWidthPx"
-    [style.background-color]="user.color?.secondary"
-    *ngFor="let user of view?.users">
+    <div class="day-view-column-header" [style.width]="eventWidthPx" [style.background-color]="user.color?.secondary"
+      *ngFor="let user of view?.users">
       {{ user.name }}
     </div>
   </div>
-  <div
-    class="cal-time-events"
-  >
+  <div class="cal-time-events">
     <div class="cal-time-label-column" *ngIf="view.hourColumns.length > 0">
-      <div
-        *ngFor="
+      <div *ngFor="
           let hour of view.hourColumns[0].hours;
           trackBy: trackByHour;
           let odd = odd
-        "
-        class="cal-hour"
-        [class.cal-hour-odd]="odd"
-      >
-        <mwl-calendar-week-view-hour-segment
-          *ngFor="let segment of hour.segments; trackBy: trackByHourSegment"
-          [style.height.px]="hourSegmentHeight"
-          [segment]="segment"
-          [segmentHeight]="hourSegmentHeight"
-          [locale]="locale"
-          [customTemplate]="hourSegmentTemplate"
-          [isTimeLabel]="true"
-        >
+        " class="cal-hour" [class.cal-hour-odd]="odd">
+        <mwl-calendar-week-view-hour-segment *ngFor="let segment of hour.segments; trackBy: trackByHourSegment"
+          [style.height.px]="hourSegmentHeight" [segment]="segment" [segmentHeight]="hourSegmentHeight"
+          [locale]="locale" [customTemplate]="hourSegmentTemplate" [isTimeLabel]="true">
         </mwl-calendar-week-view-hour-segment>
       </div>
     </div>
-    <div
-      class="cal-day-columns"
-      [class.cal-resize-active]="timeEventResizes.size > 0"
-      #dayColumns
-    >
-      <div
-        class="cal-day-column"
-        *ngFor="let column of view.hourColumns; trackBy: trackByHourColumn"
-      >
-        <div
-          *ngFor="let timeEvent of column.events; trackBy: trackByWeekTimeEvent"
-          #event
-          class="cal-event-container"
+    <div class="cal-day-columns" [class.cal-resize-active]="timeEventResizes.size > 0" #dayColumns>
+      <div class="cal-day-column" *ngFor="let column of view.hourColumns; trackBy: trackByHourColumn">
+        <div *ngFor="let timeEvent of column.events; trackBy: trackByWeekTimeEvent" #event class="cal-event-container"
           [class.cal-starts-within-day]="!timeEvent.startsBeforeDay"
-          [class.cal-ends-within-day]="!timeEvent.endsAfterDay"
-          [ngClass]="timeEvent.event.cssClass"
-          [hidden]="timeEvent.height === 0 && timeEvent.width === 0"
-          [style.top.px]="timeEvent.top"
-          [style.height.px]="timeEvent.height"
-          [style.left.px]="timeEvent.left"
-          [style.width.px]="timeEvent.width"
-        >
-          <div
-            class="cal-resize-handle cal-resize-handle-before-start"
-            *ngIf="
+          [class.cal-ends-within-day]="!timeEvent.endsAfterDay" [ngClass]="timeEvent.event.cssClass"
+          [hidden]="timeEvent.height === 0 && timeEvent.width === 0" [style.top.px]="timeEvent.top"
+          [style.height.px]="timeEvent.height" [style.left.px]="timeEvent.left" [style.width.px]="timeEvent.width">
+          <div class="cal-resize-handle cal-resize-handle-before-start" *ngIf="
               timeEvent.event?.resizable?.beforeStart &&
               !timeEvent.startsBeforeDay
-            "
-          ></div>
-          <mwl-calendar-week-view-event
-            [locale]="locale"
-            [weekEvent]="timeEvent"
-            [tooltipPlacement]="tooltipPlacement"
-            [tooltipTemplate]="tooltipTemplate"
-            [tooltipAppendToBody]="tooltipAppendToBody"
-            [tooltipDisabled]="dragActive || timeEventResizes.size > 0"
-            [tooltipDelay]="tooltipDelay"
-            [customTemplate]="eventTemplate"
-            [eventTitleTemplate]="eventTitleTemplate"
-            [eventActionsTemplate]="eventActionsTemplate"
-            [column]="column"
-          >
+            "></div>
+          <mwl-calendar-week-view-event [locale]="locale" [weekEvent]="timeEvent" [tooltipPlacement]="tooltipPlacement"
+            [tooltipTemplate]="tooltipTemplate" [tooltipAppendToBody]="tooltipAppendToBody"
+            [tooltipDisabled]="dragActive || timeEventResizes.size > 0" [tooltipDelay]="tooltipDelay"
+            [customTemplate]="customEventTemplate" [eventTitleTemplate]="eventTitleTemplate"
+            [eventActionsTemplate]="eventActionsTemplate" [column]="column">
           </mwl-calendar-week-view-event>
-          <div
-            *ngIf="
+          <div *ngIf="
               timeEvent.event?.resizable?.afterEnd && !timeEvent.endsAfterDay
-            "
-          ></div>
+            "></div>
         </div>
 
-        <div
-          *ngFor="let hour of column.hours; trackBy: trackByHour; let odd = odd"
-          class="cal-hour"
-          [class.cal-hour-odd]="odd"
-        >
-          <mwl-calendar-week-view-hour-segment
-            *ngFor="let segment of hour.segments; trackBy: trackByHourSegment"
-            [style.height.px]="hourSegmentHeight"
-            [segment]="segment"
-            [segmentHeight]="hourSegmentHeight"
-            [locale]="locale"
-            [customTemplate]="hourSegmentTemplate"
-          >
+        <div *ngFor="let hour of column.hours; trackBy: trackByHour; let odd = odd" class="cal-hour"
+          [class.cal-hour-odd]="odd">
+          <mwl-calendar-week-view-hour-segment *ngFor="let segment of hour.segments; trackBy: trackByHourSegment"
+            [style.height.px]="hourSegmentHeight" [segment]="segment" [segmentHeight]="hourSegmentHeight"
+            [locale]="locale" [customTemplate]="hourSegmentTemplate">
           </mwl-calendar-week-view-hour-segment>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- From angular-calendar / CalendarWeekViewEventComponent -->
+<ng-template #customEventTemplate let-weekEvent="weekEvent" let-tooltipPlacement="tooltipPlacement"
+  let-eventClicked="eventClicked" let-tooltipTemplate="tooltipTemplate" let-tooltipAppendToBody="tooltipAppendToBody"
+  let-tooltipDisabled="tooltipDisabled" let-tooltipDelay="tooltipDelay" let-column="column" let-daysInWeek="daysInWeek">
+  <div class="cal-event" [ngStyle]="{
+          backgroundColor: weekEvent.event.color?.secondary,
+          borderColor: weekEvent.event.color?.primary
+        }" [mwlCalendarTooltip]="
+          !tooltipDisabled
+            ? (weekEvent.event.title + ' TBD'
+              | calendarEventTitle
+                : (daysInWeek === 1 ? 'dayTooltip' : 'weekTooltip')
+                : weekEvent.event)
+            : ''
+        " [tooltipPlacement]="tooltipPlacement" [tooltipEvent]="weekEvent.event"
+    [tooltipTemplate]="customTooltipTemplate" [tooltipAppendToBody]="tooltipAppendToBody" [tooltipDelay]="tooltipDelay"
+    (mwlClick)="eventClicked.emit({ sourceEvent: $event })"
+    (mwlKeydownEnter)="eventClicked.emit({ sourceEvent: $event })" tabindex="0" role="application" [attr.aria-label]="
+          { event: weekEvent.event, locale: locale }
+            | calendarA11y: 'eventDescription'
+        ">
+    <mwl-calendar-event-title [event]="weekEvent.event" [customTemplate]="eventTitleTemplate"
+      [view]="daysInWeek === 1 ? 'day' : 'week'">
+    </mwl-calendar-event-title>
+  </div>
+</ng-template>
+<ng-template #customTooltipTemplate let-placement="placement" let-event="event">
+  <div class="cal-tooltip" [ngClass]="'cal-tooltip-' + placement">
+    <div class="cal-tooltip-arrow"></div>
+    <div class="cal-tooltip-inner" [innerHtml]="getTooltipText(event)"></div>
+  </div>
+</ng-template>
