@@ -1,8 +1,10 @@
 import { Component, EventEmitter, Output, ChangeDetectorRef, OnInit } from '@angular/core';
-import { CalendarUtils, CalendarWeekViewComponent, DateAdapter, CalendarEventTitleFormatter } from 'angular-calendar';
+import { CalendarUtils, CalendarWeekViewComponent, DateAdapter, CalendarEventTitleFormatter, CalendarEvent } from 'angular-calendar';
 import { DayViewSchedulerInterface } from './dayViewSchedulerInterface';
 import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
 import { CustomEventTitleFormatter } from './customEventTitleFormatter';
+import { TextManager } from '../data/textManager';
+
 
 @Component({
   selector: 'app-day-view-scheduler',
@@ -39,6 +41,7 @@ import { CustomEventTitleFormatter } from './customEventTitleFormatter';
 export class DayViewSchedulerComponent extends CalendarWeekViewComponent implements OnInit {
   @Output() userChanged = new EventEmitter();
 
+  txtMgr = new TextManager();
   view: DayViewSchedulerInterface;
   eventWidth: number;
   eventWidthPx: string;
@@ -72,5 +75,16 @@ export class DayViewSchedulerComponent extends CalendarWeekViewComponent impleme
     this.eventWidth = DayViewSchedulerCalendarUtils.getColumnWidth(window.innerWidth, this.view.users.length);
     this.eventWidthPx = this.eventWidth + 'px';
     this.view.hourColumns[0].events = DayViewSchedulerCalendarUtils.arrangeDayEventsInView(this.view);
+  }
+
+  getTooltipText(event: CalendarEvent): string {
+    let output = event.title;
+    if (event.meta.speaker && event.meta.speaker !== '') {
+      output += '<br/>(' + event.meta.speaker + ')';
+    }
+    if (event.meta.description && event.meta.description !== '') {
+      output += '<br/><hr/>' + TextManager.cropTextAfter(event.meta.description, 120);
+    }
+    return output;
   }
 }

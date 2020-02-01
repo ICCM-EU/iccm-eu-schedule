@@ -1,5 +1,8 @@
+import { Injectable } from '@angular/core';
+
+@Injectable()
 export class TextManager {
-  static cropDescriptionAfter(what: string, where: number): string {
+  static cropTextAfter(what: string, where: number): string {
     if (where <= what.length) {
       let realWhere = what.indexOf(' ', where);
       if (realWhere <= where) {
