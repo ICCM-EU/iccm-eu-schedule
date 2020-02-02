@@ -3,7 +3,7 @@ import { TextManager } from './textManager';
 
 @Pipe({name: 'cropText'})
 export class CropTextPipe implements PipeTransform {
-  transform(what: string, where: number): string {
-    return TextManager.cropTextAfter(what, where);
+  transform(what: string, where: number, when?: ' '): string {
+    return TextManager.cropTextAfter(what, where, when);
   }
 }

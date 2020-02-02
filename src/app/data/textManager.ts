@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TextManager {
-  static cropTextAfter(what: string, where: number): string {
+  static cropTextAfter(what: string, where: number, when?: ' '): string {
     if (where <= what.length) {
-      let realWhere = what.indexOf(' ', where);
+      let realWhere = what.indexOf(when, where);
       if (realWhere <= where) {
         realWhere = where;
       }

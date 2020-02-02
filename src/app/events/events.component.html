@@ -45,7 +45,7 @@
         <!-- <span> ({{ record.Upcoming ? 'upcoming' : 'old' }})</span> -->
         <!-- </div> -->
         <div class="event-details-row" *ngIf="showDescriptions && record.description">
-          <div class="event-description">{{ record.description | cropText:220 }}</div>
+          <div class="event-description" [attr.title]="record.description">{{ record.description | cropText:120:' ' }}</div>
         </div>
       </div>
     </ng-container>
