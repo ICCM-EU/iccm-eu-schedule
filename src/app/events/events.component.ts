@@ -1,5 +1,8 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Router, Scroll } from '@angular/router';
 import { sprintf } from 'sprintf-js';
+import { filter } from 'rxjs/operators';
 
 import { isUndefined, isBoolean } from 'util';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
@@ -23,14 +26,15 @@ export class EventsComponent implements OnInit {
   countdownCssClass: string;
   roomList: Array<EventRoomInterface>;
 
-  constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
+  constructor(public sds: SpreadsheetDS, private renderer: Renderer2, private router: Router,
+    private viewportScroller: ViewportScroller) {
     this.objName = 'events';
     this.countdownCssClass = '';
 
     this.toggleUpcoming(true);
     this.toggleDescriptions(true);
 
-    this.renderer.setStyle(document.body, 'background-color', 'white');
+    this.renderer.setStyle(document.body, 'background-color', 'dimgray');
   }
 
   ngOnInit() {
@@ -73,6 +77,11 @@ export class EventsComponent implements OnInit {
       this.sds.transformJsonToEventInterfaceArray(
         JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]'))
     );
+
+    this.router.events.pipe(
+      filter(e => e instanceof Scroll)).subscribe((e: any) => {
+        this.viewportScroller.scrollToAnchor(e.anchor);
+      });
 
     // Let the timer run
     this.sds.startTimer();

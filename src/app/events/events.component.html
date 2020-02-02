@@ -10,7 +10,8 @@
       <a routerLink="/schedule" class="btn btn-primary" mat-raised-button>Schedule</a>
       <mat-form-field>
         <mat-select placeholder="Selected Room" [ngModel]="this.sds.filterByRoom"
-          (selectionChange)="this.updateFilter($event.value)" name="roomFilter">
+          (selectionChange)="this.updateFilter($event.value)" name="roomFilter" [style.background-color]="'whitesmoke'"
+          [style.color]="'lightgrey'">
           <mat-option [value]="">All Rooms</mat-option>
           <mat-option *ngFor="let room of this.roomList" [style.background-color]="room.color.secondary"
             [value]="room.name">
@@ -19,14 +20,18 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="toprow-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
+    <a [routerLink]="'.'" [fragment]="'eventList'">
+      <div class="toprow-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
+    </a>
   </div>
 
-  <div class="events-list">
+  <div class="events-list" [attr.id]="'eventList'">
     <ng-container *ngFor="let record of events">
-      <div *ngIf="(!onlyUpcoming || record.upcoming) &&
-       (undefined === this.sds.filterByRoom || this.sds.filterByRoom == '' || this.sds.filterByRoom == record.room.name)" class="event room"
-        [style.border-left-color]="record.room.color.primary" [style.background-color]="record.room.color.secondary">
+      <div
+        *ngIf="(!onlyUpcoming || record.upcoming) &&
+       (undefined === this.sds.filterByRoom || this.sds.filterByRoom == '' || this.sds.filterByRoom == record.room.name)"
+        class="event room" [style.border-left-color]="record.room.color.primary"
+        [style.background-color]="record.room.color.secondary">
         <div class="event-head-row">
           <span> {{ record.schedule | date:'EE., HH:mm' }}:</span>
           <span class="event-title"> {{ record.title }}</span>
@@ -39,7 +44,7 @@
         <!-- <span> ({{ record.Upcoming ? 'upcoming' : 'old' }})</span> -->
         <!-- </div> -->
         <div class="event-details-row" *ngIf="showDescriptions && record.description">
-          <div class="event-description">{{ record.description | cropText:72 }}</div>
+          <div class="event-description">{{ record.description | cropText:220 }}</div>
         </div>
       </div>
     </ng-container>

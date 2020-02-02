@@ -26,4 +26,5 @@ import { CoreModule } from './core/core.module';
   providers: [SpreadsheetDS],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
