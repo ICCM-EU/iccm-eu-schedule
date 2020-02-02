@@ -1,4 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { sprintf } from 'sprintf-js';
 
 import { isUndefined, isBoolean } from 'util';
@@ -22,18 +23,21 @@ export class EventsComponent implements OnInit {
   nextEventTimeString: string;
   countdownCssClass: string;
   roomList: Array<EventRoomInterface>;
+  fragment: string;
 
-  constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
+  constructor(public sds: SpreadsheetDS, private renderer: Renderer2, private route: ActivatedRoute) {
     this.objName = 'events';
     this.countdownCssClass = '';
 
     this.toggleUpcoming(true);
     this.toggleDescriptions(true);
 
-    this.renderer.setStyle(document.body, 'background-color', 'white');
+    this.renderer.setStyle(document.body, 'background-color', 'dimgray');
   }
 
   ngOnInit() {
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+
     this.sds.eventsUpdated.subscribe(
       (newData: EventInterface[]) => {
         this.events = newData;
@@ -76,6 +80,14 @@ export class EventsComponent implements OnInit {
 
     // Let the timer run
     this.sds.startTimer();
+  }
+
+  ngAfterViewChecked(): void {
+    try {
+      if (this.fragment) {
+        document.querySelector('#' + this.fragment).scrollIntoView();
+      }
+    } catch (e) { }
   }
 
   refresh() {

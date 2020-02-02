@@ -6,6 +6,17 @@
       <div class="toprow-room">
         Upcoming in {{ this.filterstring }}
       </div>
+      <mat-form-field>
+        <mat-select placeholder="Selected Room" [ngModel]="this.sds.filterByRoom"
+          (selectionChange)="this.updateFilter($event.value)" name="roomFilter"
+           [style.background-color]="'dimgray'" [style.color]="'white'">
+          <mat-option [value]="">All Rooms</mat-option>
+          <mat-option *ngFor="let room of this.roomList" [style.background-color]="room.color.secondary"
+            [value]="room.name">
+            {{ room.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
   </div>
 
