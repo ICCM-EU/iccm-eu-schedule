@@ -1,6 +1,6 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, AfterViewInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
-import { Router, Scroll } from '@angular/router';
+import { Router, Scroll, ActivatedRoute } from '@angular/router';
 import { sprintf } from 'sprintf-js';
 import { filter } from 'rxjs/operators';
 
@@ -14,7 +14,7 @@ import { EventRoomInterface } from '../data/eventRoomInterface';
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
 })
-export class EventsComponent implements OnInit {
+export class EventsComponent implements OnInit, AfterViewInit {
   events: Array<EventInterface>;
   objName: string;
   toggleName: string;
@@ -26,7 +26,8 @@ export class EventsComponent implements OnInit {
   countdownCssClass: string;
   roomList: Array<EventRoomInterface>;
 
-  constructor(public sds: SpreadsheetDS, private renderer: Renderer2, private router: Router,
+  constructor(public sds: SpreadsheetDS, private renderer: Renderer2,
+    private router: Router, private activatedRoute: ActivatedRoute,
     private viewportScroller: ViewportScroller) {
     this.objName = 'events';
     this.countdownCssClass = '';
@@ -85,6 +86,15 @@ export class EventsComponent implements OnInit {
 
     // Let the timer run
     this.sds.startTimer();
+  }
+
+  ngAfterViewInit(): void {
+    this.activatedRoute.fragment.subscribe(f => {
+      const element = document.querySelector('#' + f);
+      if (element) {
+        element.scrollIntoView();
+      }
+    });
   }
 
   refresh() {

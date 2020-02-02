@@ -25,7 +25,8 @@
     </a>
   </div>
 
-  <div class="events-list" [attr.id]="'eventList'">
+  <a [attr.name]="'eventList'" [attr.id]="'eventList'"></a>
+  <div class="events-list">
     <ng-container *ngFor="let record of events">
       <div
         *ngIf="(!onlyUpcoming || record.upcoming) &&
