@@ -1,6 +1,8 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
+import { Router, Scroll } from '@angular/router';
 import { sprintf } from 'sprintf-js';
+import { filter } from 'rxjs/operators';
 
 import { isUndefined, isBoolean } from 'util';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
@@ -23,9 +25,9 @@ export class EventsComponent implements OnInit {
   nextEventTimeString: string;
   countdownCssClass: string;
   roomList: Array<EventRoomInterface>;
-  fragment: string;
 
-  constructor(public sds: SpreadsheetDS, private renderer: Renderer2, private route: ActivatedRoute) {
+  constructor(public sds: SpreadsheetDS, private renderer: Renderer2, private router: Router,
+    private viewportScroller: ViewportScroller) {
     this.objName = 'events';
     this.countdownCssClass = '';
 
@@ -36,8 +38,6 @@ export class EventsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
-
     this.sds.eventsUpdated.subscribe(
       (newData: EventInterface[]) => {
         this.events = newData;
@@ -78,16 +78,13 @@ export class EventsComponent implements OnInit {
         JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]'))
     );
 
+    this.router.events.pipe(
+      filter(e => e instanceof Scroll)).subscribe((e: any) => {
+        this.viewportScroller.scrollToAnchor(e.anchor);
+      });
+
     // Let the timer run
     this.sds.startTimer();
-  }
-
-  ngAfterViewChecked(): void {
-    try {
-      if (this.fragment) {
-        document.querySelector('#' + this.fragment).scrollIntoView();
-      }
-    } catch (e) { }
   }
 
   refresh() {

@@ -20,13 +20,12 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <a href="#list">
+    <a [routerLink]="'.'" [fragment]="'eventList'">
       <div class="toprow-counter {{ countdownCssClass }}">{{ nextEventTimeString }}</div>
     </a>
   </div>
 
-  <a [routerLink]="'.'" fragment="list"></a>
-  <div class="events-list">
+  <div class="events-list" [attr.id]="'eventList'">
     <ng-container *ngFor="let record of events">
       <div
         *ngIf="(!onlyUpcoming || record.upcoming) &&
