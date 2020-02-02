@@ -25,7 +25,8 @@
     </a>
   </div>
 
-  <div class="events-list" [attr.id]="'eventList'">
+  <a [attr.name]="'eventList'" [attr.id]="'eventList'"></a>
+  <div class="events-list">
     <ng-container *ngFor="let record of events">
       <div
         *ngIf="(!onlyUpcoming || record.upcoming) &&
@@ -44,7 +45,7 @@
         <!-- <span> ({{ record.Upcoming ? 'upcoming' : 'old' }})</span> -->
         <!-- </div> -->
         <div class="event-details-row" *ngIf="showDescriptions && record.description">
-          <div class="event-description">{{ record.description | cropText:220 }}</div>
+          <div class="event-description" [attr.title]="record.description">{{ record.description | cropText:120:' ' }}</div>
         </div>
       </div>
     </ng-container>
