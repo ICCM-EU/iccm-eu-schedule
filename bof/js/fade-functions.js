@@ -1,5 +1,5 @@
-var duration = 15000;
-var fadeTime = 2000;
+var duration = 30000;
+var fadeTime = 3000;
 
 function initialize() {
 	if ($('#active').length == 0) {
