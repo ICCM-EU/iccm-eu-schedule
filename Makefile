@@ -5,8 +5,6 @@ GITHUB_PROJECT_NAME=iccm-eu-2020
 all:
 	ng build --prod --output-path docs --base-href /$(GITHUB_PROJECT_NAME)/
 	cp docs/index.html docs/404.html
-	# Add BOF Flipscreen to the app
-	cp -r src/bof docs/
 	# Omit Test Data
 	-rm -f docs/assets/sheet-export.json
 	# configure github project to publish from docs folder:
