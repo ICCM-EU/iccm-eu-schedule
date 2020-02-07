@@ -190,10 +190,10 @@ export class SpreadsheetDS {
 
   transformEventData(i: InputEventInterface,
     roomsDictionary: RoomsDictionary): EventInterface {
-    const schedule = new Date(i.gsx$datetime.$t);
+    const endTime = new Date(i.gsx$enddatetime.$t);
     const now = new Date;
     let upcoming = true;
-    if (schedule <= now) {
+    if (endTime <= now) {
       upcoming = false;
     }
 
