@@ -32,7 +32,11 @@ export class EventsComponent implements OnInit, AfterViewInit {
     this.objName = 'events';
     this.countdownCssClass = '';
 
-    this.toggleUpcoming(true);
+    if (undefined === this.sds.nextEvent) {
+      this.toggleUpcoming(false);
+    } else {
+      this.toggleUpcoming(true);
+    }
     this.toggleDescriptions(true);
 
     this.renderer.setStyle(document.body, 'background-color', 'dimgray');
