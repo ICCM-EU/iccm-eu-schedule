@@ -305,6 +305,22 @@ export class SpreadsheetDS {
     return nextEvent;
   }
 
+  getFirstEvent(events: Array<EventInterface>): EventInterface {
+    let firstEvent: EventInterface;
+
+    events.forEach(currentEvent => {
+      if (undefined !== currentEvent) {
+        // Check if the event is earlier than the current or replaces an undefined value.
+        if (undefined === firstEvent ||
+          new Date(currentEvent.schedule) < new Date(firstEvent.schedule)) {
+          firstEvent = currentEvent;
+        }
+      }
+    });
+
+    return firstEvent;
+  }
+
   transformJsonToEventInterfaceArray(events: Array<EventInterface>): Array<EventInterface> {
     events.forEach(event => {
       event.schedule = new Date(event.schedule);
