@@ -15,8 +15,6 @@ export class CountdownTimerComponent implements OnInit {
   events: Array<EventInterface>;
   objName: string;
   toggleName: string;
-  toggleDescriptionsName: string;
-  onlyUpcoming: boolean;
   showDescriptions: boolean;
   nextEventTimeDiff: number;
   nextEventTimeString: string;
@@ -29,9 +27,6 @@ export class CountdownTimerComponent implements OnInit {
     this.objName = 'events';
     this.countdownCssClass = '';
     this.filterstring = '';
-
-    this.toggleUpcoming(true);
-    this.toggleDescriptions(true);
 
     this.renderer.setStyle(document.body, 'background-color', 'black');
 
@@ -65,9 +60,7 @@ export class CountdownTimerComponent implements OnInit {
       (next: Array<EventInterface>) => {
         if (next != null) {
           for (const nextEvent of next) {
-            if (nextEvent != null) {
-              this.updateNextEventString(nextEvent);
-            }
+            this.updateNextEventDisplay(nextEvent);
           }
         }
       }
@@ -125,30 +118,6 @@ export class CountdownTimerComponent implements OnInit {
     return Math.floor(innerWidth * (3 / 2) / numChars) + 'px';
   }
 
-  toggleUpcoming(init?: boolean) {
-    if (!isUndefined(init) && isBoolean(init)) {
-      this.onlyUpcoming = !init;
-    }
-    if (this.onlyUpcoming) {
-      this.toggleName = 'Show Upcoming';
-    } else {
-      this.toggleName = 'Show All';
-    }
-    this.onlyUpcoming = !this.onlyUpcoming;
-  }
-
-  toggleDescriptions(init?: boolean) {
-    if (!isUndefined(init) && isBoolean(init)) {
-      this.showDescriptions = !init;
-    }
-    if (this.showDescriptions) {
-      this.toggleDescriptionsName = 'Show Descriptions';
-    } else {
-      this.toggleDescriptionsName = 'Hide Descriptions';
-    }
-    this.showDescriptions = !this.showDescriptions;
-  }
-
   updateFilter(updatedValue: string): void {
     this.sds.updateFilter(updatedValue, this.objName);
   }
@@ -181,83 +150,85 @@ export class CountdownTimerComponent implements OnInit {
     this.nextEventTimeDiff = timediff;
   }
 
-  updateNextEventString(nextEvent: EventInterface): void {
+  updateNextEventDisplay(nextEvent: EventInterface): void {
     let timediff: number;
 
-    this.updateTimediff(nextEvent);
-
-    timediff = this.nextEventTimeDiff;
-
-    if (timediff < 0) {
-      timediff = -timediff;
-    }
-
-    const days: number = timediff / (1000 * 60 * 60 * 24);
-    let rest: number = timediff % (1000 * 60 * 60 * 24);
-
-    const hours: number = rest / (1000 * 60 * 60);
-    rest = rest % (1000 * 60 * 60);
-
-    const minutes: number = rest / (1000 * 60);
-    rest = rest % (1000 * 60);
-
-    const seconds = rest / (1000);
-
-    if (timediff < 1) {
-      timediff = -timediff;
-      this.nextEventTimeString = 'NOW';
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 2 * 1000) {
-      this.nextEventTimeString = 'NOW';
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 3 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 4 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 5 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 6 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 7 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 8 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 9 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 10 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 11 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 30 * 1000) {
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-30s';
-    } else if (timediff < 60 * 1000) { // coming to less than a minute
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-1m';
-    } else if (timediff < 3 * 60 * 1000) { // 3 Minutes
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-3m';
-    } else if (timediff < 5 * 60 * 1000) { // 5 Minutes
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-5m';
-    } else if (timediff < 60 * 60 * 1000) { // hours and a bit; less than a day
-      this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+    if (undefined === nextEvent) {
+      this.nextEventTimeDiff = 0;
+      this.nextEventTimeString = 'No future event.';
       this.countdownCssClass = 'countdown-long';
-    } else if (timediff < 24 * 60 * 60 * 1000) {
-      this.nextEventTimeString = sprintf('%02dh %02dm %02ds', hours, minutes, seconds);
-      this.countdownCssClass = 'countdown-long';
-    } else { // days and hours (and some minutes)
-      this.nextEventTimeString = sprintf('%dd %02dh %02dm', days, hours, minutes);
-      this.countdownCssClass = 'countdown-long';
+    } else {
+      this.updateTimediff(nextEvent);
+      timediff = this.nextEventTimeDiff;
+
+      if (timediff < 0) {
+        timediff = -timediff;
+      }
+
+      const days: number = timediff / (1000 * 60 * 60 * 24);
+      let rest: number = timediff % (1000 * 60 * 60 * 24);
+      const hours: number = rest / (1000 * 60 * 60);
+      rest = rest % (1000 * 60 * 60);
+      const minutes: number = rest / (1000 * 60);
+      rest = rest % (1000 * 60);
+      const seconds = rest / (1000);
+
+      if (timediff < 1) {
+        timediff = -timediff;
+        this.nextEventTimeString = 'NOW';
+        this.countdownCssClass = 'countdown-10s-uneven';
+      } else if (timediff < 2 * 1000) {
+        this.nextEventTimeString = 'NOW';
+        this.countdownCssClass = 'countdown-10s-uneven';
+      } else if (timediff < 3 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-even';
+      } else if (timediff < 4 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-uneven';
+      } else if (timediff < 5 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-even';
+      } else if (timediff < 6 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-uneven';
+      } else if (timediff < 7 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-even';
+      } else if (timediff < 8 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-uneven';
+      } else if (timediff < 9 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-even';
+      } else if (timediff < 10 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-uneven';
+      } else if (timediff < 11 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-10s-even';
+      } else if (timediff < 30 * 1000) {
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-30s';
+      } else if (timediff < 60 * 1000) { // coming to less than a minute
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-1m';
+      } else if (timediff < 3 * 60 * 1000) { // 3 Minutes
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-3m';
+      } else if (timediff < 5 * 60 * 1000) { // 5 Minutes
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-5m';
+      } else if (timediff < 60 * 60 * 1000) { // hours and a bit; less than a day
+        this.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
+        this.countdownCssClass = 'countdown-long';
+      } else if (timediff < 24 * 60 * 60 * 1000) {
+        this.nextEventTimeString = sprintf('%02dh %02dm %02ds', hours, minutes, seconds);
+        this.countdownCssClass = 'countdown-long';
+      } else { // days and hours (and some minutes)
+        this.nextEventTimeString = sprintf('%dd %02dh %02dm', days, hours, minutes);
+        this.countdownCssClass = 'countdown-long';
+      }
     }
   }
 }
