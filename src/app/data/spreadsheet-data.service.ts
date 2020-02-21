@@ -185,7 +185,7 @@ export class SpreadsheetDS {
         }
       }
     }
-    return tempArray;
+    return tempArray.sort((a, b) => a.name < b.name ? 0 : 1);
   }
 
   transformEventData(i: InputEventInterface,
