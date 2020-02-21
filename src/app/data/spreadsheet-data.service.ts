@@ -323,8 +323,10 @@ export class SpreadsheetDS {
 
   transformJsonToEventInterfaceArray(events: Array<EventInterface>): Array<EventInterface> {
     events.forEach(event => {
-      event.schedule = new Date(event.schedule);
-      event.end = new Date(event.end);
+      if (undefined !== event && null !== event) {
+        event.schedule = new Date(event.schedule);
+        event.end = new Date(event.end);
+      }
     });
     return events;
   }
@@ -332,8 +334,10 @@ export class SpreadsheetDS {
   transformJsonToEventRoomInterfaceArray(rooms: Array<EventRoomInterface>): Array<EventRoomInterface> {
     rooms.forEach(room => {
       room.events.forEach(event => {
-        event.schedule = new Date(event.schedule);
-        event.end = new Date(event.end);
+        if (undefined !== event && null !== event) {
+          event.schedule = new Date(event.schedule);
+          event.end = new Date(event.end);
+        }
       });
     });
     return rooms;
@@ -342,8 +346,10 @@ export class SpreadsheetDS {
   transformJsonToCalEventEmitterInterface(items: Array<CalEventEmitterInterface>): Array<CalEventEmitterInterface> {
     items.forEach(item => {
       item.events.forEach(event => {
-        event.start = new Date(event.start);
-        event.end = new Date(event.end);
+        if (undefined !== event && null !== event) {
+          event.start = new Date(event.start);
+          event.end = new Date(event.end);
+        }
       });
     });
     return items;
