@@ -5,6 +5,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 
 import { SpreadsheetIDs } from './spreadsheetIDs';
 import { EventInterface } from './eventInterface';
+import { EventTimerInterface } from './eventTimerInterface';
 import { RoomInterface } from './roomInterface';
 import { EventRoomInterface } from './eventRoomInterface';
 import { CalendarEvent } from 'angular-calendar';
@@ -13,7 +14,7 @@ import { colors } from './colors';
 import { RoomsDictionary } from './roomsDictionary';
 import { CalEventEmitterInterface } from './calEventEmitterInterface';
 
-const USE_LOCAL_TEST_DATA = false;
+const USE_LOCAL_TEST_DATA = true;
 
 @Injectable()
 export class SpreadsheetDS {
@@ -28,7 +29,7 @@ export class SpreadsheetDS {
 
   events: Array<EventInterface> = [];
   byRoom: Array<EventRoomInterface> = [];
-  nextEvent: EventInterface;
+  timerEvents: EventTimerInterface = {};
   filterByRoom: string;
   eventsCount = 0;
 
@@ -36,7 +37,7 @@ export class SpreadsheetDS {
   byRoomUpdated = new EventEmitter<Array<EventRoomInterface>>();
   calEventsUpdated = new EventEmitter<Array<CalEventEmitterInterface>>();
   filterUpdated = new EventEmitter<Array<string>>();
-  nextEventUpdated = new EventEmitter<Array<EventInterface>>();
+  timerEventUpdated = new EventEmitter<Array<EventTimerInterface>>();
 
   constructor(public http: HttpClient) {
     // initial loads
@@ -53,7 +54,7 @@ export class SpreadsheetDS {
     if (!SpreadsheetDS.timerStarted) {
       // Let the timer run
       setInterval(() => {
-        this.nextEventUpdated.emit([this.nextEvent]);
+        this.timerEventUpdated.emit([this.timerEvents]);
       }, 1000);
       SpreadsheetDS.timerStarted = true;
     }
@@ -90,7 +91,7 @@ export class SpreadsheetDS {
         this.byRoom = this.initializeByRooms(data, calEvents.rooms);
         this.events = this.transformEvents(data, calEvents.rooms);
         calEvents.events = this.transformToCalEvents(data, calEvents.rooms);
-        this.nextEvent = this.updateNextEvent(this.filterByRoom, this.events, this.byRoom);
+        this.timerEvents = this.updateTimerEvents(this.filterByRoom, this.events, this.byRoom);
 
         this.eventsCount = this.events.length;
         // Loop through the events and add rooms and events into the rooms
@@ -115,13 +116,13 @@ export class SpreadsheetDS {
       SpreadsheetDS.setLocal(this.events, this.ssIDs.getCacheName(objName));
       SpreadsheetDS.setLocal(this.byRoom, this.ssIDs.getCacheByRoomName(objName));
       SpreadsheetDS.setLocal([calEvents], this.ssIDs.getCacheForCalEvents(objName));
-      SpreadsheetDS.setLocal([this.nextEvent], this.ssIDs.getCacheForNextEvent(objName));
+      SpreadsheetDS.setLocal([this.timerEvents], this.ssIDs.getCacheForNextEvent(objName));
       SpreadsheetDS.setLocal([this.filterByRoom], this.ssIDs.getCacheForFilter(objName));
 
       this.eventsUpdated.emit(this.events);
       this.byRoomUpdated.emit(this.byRoom);
       this.calEventsUpdated.emit([calEvents]);
-      this.nextEventUpdated.emit([this.nextEvent]);
+      this.timerEventUpdated.emit([this.timerEvents]);
       this.filterUpdated.emit([this.filterByRoom]);
     });
   }
@@ -261,48 +262,70 @@ export class SpreadsheetDS {
 
   updateFilter(filter: string, objName: string) {
     this.filterByRoom = filter;
-    this.nextEvent = this.updateNextEvent(this.filterByRoom, this.events, this.byRoom);
+    this.timerEvents = this.updateTimerEvents(this.filterByRoom, this.events, this.byRoom);
 
     this.eventsLabel = this.buildLabel(this.eventsCount, objName);
 
-    SpreadsheetDS.setLocal([this.nextEvent], this.ssIDs.getCacheForNextEvent(objName));
-    this.nextEventUpdated.emit([this.nextEvent]);
+    SpreadsheetDS.setLocal([this.timerEvents], this.ssIDs.getCacheForNextEvent(objName));
+    this.timerEventUpdated.emit([this.timerEvents]);
 
     SpreadsheetDS.setLocal([this.filterByRoom], this.ssIDs.getCacheForFilter(objName));
     this.filterUpdated.emit([this.filterByRoom]);
   }
 
-  private updateNextEvent(filter: string, events: Array<EventInterface>, byRoom: Array<EventRoomInterface>): EventInterface {
+  private updateTimerEvents(filter: string, events: Array<EventInterface>, byRoom: Array<EventRoomInterface>): EventTimerInterface {
+    const timerEvents: EventTimerInterface = {};
     if (undefined !== filter && '' !== filter) {
       const room = byRoom.find(obj => obj.name === filter);
       if (undefined !== room) {
-        return this.getNextEvent(room.events);
-      } else {
-        return null;
+        timerEvents.nextEvent = this.getNextEvent(room.events);
+        timerEvents.currentEvent = this.getCurrentEvent(room.events);
       }
     } else {
-      return this.getNextEvent(events);
+      timerEvents.nextEvent = this.getNextEvent(events);
+      timerEvents.currentEvent = this.getCurrentEvent(events);
     }
+    return timerEvents;
   }
 
   getNextEvent(events: Array<EventInterface>): EventInterface {
     const now = new Date();
     let nextEvent: EventInterface;
 
-    events.forEach(currentEvent => {
-      if (undefined !== currentEvent) {
+    events.forEach(event => {
+      if (undefined !== event) {
         // Check if the current event is in the future
-        if (new Date(currentEvent.schedule) >= now) {
+        if (new Date(event.schedule) >= now) {
           // Check if the event is nearer than the current or replaces an undefined value.
           if (undefined === nextEvent ||
-            new Date(currentEvent.schedule) < new Date(nextEvent.schedule)) {
-            nextEvent = currentEvent;
+            new Date(event.schedule) < new Date(nextEvent.schedule)) {
+            nextEvent = event;
           }
         }
       }
     });
 
     return nextEvent;
+  }
+
+  getCurrentEvent(events: Array<EventInterface>): EventInterface {
+    const now = new Date();
+    let currentEvent: EventInterface;
+
+    events.forEach(event => {
+      if (undefined !== event) {
+        // Check if the current event end is in the future and it has started
+        if (new Date(event.end) >= now && new Date(event.schedule) <= now) {
+          // Check if the event end is earlier than the current or replaces an undefined value.
+          if (undefined === currentEvent ||
+            new Date(event.end) < new Date(currentEvent.end)) {
+            currentEvent = event;
+          }
+        }
+      }
+    });
+
+    return currentEvent;
   }
 
   getFirstEvent(events: Array<EventInterface>): EventInterface {
@@ -319,6 +342,22 @@ export class SpreadsheetDS {
     });
 
     return firstEvent;
+  }
+
+  transformJsonToEventTimerInterfaceArray(events: Array<EventTimerInterface>): Array<EventTimerInterface> {
+    events.forEach(entry => {
+      if (undefined !== entry && null !== entry) {
+        if (undefined !== entry.currentEvent && null !== entry.currentEvent) {
+          entry.currentEvent.schedule = new Date(entry.currentEvent.schedule);
+          entry.currentEvent.end = new Date(entry.currentEvent.end);
+        }
+        if (undefined !== entry.nextEvent && null !== entry.nextEvent) {
+          entry.nextEvent.schedule = new Date(entry.nextEvent.schedule);
+          entry.nextEvent.end = new Date(entry.nextEvent.end);
+        }
+      }
+    });
+    return events;
   }
 
   transformJsonToEventInterfaceArray(events: Array<EventInterface>): Array<EventInterface> {
