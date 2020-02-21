@@ -9,7 +9,7 @@
       <!-- <a routerLink="/by-room" class="btn btn-primary" mat-raised-button>By Room</a> -->
       <a routerLink="/schedule" class="btn btn-primary" mat-raised-button>Schedule</a>
       <mat-form-field>
-        <mat-select placeholder="Selected Room" [ngModel]="this.sds.filterByRoom"
+        <mat-select placeholder="All Rooms" [ngModel]="this.sds.filterByRoom"
           (selectionChange)="this.updateFilter($event.value)" name="roomFilter" [style.background-color]="'whitesmoke'"
           [style.color]="'lightgrey'">
           <mat-option [value]="">All Rooms</mat-option>

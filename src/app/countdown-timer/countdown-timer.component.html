@@ -7,7 +7,7 @@
         Upcoming in {{ this.filterstring }}
       </div>
       <mat-form-field>
-        <mat-select placeholder="Selected Room" [ngModel]="this.sds.filterByRoom"
+        <mat-select placeholder="All Rooms" [ngModel]="this.sds.filterByRoom"
           (selectionChange)="this.updateFilter($event.value)" name="roomFilter"
            [style.background-color]="'dimgray'" [style.color]="'white'">
           <mat-option [value]="">All Rooms</mat-option>
