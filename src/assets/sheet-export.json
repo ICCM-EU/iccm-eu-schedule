@@ -46,10 +46,10 @@
     "author": [
       {
         "name": {
-          "$t": "hj.tappe"
+          "$t": ""
         },
         "email": {
-          "$t": "hj.tappe@gmail.com"
+          "$t": ""
         }
       }
     ],
@@ -75,11 +75,11 @@
         ],
         "title": {
           "type": "text",
-          "$t": "🍲 Test Event"
+          "$t": "🍲 Test Event 1"
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/4/2020 18:00:00, enddatetime: 2/4/2020 19:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Tuesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/2/2021 18:00:00, enddatetime: 2/2/2021 19:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Tuesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -89,13 +89,154 @@
           }
         ],
         "gsx$session": {
-          "$t": "🍲 Test Event"
+          "$t": "🍲 Test Event 1"
         },
         "gsx$datetime": {
-          "$t": "12/13/2019 12:00:00"
+          "$t": "2020-02-22 06:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "12/13/2019 12:45:00"
+          "$t": "2020-02-22 10:30:00"
+        },
+        "gsx$room": {
+          "$t": "AJAX Room"
+        },
+        "gsx$speaker": {
+          "$t": ""
+        },
+        "gsx$description": {
+          "$t": ""
+        },
+        "gsx$parallel": {
+          "$t": ""
+        },
+        "gsx$photo": {
+          "$t": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia"
+        },
+        "gsx$category": {
+          "$t": "Refreshment and 1-to-1"
+        },
+        "gsx$time": {
+          "$t": "Some day at some time"
+        },
+        "gsx$parallelslotparallelslotsname": {
+          "$t": ""
+        },
+        "gsx$speakerspeakersname": {
+          "$t": ""
+        },
+        "gsx$categorycategoryname": {
+          "$t": "Test Event"
+        },
+        "gsx$roomvenuename": {
+          "$t": "AJAX Room"
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/cokwr"
+        },
+        "updated": {
+          "$t": "2019-11-28T18:30:18.665Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "🍲 Test Event 2"
+        },
+        "content": {
+          "type": "text",
+          "$t": "datetime: 2/2/2021 18:00:00, enddatetime: 2/2/2021 19:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Tuesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/cokwr"
+          }
+        ],
+        "gsx$session": {
+          "$t": "🍲 Test Event 2"
+        },
+        "gsx$datetime": {
+          "$t": "2020-02-22 13:00:00"
+        },
+        "gsx$enddatetime": {
+          "$t": "2020-02-22 18:00:00"
+        },
+        "gsx$room": {
+          "$t": "AJAX Room"
+        },
+        "gsx$speaker": {
+          "$t": ""
+        },
+        "gsx$description": {
+          "$t": ""
+        },
+        "gsx$parallel": {
+          "$t": ""
+        },
+        "gsx$photo": {
+          "$t": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia"
+        },
+        "gsx$category": {
+          "$t": "Refreshment and 1-to-1"
+        },
+        "gsx$time": {
+          "$t": "Some day at some time"
+        },
+        "gsx$parallelslotparallelslotsname": {
+          "$t": ""
+        },
+        "gsx$speakerspeakersname": {
+          "$t": ""
+        },
+        "gsx$categorycategoryname": {
+          "$t": "Test Event"
+        },
+        "gsx$roomvenuename": {
+          "$t": "AJAX Room"
+        }
+      },      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/cokwr"
+        },
+        "updated": {
+          "$t": "2019-11-28T18:30:18.665Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "🍲 Test Event 3"
+        },
+        "content": {
+          "type": "text",
+          "$t": "datetime: 2/2/2021 18:00:00, enddatetime: 2/2/2021 19:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Tuesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/cokwr"
+          }
+        ],
+        "gsx$session": {
+          "$t": "🍲 Test Event 3"
+        },
+        "gsx$datetime": {
+          "$t": "2020-02-22 19:00:00"
+        },
+        "gsx$enddatetime": {
+          "$t": "2020-02-22 23:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -150,7 +291,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/4/2020 18:00:00, enddatetime: 2/4/2020 19:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Tuesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/2/2021 18:00:00, enddatetime: 2/2/2021 19:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Tuesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -163,10 +304,10 @@
           "$t": "🍲 Pre-Conference Evening Meal"
         },
         "gsx$datetime": {
-          "$t": "2/4/2020 18:00:00"
+          "$t": "2/2/2021 18:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/4/2020 19:45:00"
+          "$t": "2/2/2021 19:45:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -221,7 +362,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/4/2020 19:45:00, enddatetime: 2/5/2020 8:00:00, room: BASIC Room, parallel: Pre-Conference 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Tuesday at 19:45, parallelslotparallelslotsname: Pre-Conference 1, speakerspeakersname: James Doc, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/2/2021 19:45:00, enddatetime: 2/3/2021 8:00:00, room: BASIC Room, parallel: Pre-Conference 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Tuesday at 19:45, parallelslotparallelslotsname: Pre-Conference 1, speakerspeakersname: Speaker Name, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -234,10 +375,10 @@
           "$t": "⌨ Pre-Conference: Workshop"
         },
         "gsx$datetime": {
-          "$t": "2/4/2020 19:45:00"
+          "$t": "2/2/2021 19:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 8:00:00"
+          "$t": "2/3/2021 8:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
@@ -264,7 +405,7 @@
           "$t": "Pre-Conference 1"
         },
         "gsx$speakerspeakersname": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Pre-Conference Workshop"
@@ -292,7 +433,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/4/2020 19:45:00, enddatetime: 2/5/2020 8:00:00, room: COBOL Room, speaker: James Doc, parallel: Pre-Conference 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Tuesday at 19:45, parallelslotparallelslotsname: Pre-Conference 1, speakerspeakersname: James Doc, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/2/2021 19:45:00, enddatetime: 2/3/2021 8:00:00, room: COBOL Room, speaker: Speaker Name, parallel: Pre-Conference 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Tuesday at 19:45, parallelslotparallelslotsname: Pre-Conference 1, speakerspeakersname: Speaker Name, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -305,16 +446,16 @@
           "$t": "⌨ Pre-Conference: Hackathon"
         },
         "gsx$datetime": {
-          "$t": "2/4/2020 19:45:00"
+          "$t": "2/2/2021 19:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 8:00:00"
+          "$t": "2/3/2021 8:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -335,7 +476,7 @@
           "$t": "Pre-Conference 1"
         },
         "gsx$speakerspeakersname": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Pre-Conference Workshop"
@@ -363,7 +504,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 8:00:00, enddatetime: 2/5/2020 8:30:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F2acac0.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 08:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/3/2021 8:00:00, enddatetime: 2/3/2021 8:30:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F2acac0.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 08:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -376,10 +517,10 @@
           "$t": "🥐 Pre-Conference Breakfast"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 8:00:00"
+          "$t": "2/3/2021 8:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 8:30:00"
+          "$t": "2/3/2021 8:30:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -434,7 +575,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 8:30:00, enddatetime: 2/5/2020 10:15:00, room: BASIC Room, parallel: Pre-Conference 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 08:30, parallelslotparallelslotsname: Pre-Conference 2, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/3/2021 8:30:00, enddatetime: 2/3/2021 10:15:00, room: BASIC Room, parallel: Pre-Conference 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 08:30, parallelslotparallelslotsname: Pre-Conference 2, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -447,10 +588,10 @@
           "$t": "⌨ Pre-Conference: Workshop"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 8:30:00"
+          "$t": "2/3/2021 8:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 10:15:00"
+          "$t": "2/3/2021 10:15:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
@@ -505,7 +646,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 8:30:00, enddatetime: 2/5/2020 10:15:00, room: COBOL Room, speaker: James Doc, parallel: Pre-Conference 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 08:30, parallelslotparallelslotsname: Pre-Conference 2, speakerspeakersname: James Doc, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/3/2021 8:30:00, enddatetime: 2/3/2021 10:15:00, room: COBOL Room, speaker: Speaker Name, parallel: Pre-Conference 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 08:30, parallelslotparallelslotsname: Pre-Conference 2, speakerspeakersname: Speaker Name, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -518,16 +659,16 @@
           "$t": "⌨ Pre-Conference: Hackathon"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 8:30:00"
+          "$t": "2/3/2021 8:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 10:15:00"
+          "$t": "2/3/2021 10:15:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -548,7 +689,7 @@
           "$t": "Pre-Conference 2"
         },
         "gsx$speakerspeakersname": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Pre-Conference Workshop"
@@ -576,7 +717,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 10:15:00, enddatetime: 2/5/2020 10:45:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 10:15, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/3/2021 10:15:00, enddatetime: 2/3/2021 10:45:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 10:15, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -589,10 +730,10 @@
           "$t": "☕ Pre-Conference Coffee Break"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 10:15:00"
+          "$t": "2/3/2021 10:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 10:45:00"
+          "$t": "2/3/2021 10:45:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -647,7 +788,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 10:45:00, enddatetime: 2/5/2020 12:00:00, room: BASIC Room, parallel: Pre-Conference 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 10:45, parallelslotparallelslotsname: Pre-Conference 3, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/3/2021 10:45:00, enddatetime: 2/3/2021 12:00:00, room: BASIC Room, parallel: Pre-Conference 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 10:45, parallelslotparallelslotsname: Pre-Conference 3, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -660,10 +801,10 @@
           "$t": "⌨ Pre-Conference: Workshop"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 10:45:00"
+          "$t": "2/3/2021 10:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 12:00:00"
+          "$t": "2/3/2021 12:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
@@ -718,7 +859,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 10:45:00, enddatetime: 2/5/2020 12:00:00, room: COBOL Room, speaker: James Doc, parallel: Pre-Conference 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 10:45, parallelslotparallelslotsname: Pre-Conference 3, speakerspeakersname: James Doc, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/3/2021 10:45:00, enddatetime: 2/3/2021 12:00:00, room: COBOL Room, speaker: Speaker Name, parallel: Pre-Conference 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 10:45, parallelslotparallelslotsname: Pre-Conference 3, speakerspeakersname: Speaker Name, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -731,16 +872,16 @@
           "$t": "⌨ Pre-Conference: Hackathon"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 10:45:00"
+          "$t": "2/3/2021 10:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 12:00:00"
+          "$t": "2/3/2021 12:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -761,7 +902,7 @@
           "$t": "Pre-Conference 3"
         },
         "gsx$speakerspeakersname": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Pre-Conference Workshop"
@@ -789,7 +930,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 12:00:00, enddatetime: 2/5/2020 13:00:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F8fa131.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 12:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/3/2021 12:00:00, enddatetime: 2/3/2021 13:00:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F8fa131.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 12:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -802,10 +943,10 @@
           "$t": "🍞 Pre-Conference Lunch"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 12:00:00"
+          "$t": "2/3/2021 12:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 13:00:00"
+          "$t": "2/3/2021 13:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -860,7 +1001,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 13:00:00, enddatetime: 2/5/2020 15:00:00, room: BASIC Room, parallel: Pre-Conference 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 13:00, parallelslotparallelslotsname: Pre-Conference 4, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/3/2021 13:00:00, enddatetime: 2/3/2021 15:00:00, room: BASIC Room, parallel: Pre-Conference 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 13:00, parallelslotparallelslotsname: Pre-Conference 4, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -873,10 +1014,10 @@
           "$t": "⌨ Pre-Conference: Workshop"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 13:00:00"
+          "$t": "2/3/2021 13:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 15:00:00"
+          "$t": "2/3/2021 15:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
@@ -931,7 +1072,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 13:00:00, enddatetime: 2/5/2020 15:00:00, room: COBOL Room, speaker: James Doc, parallel: Pre-Conference 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 13:00, parallelslotparallelslotsname: Pre-Conference 4, speakerspeakersname: James Doc, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/3/2021 13:00:00, enddatetime: 2/3/2021 15:00:00, room: COBOL Room, speaker: Speaker Name, parallel: Pre-Conference 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 13:00, parallelslotparallelslotsname: Pre-Conference 4, speakerspeakersname: Speaker Name, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -944,16 +1085,16 @@
           "$t": "⌨ Pre-Conference: Hackathon"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 13:00:00"
+          "$t": "2/3/2021 13:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 15:00:00"
+          "$t": "2/3/2021 15:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -974,7 +1115,7 @@
           "$t": "Pre-Conference 4"
         },
         "gsx$speakerspeakersname": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Pre-Conference Workshop"
@@ -1002,7 +1143,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 15:00:00, enddatetime: 2/5/2020 15:15:00, room: Espresso Room, description: Please register when you arrive., parallel: Pre-Conference 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F3de8dd.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 15:00, parallelslotparallelslotsname: Pre-Conference 4, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/3/2021 15:00:00, enddatetime: 2/3/2021 15:15:00, room: Espresso Room, description: Please register when you arrive., parallel: Pre-Conference 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F3de8dd.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 15:00, parallelslotparallelslotsname: Pre-Conference 4, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -1015,10 +1156,10 @@
           "$t": "💁\u200d♂️ Arrival and Registration"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 15:00:00"
+          "$t": "2/3/2021 15:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 15:15:00"
+          "$t": "2/3/2021 15:15:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -1073,7 +1214,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 15:15:00, enddatetime: 2/5/2020 15:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 15:15, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/3/2021 15:15:00, enddatetime: 2/3/2021 15:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 15:15, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -1086,10 +1227,10 @@
           "$t": "☕ Coffee Break"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 15:15:00"
+          "$t": "2/3/2021 15:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 15:45:00"
+          "$t": "2/3/2021 15:45:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -1144,7 +1285,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 15:45:00, enddatetime: 2/5/2020 18:00:00, room: BASIC Room, parallel: Pre-Conference 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 15:45, parallelslotparallelslotsname: Pre-Conference 5, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/3/2021 15:45:00, enddatetime: 2/3/2021 18:00:00, room: BASIC Room, parallel: Pre-Conference 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 15:45, parallelslotparallelslotsname: Pre-Conference 5, categorycategoryname: Pre-Conference Workshop, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -1157,10 +1298,10 @@
           "$t": "⌨ Pre-Conference: Workshop"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 15:45:00"
+          "$t": "2/3/2021 15:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 18:00:00"
+          "$t": "2/3/2021 18:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
@@ -1215,7 +1356,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 15:45:00, enddatetime: 2/5/2020 18:00:00, room: COBOL Room, speaker: James Doc, parallel: Pre-Conference 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 15:45, parallelslotparallelslotsname: Pre-Conference 5, speakerspeakersname: James Doc, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/3/2021 15:45:00, enddatetime: 2/3/2021 18:00:00, room: COBOL Room, speaker: Speaker Name, parallel: Pre-Conference 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Pre-Conference Workshop, time: Wednesday at 15:45, parallelslotparallelslotsname: Pre-Conference 5, speakerspeakersname: Speaker Name, categorycategoryname: Pre-Conference Workshop, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -1228,16 +1369,16 @@
           "$t": "⌨ Pre-Conference: Hackathon"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 15:45:00"
+          "$t": "2/3/2021 15:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 18:00:00"
+          "$t": "2/3/2021 18:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -1258,7 +1399,7 @@
           "$t": "Pre-Conference 5"
         },
         "gsx$speakerspeakersname": {
-          "$t": "James Doc"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Pre-Conference Workshop"
@@ -1286,7 +1427,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 18:00:00, enddatetime: 2/5/2020 19:45:00, room: Dining Hall, description: Suggestion: Sit next to someone you don't know., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/3/2021 18:00:00, enddatetime: 2/3/2021 19:45:00, room: Dining Hall, description: Suggestion: Sit next to someone you don't know., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -1299,10 +1440,10 @@
           "$t": "🍲 Evening Meal"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 18:00:00"
+          "$t": "2/3/2021 18:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 19:45:00"
+          "$t": "2/3/2021 19:45:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -1357,7 +1498,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 19:45:00, enddatetime: 2/5/2020 20:15:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa156bc.jpeg?alt\u003dmedia, category: Common Sessions, time: Wednesday at 19:45, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/3/2021 19:45:00, enddatetime: 2/3/2021 20:15:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa156bc.jpeg?alt\u003dmedia, category: Common Sessions, time: Wednesday at 19:45, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -1370,10 +1511,10 @@
           "$t": "🗨 Official Welcome"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 19:45:00"
+          "$t": "2/3/2021 19:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 20:15:00"
+          "$t": "2/3/2021 20:15:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -1428,7 +1569,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 20:15:00, enddatetime: 2/5/2020 21:30:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Wednesday at 20:15, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/3/2021 20:15:00, enddatetime: 2/3/2021 21:30:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Wednesday at 20:15, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -1441,10 +1582,10 @@
           "$t": "🗨 Introductions"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 20:15:00"
+          "$t": "2/3/2021 20:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 21:30:00"
+          "$t": "2/3/2021 21:30:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -1499,7 +1640,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 21:30:00, enddatetime: 2/5/2020 21:45:00, room: AJAX Room, speaker: Corey K, description: Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Keynote, time: Wednesday at 21:30, speakerspeakersname: Corey K, categorycategoryname: Keynote, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/3/2021 21:30:00, enddatetime: 2/3/2021 21:45:00, room: AJAX Room, speaker: Speaker Name, description: Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Keynote, time: Wednesday at 21:30, speakerspeakersname: Speaker Name, categorycategoryname: Keynote, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -1512,16 +1653,16 @@
           "$t": "🔑 Introduction of Keynote Speaker"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 21:30:00"
+          "$t": "2/3/2021 21:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 21:45:00"
+          "$t": "2/3/2021 21:45:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Corey K"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses."
@@ -1542,7 +1683,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Corey K"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Keynote"
@@ -1570,7 +1711,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 21:45:00, enddatetime: 2/5/2020 22:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Wednesday at 21:45, categorycategoryname: Birds of a Feather (BOF), roomvenuename: AJAX Room"
+          "$t": "datetime: 2/3/2021 21:45:00, enddatetime: 2/3/2021 22:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Wednesday at 21:45, categorycategoryname: Birds of a Feather (BOF), roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -1583,10 +1724,10 @@
           "$t": "🗨 BOF Topic Entry and TFM Introduction"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 21:45:00"
+          "$t": "2/3/2021 21:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/5/2020 22:00:00"
+          "$t": "2/3/2021 22:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -1641,7 +1782,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 22:00:00, enddatetime: 2/6/2020 0:00:00, room: Espresso Room, description: Free time with snacks and drinks provided. Get to know one another, play games, and have fun!, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F987873.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 22:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/3/2021 22:00:00, enddatetime: 2/4/2021 0:00:00, room: Espresso Room, description: Free time with snacks and drinks provided. Get to know one another, play games, and have fun!, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F987873.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 22:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -1654,10 +1795,10 @@
           "$t": "🍕 Social Gathering"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 22:00:00"
+          "$t": "2/3/2021 22:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 0:00:00"
+          "$t": "2/4/2021 0:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -1712,7 +1853,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/5/2020 22:00:00, enddatetime: 2/6/2020 0:00:00, room: Espresso Room, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 22:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/3/2021 22:00:00, enddatetime: 2/4/2021 0:00:00, room: Espresso Room, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Wednesday at 22:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -1725,10 +1866,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/5/2020 22:00:00"
+          "$t": "2/3/2021 22:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 0:00:00"
+          "$t": "2/4/2021 0:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -1783,7 +1924,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 8:00:00, enddatetime: 2/6/2020 9:00:00, room: Dining Hall, description: The most important meal of the day (AKA Coffee)., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0bf0cb.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 08:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/4/2021 8:00:00, enddatetime: 2/4/2021 9:00:00, room: Dining Hall, description: The most important meal of the day (AKA Coffee)., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0bf0cb.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 08:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -1796,10 +1937,10 @@
           "$t": "🥐 Breakfast"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 8:00:00"
+          "$t": "2/4/2021 8:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 9:00:00"
+          "$t": "2/4/2021 9:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -1854,7 +1995,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 9:00:00, enddatetime: 2/6/2020 9:45:00, room: AJAX Room, speaker: Rob Hazel, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Thursday at 09:00, speakerspeakersname: Rob Hazel, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 9:00:00, enddatetime: 2/4/2021 9:45:00, room: AJAX Room, speaker: Speaker Name, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Thursday at 09:00, speakerspeakersname: Speaker Name, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -1867,16 +2008,16 @@
           "$t": "🎹 Devotions \u0026 Worship"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 9:00:00"
+          "$t": "2/4/2021 9:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 9:45:00"
+          "$t": "2/4/2021 9:45:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Rob Hazel"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -1897,7 +2038,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Rob Hazel"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Prayer and Worship"
@@ -1925,7 +2066,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 9:45:00, enddatetime: 2/6/2020 10:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Thursday at 09:45, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 9:45:00, enddatetime: 2/4/2021 10:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Thursday at 09:45, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -1938,10 +2079,10 @@
           "$t": "📢 Announcements \u0026 Intro to Prayer Pals"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 9:45:00"
+          "$t": "2/4/2021 9:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 10:00:00"
+          "$t": "2/4/2021 10:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -1996,7 +2137,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 10:00:00, enddatetime: 2/6/2020 10:45:00, room: AJAX Room, description: Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Thursday at 10:00, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 10:00:00, enddatetime: 2/4/2021 10:45:00, room: AJAX Room, description: Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Thursday at 10:00, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -2009,10 +2150,10 @@
           "$t": "🙏 Prayer Pals Part 1"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 10:00:00"
+          "$t": "2/4/2021 10:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 10:45:00"
+          "$t": "2/4/2021 10:45:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -2067,7 +2208,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 10:45:00, enddatetime: 2/6/2020 10:30:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 10:45, categorycategoryname: Birds of a Feather (BOF), roomvenuename: Dining Hall"
+          "$t": "datetime: 2/4/2021 10:45:00, enddatetime: 2/4/2021 11:30:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 10:45, categorycategoryname: Birds of a Feather (BOF), roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -2080,10 +2221,10 @@
           "$t": "📢 Notice: BOF Submissions End at Noon"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 10:45:00"
+          "$t": "2/4/2021 10:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 10:30:00"
+          "$t": "2/4/2021 11:30:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -2138,7 +2279,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 10:30:00, enddatetime: 2/6/2020 10:45:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 10:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/4/2021 10:30:00, enddatetime: 2/4/2021 10:45:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 10:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -2151,10 +2292,10 @@
           "$t": "☕ Coffee Break"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 10:30:00"
+          "$t": "2/4/2021 10:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 10:45:00"
+          "$t": "2/4/2021 10:45:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -2209,7 +2350,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 10:45:00, enddatetime: 2/6/2020 12:00:00, room: AJAX Room, speaker: Corey K, description: Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Keynote, time: Thursday at 10:45, speakerspeakersname: Corey K, categorycategoryname: Keynote, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 10:45:00, enddatetime: 2/4/2021 12:00:00, room: AJAX Room, speaker: Speaker Name, description: Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Keynote, time: Thursday at 10:45, speakerspeakersname: Speaker Name, categorycategoryname: Keynote, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -2222,16 +2363,16 @@
           "$t": "🔑 Keynote Speaker"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 10:45:00"
+          "$t": "2/4/2021 10:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 12:00:00"
+          "$t": "2/4/2021 12:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Corey K"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses."
@@ -2252,7 +2393,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Corey K"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Keynote"
@@ -2280,7 +2421,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 11:45:00, enddatetime: 2/6/2020 12:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Thursday at 11:45, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 11:45:00, enddatetime: 2/4/2021 12:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Thursday at 11:45, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -2293,10 +2434,10 @@
           "$t": "🗨 60-Second Workshop Previews"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 11:45:00"
+          "$t": "2/4/2021 11:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 12:00:00"
+          "$t": "2/4/2021 12:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -2351,7 +2492,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 12:00:00, enddatetime: 2/6/2020 13:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F01541b.jpeg?alt\u003dmedia, category: Common Sessions, time: Thursday at 12:00, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 12:00:00, enddatetime: 2/4/2021 13:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F01541b.jpeg?alt\u003dmedia, category: Common Sessions, time: Thursday at 12:00, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -2364,10 +2505,10 @@
           "$t": "📸 Group Photo"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 12:00:00"
+          "$t": "2/4/2021 12:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 13:00:00"
+          "$t": "2/4/2021 13:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -2422,7 +2563,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 12:00:00, enddatetime: 2/6/2020 13:00:00, room: Dining Hall, description: Table discussion question: Which session looks the most interesting?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F570305.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 12:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/4/2021 12:00:00, enddatetime: 2/4/2021 13:00:00, room: Dining Hall, description: Table discussion question: Which session looks the most interesting?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F570305.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 12:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -2435,10 +2576,10 @@
           "$t": "🍞 Lunch"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 12:00:00"
+          "$t": "2/4/2021 12:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 13:00:00"
+          "$t": "2/4/2021 13:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -2493,7 +2634,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 12:00:00, enddatetime: 2/6/2020 13:00:00, room: Espresso Room, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 12:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/4/2021 12:00:00, enddatetime: 2/4/2021 13:00:00, room: Espresso Room, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 12:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -2506,10 +2647,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 12:00:00"
+          "$t": "2/4/2021 12:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 13:00:00"
+          "$t": "2/4/2021 13:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -2564,7 +2705,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 13:00:00, enddatetime: 2/6/2020 14:00:00, room: AJAX Room, speaker: Y, description: In the past, have you ever bought pirated software or cheated Microsoft licensing restrictions and usage, while on the field? In your office, are you on top of your software licensing, EULAs, data protection and other requirements relating to your digital data? Have you taken into account the corporate reputation or ethics of your secular IT software, hardware or service provider, before using their offerings?When it comes down to the use of cheap and cheerful IT products, highly convenient solutions, or the unavoidable secular giants of the IT Cloud world, we seem to have distanced ourselves from our Biblical ethics and morality. The unpleasant thought of spending more money, more time or more resources to come up with an alternative solution, dulls the reality that many secular IT corporations, are using practices that are in direct conflict with our Biblical worldview. It's not a secret that Western corporate greed for profit and control is a cancer to our society, leading to scandals in the news when they are exposed, and involving many of our IT providers.In this workshop, we will look at what the Bible and related readings have to say, in order to help us choose an ethical and moral approach to our decision-making process. We will also reflect on the challenges to implementing an uncompromising biblical position when dealing with secular IT providers., parallel: Workshops 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Christian Growth, time: Thursday at 13:00, parallelslotparallelslotsname: Workshops 1, speakerspeakersname: Y, categorycategoryname: Christian Growth, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 13:00:00, enddatetime: 2/4/2021 14:00:00, room: AJAX Room, speaker: Speaker Name, description: In the past, have you ever bought pirated software or cheated Microsoft licensing restrictions and usage, while on the field? In your office, are you on top of your software licensing, EULAs, data protection and other requirements relating to your digital data? Have you taken into account the corporate reputation or ethics of your secular IT software, hardware or service provider, before using their offerings?When it comes down to the use of cheap and cheerful IT products, highly convenient solutions, or the unavoidable secular giants of the IT Cloud world, we seem to have distanced ourselves from our Biblical ethics and morality. The unpleasant thought of spending more money, more time or more resources to come up with an alternative solution, dulls the reality that many secular IT corporations, are using practices that are in direct conflict with our Biblical worldview. It's not a secret that Western corporate greed for profit and control is a cancer to our society, leading to scandals in the news when they are exposed, and involving many of our IT providers.In this workshop, we will look at what the Bible and related readings have to say, in order to help us choose an ethical and moral approach to our decision-making process. We will also reflect on the challenges to implementing an uncompromising biblical position when dealing with secular IT providers., parallel: Workshops 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Christian Growth, time: Thursday at 13:00, parallelslotparallelslotsname: Workshops 1, speakerspeakersname: Y, categorycategoryname: Christian Growth, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -2577,16 +2718,16 @@
           "$t": "👍 1a Biblical Ethics and Morality in IT Decision Making"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 13:00:00"
+          "$t": "2/4/2021 13:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 14:00:00"
+          "$t": "2/4/2021 14:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Y"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "In the past, have you ever bought pirated software or cheated Microsoft licensing restrictions and usage, while on the field? In your office, are you on top of your software licensing, EULAs, data protection and other requirements relating to your digital data? Have you taken into account the corporate reputation or ethics of your secular IT software, hardware or service provider, before using their offerings?When it comes down to the use of cheap and cheerful IT products, highly convenient solutions, or the unavoidable secular giants of the IT Cloud world, we seem to have distanced ourselves from our Biblical ethics and morality. The unpleasant thought of spending more money, more time or more resources to come up with an alternative solution, dulls the reality that many secular IT corporations, are using practices that are in direct conflict with our Biblical worldview. It's not a secret that Western corporate greed for profit and control is a cancer to our society, leading to scandals in the news when they are exposed, and involving many of our IT providers.In this workshop, we will look at what the Bible and related readings have to say, in order to help us choose an ethical and moral approach to our decision-making process. We will also reflect on the challenges to implementing an uncompromising biblical position when dealing with secular IT providers."
@@ -2607,7 +2748,7 @@
           "$t": "Workshops 1"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Y"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Christian Growth"
@@ -2635,7 +2776,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 13:00:00, enddatetime: 2/6/2020 14:00:00, room: BASIC Room, speaker: Jeff Gage, description: Adobe XD is a cross-platform tool for rapidly creating wireframes and interactive prototypes. In May, 2018, Adobe made this product completely free and it is quickly becoming the standard tool for designers and prototype makers around the world.Jeff has been using Adobe XD since he first started using in 2017 at a hackathon in London. He was amazed at how quickly he could create prototype wireframes. This workshop will be a brief overview of its features, including some tips and tricks and even a few best practices., parallel: Workshops 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Basic Tech, time: Thursday at 13:00, parallelslotparallelslotsname: Workshops 1, speakerspeakersname: Jeff Gage, categorycategoryname: Basic Tech, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/4/2021 13:00:00, enddatetime: 2/4/2021 14:00:00, room: BASIC Room, speaker: Speaker Name, description: Adobe XD is a cross-platform tool for rapidly creating wireframes and interactive prototypes. In May, 2018, Adobe made this product completely free and it is quickly becoming the standard tool for designers and prototype makers around the world.Jeff has been using Adobe XD since he first started using in 2017 at a hackathon in London. He was amazed at how quickly he could create prototype wireframes. This workshop will be a brief overview of its features, including some tips and tricks and even a few best practices., parallel: Workshops 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Basic Tech, time: Thursday at 13:00, parallelslotparallelslotsname: Workshops 1, speakerspeakersname: Speaker Name, categorycategoryname: Basic Tech, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -2648,16 +2789,16 @@
           "$t": "🔨 1b Introducing Adobe XD"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 13:00:00"
+          "$t": "2/4/2021 13:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 14:00:00"
+          "$t": "2/4/2021 14:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
         },
         "gsx$speaker": {
-          "$t": "Jeff Gage"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Adobe XD is a cross-platform tool for rapidly creating wireframes and interactive prototypes. In May, 2018, Adobe made this product completely free and it is quickly becoming the standard tool for designers and prototype makers around the world.Jeff has been using Adobe XD since he first started using in 2017 at a hackathon in London. He was amazed at how quickly he could create prototype wireframes. This workshop will be a brief overview of its features, including some tips and tricks and even a few best practices."
@@ -2678,7 +2819,7 @@
           "$t": "Workshops 1"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Jeff Gage"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Basic Tech"
@@ -2706,7 +2847,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 13:00:00, enddatetime: 2/6/2020 14:00:00, room: COBOL Room, speaker: Dirk K., description: Osquery (osquery.io) is an open source, cross-platform (MacOS/Windows/Linux) app that gives you a high level of visibility into your endpoints. In this session, we will walk through the basics of using osquery and how to practically use it to find malicious activity or software on your systems. This will be a hands-on workshop, so bring your Windows 10, MacOS or Linux laptop. Save time by installing osquery before we start: https://osquery.io/downloads., parallel: Workshops 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Advanced Tech, time: Thursday at 13:00, parallelslotparallelslotsname: Workshops 1, speakerspeakersname: Dirk K., categorycategoryname: Advanced Tech, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/4/2021 13:00:00, enddatetime: 2/4/2021 14:00:00, room: COBOL Room, speaker: Speaker Name, description: Osquery (osquery.io) is an open source, cross-platform (MacOS/Windows/Linux) app that gives you a high level of visibility into your endpoints. In this session, we will walk through the basics of using osquery and how to practically use it to find malicious activity or software on your systems. This will be a hands-on workshop, so bring your Windows 10, MacOS or Linux laptop. Save time by installing osquery before we start: https://osquery.io/downloads., parallel: Workshops 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Advanced Tech, time: Thursday at 13:00, parallelslotparallelslotsname: Workshops 1, speakerspeakersname: Speaker Name, categorycategoryname: Advanced Tech, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -2719,16 +2860,16 @@
           "$t": "🔬 1c Increasing your Endpoint Visibility: An Introduction to Osquery"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 13:00:00"
+          "$t": "2/4/2021 13:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 14:00:00"
+          "$t": "2/4/2021 14:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "Dirk K."
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Osquery (osquery.io) is an open source, cross-platform (MacOS/Windows/Linux) app that gives you a high level of visibility into your endpoints. In this session, we will walk through the basics of using osquery and how to practically use it to find malicious activity or software on your systems. This will be a hands-on workshop, so bring your Windows 10, MacOS or Linux laptop. Save time by installing osquery before we start: https://osquery.io/downloads."
@@ -2749,7 +2890,7 @@
           "$t": "Workshops 1"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Dirk K."
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Advanced Tech"
@@ -2777,7 +2918,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 14:00:00, enddatetime: 2/6/2020 14:15:00, room: Espresso Room, description: Time to move to and set up for the next workshop. No coffee served., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F59b9e9.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 14:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/4/2021 14:00:00, enddatetime: 2/4/2021 14:15:00, room: Espresso Room, description: Time to move to and set up for the next workshop. No coffee served., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F59b9e9.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 14:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -2790,10 +2931,10 @@
           "$t": "🚶 Transition"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 14:00:00"
+          "$t": "2/4/2021 14:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 14:15:00"
+          "$t": "2/4/2021 14:15:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -2848,7 +2989,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 14:15:00, enddatetime: 2/6/2020 15:15:00, room: AJAX Room, speaker: Melanie Rissler, description: Are you having trouble implementing a GDPR policy in your charity? Do you need help creating an action plan to become 100% compliant? If you have answered 'yes' to these questions, please consider attending this workshop. Melanie is a member of a GDPR working group for her charity in the UK and has been involved in the GDPR training of the charity volunteers. Melanie will share from the point of view of implementation of GDPR and will provide templates, examples of policies, action plans and other related documents to aid in the analysis and implementation of GDPR., parallel: Workshops 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Leadership \u0026 Management, time: Thursday at 14:15, parallelslotparallelslotsname: Workshops 2, speakerspeakersname: Melanie Rissler, categorycategoryname: Leadership \u0026 Management, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 14:15:00, enddatetime: 2/4/2021 15:15:00, room: AJAX Room, speaker: Speaker Name, description: Are you having trouble implementing a GDPR policy in your charity? Do you need help creating an action plan to become 100% compliant? If you have answered 'yes' to these questions, please consider attending this workshop. Melanie is a member of a GDPR working group for her charity in the UK and has been involved in the GDPR training of the charity volunteers. Melanie will share from the point of view of implementation of GDPR and will provide templates, examples of policies, action plans and other related documents to aid in the analysis and implementation of GDPR., parallel: Workshops 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Leadership \u0026 Management, time: Thursday at 14:15, parallelslotparallelslotsname: Workshops 2, speakerspeakersname: Speaker Name, categorycategoryname: Leadership \u0026 Management, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -2861,16 +3002,16 @@
           "$t": "🔭 2a GDPR Implementation Tips"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 14:15:00"
+          "$t": "2/4/2021 14:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 15:15:00"
+          "$t": "2/4/2021 15:15:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Melanie Rissler"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Are you having trouble implementing a GDPR policy in your charity? Do you need help creating an action plan to become 100% compliant? If you have answered 'yes' to these questions, please consider attending this workshop. Melanie is a member of a GDPR working group for her charity in the UK and has been involved in the GDPR training of the charity volunteers. Melanie will share from the point of view of implementation of GDPR and will provide templates, examples of policies, action plans and other related documents to aid in the analysis and implementation of GDPR."
@@ -2891,7 +3032,7 @@
           "$t": "Workshops 2"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Melanie Rissler"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Leadership \u0026 Management"
@@ -2919,7 +3060,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 14:15:00, enddatetime: 2/6/2020 15:15:00, room: BASIC Room, speaker: Lars Gunnarsson, description: We will experiment with some of the core features of React JS, but previous programming experience will not be necessary. React is the fastest growing framework and nowadays the most asked for skill for web app developers. Although, in fact, it is not a framework, but rather a library of reusable components. All components, small or big, are reusable, even across different projects. The functional JavaScript model and the one-way data flow improves the readability of all components and makes it easier to design re-usability., parallel: Workshops 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Web \u0026 App Development, time: Thursday at 14:15, parallelslotparallelslotsname: Workshops 2, speakerspeakersname: Lars Gunnarsson, categorycategoryname: Web \u0026 App Development, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/4/2021 14:15:00, enddatetime: 2/4/2021 15:15:00, room: BASIC Room, speaker: Speaker Name, description: We will experiment with some of the core features of React JS, but previous programming experience will not be necessary. React is the fastest growing framework and nowadays the most asked for skill for web app developers. Although, in fact, it is not a framework, but rather a library of reusable components. All components, small or big, are reusable, even across different projects. The functional JavaScript model and the one-way data flow improves the readability of all components and makes it easier to design re-usability., parallel: Workshops 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Web \u0026 App Development, time: Thursday at 14:15, parallelslotparallelslotsname: Workshops 2, speakerspeakersname: Speaker Name, categorycategoryname: Web \u0026 App Development, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -2932,16 +3073,16 @@
           "$t": "🌍 2b Hands-On: Building a Mini Interactive Web App with React"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 14:15:00"
+          "$t": "2/4/2021 14:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 15:15:00"
+          "$t": "2/4/2021 15:15:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
         },
         "gsx$speaker": {
-          "$t": "Lars Gunnarsson"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "We will experiment with some of the core features of React JS, but previous programming experience will not be necessary. React is the fastest growing framework and nowadays the most asked for skill for web app developers. Although, in fact, it is not a framework, but rather a library of reusable components. All components, small or big, are reusable, even across different projects. The functional JavaScript model and the one-way data flow improves the readability of all components and makes it easier to design re-usability."
@@ -2962,7 +3103,7 @@
           "$t": "Workshops 2"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Lars Gunnarsson"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Web \u0026 App Development"
@@ -2990,7 +3131,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 15:15:00, enddatetime: 2/6/2020 16:00:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 15:15, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/4/2021 15:15:00, enddatetime: 2/4/2021 16:00:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 15:15, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -3003,10 +3144,10 @@
           "$t": "☕ Coffee Break"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 15:15:00"
+          "$t": "2/4/2021 15:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 16:00:00"
+          "$t": "2/4/2021 16:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -3061,7 +3202,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 16:00:00, enddatetime: 2/6/2020 17:00:00, room: AJAX Room, speaker: JB, description: There is no one-size-fits-all when it comes to cybersecurity. Learn how to help your field staff assess their digital security needs based on their ministry context and apply practical risk reduction steps. This will include a walkthrough of a couple new tools, developed specifically for our community to help assess the security of our devices., parallel: Workshops 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Basic Tech, time: Thursday at 16:00, parallelslotparallelslotsname: Workshops 3, speakerspeakersname: JB, categorycategoryname: Basic Tech, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 16:00:00, enddatetime: 2/4/2021 17:00:00, room: AJAX Room, speaker: Speaker Name, description: There is no one-size-fits-all when it comes to cybersecurity. Learn how to help your field staff assess their digital security needs based on their ministry context and apply practical risk reduction steps. This will include a walkthrough of a couple new tools, developed specifically for our community to help assess the security of our devices., parallel: Workshops 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Basic Tech, time: Thursday at 16:00, parallelslotparallelslotsname: Workshops 3, speakerspeakersname: Speaker Name, categorycategoryname: Basic Tech, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -3074,16 +3215,16 @@
           "$t": "🔨 3a Digital Threat Profile"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 16:00:00"
+          "$t": "2/4/2021 16:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 17:00:00"
+          "$t": "2/4/2021 17:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "JB"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "There is no one-size-fits-all when it comes to cybersecurity. Learn how to help your field staff assess their digital security needs based on their ministry context and apply practical risk reduction steps. This will include a walkthrough of a couple new tools, developed specifically for our community to help assess the security of our devices."
@@ -3104,7 +3245,7 @@
           "$t": "Workshops 3"
         },
         "gsx$speakerspeakersname": {
-          "$t": "JB"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Basic Tech"
@@ -3132,7 +3273,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 16:00:00, enddatetime: 2/6/2020 17:00:00, room: BASIC Room, speaker: Courtney R, description: As a leader, we have a lot of things wanting our attention. Being able to prioritize our time appropriately is a key skill. Understanding what action items are tactical vs strategic (and even what is visionary) play a role in not only making sure we're doing what we should be doing but also helps those we lead in focusing on what they are to be doing., parallel: Workshops 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Leadership \u0026 Management, time: Thursday at 16:00, parallelslotparallelslotsname: Workshops 3, speakerspeakersname: Courtney R, categorycategoryname: Leadership \u0026 Management, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/4/2021 16:00:00, enddatetime: 2/4/2021 17:00:00, room: BASIC Room, speaker: Speaker Name, description: As a leader, we have a lot of things wanting our attention. Being able to prioritize our time appropriately is a key skill. Understanding what action items are tactical vs strategic (and even what is visionary) play a role in not only making sure we're doing what we should be doing but also helps those we lead in focusing on what they are to be doing., parallel: Workshops 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Leadership \u0026 Management, time: Thursday at 16:00, parallelslotparallelslotsname: Workshops 3, speakerspeakersname: Speaker Name, categorycategoryname: Leadership \u0026 Management, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -3145,16 +3286,16 @@
           "$t": "🔭 3b Tactical vs Strategic"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 16:00:00"
+          "$t": "2/4/2021 16:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 17:00:00"
+          "$t": "2/4/2021 17:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
         },
         "gsx$speaker": {
-          "$t": "Courtney R"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "As a leader, we have a lot of things wanting our attention. Being able to prioritize our time appropriately is a key skill. Understanding what action items are tactical vs strategic (and even what is visionary) play a role in not only making sure we're doing what we should be doing but also helps those we lead in focusing on what they are to be doing."
@@ -3175,7 +3316,7 @@
           "$t": "Workshops 3"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Courtney R"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Leadership \u0026 Management"
@@ -3203,7 +3344,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 16:00:00, enddatetime: 2/6/2020 17:00:00, room: COBOL Room, speaker: Victor Norman, description: Design Patterns are well-defined and well-studied relationships between classes, interfaces, and objects. They have been proven to help developers design and implement more robust software -- software that adapts gracefully to changing requirements and environments. In this talk, I will introduce some of the most common and useful design patterns, with examples. I will also speak about the underlying Design Principles that motivate the creation and use of patterns., parallel: Workshops 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Web \u0026 App Development, time: Thursday at 16:00, parallelslotparallelslotsname: Workshops 3, speakerspeakersname: Victor Norman, categorycategoryname: Web \u0026 App Development, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/4/2021 16:00:00, enddatetime: 2/4/2021 17:00:00, room: COBOL Room, speaker: Speaker Name, description: Design Patterns are well-defined and well-studied relationships between classes, interfaces, and objects. They have been proven to help developers design and implement more robust software -- software that adapts gracefully to changing requirements and environments. In this talk, I will introduce some of the most common and useful design patterns, with examples. I will also speak about the underlying Design Principles that motivate the creation and use of patterns., parallel: Workshops 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Web \u0026 App Development, time: Thursday at 16:00, parallelslotparallelslotsname: Workshops 3, speakerspeakersname: Speaker Name, categorycategoryname: Web \u0026 App Development, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -3216,16 +3357,16 @@
           "$t": "🌍 3c Programmatic Design Patterns"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 16:00:00"
+          "$t": "2/4/2021 16:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 17:00:00"
+          "$t": "2/4/2021 17:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "Victor Norman"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Design Patterns are well-defined and well-studied relationships between classes, interfaces, and objects. They have been proven to help developers design and implement more robust software -- software that adapts gracefully to changing requirements and environments. In this talk, I will introduce some of the most common and useful design patterns, with examples. I will also speak about the underlying Design Principles that motivate the creation and use of patterns."
@@ -3246,7 +3387,7 @@
           "$t": "Workshops 3"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Victor Norman"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Web \u0026 App Development"
@@ -3274,7 +3415,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 17:00:00, enddatetime: 2/6/2020 17:30:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/4/2021 17:00:00, enddatetime: 2/4/2021 17:30:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -3287,10 +3428,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 17:00:00"
+          "$t": "2/4/2021 17:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 17:30:00"
+          "$t": "2/4/2021 17:30:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -3345,7 +3486,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 17:00:00, enddatetime: 2/6/2020 17:30:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/4/2021 17:00:00, enddatetime: 2/4/2021 17:30:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -3358,10 +3499,10 @@
           "$t": "💻 Lab Time"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 17:00:00"
+          "$t": "2/4/2021 17:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 17:30:00"
+          "$t": "2/4/2021 17:30:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -3416,7 +3557,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 17:00:00, enddatetime: 2/6/2020 17:30:00, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 17:00, categorycategoryname: Birds of a Feather (BOF)"
+          "$t": "datetime: 2/4/2021 17:00:00, enddatetime: 2/4/2021 17:30:00, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 17:00, categorycategoryname: Birds of a Feather (BOF)"
         },
         "link": [
           {
@@ -3429,10 +3570,10 @@
           "$t": "🗨 BOF Voting Ends at 17:30."
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 17:00:00"
+          "$t": "2/4/2021 17:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 17:30:00"
+          "$t": "2/4/2021 17:30:00"
         },
         "gsx$room": {
           "$t": ""
@@ -3487,7 +3628,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 17:30:00, enddatetime: 2/6/2020 19:00:00, room: Dining Hall, description: Table discussion question: What is your favorite restaurant and what would you recommend there?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 17:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/4/2021 17:30:00, enddatetime: 2/4/2021 19:00:00, room: Dining Hall, description: Table discussion question: What is your favorite restaurant and what would you recommend there?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 17:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -3500,10 +3641,10 @@
           "$t": "🍲 Evening Meal"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 17:30:00"
+          "$t": "2/4/2021 17:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 19:00:00"
+          "$t": "2/4/2021 19:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -3558,7 +3699,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 19:00:00, enddatetime: 2/6/2020 20:00:00, room: AJAX Room, description: TFM voting ends at 12:45 on Thursday., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Thursday at 19:00, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 19:00:00, enddatetime: 2/4/2021 20:00:00, room: AJAX Room, description: TFM voting ends at 12:45 on Thursday., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Thursday at 19:00, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -3571,10 +3712,10 @@
           "$t": "🛠 ICCM TFM Contest"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 19:00:00"
+          "$t": "2/4/2021 19:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 20:00:00"
+          "$t": "2/4/2021 20:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -3629,7 +3770,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 20:00:00, enddatetime: 2/6/2020 20:10:00, room: AJAX Room, description: There are a lot of technical and management subjects that need attention, but not all of these can be planned as a workshop. Birds Of a Feather, or BOF sessions, bring people with similar interests together to meet and discuss these topics. The topics are agreed by the attendees on the first day of the conference and then the session times and locations are publicised.English Idiom: Birds of a feather flock together.Explanation: Just as bird species flock together, people with similar interests tend to congregate with one another., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 20:00, categorycategoryname: Birds of a Feather (BOF), roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 20:00:00, enddatetime: 2/4/2021 20:10:00, room: AJAX Room, description: There are a lot of technical and management subjects that need attention, but not all of these can be planned as a workshop. Birds Of a Feather, or BOF sessions, bring people with similar interests together to meet and discuss these topics. The topics are agreed by the attendees on the first day of the conference and then the session times and locations are publicised.English Idiom: Birds of a feather flock together.Explanation: Just as bird species flock together, people with similar interests tend to congregate with one another., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 20:00, categorycategoryname: Birds of a Feather (BOF), roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -3642,10 +3783,10 @@
           "$t": "📢 Explain BOF's ('Birds of a Feather' Sessions)"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 20:00:00"
+          "$t": "2/4/2021 20:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 20:10:00"
+          "$t": "2/4/2021 20:10:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -3700,7 +3841,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 20:10:00, enddatetime: 2/6/2020 21:00:00, room: AJAX Room, parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Birds of a Feather (BOF), roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 20:10:00, enddatetime: 2/4/2021 21:00:00, room: AJAX Room, parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Birds of a Feather (BOF), roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -3713,10 +3854,10 @@
           "$t": "🐧 BOF 1a: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 20:10:00"
+          "$t": "2/4/2021 20:10:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -3771,7 +3912,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 20:10:00, enddatetime: 2/6/2020 21:00:00, room: BASIC Room, parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Birds of a Feather (BOF), roomvenuename: BASIC Room"
+          "$t": "datetime: 2/4/2021 20:10:00, enddatetime: 2/4/2021 21:00:00, room: BASIC Room, parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Birds of a Feather (BOF), roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -3784,10 +3925,10 @@
           "$t": "🐧 BOF 1b: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 20:10:00"
+          "$t": "2/4/2021 20:10:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
@@ -3842,7 +3983,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 20:10:00, enddatetime: 2/6/2020 21:00:00, room: COBOL Room, parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Birds of a Feather (BOF), roomvenuename: COBOL Room"
+          "$t": "datetime: 2/4/2021 20:10:00, enddatetime: 2/4/2021 21:00:00, room: COBOL Room, parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Birds of a Feather (BOF), roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -3855,10 +3996,10 @@
           "$t": "🐧 BOF 1c: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 20:10:00"
+          "$t": "2/4/2021 20:10:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
@@ -3913,7 +4054,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 20:10:00, enddatetime: 2/6/2020 21:00:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/4/2021 20:10:00, enddatetime: 2/4/2021 21:00:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -3926,10 +4067,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 20:10:00"
+          "$t": "2/4/2021 20:10:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -3984,7 +4125,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 20:10:00, enddatetime: 2/6/2020 21:00:00, room: Espresso Room, parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/4/2021 20:10:00, enddatetime: 2/4/2021 21:00:00, room: Espresso Room, parallel: BOFs 1, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 20:10, parallelslotparallelslotsname: BOFs 1, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -3997,10 +4138,10 @@
           "$t": "💻 Lab Time"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 20:10:00"
+          "$t": "2/4/2021 20:10:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -4055,7 +4196,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 21:00:00, enddatetime: 2/6/2020 22:00:00, room: AJAX Room, parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Birds of a Feather (BOF), roomvenuename: AJAX Room"
+          "$t": "datetime: 2/4/2021 21:00:00, enddatetime: 2/4/2021 22:00:00, room: AJAX Room, parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Birds of a Feather (BOF), roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -4068,10 +4209,10 @@
           "$t": "🐧 BOF 2a: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 22:00:00"
+          "$t": "2/4/2021 22:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -4126,7 +4267,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 21:00:00, enddatetime: 2/6/2020 22:00:00, room: BASIC Room, parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Birds of a Feather (BOF), roomvenuename: BASIC Room"
+          "$t": "datetime: 2/4/2021 21:00:00, enddatetime: 2/4/2021 22:00:00, room: BASIC Room, parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Birds of a Feather (BOF), roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -4139,10 +4280,10 @@
           "$t": "🐧 BOF 2b: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 22:00:00"
+          "$t": "2/4/2021 22:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
@@ -4197,7 +4338,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 21:00:00, enddatetime: 2/6/2020 22:00:00, room: COBOL Room, parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Birds of a Feather (BOF), roomvenuename: COBOL Room"
+          "$t": "datetime: 2/4/2021 21:00:00, enddatetime: 2/4/2021 22:00:00, room: COBOL Room, parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Birds of a Feather (BOF), roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -4210,10 +4351,10 @@
           "$t": "🐧 BOF 2c: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 22:00:00"
+          "$t": "2/4/2021 22:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
@@ -4268,7 +4409,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 21:00:00, enddatetime: 2/6/2020 22:00:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/4/2021 21:00:00, enddatetime: 2/4/2021 22:00:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -4281,10 +4422,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 22:00:00"
+          "$t": "2/4/2021 22:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -4339,7 +4480,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 21:00:00, enddatetime: 2/6/2020 22:00:00, room: Espresso Room, parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/4/2021 21:00:00, enddatetime: 2/4/2021 22:00:00, room: Espresso Room, parallel: BOFs 2, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 21:00, parallelslotparallelslotsname: BOFs 2, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -4352,10 +4493,10 @@
           "$t": "💻 Lab Time"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 21:00:00"
+          "$t": "2/4/2021 21:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/6/2020 22:00:00"
+          "$t": "2/4/2021 22:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -4410,7 +4551,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/6/2020 22:00:00, enddatetime: 2/7/2020 0:00:00, room: Espresso Room, description: Free time with snacks and drinks provided. Get to know one another, play games, and have fun!, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F1a8b3f.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 22:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/4/2021 22:00:00, enddatetime: 2/5/2021 0:00:00, room: Espresso Room, description: Free time with snacks and drinks provided. Get to know one another, play games, and have fun!, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F1a8b3f.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Thursday at 22:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -4423,10 +4564,10 @@
           "$t": "🌭 Social Gathering"
         },
         "gsx$datetime": {
-          "$t": "2/6/2020 22:00:00"
+          "$t": "2/4/2021 22:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 0:00:00"
+          "$t": "2/5/2021 0:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -4481,7 +4622,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 8:00:00, enddatetime: 2/7/2020 9:00:00, room: Dining Hall, description: Table discussion question: What is your idea of a \"balanced breakfast\"?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa864a2.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 08:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/5/2021 8:00:00, enddatetime: 2/5/2021 9:00:00, room: Dining Hall, description: Table discussion question: What is your idea of a \"balanced breakfast\"?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa864a2.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 08:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -4494,10 +4635,10 @@
           "$t": "🥐 Breakfast"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 8:00:00"
+          "$t": "2/5/2021 8:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 9:00:00"
+          "$t": "2/5/2021 9:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -4552,7 +4693,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 9:00:00, enddatetime: 2/7/2020 9:45:00, room: AJAX Room, speaker: Rob Hazel, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Friday at 09:00, speakerspeakersname: Rob Hazel, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/5/2021 9:00:00, enddatetime: 2/5/2021 9:45:00, room: AJAX Room, speaker: Speaker Name, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Friday at 09:00, speakerspeakersname: Speaker Name, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -4565,16 +4706,16 @@
           "$t": "🎹 Devotions \u0026 Worship"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 9:00:00"
+          "$t": "2/5/2021 9:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 9:45:00"
+          "$t": "2/5/2021 9:45:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Rob Hazel"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -4595,7 +4736,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Rob Hazel"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Prayer and Worship"
@@ -4623,7 +4764,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 9:45:00, enddatetime: 2/7/2020 10:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Friday at 09:45, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/5/2021 9:45:00, enddatetime: 2/5/2021 10:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Friday at 09:45, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -4636,10 +4777,10 @@
           "$t": "📢 Announcements \u0026 Intro to Prayer Pals"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 9:45:00"
+          "$t": "2/5/2021 9:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 10:00:00"
+          "$t": "2/5/2021 10:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -4694,7 +4835,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 10:00:00, enddatetime: 2/7/2020 10:30:00, room: AJAX Room, description: Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Friday at 10:00, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/5/2021 10:00:00, enddatetime: 2/5/2021 10:30:00, room: AJAX Room, description: Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Friday at 10:00, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -4707,10 +4848,10 @@
           "$t": "🙏 Prayer Pals Part 2"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 10:00:00"
+          "$t": "2/5/2021 10:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 10:30:00"
+          "$t": "2/5/2021 10:30:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -4765,7 +4906,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 10:30:00, enddatetime: 2/7/2020 10:45:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 10:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/5/2021 10:30:00, enddatetime: 2/5/2021 10:45:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 10:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -4778,10 +4919,10 @@
           "$t": "☕ Coffee Break"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 10:30:00"
+          "$t": "2/5/2021 10:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 10:45:00"
+          "$t": "2/5/2021 10:45:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -4836,7 +4977,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 10:45:00, enddatetime: 2/7/2020 11:45:00, room: AJAX Room, speaker: Corey K, description: Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Keynote, time: Friday at 10:45, speakerspeakersname: Corey K, categorycategoryname: Keynote, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/5/2021 10:45:00, enddatetime: 2/5/2021 11:45:00, room: AJAX Room, speaker: Speaker Name, description: Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Keynote, time: Friday at 10:45, speakerspeakersname: Speaker Name, categorycategoryname: Keynote, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -4849,16 +4990,16 @@
           "$t": "🔑 Keynote Speaker"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 10:45:00"
+          "$t": "2/5/2021 10:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 11:45:00"
+          "$t": "2/5/2021 11:45:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Corey K"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses."
@@ -4879,7 +5020,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Corey K"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Keynote"
@@ -4907,7 +5048,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 11:45:00, enddatetime: 2/7/2020 12:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Friday at 11:45, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/5/2021 11:45:00, enddatetime: 2/5/2021 12:00:00, room: AJAX Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Friday at 11:45, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -4920,10 +5061,10 @@
           "$t": "🗨 60-Second Workshop Previews"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 11:45:00"
+          "$t": "2/5/2021 11:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 12:00:00"
+          "$t": "2/5/2021 12:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -4978,7 +5119,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 12:00:00, enddatetime: 2/7/2020 13:00:00, room: Dining Hall, description: Table discussion question: What has been the most interesting so far?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F8fa131.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 12:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/5/2021 12:00:00, enddatetime: 2/5/2021 13:00:00, room: Dining Hall, description: Table discussion question: What has been the most interesting so far?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F8fa131.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 12:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -4991,10 +5132,10 @@
           "$t": "🍞 Lunch"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 12:00:00"
+          "$t": "2/5/2021 12:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 13:00:00"
+          "$t": "2/5/2021 13:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -5049,7 +5190,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 13:00:00, enddatetime: 2/7/2020 14:00:00, room: AJAX Room, speaker: Dirk K., description: Working with nationals out on the field and within their countries is a requirement for most ministries. As expats, we usually do a good job of taking care of our own ministry’s internal digital security. But what about when we work with nationals? Are there differences? Do we need to have them at the same standard as our own ministry’s levels? This workshop will look into what considerations and protocols we should be looking at when working with nationals., parallel: Workshops 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Leadership \u0026 Management, time: Friday at 13:00, parallelslotparallelslotsname: Workshops 4, speakerspeakersname: Dirk K., categorycategoryname: Leadership \u0026 Management, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/5/2021 13:00:00, enddatetime: 2/5/2021 14:00:00, room: AJAX Room, speaker: Speaker Name, description: Working with nationals out on the field and within their countries is a requirement for most ministries. As expats, we usually do a good job of taking care of our own ministry’s internal digital security. But what about when we work with nationals? Are there differences? Do we need to have them at the same standard as our own ministry’s levels? This workshop will look into what considerations and protocols we should be looking at when working with nationals., parallel: Workshops 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Leadership \u0026 Management, time: Friday at 13:00, parallelslotparallelslotsname: Workshops 4, speakerspeakersname: Speaker Name, categorycategoryname: Leadership \u0026 Management, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -5062,16 +5203,16 @@
           "$t": "🔭 4a Cybersecurity \u0026 Nationals"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 13:00:00"
+          "$t": "2/5/2021 13:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 14:00:00"
+          "$t": "2/5/2021 14:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Dirk K."
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Working with nationals out on the field and within their countries is a requirement for most ministries. As expats, we usually do a good job of taking care of our own ministry’s internal digital security. But what about when we work with nationals? Are there differences? Do we need to have them at the same standard as our own ministry’s levels? This workshop will look into what considerations and protocols we should be looking at when working with nationals."
@@ -5092,7 +5233,7 @@
           "$t": "Workshops 4"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Dirk K."
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Leadership \u0026 Management"
@@ -5120,7 +5261,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 13:00:00, enddatetime: 2/7/2020 14:00:00, room: BASIC Room, speaker: Victor Norman, description: In this talk, we will investigate the relationship between virtues and the act (and art) of computer programming, and how computer code can exhibit these virtues. the virtues we will investigate are hospitality, humility, and integrity (and creativity, stewardship, and diligence, as time permits)., parallel: Workshops 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Christian Growth, time: Friday at 13:00, parallelslotparallelslotsname: Workshops 4, speakerspeakersname: Victor Norman, categorycategoryname: Christian Growth, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/5/2021 13:00:00, enddatetime: 2/5/2021 14:00:00, room: BASIC Room, speaker: Speaker Name, description: In this talk, we will investigate the relationship between virtues and the act (and art) of computer programming, and how computer code can exhibit these virtues. the virtues we will investigate are hospitality, humility, and integrity (and creativity, stewardship, and diligence, as time permits)., parallel: Workshops 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Christian Growth, time: Friday at 13:00, parallelslotparallelslotsname: Workshops 4, speakerspeakersname: Speaker Name, categorycategoryname: Christian Growth, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -5133,16 +5274,16 @@
           "$t": "👍 4b What Christian Virtues Does Your Code Exhibit?"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 13:00:00"
+          "$t": "2/5/2021 13:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 14:00:00"
+          "$t": "2/5/2021 14:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
         },
         "gsx$speaker": {
-          "$t": "Victor Norman"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "In this talk, we will investigate the relationship between virtues and the act (and art) of computer programming, and how computer code can exhibit these virtues. the virtues we will investigate are hospitality, humility, and integrity (and creativity, stewardship, and diligence, as time permits)."
@@ -5163,7 +5304,7 @@
           "$t": "Workshops 4"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Victor Norman"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Christian Growth"
@@ -5191,7 +5332,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 13:00:00, enddatetime: 2/7/2020 14:00:00, room: COBOL Room, speaker: Timotheus, description: OpenPetra is an administration tool for charities, and the workshop will show how it helps you to manage your contacts' addresses, lists for newsletters, and the donations.In the past year, OpenPetra has been partly rewritten to now run in the web browser and can be used from everywhere. It is open source and can be hosted by yourself, or you can use the service at https://www.openpetra.com.This workshop shows how you can manage your addresses, and how you can import your bank statements and match regular and new donations to the donors so that you can print an annual receipt for the donors which they can give to their tax office.We currently don't target big organisations, but the small charity or church bookkeeper that manages the addresses and finances in his/her spare time., parallel: Workshops 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Basic Tech, time: Friday at 13:00, parallelslotparallelslotsname: Workshops 4, speakerspeakersname: Timotheus, categorycategoryname: Basic Tech, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/5/2021 13:00:00, enddatetime: 2/5/2021 14:00:00, room: COBOL Room, speaker: Speaker Name, description: OpenPetra is an administration tool for charities, and the workshop will show how it helps you to manage your contacts' addresses, lists for newsletters, and the donations.In the past year, OpenPetra has been partly rewritten to now run in the web browser and can be used from everywhere. It is open source and can be hosted by yourself, or you can use the service at https://www.openpetra.com.This workshop shows how you can manage your addresses, and how you can import your bank statements and match regular and new donations to the donors so that you can print an annual receipt for the donors which they can give to their tax office.We currently don't target big organisations, but the small charity or church bookkeeper that manages the addresses and finances in his/her spare time., parallel: Workshops 4, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Basic Tech, time: Friday at 13:00, parallelslotparallelslotsname: Workshops 4, speakerspeakersname: Speaker Name, categorycategoryname: Basic Tech, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -5204,16 +5345,16 @@
           "$t": "🔨 4c Using OpenPetra for Your Small Charity"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 13:00:00"
+          "$t": "2/5/2021 13:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 14:00:00"
+          "$t": "2/5/2021 14:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "Timotheus"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "OpenPetra is an administration tool for charities, and the workshop will show how it helps you to manage your contacts' addresses, lists for newsletters, and the donations.In the past year, OpenPetra has been partly rewritten to now run in the web browser and can be used from everywhere. It is open source and can be hosted by yourself, or you can use the service at https://www.openpetra.com.This workshop shows how you can manage your addresses, and how you can import your bank statements and match regular and new donations to the donors so that you can print an annual receipt for the donors which they can give to their tax office.We currently don't target big organisations, but the small charity or church bookkeeper that manages the addresses and finances in his/her spare time."
@@ -5234,7 +5375,7 @@
           "$t": "Workshops 4"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Timotheus"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Basic Tech"
@@ -5262,7 +5403,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 14:00:00, enddatetime: 2/7/2020 14:15:00, room: Espresso Room, description: Time to move to and set up for the next workshop. No coffee served., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F59b9e9.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 14:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/5/2021 14:00:00, enddatetime: 2/5/2021 14:15:00, room: Espresso Room, description: Time to move to and set up for the next workshop. No coffee served., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F59b9e9.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 14:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -5275,10 +5416,10 @@
           "$t": "🚶 Transition"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 14:00:00"
+          "$t": "2/5/2021 14:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 14:15:00"
+          "$t": "2/5/2021 14:15:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -5316,7 +5457,7 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/ajbm8"
+          "$t": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/aSpeaker Namem8"
         },
         "updated": {
           "$t": "2019-11-28T18:30:18.665Z"
@@ -5333,29 +5474,29 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 14:15:00, enddatetime: 2/7/2020 15:15:00, room: AJAX Room, speaker: Hilton, description: Basic visibility of network and security events can be time-consuming and expensive to deploy. This session will demonstrate how to quickly and easily deploy an affordable \u0026 open-source embedded security system to store events for long-term storage, hunting, and analysis., parallel: Workshops 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Advanced Tech, time: Friday at 14:15, parallelslotparallelslotsname: Workshops 5, speakerspeakersname: Hilton, categorycategoryname: Advanced Tech, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/5/2021 14:15:00, enddatetime: 2/5/2021 15:15:00, room: AJAX Room, speaker: Speaker Name, description: Basic visibility of network and security events can be time-consuming and expensive to deploy. This session will demonstrate how to quickly and easily deploy an affordable \u0026 open-source embedded security system to store events for long-term storage, hunting, and analysis., parallel: Workshops 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Advanced Tech, time: Friday at 14:15, parallelslotparallelslotsname: Workshops 5, speakerspeakersname: Speaker Name, categorycategoryname: Advanced Tech, roomvenuename: AJAX Room"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/ajbm8"
+            "href": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/aSpeaker Namem8"
           }
         ],
         "gsx$session": {
           "$t": "🔬 5a Simple \u0026 Affordable Security Awareness"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 14:15:00"
+          "$t": "2/5/2021 14:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 15:15:00"
+          "$t": "2/5/2021 15:15:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Hilton"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Basic visibility of network and security events can be time-consuming and expensive to deploy. This session will demonstrate how to quickly and easily deploy an affordable \u0026 open-source embedded security system to store events for long-term storage, hunting, and analysis."
@@ -5376,7 +5517,7 @@
           "$t": "Workshops 5"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Hilton"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Advanced Tech"
@@ -5404,7 +5545,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 14:15:00, enddatetime: 2/7/2020 15:15:00, room: BASIC Room, speaker: Timotheus and Andreas, description: Your organisation is already using an older version of Dynamics NAV, and you want to know where Dynamics NAV is going? Or are you considering Dynamics NAV as a future alternative to your existing ERP System?We will present the possibilities you have as developer with coding in AL and developing extensions for Dynamics NAV. We will show the development with Visual Code, and managing your code in Git, show situations where you still have to make changes in C/AL, how to manage your own data model for your extensions, and how to develop assistants. We can tell you which issues you must watch out for from our own experience. You can try our examples at home on a free Docker image of Dynamics NAV., parallel: Workshops 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Web \u0026 App Development, time: Friday at 14:15, parallelslotparallelslotsname: Workshops 5, speakerspeakersname: Timotheus and Andreas, categorycategoryname: Web \u0026 App Development, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/5/2021 14:15:00, enddatetime: 2/5/2021 15:15:00, room: BASIC Room, speaker: Speaker Name, description: Your organisation is already using an older version of Dynamics NAV, and you want to know where Dynamics NAV is going? Or are you considering Dynamics NAV as a future alternative to your existing ERP System?We will present the possibilities you have as developer with coding in AL and developing extensions for Dynamics NAV. We will show the development with Visual Code, and managing your code in Git, show situations where you still have to make changes in C/AL, how to manage your own data model for your extensions, and how to develop assistants. We can tell you which issues you must watch out for from our own experience. You can try our examples at home on a free Docker image of Dynamics NAV., parallel: Workshops 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Web \u0026 App Development, time: Friday at 14:15, parallelslotparallelslotsname: Workshops 5, speakerspeakersname: Speaker Name, categorycategoryname: Web \u0026 App Development, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -5417,16 +5558,16 @@
           "$t": "🌍 5b Developing extensions for MS Dynamics NAV 2018"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 14:15:00"
+          "$t": "2/5/2021 14:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 15:15:00"
+          "$t": "2/5/2021 15:15:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
         },
         "gsx$speaker": {
-          "$t": "Timotheus and Andreas"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Your organisation is already using an older version of Dynamics NAV, and you want to know where Dynamics NAV is going? Or are you considering Dynamics NAV as a future alternative to your existing ERP System?We will present the possibilities you have as developer with coding in AL and developing extensions for Dynamics NAV. We will show the development with Visual Code, and managing your code in Git, show situations where you still have to make changes in C/AL, how to manage your own data model for your extensions, and how to develop assistants. We can tell you which issues you must watch out for from our own experience. You can try our examples at home on a free Docker image of Dynamics NAV."
@@ -5447,7 +5588,7 @@
           "$t": "Workshops 5"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Timotheus and Andreas"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Web \u0026 App Development"
@@ -5475,7 +5616,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 14:15:00, enddatetime: 2/7/2020 15:15:00, room: COBOL Room, speaker: Dana Cherry, description: We all worry from time to time. We may worry about:financesa jobthe health of parents or childrenfailing to make much impact for God in the role that He has given us on earthour relationship with God, as we pray and God seems unwilling, or unable, to answer and provideIn this workshop, we will explore Christ's words in Matthew 6:34 as the means to eliminate worry from our lives. In the midst of this workshop, we will take time to commit our worries to the Lord, laying our requests before our Father in heaven., parallel: Workshops 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Christian Growth, time: Friday at 14:15, parallelslotparallelslotsname: Workshops 5, speakerspeakersname: Dana Cherry, categorycategoryname: Christian Growth, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/5/2021 14:15:00, enddatetime: 2/5/2021 15:15:00, room: COBOL Room, speaker: Speaker Name, description: We all worry from time to time. We may worry about:financesa jobthe health of parents or childrenfailing to make much impact for God in the role that He has given us on earthour relationship with God, as we pray and God seems unwilling, or unable, to answer and provideIn this workshop, we will explore Christ's words in Matthew 6:34 as the means to eliminate worry from our lives. In the midst of this workshop, we will take time to commit our worries to the Lord, laying our requests before our Father in heaven., parallel: Workshops 5, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Christian Growth, time: Friday at 14:15, parallelslotparallelslotsname: Workshops 5, speakerspeakersname: Speaker Name, categorycategoryname: Christian Growth, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -5488,16 +5629,16 @@
           "$t": "👍 5c Erasing Worry from Our Lives"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 14:15:00"
+          "$t": "2/5/2021 14:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 15:15:00"
+          "$t": "2/5/2021 15:15:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "Dana Cherry"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "We all worry from time to time. We may worry about:financesa jobthe health of parents or childrenfailing to make much impact for God in the role that He has given us on earthour relationship with God, as we pray and God seems unwilling, or unable, to answer and provideIn this workshop, we will explore Christ's words in Matthew 6:34 as the means to eliminate worry from our lives. In the midst of this workshop, we will take time to commit our worries to the Lord, laying our requests before our Father in heaven."
@@ -5518,7 +5659,7 @@
           "$t": "Workshops 5"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Dana Cherry"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Christian Growth"
@@ -5546,7 +5687,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 15:15:00, enddatetime: 2/7/2020 16:00:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 15:15, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/5/2021 15:15:00, enddatetime: 2/5/2021 16:00:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 15:15, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -5559,10 +5700,10 @@
           "$t": "☕ Coffee Break"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 15:15:00"
+          "$t": "2/5/2021 15:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 16:00:00"
+          "$t": "2/5/2021 16:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -5617,7 +5758,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 16:00:00, enddatetime: 2/7/2020 17:00:00, room: BASIC Room, speaker: Courtney R, description: Leading people who started off their careers in other areas of the IT industry but then started working in full-time ministries comes with its own set of challenges. Come to this panel discussion where you'll hear from people who lead as well as some who are these \"2nd Career\" workers., parallel: Workshops 6, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Leadership \u0026 Management, time: Friday at 16:00, parallelslotparallelslotsname: Workshops 6, speakerspeakersname: Courtney R, categorycategoryname: Leadership \u0026 Management, roomvenuename: BASIC Room"
+          "$t": "datetime: 2/5/2021 16:00:00, enddatetime: 2/5/2021 17:00:00, room: BASIC Room, speaker: Speaker Name, description: Leading people who started off their careers in other areas of the IT industry but then started working in full-time ministries comes with its own set of challenges. Come to this panel discussion where you'll hear from people who lead as well as some who are these \"2nd Career\" workers., parallel: Workshops 6, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Leadership \u0026 Management, time: Friday at 16:00, parallelslotparallelslotsname: Workshops 6, speakerspeakersname: Speaker Name, categorycategoryname: Leadership \u0026 Management, roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -5630,16 +5771,16 @@
           "$t": "🔭 6b Leading 2nd Career Workers - Panel Discussion"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 16:00:00"
+          "$t": "2/5/2021 16:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 17:00:00"
+          "$t": "2/5/2021 17:00:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
         },
         "gsx$speaker": {
-          "$t": "Courtney R"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Leading people who started off their careers in other areas of the IT industry but then started working in full-time ministries comes with its own set of challenges. Come to this panel discussion where you'll hear from people who lead as well as some who are these \"2nd Career\" workers."
@@ -5660,7 +5801,7 @@
           "$t": "Workshops 6"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Courtney R"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Leadership \u0026 Management"
@@ -5688,7 +5829,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 16:00:00, enddatetime: 2/7/2020 17:00:00, room: COBOL Room, speaker: Timotheus, description: You have heard about Salesforce and you are wondering if that is something useful for your organisation? We have people with real experience of using Salesforce in Missions, and we will discuss the benefits and risks of using Salesforce.We will talk about what Salesforce is really good at, and how not to use Salesforce. How to extend it yourself, and how to integrate it with your other software systems., parallel: Workshops 6, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Basic Tech, time: Friday at 16:00, parallelslotparallelslotsname: Workshops 6, speakerspeakersname: Timotheus, categorycategoryname: Basic Tech, roomvenuename: COBOL Room"
+          "$t": "datetime: 2/5/2021 16:00:00, enddatetime: 2/5/2021 17:00:00, room: COBOL Room, speaker: Speaker Name, description: You have heard about Salesforce and you are wondering if that is something useful for your organisation? We have people with real experience of using Salesforce in Missions, and we will discuss the benefits and risks of using Salesforce.We will talk about what Salesforce is really good at, and how not to use Salesforce. How to extend it yourself, and how to integrate it with your other software systems., parallel: Workshops 6, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F7602b4.jpeg?alt\u003dmedia, category: Basic Tech, time: Friday at 16:00, parallelslotparallelslotsname: Workshops 6, speakerspeakersname: Speaker Name, categorycategoryname: Basic Tech, roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -5701,16 +5842,16 @@
           "$t": "🔨 6c Using Salesforce in Missions - Panel Discussion"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 16:00:00"
+          "$t": "2/5/2021 16:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 17:00:00"
+          "$t": "2/5/2021 17:00:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
         },
         "gsx$speaker": {
-          "$t": "Timotheus"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "You have heard about Salesforce and you are wondering if that is something useful for your organisation? We have people with real experience of using Salesforce in Missions, and we will discuss the benefits and risks of using Salesforce.We will talk about what Salesforce is really good at, and how not to use Salesforce. How to extend it yourself, and how to integrate it with your other software systems."
@@ -5731,7 +5872,7 @@
           "$t": "Workshops 6"
         },
         "gsx$speakerspeakersname": {
-          "$t": "Timotheus"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Basic Tech"
@@ -5759,7 +5900,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 16:00:00, enddatetime: 2/7/2020 17:00:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., parallel: Workshops 6, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 16:00, parallelslotparallelslotsname: Workshops 6, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/5/2021 16:00:00, enddatetime: 2/5/2021 17:00:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., parallel: Workshops 6, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 16:00, parallelslotparallelslotsname: Workshops 6, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -5772,10 +5913,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 16:00:00"
+          "$t": "2/5/2021 16:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 17:00:00"
+          "$t": "2/5/2021 17:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -5830,7 +5971,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 16:00:00, enddatetime: 2/7/2020 17:00:00, room: Espresso Room, parallel: Workshops 6, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 16:00, parallelslotparallelslotsname: Workshops 6, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/5/2021 16:00:00, enddatetime: 2/5/2021 17:00:00, room: Espresso Room, parallel: Workshops 6, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 16:00, parallelslotparallelslotsname: Workshops 6, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -5843,10 +5984,10 @@
           "$t": "💻 Lab Time"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 16:00:00"
+          "$t": "2/5/2021 16:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 17:00:00"
+          "$t": "2/5/2021 17:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -5901,7 +6042,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 17:00:00, enddatetime: 2/7/2020 18:00:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fbaac57.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/5/2021 17:00:00, enddatetime: 2/5/2021 18:00:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fbaac57.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -5914,10 +6055,10 @@
           "$t": "🥛 Break"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 17:00:00"
+          "$t": "2/5/2021 17:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 18:00:00"
+          "$t": "2/5/2021 18:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -5972,7 +6113,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 17:00:00, enddatetime: 2/7/2020 18:00:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/5/2021 17:00:00, enddatetime: 2/5/2021 18:00:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -5985,10 +6126,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 17:00:00"
+          "$t": "2/5/2021 17:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 18:00:00"
+          "$t": "2/5/2021 18:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -6043,7 +6184,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 17:00:00, enddatetime: 2/7/2020 18:00:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/5/2021 17:00:00, enddatetime: 2/5/2021 18:00:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa16de4.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 17:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -6056,10 +6197,10 @@
           "$t": "💻 Lab Time"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 17:00:00"
+          "$t": "2/5/2021 17:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 18:00:00"
+          "$t": "2/5/2021 18:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -6097,7 +6238,7 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/anjbj"
+          "$t": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/anSpeaker Namej"
         },
         "updated": {
           "$t": "2019-11-28T18:30:18.665Z"
@@ -6114,23 +6255,23 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 18:00:00, enddatetime: 2/7/2020 19:00:00, room: Dining Hall, description: Table discussion question: What was your first computer?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/5/2021 18:00:00, enddatetime: 2/5/2021 19:00:00, room: Dining Hall, description: Table discussion question: What was your first computer?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/anjbj"
+            "href": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/anSpeaker Namej"
           }
         ],
         "gsx$session": {
           "$t": "🍲 Evening Meal"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 18:00:00"
+          "$t": "2/5/2021 18:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 19:00:00"
+          "$t": "2/5/2021 19:00:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -6185,7 +6326,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 19:00:00, enddatetime: 2/7/2020 20:30:00, room: Espresso Room, description: In espresso Room to facilitate the Fermate setup., parallel: BOFs 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Friday at 19:00, parallelslotparallelslotsname: BOFs 3, categorycategoryname: Birds of a Feather (BOF), roomvenuename: Espresso Room"
+          "$t": "datetime: 2/5/2021 19:00:00, enddatetime: 2/5/2021 20:30:00, room: Espresso Room, description: In espresso Room to facilitate the Speaker Name setup., parallel: BOFs 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Friday at 19:00, parallelslotparallelslotsname: BOFs 3, categorycategoryname: Birds of a Feather (BOF), roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -6198,10 +6339,10 @@
           "$t": "🐧 BOF 3a: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 19:00:00"
+          "$t": "2/5/2021 19:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 20:30:00"
+          "$t": "2/5/2021 20:30:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -6210,7 +6351,7 @@
           "$t": ""
         },
         "gsx$description": {
-          "$t": "In espresso Room to facilitate the Fermate setup."
+          "$t": "In espresso Room to facilitate the Speaker Name setup."
         },
         "gsx$parallel": {
           "$t": "BOFs 3"
@@ -6256,7 +6397,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 19:00:00, enddatetime: 2/7/2020 20:30:00, room: BASIC Room, parallel: BOFs 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Friday at 19:00, parallelslotparallelslotsname: BOFs 3, categorycategoryname: Birds of a Feather (BOF), roomvenuename: BASIC Room"
+          "$t": "datetime: 2/5/2021 19:00:00, enddatetime: 2/5/2021 20:30:00, room: BASIC Room, parallel: BOFs 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: Friday at 19:00, parallelslotparallelslotsname: BOFs 3, categorycategoryname: Birds of a Feather (BOF), roomvenuename: BASIC Room"
         },
         "link": [
           {
@@ -6269,10 +6410,10 @@
           "$t": "🐧 BOF 3b: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 19:00:00"
+          "$t": "2/5/2021 19:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 20:30:00"
+          "$t": "2/5/2021 20:30:00"
         },
         "gsx$room": {
           "$t": "BASIC Room"
@@ -6327,7 +6468,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 19:00:00, enddatetime: 2/7/2020 20:30:00, room: COBOL Room, parallel: BOFs 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: #VALUE!, parallelslotparallelslotsname: BOFs 3, categorycategoryname: Birds of a Feather (BOF), roomvenuename: COBOL Room"
+          "$t": "datetime: 2/5/2021 19:00:00, enddatetime: 2/5/2021 20:30:00, room: COBOL Room, parallel: BOFs 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F554a43.jpeg?alt\u003dmedia, category: Birds of a Feather (BOF), time: #VALUE!, parallelslotparallelslotsname: BOFs 3, categorycategoryname: Birds of a Feather (BOF), roomvenuename: COBOL Room"
         },
         "link": [
           {
@@ -6340,10 +6481,10 @@
           "$t": "🐧 BOF 3c: Subject To Vote"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 19:00:00"
+          "$t": "2/5/2021 19:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 20:30:00"
+          "$t": "2/5/2021 20:30:00"
         },
         "gsx$room": {
           "$t": "COBOL Room"
@@ -6398,7 +6539,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 19:00:00, enddatetime: 2/7/2020 20:30:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., parallel: BOFs 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 19:00, parallelslotparallelslotsname: BOFs 3, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/5/2021 19:00:00, enddatetime: 2/5/2021 20:30:00, room: Dining Hall, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., parallel: BOFs 3, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 19:00, parallelslotparallelslotsname: BOFs 3, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -6411,10 +6552,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 19:00:00"
+          "$t": "2/5/2021 19:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 20:30:00"
+          "$t": "2/5/2021 20:30:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -6469,7 +6610,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 20:30:00, enddatetime: 2/7/2020 22:00:00, room: AJAX Room, speaker: Fermate, description: The fermata is a symbol from the music theory. Just as it indicates to the musician to pause, to quit the previous measure, and to hold the note as long as the conductor instructs, fermate wants to stimulate with songs to pause and meditate. Such time-outs enrich everyday life and set valuable accents in life., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F9359ff.jpeg?alt\u003dmedia, category: Common Sessions, time: Friday at 20:30, speakerspeakersname: Fermate, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/5/2021 20:30:00, enddatetime: 2/5/2021 22:00:00, room: AJAX Room, speaker: Speaker Name, description: The fermata is a symbol from the music theory. Just as it indicates to the musician to pause, to quit the previous measure, and to hold the note as long as the conductor instructs, Speaker Name wants to stimulate with songs to pause and meditate. Such time-outs enrich everyday life and set valuable accents in life., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F9359ff.jpeg?alt\u003dmedia, category: Common Sessions, time: Friday at 20:30, speakerspeakersname: Speaker Name, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -6482,19 +6623,19 @@
           "$t": "🎤 Evening Entertainment"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 20:30:00"
+          "$t": "2/5/2021 20:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/7/2020 22:00:00"
+          "$t": "2/5/2021 22:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Fermate"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
-          "$t": "The fermata is a symbol from the music theory. Just as it indicates to the musician to pause, to quit the previous measure, and to hold the note as long as the conductor instructs, fermate wants to stimulate with songs to pause and meditate. Such time-outs enrich everyday life and set valuable accents in life."
+          "$t": "The fermata is a symbol from the music theory. Just as it indicates to the musician to pause, to quit the previous measure, and to hold the note as long as the conductor instructs, Speaker Name wants to stimulate with songs to pause and meditate. Such time-outs enrich everyday life and set valuable accents in life."
         },
         "gsx$parallel": {
           "$t": ""
@@ -6512,7 +6653,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Fermate"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Common Sessions"
@@ -6540,7 +6681,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/7/2020 22:00:00, enddatetime: 2/8/2020 0:00:00, room: Espresso Room, description: Free time with snacks and drinks provided. Get to know one another, play games, and have fun!, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F987873.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 22:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/5/2021 22:00:00, enddatetime: 2/6/2021 0:00:00, room: Espresso Room, description: Free time with snacks and drinks provided. Get to know one another, play games, and have fun!, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F987873.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Friday at 22:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -6553,10 +6694,10 @@
           "$t": "🍦 Social Gathering"
         },
         "gsx$datetime": {
-          "$t": "2/7/2020 22:00:00"
+          "$t": "2/5/2021 22:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 0:00:00"
+          "$t": "2/6/2021 0:00:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -6611,7 +6752,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 8:00:00, enddatetime: 2/8/2020 8:45:00, room: Dining Hall, description: Table discussion question: What are you most looking forward too at home?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F590a50.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Saturday at 08:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/6/2021 8:00:00, enddatetime: 2/6/2021 8:45:00, room: Dining Hall, description: Table discussion question: What are you most looking forward too at home?, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F590a50.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Saturday at 08:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -6624,10 +6765,10 @@
           "$t": "🥐 Breakfast"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 8:00:00"
+          "$t": "2/6/2021 8:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 8:45:00"
+          "$t": "2/6/2021 8:45:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -6682,7 +6823,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 8:45:00, enddatetime: 2/8/2020 9:15:00, room: AJAX Room, speaker: Rob Hazel, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Saturday at 08:45, speakerspeakersname: Rob Hazel, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/6/2021 8:45:00, enddatetime: 2/6/2021 9:15:00, room: AJAX Room, speaker: Speaker Name, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Saturday at 08:45, speakerspeakersname: Speaker Name, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -6695,16 +6836,16 @@
           "$t": "🎹 Devotions \u0026 Worship"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 8:45:00"
+          "$t": "2/6/2021 8:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 9:15:00"
+          "$t": "2/6/2021 9:15:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Rob Hazel"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -6725,7 +6866,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Rob Hazel"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Prayer and Worship"
@@ -6753,7 +6894,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 9:15:00, enddatetime: 2/8/2020 9:45:00, room: AJAX Room, speaker: Corey K, description: Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Keynote, time: Saturday at 09:15, speakerspeakersname: Corey K, categorycategoryname: Keynote, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/6/2021 9:15:00, enddatetime: 2/6/2021 9:45:00, room: AJAX Room, speaker: Speaker Name, description: Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Keynote, time: Saturday at 09:15, speakerspeakersname: Speaker Name, categorycategoryname: Keynote, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -6766,16 +6907,16 @@
           "$t": "🔑 Keynote Speaker"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 9:15:00"
+          "$t": "2/6/2021 9:15:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 9:45:00"
+          "$t": "2/6/2021 9:45:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Corey K"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": "Corey has a Ph.D. in cybersecurity, focused on information systems risk assessment. His professional career includes years of work as a network engineer and server administrator; he currently leads the information security department for a large non-profit healthcare organization. He has had many industry certifications, from Microsoft, Novell, Banyan, etc., and is currently a CISSP and PCI Professional. During his time as a college professor, Corey taught numerous networking, security, and programming courses."
@@ -6796,7 +6937,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Corey K"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Keynote"
@@ -6824,7 +6965,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 9:45:00, enddatetime: 2/8/2020 10:00:00, room: AJAX Room, description: Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Saturday at 09:45, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/6/2021 9:45:00, enddatetime: 2/6/2021 10:00:00, room: AJAX Room, description: Prayer was the constant occupation of Jesus' life. Let's make it ours as we pray together., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Saturday at 09:45, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -6837,10 +6978,10 @@
           "$t": "🙏 Prayer Pals Part 3"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 9:45:00"
+          "$t": "2/6/2021 9:45:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 10:00:00"
+          "$t": "2/6/2021 10:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -6895,7 +7036,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 10:00:00, enddatetime: 2/8/2020 10:30:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Saturday at 10:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/6/2021 10:00:00, enddatetime: 2/6/2021 10:30:00, room: Espresso Room, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F49455b.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Saturday at 10:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -6908,10 +7049,10 @@
           "$t": "☕ Coffee Break"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 10:00:00"
+          "$t": "2/6/2021 10:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 10:30:00"
+          "$t": "2/6/2021 10:30:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"
@@ -6966,7 +7107,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 10:30:00, enddatetime: 2/8/2020 11:30:00, room: AJAX Room, description: What’s Hot, What’s Not is a humorous and interactive presentation of the current state of technology and how it interacts with your organizations. We will review the current Gartner Hype Cycle, discuss technology in the news, and share what technologies we are currently using. Bring your smart phones, tablets, or laptops so you can join in on the interactive poll., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Saturday at 10:30, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/6/2021 10:30:00, enddatetime: 2/6/2021 11:30:00, room: AJAX Room, description: What’s Hot, What’s Not is a humorous and interactive presentation of the current state of technology and how it interacts with your organizations. We will review the current Gartner Hype Cycle, discuss technology in the news, and share what technologies we are currently using. Bring your smart phones, tablets, or laptops so you can join in on the interactive poll., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Saturday at 10:30, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -6979,10 +7120,10 @@
           "$t": "🔥 What's Hot, What's Not"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 10:30:00"
+          "$t": "2/6/2021 10:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 11:30:00"
+          "$t": "2/6/2021 11:30:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -7037,7 +7178,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 11:30:00, enddatetime: 2/8/2020 12:00:00, room: AJAX Room, description: TFM voting ends at 12:45 on Thursday., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Saturday at 11:30, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/6/2021 11:30:00, enddatetime: 2/6/2021 12:00:00, room: AJAX Room, description: TFM voting ends at 12:45 on Thursday., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F0cf1ec.jpeg?alt\u003dmedia, category: Common Sessions, time: Saturday at 11:30, categorycategoryname: Common Sessions, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -7050,10 +7191,10 @@
           "$t": "🗨 Final Matters, TFM Contest Awards, and Testimonies about ICCM"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 11:30:00"
+          "$t": "2/6/2021 11:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 12:00:00"
+          "$t": "2/6/2021 12:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
@@ -7108,7 +7249,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 12:00:00, enddatetime: 2/8/2020 12:30:00, room: AJAX Room, speaker: Rob Hazel, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Saturday at 12:00, speakerspeakersname: Rob Hazel, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
+          "$t": "datetime: 2/6/2021 12:00:00, enddatetime: 2/6/2021 12:30:00, room: AJAX Room, speaker: Speaker Name, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F6f81c2.jpeg?alt\u003dmedia, category: Prayer and Worship, time: Saturday at 12:00, speakerspeakersname: Speaker Name, categorycategoryname: Prayer and Worship, roomvenuename: AJAX Room"
         },
         "link": [
           {
@@ -7121,16 +7262,16 @@
           "$t": "🎹 Worship and Close of Conference"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 12:00:00"
+          "$t": "2/6/2021 12:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 12:30:00"
+          "$t": "2/6/2021 12:30:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"
         },
         "gsx$speaker": {
-          "$t": "Rob Hazel"
+          "$t": "Speaker Name"
         },
         "gsx$description": {
           "$t": ""
@@ -7151,7 +7292,7 @@
           "$t": ""
         },
         "gsx$speakerspeakersname": {
-          "$t": "Rob Hazel"
+          "$t": "Speaker Name"
         },
         "gsx$categorycategoryname": {
           "$t": "Prayer and Worship"
@@ -7179,7 +7320,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 12:30:00, enddatetime: 2/8/2020 13:30:00, room: Dining Hall, description: Say good bye to friends new and old!, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F570305.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Saturday at 12:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+          "$t": "datetime: 2/6/2021 12:30:00, enddatetime: 2/6/2021 13:30:00, room: Dining Hall, description: Say good bye to friends new and old!, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2F570305.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Saturday at 12:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
         },
         "link": [
           {
@@ -7192,10 +7333,10 @@
           "$t": "🍞 Lunch"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 12:30:00"
+          "$t": "2/6/2021 12:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 13:30:00"
+          "$t": "2/6/2021 13:30:00"
         },
         "gsx$room": {
           "$t": "Dining Hall"
@@ -7250,7 +7391,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "datetime: 2/8/2020 12:30:00, enddatetime: 2/8/2020 13:30:00, room: Espresso Room, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Saturday at 12:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
+          "$t": "datetime: 2/6/2021 12:30:00, enddatetime: 2/6/2021 13:30:00, room: Espresso Room, description: An informal and more individual time for subject matter experts to talk about that subject with interested people. For example, someone might need help with Wordpress, so they might find time to talk to a Wordpress expert during a One-2-One session., photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Ff35eb7.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Saturday at 12:30, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Espresso Room"
         },
         "link": [
           {
@@ -7263,10 +7404,10 @@
           "$t": "👥 One-2-One"
         },
         "gsx$datetime": {
-          "$t": "2/8/2020 12:30:00"
+          "$t": "2/6/2021 12:30:00"
         },
         "gsx$enddatetime": {
-          "$t": "2/8/2020 13:30:00"
+          "$t": "2/6/2021 13:30:00"
         },
         "gsx$room": {
           "$t": "Espresso Room"

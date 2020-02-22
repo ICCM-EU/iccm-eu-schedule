@@ -1,13 +1,15 @@
 import { Component, OnInit, Renderer2, AfterViewInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { Router, Scroll, ActivatedRoute } from '@angular/router';
-import { sprintf } from 'sprintf-js';
 import { filter } from 'rxjs/operators';
 
 import { isUndefined, isBoolean } from 'util';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { EventInterface } from '../data/eventInterface';
+import { EventTimerInterface } from '../data/eventTimerInterface';
 import { EventRoomInterface } from '../data/eventRoomInterface';
+import { TimerDisplay } from '../data/timerDisplay';
+import { TextManager } from '../data/textManager';
 
 @Component({
   selector: 'app-events',
@@ -21,18 +23,19 @@ export class EventsComponent implements OnInit, AfterViewInit {
   toggleDescriptionsName: string;
   onlyUpcoming: boolean;
   showDescriptions: boolean;
-  nextEventTimeDiff: number;
-  nextEventTimeString: string;
-  countdownCssClass: string;
+  timerDisplay: TimerDisplay;
   roomList: Array<EventRoomInterface>;
 
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2,
     private router: Router, private activatedRoute: ActivatedRoute,
     private viewportScroller: ViewportScroller) {
     this.objName = 'events';
-    this.countdownCssClass = '';
+    this.timerDisplay = {
+      timerCssClass: '',
+      timerString: '',
+    };
 
-    if (undefined === this.sds.nextEvent) {
+    if (undefined === this.sds.timerEvents.nextEvent) {
       this.toggleUpcoming(false);
     } else {
       this.toggleUpcoming(true);
@@ -66,20 +69,22 @@ export class EventsComponent implements OnInit, AfterViewInit {
         JSON.parse(localStorage[this.sds.ssIDs.getCacheByRoomName(this.objName)] || '[]'))
     );
 
-    this.sds.nextEventUpdated.subscribe(
-      (next: Array<EventInterface>) => {
+    this.sds.timerEventUpdated.subscribe(
+      (next: Array<EventTimerInterface>) => {
         if (next != null) {
-          for (const nextEvent of next) {
-            if (nextEvent != null) {
-              this.updateNextEventString(nextEvent);
+          for (const entry of next) {
+            let thenTime: Date;
+            if (entry != null && entry.nextEvent && entry.nextEvent.schedule) {
+              thenTime = entry.nextEvent.schedule;
             }
+            this.timerDisplay = TextManager.getTimerDisplay(thenTime, this.sds);
           }
         }
       }
     );
-    this.sds.nextEventUpdated.emit(
+    this.sds.timerEventUpdated.emit(
       // use the local storage if there until HTTP call retrieves something
-      this.sds.transformJsonToEventInterfaceArray(
+      this.sds.transformJsonToEventTimerInterfaceArray(
         JSON.parse(localStorage[this.sds.ssIDs.getCacheForNextEvent(this.objName)] || '[]'))
     );
 
@@ -131,111 +136,5 @@ export class EventsComponent implements OnInit, AfterViewInit {
 
   updateFilter(updatedValue: string): void {
     this.sds.updateFilter(updatedValue, this.objName);
-  }
-
-  /**
-   * Calculate the timediff to the next event
-   * @param nextEvent The event to calculate the time diff for
-   */
-  updateTimediff(nextEvent: EventInterface): void {
-    if (!nextEvent) {
-      this.nextEventTimeDiff = 0;
-      return;
-    }
-
-    // Calculate / update the time value
-    const thenTime = nextEvent.schedule.getTime();
-    // refresh for more precision
-    const nowTime = new Date().getTime();
-    const timediff: number = thenTime - nowTime;
-
-    if (timediff <= 0) {
-      // refresh now, the event has just passed:
-      this.sds.refreshAll();
-      // } else {
-      //   // schedule a refresh when it is time to update the next event
-      //   if (timediff < this.sds.refreshIntervalMin) {
-      //     setTimeout(() => { this.sds.refreshAll(); }, timediff);
-      //   }
-    }
-
-    this.nextEventTimeDiff = timediff;
-  }
-
-  updateNextEventString(nextEvent: EventInterface): void {
-    let timediff: number;
-
-    this.updateTimediff(nextEvent);
-
-    timediff = this.nextEventTimeDiff;
-
-    if (timediff < 0) {
-      timediff = -timediff;
-    }
-
-    const days: number = timediff / (1000 * 60 * 60 * 24);
-    let rest: number = timediff % (1000 * 60 * 60 * 24);
-
-    const hours: number = rest / (1000 * 60 * 60);
-    rest = rest % (1000 * 60 * 60);
-
-    const minutes: number = rest / (1000 * 60);
-    rest = rest % (1000 * 60);
-
-    const seconds = rest / (1000);
-
-    if (timediff < 1) {
-      timediff = -timediff;
-      this.nextEventTimeString = 'Next event is now.';
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 2 * 1000) {
-      this.nextEventTimeString = 'Next event is now.';
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 3 * 1000) {
-      this.nextEventTimeString = 'Next event is in two seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 4 * 1000) {
-      this.nextEventTimeString = 'Next event is in three seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 5 * 1000) {
-      this.nextEventTimeString = 'Next event is in four seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 6 * 1000) {
-      this.nextEventTimeString = 'Next event is in five seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 7 * 1000) {
-      this.nextEventTimeString = 'Next event is in six seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 8 * 1000) {
-      this.nextEventTimeString = 'Next event is in seven seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 9 * 1000) {
-      this.nextEventTimeString = 'Next event is in eight seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 10 * 1000) {
-      this.nextEventTimeString = 'Next event is in nine seconds  (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-uneven';
-    } else if (timediff < 11 * 1000) {
-      this.nextEventTimeString = 'Next event is in ten seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-10s-even';
-    } else if (timediff < 30 * 1000) {
-      this.nextEventTimeString = 'Next event is in a few seconds (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-30s';
-    } else if (timediff < 60 * 1000) { // coming to less than a minute
-      this.nextEventTimeString = 'Next event is in a minute (' + sprintf('%02d', seconds) + 's).';
-      this.countdownCssClass = 'countdown-1m';
-    } else if (timediff < 3 * 60 * 1000) { // 3 Minutes
-      this.nextEventTimeString = 'Next Event in: ' + sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-3m';
-    } else if (timediff < 5 * 60 * 1000) { // 5 Minutes
-      this.nextEventTimeString = 'Next Event in: ' + sprintf('%02d:%02d', minutes, seconds);
-      this.countdownCssClass = 'countdown-5m';
-    } else if (timediff < 60 * 60 * 1000) { // hours and a bit; less than a day
-      this.nextEventTimeString = 'Next Event in: ' + sprintf('%02dh %02dm', hours, minutes);
-      this.countdownCssClass = 'countdown-long';
-    } else { // days and hours (and some minutes)
-      this.nextEventTimeString = 'Next Event in: ' + sprintf('%dd %02dh %02dm', days, hours, minutes);
-      this.countdownCssClass = 'countdown-long';
-    }
   }
 }

@@ -8,8 +8,8 @@
       </div>
       <mat-form-field>
         <mat-select placeholder="All Rooms" [ngModel]="this.sds.filterByRoom"
-          (selectionChange)="this.updateFilter($event.value)" name="roomFilter"
-           [style.background-color]="'dimgray'" [style.color]="'white'">
+          (selectionChange)="this.updateFilter($event.value)" name="roomFilter" [style.background-color]="'dimgray'"
+          [style.color]="'white'">
           <mat-option [value]="">All Rooms</mat-option>
           <mat-option *ngFor="let room of this.roomList" [style.background-color]="room.color.secondary"
             [value]="room.name">
@@ -21,13 +21,25 @@
   </div>
 
   <div class="counter">
-    <div class="central-counter {{ countdownCssClass }}" [style.font-size]="counterFontSize"
-      (window:resize)="onResize($event.target?.innerWidth)">{{ nextEventTimeString }}</div>
-    <div *ngIf="this.sds.nextEvent" class="event-details">
-      <div class="event-details">
-        <span class="event-time">{{ this.sds.nextEvent.schedule | date:'HH:mm' }}:</span>
-        <span class="event-title"> {{ this.sds.nextEvent.title }}</span>
-      </div>
+    <div class="event-details">
+      <ng-container *ngIf="this.sds.timerEvents.currentEvent">
+        <span class="event-time">
+          {{ this.sds.timerEvents.currentEvent.schedule | date:'HH:mm' }}-{{ this.sds.timerEvents.currentEvent.end | date:'HH:mm' }}:
+        </span>
+        <span class="event-title">
+          {{ this.sds.timerEvents.currentEvent.title }}
+        </span>
+      </ng-container>
+    </div>
+    <div class="central-counter {{ timerDisplay.timerCssClass }}" [style.font-size]="counterFontSize"
+      (window:resize)="onResize($event.target?.innerWidth)">{{ timerDisplay.timerString }}</div>
+    <div *ngIf="this.sds.timerEvents.nextEvent" class="event-details">
+      <span class="event-time">
+        {{ this.sds.timerEvents.nextEvent.schedule | date:'HH:mm' }}:
+      </span>
+      <span class="event-title">
+        {{ this.sds.timerEvents.nextEvent.title }}
+      </span>
     </div>
   </div>
 </div>
