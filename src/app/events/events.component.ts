@@ -31,9 +31,8 @@ export class EventsComponent implements OnInit, AfterViewInit {
     private viewportScroller: ViewportScroller) {
     this.objName = 'events';
     this.timerDisplay = {
-      countdownCssClass: '',
-      nextEventTimeDiff: 0,
-      nextEventTimeString: '',
+      timerCssClass: '',
+      timerString: '',
     };
 
     if (undefined === this.sds.timerEvents.nextEvent) {
@@ -74,9 +73,11 @@ export class EventsComponent implements OnInit, AfterViewInit {
       (next: Array<EventTimerInterface>) => {
         if (next != null) {
           for (const entry of next) {
-            if (entry != null) {
-              this.timerDisplay = TextManager.getTimerDisplay(entry.nextEvent, this.sds);
+            let thenTime: Date;
+            if (entry != null && entry.nextEvent && entry.nextEvent.schedule) {
+              thenTime = entry.nextEvent.schedule;
             }
+            this.timerDisplay = TextManager.getTimerDisplay(thenTime, this.sds);
           }
         }
       }

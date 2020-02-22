@@ -24,19 +24,17 @@ export class TextManager {
     }
   }
 
-  static getTimerDisplay(event: EventInterface, sds: SpreadsheetDS): TimerDisplay {
+  static getTimerDisplay(thenTime: Date, sds: SpreadsheetDS): TimerDisplay {
     const display: TimerDisplay = {
-      nextEventTimeDiff: 0,
-      nextEventTimeString: 'No future event.',
-      countdownCssClass: 'countdown-long',
+      timerString: '--:--',
+      timerCssClass: 'countdown-long',
     };
 
-    if (undefined !== event && null !== event) {
+    if (undefined !== thenTime && null !== thenTime) {
       // Calculate / update the time value
-      const thenTime = event.schedule.getTime();
       // refresh for more precision
-      const nowTime = new Date().getTime();
-      let timediff: number = thenTime - nowTime;
+      const now = new Date();
+      let timediff: number = thenTime.getTime() - now.getTime();
 
       if (timediff <= 0) {
         // refresh now, the event has just passed:
@@ -59,59 +57,59 @@ export class TextManager {
 
       if (timediff < 1) {
         timediff = -timediff;
-        display.nextEventTimeString = 'NOW';
-        display.countdownCssClass = 'countdown-10s-uneven';
+        display.timerString = 'NOW';
+        display.timerCssClass = 'countdown-10s-uneven';
       } else if (timediff < 2 * 1000) {
-        display.nextEventTimeString = 'NOW';
-        display.countdownCssClass = 'countdown-10s-uneven';
+        display.timerString = 'NOW';
+        display.timerCssClass = 'countdown-10s-uneven';
       } else if (timediff < 3 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-even';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-even';
       } else if (timediff < 4 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-uneven';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-uneven';
       } else if (timediff < 5 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-even';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-even';
       } else if (timediff < 6 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-uneven';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-uneven';
       } else if (timediff < 7 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-even';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-even';
       } else if (timediff < 8 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-uneven';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-uneven';
       } else if (timediff < 9 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-even';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-even';
       } else if (timediff < 10 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-uneven';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-uneven';
       } else if (timediff < 11 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-10s-even';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-10s-even';
       } else if (timediff < 30 * 1000) {
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-30s';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-30s';
       } else if (timediff < 60 * 1000) { // coming to less than a minute
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-1m';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-1m';
       } else if (timediff < 3 * 60 * 1000) { // 3 Minutes
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-3m';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-3m';
       } else if (timediff < 5 * 60 * 1000) { // 5 Minutes
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-5m';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-5m';
       } else if (timediff < 60 * 60 * 1000) { // hours and a bit; less than a day
-        display.nextEventTimeString = sprintf('%02d:%02d', minutes, seconds);
-        display.countdownCssClass = 'countdown-long';
+        display.timerString = sprintf('%02d:%02d', minutes, seconds);
+        display.timerCssClass = 'countdown-long';
       } else if (timediff < 24 * 60 * 60 * 1000) {
-        display.nextEventTimeString = sprintf('%02dh %02dm %02ds', hours, minutes, seconds);
-        display.countdownCssClass = 'countdown-long';
+        display.timerString = sprintf('%02dh %02dm %02ds', hours, minutes, seconds);
+        display.timerCssClass = 'countdown-long';
       } else { // days and hours (and some minutes)
-        display.nextEventTimeString = sprintf('%dd %02dh %02dm', days, hours, minutes);
-        display.countdownCssClass = 'countdown-long';
+        display.timerString = sprintf('%dd %02dh %02dm', days, hours, minutes);
+        display.timerCssClass = 'countdown-long';
       }
     }
     return display;

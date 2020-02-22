@@ -75,7 +75,7 @@
         ],
         "title": {
           "type": "text",
-          "$t": "🍲 Test Event"
+          "$t": "🍲 Test Event 1"
         },
         "content": {
           "type": "text",
@@ -89,13 +89,154 @@
           }
         ],
         "gsx$session": {
-          "$t": "🍲 Test Event"
+          "$t": "🍲 Test Event 1"
         },
         "gsx$datetime": {
-          "$t": "2020-02-22 12:00:00"
+          "$t": "2020-02-22 06:00:00"
         },
         "gsx$enddatetime": {
-          "$t": "2020-02-22 12:45:00"
+          "$t": "2020-02-22 10:30:00"
+        },
+        "gsx$room": {
+          "$t": "AJAX Room"
+        },
+        "gsx$speaker": {
+          "$t": ""
+        },
+        "gsx$description": {
+          "$t": ""
+        },
+        "gsx$parallel": {
+          "$t": ""
+        },
+        "gsx$photo": {
+          "$t": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia"
+        },
+        "gsx$category": {
+          "$t": "Refreshment and 1-to-1"
+        },
+        "gsx$time": {
+          "$t": "Some day at some time"
+        },
+        "gsx$parallelslotparallelslotsname": {
+          "$t": ""
+        },
+        "gsx$speakerspeakersname": {
+          "$t": ""
+        },
+        "gsx$categorycategoryname": {
+          "$t": "Test Event"
+        },
+        "gsx$roomvenuename": {
+          "$t": "AJAX Room"
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/cokwr"
+        },
+        "updated": {
+          "$t": "2019-11-28T18:30:18.665Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "🍲 Test Event 2"
+        },
+        "content": {
+          "type": "text",
+          "$t": "datetime: 2/2/2021 18:00:00, enddatetime: 2/2/2021 19:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Tuesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/cokwr"
+          }
+        ],
+        "gsx$session": {
+          "$t": "🍲 Test Event 2"
+        },
+        "gsx$datetime": {
+          "$t": "2020-02-22 13:00:00"
+        },
+        "gsx$enddatetime": {
+          "$t": "2020-02-22 18:00:00"
+        },
+        "gsx$room": {
+          "$t": "AJAX Room"
+        },
+        "gsx$speaker": {
+          "$t": ""
+        },
+        "gsx$description": {
+          "$t": ""
+        },
+        "gsx$parallel": {
+          "$t": ""
+        },
+        "gsx$photo": {
+          "$t": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia"
+        },
+        "gsx$category": {
+          "$t": "Refreshment and 1-to-1"
+        },
+        "gsx$time": {
+          "$t": "Some day at some time"
+        },
+        "gsx$parallelslotparallelslotsname": {
+          "$t": ""
+        },
+        "gsx$speakerspeakersname": {
+          "$t": ""
+        },
+        "gsx$categorycategoryname": {
+          "$t": "Test Event"
+        },
+        "gsx$roomvenuename": {
+          "$t": "AJAX Room"
+        }
+      },      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/cokwr"
+        },
+        "updated": {
+          "$t": "2019-11-28T18:30:18.665Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "🍲 Test Event 3"
+        },
+        "content": {
+          "type": "text",
+          "$t": "datetime: 2/2/2021 18:00:00, enddatetime: 2/2/2021 19:45:00, room: Dining Hall, photo: https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/img-uploads%2Fpg9I4QgQEHhnMbSeJChw%2Fa59c99.jpeg?alt\u003dmedia, category: Refreshment and 1-to-1, time: Tuesday at 18:00, categorycategoryname: Refreshment and 1-to-1, roomvenuename: Dining Hall"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI/2/public/full/cokwr"
+          }
+        ],
+        "gsx$session": {
+          "$t": "🍲 Test Event 3"
+        },
+        "gsx$datetime": {
+          "$t": "2020-02-22 19:00:00"
+        },
+        "gsx$enddatetime": {
+          "$t": "2020-02-22 23:00:00"
         },
         "gsx$room": {
           "$t": "AJAX Room"

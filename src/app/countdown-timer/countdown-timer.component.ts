@@ -25,9 +25,8 @@ export class CountdownTimerComponent implements OnInit {
   constructor(public sds: SpreadsheetDS, private renderer: Renderer2) {
     this.objName = 'events';
     this.timerDisplay = {
-      countdownCssClass: '',
-      nextEventTimeDiff: 0,
-      nextEventTimeString: '',
+      timerCssClass: '',
+      timerString: '',
     };
     this.filterstring = '';
 
@@ -63,7 +62,13 @@ export class CountdownTimerComponent implements OnInit {
       (next: Array<EventTimerInterface>) => {
         if (next != null) {
           for (const entry of next) {
-            this.timerDisplay = TextManager.getTimerDisplay(entry.nextEvent, this.sds);
+            let thenTime: Date;
+            if (entry.currentEvent && entry.currentEvent.end) {
+              thenTime = entry.currentEvent.end;
+            } else if (entry.nextEvent && entry.nextEvent.schedule) {
+              thenTime = entry.nextEvent.schedule;
+            }
+            this.timerDisplay = TextManager.getTimerDisplay(thenTime, this.sds);
           }
         }
       }
