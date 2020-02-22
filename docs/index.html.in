@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Browser-Schedule</title>
+  <meta http-equiv="refresh" content="0;URL='###YEAR_NAME###/'" />
+</head>
+
+<body>
+  <p>The latest version is <a href="###YEAR_NAME###/">here (###YEAR_NAME###)</a>.</p>
+</body>
+
+</html>
