@@ -13,11 +13,11 @@ const routerOptions: ExtraOptions = {
 
 const appRoutes: Routes = [
   // { path: '', loadChildren: './countdown-timer/countdown-timer.module#CountdownTimerModule' },
-  { path: 'countdown', loadChildren: './countdown-timer/countdown-timer.module#CountdownTimerModule' },
-  { path: 'by-room', loadChildren: './by-room/by-room.module#ByRoomModule' },
-  { path: 'schedule', loadChildren: './schedule/schedule.module#ScheduleModule' },
-  { path: '404', loadChildren: './page-not-found/page-not-found.module#PageNotFoundModule' },
-  { path: '', loadChildren: './events/events.module#EventsModule' },
+  { path: 'countdown', loadChildren: () => import('./countdown-timer/countdown-timer.module').then(m => m.CountdownTimerModule) },
+  { path: 'by-room', loadChildren: () => import('./by-room/by-room.module').then(m => m.ByRoomModule) },
+  { path: 'schedule', loadChildren: () => import('./schedule/schedule.module').then(m => m.ScheduleModule) },
+  { path: '404', loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
+  { path: '', loadChildren: () => import('./events/events.module').then(m => m.EventsModule) },
   { path: '**', redirectTo: '/404' }
 ];
 
