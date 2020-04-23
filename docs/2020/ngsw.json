@@ -1,0 +1,90 @@
+{
+  "configVersion": 1,
+  "timestamp": 1587667295832,
+  "index": "/iccm-eu-2020/2020/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/iccm-eu-2020/2020/10.c49cf6dc74b1935f742a.js",
+        "/iccm-eu-2020/2020/11.e6977f61bc6e31255278.js",
+        "/iccm-eu-2020/2020/2.afc27425f51bd1f01a69.js",
+        "/iccm-eu-2020/2020/7.c43d7d86a3c1dd05b8fe.js",
+        "/iccm-eu-2020/2020/8.ea5440d8e3a32a10b745.js",
+        "/iccm-eu-2020/2020/9.0d8a266177bd80f8a416.js",
+        "/iccm-eu-2020/2020/common.40648ae4dff4b620f558.js",
+        "/iccm-eu-2020/2020/favicon.ico",
+        "/iccm-eu-2020/2020/index.html",
+        "/iccm-eu-2020/2020/main.55766acf004ea3e9a99a.js",
+        "/iccm-eu-2020/2020/polyfills-es5.ef6bfc566fa90a4ed8e7.js",
+        "/iccm-eu-2020/2020/polyfills.8806089d559661128553.js",
+        "/iccm-eu-2020/2020/runtime.4ee9a4d29bf3dc3bd9b4.js",
+        "/iccm-eu-2020/2020/styles.a05e0d46b503adbb5594.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/iccm-eu-2020/2020/assets/icons/icon-128x128.png",
+        "/iccm-eu-2020/2020/assets/icons/icon-144x144.png",
+        "/iccm-eu-2020/2020/assets/icons/icon-152x152.png",
+        "/iccm-eu-2020/2020/assets/icons/icon-192x192.png",
+        "/iccm-eu-2020/2020/assets/icons/icon-384x384.png",
+        "/iccm-eu-2020/2020/assets/icons/icon-512x512.png",
+        "/iccm-eu-2020/2020/assets/icons/icon-72x72.png",
+        "/iccm-eu-2020/2020/assets/icons/icon-96x96.png",
+        "/iccm-eu-2020/2020/assets/sheet-export.json"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/iccm-eu-2020/2020/10.c49cf6dc74b1935f742a.js": "6520fe4198acfc58feaa1ef9fed010aa8c9fde08",
+    "/iccm-eu-2020/2020/11.e6977f61bc6e31255278.js": "2cee17670f9056e47206fb4f2260dcfc61e4cc1f",
+    "/iccm-eu-2020/2020/2.afc27425f51bd1f01a69.js": "33c5245ea705ed60e3b963b5f464710fcae532c7",
+    "/iccm-eu-2020/2020/7.c43d7d86a3c1dd05b8fe.js": "7df85308c3adfa9fb87cca5dc60c7af616aa0903",
+    "/iccm-eu-2020/2020/8.ea5440d8e3a32a10b745.js": "0198c99754fddf88dcb60c94bc5bf4e8fb09006c",
+    "/iccm-eu-2020/2020/9.0d8a266177bd80f8a416.js": "e3d6c573f7942f813ab3daf88c27aaab8800888b",
+    "/iccm-eu-2020/2020/assets/icons/icon-128x128.png": "cfdecd14e5b436106a19a1e6656661a0cdd22299",
+    "/iccm-eu-2020/2020/assets/icons/icon-144x144.png": "c2c87e553494cbb0226bdc643f8037d9e151da01",
+    "/iccm-eu-2020/2020/assets/icons/icon-152x152.png": "121d4853c1e70df065db659065f0c245d63f409d",
+    "/iccm-eu-2020/2020/assets/icons/icon-192x192.png": "0b330ab4d9d7c611ba0758cde8be87969a26ec73",
+    "/iccm-eu-2020/2020/assets/icons/icon-384x384.png": "875c203a8c98c4c16d8a22df3a8f304c6e487ed1",
+    "/iccm-eu-2020/2020/assets/icons/icon-512x512.png": "1705c7ad8588bbbcb48cd7ecbeaa6d23b63adfbb",
+    "/iccm-eu-2020/2020/assets/icons/icon-72x72.png": "eb0f0de58b6fccc394c67e234be211e6575e3381",
+    "/iccm-eu-2020/2020/assets/icons/icon-96x96.png": "84be8cda34892f4853f38a0dafe523f2d5d145ce",
+    "/iccm-eu-2020/2020/assets/sheet-export.json": "b87b0c811fb05916623ce3a47ac569592c18476f",
+    "/iccm-eu-2020/2020/common.40648ae4dff4b620f558.js": "22067fa02a93e0bb13d3669f4904189abc4aaf3b",
+    "/iccm-eu-2020/2020/favicon.ico": "0cbf3ab920f5d5d6ab8f3ae55c13edb3f33e3239",
+    "/iccm-eu-2020/2020/index.html": "8da4a522b1763a6c0ce8609713057cb86eb9b820",
+    "/iccm-eu-2020/2020/main.55766acf004ea3e9a99a.js": "a2fa6f6aab53b188a4c583f34e1cc8d3a90c3ae5",
+    "/iccm-eu-2020/2020/polyfills-es5.ef6bfc566fa90a4ed8e7.js": "243fa76403453696c824cadc8585760df29bcb01",
+    "/iccm-eu-2020/2020/polyfills.8806089d559661128553.js": "b00d5a55278f1419da16e0a83b4d52ca036cf4a2",
+    "/iccm-eu-2020/2020/runtime.4ee9a4d29bf3dc3bd9b4.js": "1a8a2dbc43b63eb4953f9a53ed5a99351fc944e7",
+    "/iccm-eu-2020/2020/styles.a05e0d46b503adbb5594.css": "166767cef62c59b90114b2db1d522ea6e141b9c0"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
