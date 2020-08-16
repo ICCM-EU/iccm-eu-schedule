@@ -7,7 +7,7 @@ which is also connected to a conference app, made with <https://glideapps.com/>
 
 ## Development server
 
-Run `ng serve --port=4200 --live-reload=true` for a dev server. Navigate to `<http://localhost:4200/>`. The app will automatically reload if you change any of the source files.
+Run `ng serve --port=4200 --live-reload=true` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build for production
 
