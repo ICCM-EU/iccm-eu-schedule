@@ -1,13 +1,13 @@
 # ICCM Conference Schedule View (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+This project was generated with [Angular CLI](<https://github.com/angular/angular-cli>).
 
 It represents different views on a schedule stored in a google sheet
-which is also connected to a conference app, made with https://glideapps.com/
+which is also connected to a conference app, made with <https://glideapps.com/>
 
 ## Development server
 
-Run `ng serve --port=4200 --live-reload=true` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --port=4200 --live-reload=true` for a dev server. Navigate to `<http://localhost:4200/>`. The app will automatically reload if you change any of the source files.
 
 ## Build for production
 
@@ -15,9 +15,8 @@ Run `ng build --prod --output-path docs --base-href /iccm-eu-2020/` to build the
 
 Copy docs/index.html to docs/404.html to allow all content to be provided on github.
 
-Access the production pages at https://hjtappe.github.io/iccm-eu-2020/
+Access the production pages at <https://hjtappe.github.io/iccm-eu-2020/>
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](<https://github.com/angular/angular-cli/blob/master/README.md>).
