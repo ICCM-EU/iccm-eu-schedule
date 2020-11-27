@@ -15,7 +15,7 @@ Run `ng build --prod --output-path docs --base-href /iccm-eu-2020/` to build the
 
 Copy docs/index.html to docs/404.html to allow all content to be provided on github.
 
-Access the production pages at https://hjtappe.github.io/iccm-eu-2020/
+Access the production pages at https://iccm-eu.github.io/iccm-eu-schedule/
 
 ## Further help
 

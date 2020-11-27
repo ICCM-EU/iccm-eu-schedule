@@ -1,6 +1,6 @@
 # Reference commands for publishing.
 
-GITHUB_PROJECT_NAME=iccm-eu-2020
+GITHUB_PROJECT_NAME=iccm-eu-schedule
 YEAR_NAME=2020
 
 all:
