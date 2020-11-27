@@ -1,9 +1,9 @@
 # ICCM Conference Schedule View (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+This project was generated with [Angular CLI](<https://github.com/angular/angular-cli>).
 
 It represents different views on a schedule stored in a google sheet
-which is also connected to a conference app, made with https://glideapps.com/
+which is also connected to a conference app, made with <https://glideapps.com/>
 
 ## Development server
 
@@ -19,5 +19,4 @@ Access the production pages at https://iccm-eu.github.io/iccm-eu-schedule/
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](<https://github.com/angular/angular-cli/blob/master/README.md>).
