@@ -1,7 +1,8 @@
 # Reference commands for publishing.
 
 GITHUB_PROJECT_NAME=iccm-eu-schedule
-YEAR_NAME=2020
+# Also update the spreadsheet ID in src/app/data/spreadsheetIDs.ts
+YEAR_NAME=2021
 
 all:
 	ng build --prod --output-path docs/$(YEAR_NAME) --base-href /$(GITHUB_PROJECT_NAME)/$(YEAR_NAME)/

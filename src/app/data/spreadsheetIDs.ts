@@ -18,9 +18,10 @@ export class SpreadsheetIDs {
 
   constructor(useTestData: boolean) {
     if (!useTestData) {
-      // https://spreadsheets.google.com/feeds/list/YOURGOOGLESHEETCODE/SHEETPAGENUMBER/public/full?alt=json
       this.tabURLStart = 'https://spreadsheets.google.com/feeds/list/';
-      this.spreadsheetID = '11f_uYNyaHuxM1agro6GpGbyxYlBYj472Pot-QoEbJnI';
+      // https://spreadsheets.google.com/feeds/list/YOURGOOGLESHEETCODE/SHEETPAGENUMBER/public/full?alt=json
+      // https://docs.google.com/spreadsheets/d/YOURGOOGLESHEETCODE/
+      this.spreadsheetID = '1Wy6Vt5P3IHaVfnvS4RRZDMkS1m_vp2pBFHEUgJrzYAE';
       this.urlEnd = '/public/full?alt=json';
       this.dataObjects.push({
         tabID: '2',

@@ -1,0 +1,90 @@
+{
+  "configVersion": 1,
+  "timestamp": 1606508861395,
+  "index": "/iccm-eu-schedule/2021/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/iccm-eu-schedule/2021/10.2d4c2fb45606b2843756.js",
+        "/iccm-eu-schedule/2021/11.1b8f4546d63f08e06592.js",
+        "/iccm-eu-schedule/2021/2.eef95a3f12e15ffb864f.js",
+        "/iccm-eu-schedule/2021/7.1e92320f1b10a1a62006.js",
+        "/iccm-eu-schedule/2021/8.19bb26093a7ffb5b013b.js",
+        "/iccm-eu-schedule/2021/9.55a5c7fa844e912b010b.js",
+        "/iccm-eu-schedule/2021/common.0fa337cb2554ca281efb.js",
+        "/iccm-eu-schedule/2021/favicon.ico",
+        "/iccm-eu-schedule/2021/index.html",
+        "/iccm-eu-schedule/2021/main.60a54b5afa5ff6ae22cc.js",
+        "/iccm-eu-schedule/2021/polyfills-es5.6477e1dcfb00304c2017.js",
+        "/iccm-eu-schedule/2021/polyfills.ab5e6164aeb51e11001b.js",
+        "/iccm-eu-schedule/2021/runtime.c8b66dd4271b4ac66472.js",
+        "/iccm-eu-schedule/2021/styles.fcd5528819f8f90acee8.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/iccm-eu-schedule/2021/assets/icons/icon-128x128.png",
+        "/iccm-eu-schedule/2021/assets/icons/icon-144x144.png",
+        "/iccm-eu-schedule/2021/assets/icons/icon-152x152.png",
+        "/iccm-eu-schedule/2021/assets/icons/icon-192x192.png",
+        "/iccm-eu-schedule/2021/assets/icons/icon-384x384.png",
+        "/iccm-eu-schedule/2021/assets/icons/icon-512x512.png",
+        "/iccm-eu-schedule/2021/assets/icons/icon-72x72.png",
+        "/iccm-eu-schedule/2021/assets/icons/icon-96x96.png",
+        "/iccm-eu-schedule/2021/assets/sheet-export.json"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/iccm-eu-schedule/2021/10.2d4c2fb45606b2843756.js": "acd85c466ab9b05f98a6ecd50ab24675d6abeca8",
+    "/iccm-eu-schedule/2021/11.1b8f4546d63f08e06592.js": "aaff219dadf7d44f2dcacf4dc9bc83991705212b",
+    "/iccm-eu-schedule/2021/2.eef95a3f12e15ffb864f.js": "cde9a9436c229586c6412048d965a2d1883e71e0",
+    "/iccm-eu-schedule/2021/7.1e92320f1b10a1a62006.js": "e5eec995f7b104d1511ca65944b73827ae4674b0",
+    "/iccm-eu-schedule/2021/8.19bb26093a7ffb5b013b.js": "9762c4368472d5c91cf945ef588720a4951b6962",
+    "/iccm-eu-schedule/2021/9.55a5c7fa844e912b010b.js": "5a64b14a9578a8a661f2f433b3d3d2f8b02a0f2a",
+    "/iccm-eu-schedule/2021/assets/icons/icon-128x128.png": "cfdecd14e5b436106a19a1e6656661a0cdd22299",
+    "/iccm-eu-schedule/2021/assets/icons/icon-144x144.png": "c2c87e553494cbb0226bdc643f8037d9e151da01",
+    "/iccm-eu-schedule/2021/assets/icons/icon-152x152.png": "121d4853c1e70df065db659065f0c245d63f409d",
+    "/iccm-eu-schedule/2021/assets/icons/icon-192x192.png": "0b330ab4d9d7c611ba0758cde8be87969a26ec73",
+    "/iccm-eu-schedule/2021/assets/icons/icon-384x384.png": "875c203a8c98c4c16d8a22df3a8f304c6e487ed1",
+    "/iccm-eu-schedule/2021/assets/icons/icon-512x512.png": "1705c7ad8588bbbcb48cd7ecbeaa6d23b63adfbb",
+    "/iccm-eu-schedule/2021/assets/icons/icon-72x72.png": "eb0f0de58b6fccc394c67e234be211e6575e3381",
+    "/iccm-eu-schedule/2021/assets/icons/icon-96x96.png": "84be8cda34892f4853f38a0dafe523f2d5d145ce",
+    "/iccm-eu-schedule/2021/assets/sheet-export.json": "b87b0c811fb05916623ce3a47ac569592c18476f",
+    "/iccm-eu-schedule/2021/common.0fa337cb2554ca281efb.js": "758400fa4df30331da01f06d28b9f3ff5960cd99",
+    "/iccm-eu-schedule/2021/favicon.ico": "0cbf3ab920f5d5d6ab8f3ae55c13edb3f33e3239",
+    "/iccm-eu-schedule/2021/index.html": "8bb253adf31e3ff58adbebf89a1efb99ac783de8",
+    "/iccm-eu-schedule/2021/main.60a54b5afa5ff6ae22cc.js": "163c26751e84a35532db025769d4929f3b1ec286",
+    "/iccm-eu-schedule/2021/polyfills-es5.6477e1dcfb00304c2017.js": "243fa76403453696c824cadc8585760df29bcb01",
+    "/iccm-eu-schedule/2021/polyfills.ab5e6164aeb51e11001b.js": "b00d5a55278f1419da16e0a83b4d52ca036cf4a2",
+    "/iccm-eu-schedule/2021/runtime.c8b66dd4271b4ac66472.js": "51f95478b995d0ca99d6bc59ff8acae32f7fb45c",
+    "/iccm-eu-schedule/2021/styles.fcd5528819f8f90acee8.css": "285d938da53621619b095d04752819bceb6650b2"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
