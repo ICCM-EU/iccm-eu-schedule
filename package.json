@@ -32,7 +32,7 @@
     "eslint": "^6.8.0",
     "flatpickr": "^4.6.6",
     "font-awesome": "^4.7.0",
-    "highlight.js": "^9.18.3",
+    "highlight.js": "^10.4.1",
     "ngx-order-pipe": "^2.1.0",
     "ngx-perfect-scrollbar": "^8.0.0",
     "rxjs": "^6.6.2",
