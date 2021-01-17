@@ -10,6 +10,8 @@ all:
 	sed 's/###YEAR_NAME###/$(YEAR_NAME)/g' docs/index.html.in > docs/index.html
 	# Omit Test Data
 	-rm -f docs/$(YEAR_NAME)/assets/sheet-export.json
+	# install bof display pages
+	cp -r bof/ docs/$(YEAR_NAME)/
 	@echo
 	@echo "Configure github project to publish from docs folder:"
 	@echo "https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch"
