@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT_NAME=iccm-eu-schedule
 # Also update the spreadsheet ID in src/app/data/spreadsheetIDs.ts
-YEAR_NAME=2021
+YEAR_NAME=2022
 
 all:
 	ng build --prod --output-path docs/$(YEAR_NAME) --base-href /$(GITHUB_PROJECT_NAME)/$(YEAR_NAME)/
@@ -17,3 +17,8 @@ all:
 	@echo "https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch"
 	@echo "make project available at https://<user_name>.github.io/$(GITHUB_PROJECT_NAME)/$(YEAR_NAME)/"
 
+update-packages:
+	npm audit fix
+
+update-angular:
+	ng update
