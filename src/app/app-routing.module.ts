@@ -3,12 +3,21 @@ import { Routes, RouterModule, PreloadAllModules, ExtraOptions } from '@angular/
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routerOptions: ExtraOptions = {
-  scrollPositionRestoration: 'disabled',
-  anchorScrolling: 'enabled',
-  scrollOffset: [0, 0],
-  preloadingStrategy: PreloadAllModules,
-  useHash: true,
-  initialNavigation: 'enabled',
+    scrollPositionRestoration: 'disabled',
+    anchorScrolling: 'enabled',
+    scrollOffset: [0, 0],
+    preloadingStrategy: PreloadAllModules,
+    useHash: true,
+    initialNavigation: 'enabled',
+    relativeLinkResolution: 'legacy'
+}{
+    scrollPositionRestoration: 'disabled',
+    anchorScrolling: 'enabled',
+    scrollOffset: [0, 0],
+    preloadingStrategy: PreloadAllModules,
+    useHash: true,
+    initialNavigation: 'enabled',
+    relativeLinkResolution: 'legacy'
 };
 
 const appRoutes: Routes = [
