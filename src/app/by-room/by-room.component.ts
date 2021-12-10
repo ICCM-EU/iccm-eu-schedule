@@ -1,7 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
-import { isUndefined, isBoolean } from 'util';
 import { EventRoomInterface } from '../data/eventRoomInterface';
 
 @Component({
@@ -44,7 +43,7 @@ export class ByRoomComponent implements OnInit {
   }
 
   toggleUpcoming(init?: boolean) {
-    if (!isUndefined(init) && isBoolean(init)) {
+    if (!(init === undefined) && (typeof init === 'boolean')) {
       this.onlyUpcoming = !init;
     }
     if (this.onlyUpcoming) {
@@ -56,7 +55,7 @@ export class ByRoomComponent implements OnInit {
   }
 
   toggleDescriptions(init?: boolean) {
-    if (!isUndefined(init) && isBoolean(init)) {
+    if (!(init === undefined) && (typeof init === 'boolean')) {
       this.showDescriptions = !init;
     }
     if (this.showDescriptions) {

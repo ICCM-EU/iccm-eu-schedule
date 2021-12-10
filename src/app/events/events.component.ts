@@ -3,7 +3,6 @@ import { ViewportScroller } from '@angular/common';
 import { Router, Scroll, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
-import { isUndefined, isBoolean } from 'util';
 import { SpreadsheetDS } from '../data/spreadsheet-data.service';
 import { EventInterface } from '../data/eventInterface';
 import { EventTimerInterface } from '../data/eventTimerInterface';
@@ -111,7 +110,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
   }
 
   toggleUpcoming(init?: boolean) {
-    if (!isUndefined(init) && isBoolean(init)) {
+    if (!(init === undefined) && (typeof init === 'boolean')) {
       this.onlyUpcoming = !init;
     }
     if (this.onlyUpcoming) {
@@ -123,7 +122,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
   }
 
   toggleDescriptions(init?: boolean) {
-    if (!isUndefined(init) && isBoolean(init)) {
+    if (!(init === undefined) && (typeof init === 'boolean')) {
       this.showDescriptions = !init;
     }
     if (this.showDescriptions) {

@@ -22,3 +22,6 @@ update-packages:
 
 update-angular:
 	ng update
+
+serve:
+	node-modules/angular-ide/bin/ng serve --port=4200 --live-reload=true

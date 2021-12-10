@@ -1,16 +1,8 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules, ExtraOptions } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions, PreloadAllModules } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routerOptions: ExtraOptions = {
-    scrollPositionRestoration: 'disabled',
-    anchorScrolling: 'enabled',
-    scrollOffset: [0, 0],
-    preloadingStrategy: PreloadAllModules,
-    useHash: true,
-    initialNavigation: 'enabled',
-    relativeLinkResolution: 'legacy'
-}{
     scrollPositionRestoration: 'disabled',
     anchorScrolling: 'enabled',
     scrollOffset: [0, 0],
