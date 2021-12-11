@@ -22,7 +22,7 @@ export class SpreadsheetIDs {
       // https://spreadsheets.google.com/feeds/list/YOURGOOGLESHEETCODE/SHEETPAGENUMBER/public/full?alt=json
       // https://docs.google.com/spreadsheets/d/YOURGOOGLESHEETCODE/
       // Remember to publish the spreadsheet tabs (venue & sessions) as a website
-      this.spreadsheetID = '1Wy6Vt5P3IHaVfnvS4RRZDMkS1m_vp2pBFHEUgJrzYAE';
+      this.spreadsheetID = '1Fs4DzGAEFRDe76D1kNVaO700-Vus4Hrb4CPJeTnAp4U';
       this.urlEnd = '/public/full?alt=json';
       this.dataObjects.push({
         tabID: '2',
