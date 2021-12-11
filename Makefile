@@ -1,11 +1,12 @@
 # Reference commands for publishing.
 
+# project name within https://<your-account>.github.io/GITHUB_PROJECT_NAME
 GITHUB_PROJECT_NAME=iccm-eu-schedule
 # Also update the spreadsheet ID in src/app/data/spreadsheetIDs.ts
 YEAR_NAME=2022
 
 all:
-	ng build --prod --output-path docs/$(YEAR_NAME) --base-href /$(GITHUB_PROJECT_NAME)/$(YEAR_NAME)/
+	ng build --configuration production --output-path docs/$(YEAR_NAME) --base-href /$(GITHUB_PROJECT_NAME)/$(YEAR_NAME)/
 	cp docs/$(YEAR_NAME)/index.html docs/$(YEAR_NAME)/404.html
 	sed 's/###YEAR_NAME###/$(YEAR_NAME)/g' docs/index.html.in > docs/index.html
 	# Omit Test Data
