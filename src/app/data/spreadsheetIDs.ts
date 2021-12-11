@@ -21,7 +21,8 @@ export class SpreadsheetIDs {
       this.tabURLStart = 'https://spreadsheets.google.com/feeds/list/';
       // https://spreadsheets.google.com/feeds/list/YOURGOOGLESHEETCODE/SHEETPAGENUMBER/public/full?alt=json
       // https://docs.google.com/spreadsheets/d/YOURGOOGLESHEETCODE/
-      // Remember to publish the spreadsheet tabs (venue & sessions) as a website
+      // HINT: Remember to publish the spreadsheet tabs (venue & sessions) as a website
+      // Google Sheet: File / Publish / In the Web
       this.spreadsheetID = '1Fs4DzGAEFRDe76D1kNVaO700-Vus4Hrb4CPJeTnAp4U';
       this.urlEnd = '/public/full?alt=json';
       this.dataObjects.push({
