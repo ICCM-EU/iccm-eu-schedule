@@ -7,8 +7,6 @@
       "fs": ["./node_modules/fs-web"],
       "https": ["./node_modules/https-browserify"],
       "http": ["./node_modules/http-browserify"],
-      "util": ["./node_modules/util"],
-      "process": ["./node_modules/process"],
       "child_process": ["./node_modules/child_process"],
     }
   },

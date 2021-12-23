@@ -32,21 +32,16 @@ The spreadsheet needs to contain at least (see spreadsheetIDs.ts and spreadsheet
 
 ## Preparing access to the spreadsheet
 
-Setup a google service account.
-
 Publish the spreadsheet tabs (venue & sessions) as a website:  Google Sheet / File / Publish / In the Web.
 
-Potentially, also grant read access to the spreadsheet to the service account. 
+* Setup an API key at https://console.cloud.google.com/apis/credentials
+* Restrict the API key to Website https://github.com/ICCM-EU/iccm-eu-schedule/* or your respective URL
+* Restrict the API key to the Sheets API.
+* Configure the key in spreadsheetIDs.ts
 
 ## Configuring Github Pages
 
-In Git Pages, enable the {{github-pages}} plugin, direct it to the "docs" directory.
-
-Export the Environments section, set the following environment variables with the Google service account mail address and access key:
-
-* GOOGLE_SHEET_CODE - https://docs.google.com/spreadsheets/d/YOURGOOGLESHEETCODE/
-* GOOGLE_API_USER - Your service.account@projectname.iam.gserviceaccount.com
-* GOOGLE_API_KEY - The key configured as access token
+In Git Pages, enable the {{github-pages}} plugin, direct it to the "docs/" directory.
 
 ## Further help
 
