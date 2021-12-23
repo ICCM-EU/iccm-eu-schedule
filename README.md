@@ -47,7 +47,7 @@ In Git Pages, enable the {{github-pages}} plugin, direct it to the "docs" direct
 Export the Environments section, set the following environment variables with the Google service account mail address and access key:
 
 * GOOGLE_SHEET_CODE - https://docs.google.com/spreadsheets/d/YOURGOOGLESHEETCODE/
-* GOOGLE_API_USER - Your service.account@googlemail.com
+* GOOGLE_API_USER - Your service.account@projectname.iam.gserviceaccount.com
 * GOOGLE_API_KEY - The key configured as access token
 
 ## Further help
