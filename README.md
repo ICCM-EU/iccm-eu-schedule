@@ -26,11 +26,9 @@ The spreadsheet needs to contain at least (see spreadsheetIDs.ts and spreadsheet
   * Date & Time (in DateTime format)
   * Time (Text describing the time in natural language)
   * End Date & Time (in DateTime format)
-   * Room  (as specified in more detail in the Venue tab)
+  * Room (Name of the room)
   * Speaker (Name of the person who will lead the sessions)
   * Description
-* Tab "Venue"
-  * Name
 
 ## Preparing access to the spreadsheet
 

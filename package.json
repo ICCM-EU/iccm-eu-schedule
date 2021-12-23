@@ -24,21 +24,43 @@
     "@angular/service-worker": "^13.1.0",
     "@types/sprintf-js": "^1.1.2",
     "angular-calendar": "^0.28.16",
+    "assert": "^2.0.0",
     "bootstrap-css-only": "^4.4.1",
     "calendar-utils": "^0.9.0",
+    "child_process": "^1.0.2",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.0",
     "date-fns": "^2.15.0",
     "flatpickr": "^4.6.6",
     "font-awesome": "^4.7.0",
+    "fs": "^0.0.1-security",
+    "fs-web": "^1.0.1",
+    "google-spreadsheet": "^3.2.0",
     "highlight.js": "^11.3.1",
+    "http-browserify": "^1.7.0",
+    "https": "^1.0.0",
+    "https-browserify": "^1.0.0",
+    "net": "^1.0.2",
     "ngx-order-pipe": "^2.1.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
     "perfect-scrollbar": "^1.5.3",
     "rxjs": "^7.4.0",
-    "sprintf-js": "^1.1.2"
+    "sprintf-js": "^1.1.2",
+    "stream": "^0.0.2",
+    "stream-browserify": "^3.0.0",
+    "tls": "^0.0.1",
+    "util": "^0.12.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^13.1.1",
     "@angular/cli": "^13.1.1",
     "@types/node": "^16.11.12",
     "angular-ide": "^0.9.77"
+  },
+  "browser": {
+    "crypto": false,
+    "child_process": false
   }
 }

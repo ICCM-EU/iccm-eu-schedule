@@ -14,13 +14,11 @@ import { colors } from './colors';
 import { RoomsDictionary } from './roomsDictionary';
 import { CalEventEmitterInterface } from './calEventEmitterInterface';
 
-const USE_LOCAL_TEST_DATA = false;
-
 @Injectable()
 export class SpreadsheetDS {
   static timerStarted = false;
 
-  ssIDs: SpreadsheetIDs = new SpreadsheetIDs(USE_LOCAL_TEST_DATA);
+  ssIDs: SpreadsheetIDs = new SpreadsheetIDs();
   lastUpdated = new Date();
   refreshIntervalMin = (60e3 * 5); // 5 Minutes
 
@@ -65,9 +63,8 @@ export class SpreadsheetDS {
   }
 
   // google sheets
-  getHTTPData_SS(whatTab: string): Observable<Array<any>> {
-    return this.http.get<any>(this.ssIDs.getTabURL(whatTab))
-      .pipe(map(obj => obj.feed.entry));
+  getSheetData(objName: string): Observable<Array<any>> {
+    return this.ssIDs.getSheetRows(objName);
   }
 
   refreshAll(): void {
@@ -83,7 +80,7 @@ export class SpreadsheetDS {
       rooms: {},
     };
 
-    this.events$ = this.getHTTPData_SS(objName);
+    this.events$ = this.getSheetData(objName);
     this.events$.subscribe(data => {
       if (undefined !== data) {
         // transform the JSON returned to make it more usable
@@ -199,7 +196,6 @@ export class SpreadsheetDS {
     }
 
     const event: EventInterface = {
-      // TODO: Roll back for google sheet
       // Title: i.gsx$Session.$t,
       // Schedule: i.gsx$datetime.$t,
       title: i.gsx$session.$t,
