@@ -28,7 +28,6 @@
     "bootstrap-css-only": "^4.4.1",
     "calendar-utils": "^0.9.0",
     "child_process": "^1.0.2",
-    "crypto": "^1.0.1",
     "crypto-browserify": "^3.12.0",
     "date-fns": "^2.15.0",
     "flatpickr": "^4.6.6",
