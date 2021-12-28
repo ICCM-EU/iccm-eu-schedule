@@ -71,7 +71,7 @@ export class SpreadsheetDS {
 
   // google sheets
   async triggerSheetDataUpdate(objName: string) {
-    // await this.ssIDs.printTitle();
+    // await this.ssIDs.printSheetTitle();
     const tabName = this.ssIDs.getTabName(objName);
     let workSheet: GoogleSpreadsheetWorksheet = await this.ssIDs.getSheetsByTitle(tabName);
     if (Array.isArray(workSheet)) {

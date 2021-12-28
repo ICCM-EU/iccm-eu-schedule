@@ -35,19 +35,19 @@ export class SpreadsheetIDs {
     return sheet;
   }
 
-  async printTitle() {
-    console.log("Initializing for printTitle");
+  async printSheetTitle() {
+    // console.log("Initializing for printTitle");
     // await this.initializeSheet();
     let sheet = await this.initializeSheet();
-    console.log("Initialized in printTitle"); 
-    console.log("About to print the title");
+    // console.log("Initialized in printTitle");
+    // console.log("About to print the title");
     console.log("Title: " + sheet.title);
   }
 
   async getSheetsByTitle(name: string): Promise<Array<GoogleSpreadsheetWorksheet>> {
-    console.log("Initializing for getSheetsByTitle");
+    // console.log("Initializing for getSheetsByTitle");
     let sheet: GoogleSpreadsheet = await this.initializeSheet();
-    console.log("Initialized in getSheetsByTitle"); 
+    // console.log("Initialized in getSheetsByTitle");
     return sheet.sheetsByTitle[name];
   }
 
