@@ -106,7 +106,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
   }
 
   refresh() {
-    this.sds.loadEvents(this.objName);
+    this.sds.triggerSheetDataUpdate(this.objName);
   }
 
   toggleUpcoming(init?: boolean) {

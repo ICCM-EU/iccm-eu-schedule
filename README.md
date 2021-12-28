@@ -32,12 +32,16 @@ The spreadsheet needs to contain at least (see spreadsheetIDs.ts and spreadsheet
 
 ## Preparing access to the spreadsheet
 
-Publish the spreadsheet tabs (venue & sessions) as a website:  Google Sheet / File / Publish / In the Web.
+Publish the spreadsheet URL read-only for everybody with a link to it.
 
 * Setup an API key at https://console.cloud.google.com/apis/credentials
 * Restrict the API key to Website https://github.com/ICCM-EU/iccm-eu-schedule/* or your respective URL
 * Restrict the API key to the Sheets API.
 * Configure the key in spreadsheetIDs.ts
+
+IMPORTANT NOTES:
+* Make sure that the link does not allow editing. Everybody will be able to read the spreadsheet link and use it for editing then. 
+* Make sure the spreadsheet does not contain a sub-sheet with confidential information. It will be publicly readable.
 
 ## Configuring Github Pages
 

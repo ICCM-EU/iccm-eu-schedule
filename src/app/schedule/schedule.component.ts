@@ -84,6 +84,6 @@ export class ScheduleComponent implements OnInit {
   }
 
   refresh() {
-    this.sds.loadEvents(this.objName);
+    this.sds.triggerSheetDataUpdate(this.objName);
   }
 }

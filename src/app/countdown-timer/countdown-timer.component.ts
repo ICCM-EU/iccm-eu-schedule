@@ -103,7 +103,7 @@ export class CountdownTimerComponent implements OnInit {
   }
 
   refresh() {
-    this.sds.loadEvents(this.objName);
+    this.sds.triggerSheetDataUpdate(this.objName);
   }
 
   onResize(innerWidth: number) {

@@ -1,6 +1,4 @@
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Injectable, EventEmitter } from '@angular/core';
 
 import { SpreadsheetIDs } from './spreadsheetIDs';
@@ -9,10 +7,12 @@ import { EventTimerInterface } from './eventTimerInterface';
 import { RoomInterface } from './roomInterface';
 import { EventRoomInterface } from './eventRoomInterface';
 import { CalendarEvent } from 'angular-calendar';
-import { InputEventInterface } from './inputEventInterface';
+import { EventInputInterface } from './eventInputInterface';
 import { colors } from './colors';
 import { RoomsDictionary } from './roomsDictionary';
 import { CalEventEmitterInterface } from './calEventEmitterInterface';
+
+import { GoogleSpreadsheetWorksheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
 
 @Injectable()
 export class SpreadsheetDS {
@@ -22,9 +22,9 @@ export class SpreadsheetDS {
   lastUpdated = new Date();
   refreshIntervalMin = (60e3 * 5); // 5 Minutes
 
-  events$: Observable<Array<InputEventInterface>>;
   eventsLabel = 'Events';
 
+  rawEvents: Array<EventInputInterface> = [];
   events: Array<EventInterface> = [];
   byRoom: Array<EventRoomInterface> = [];
   timerEvents: EventTimerInterface = {};
@@ -62,80 +62,118 @@ export class SpreadsheetDS {
     this.refreshAll();
   }
 
-  // google sheets
-  getSheetData(objName: string): Observable<Array<any>> {
-    return this.ssIDs.getSheetRows(objName);
-  }
-
-  refreshAll(): void {
+  refreshAll() {
     this.ssIDs.getObjNames().forEach(objName => {
-      this.loadEvents(objName);
+      this.triggerSheetDataUpdate(objName);
     });
     this.lastUpdated = new Date();
   }
 
-  loadEvents(objName: string): void {
+  // google sheets
+  async triggerSheetDataUpdate(objName: string) {
+    // await this.ssIDs.printTitle();
+    const tabName = this.ssIDs.getTabName(objName);
+    let workSheet: GoogleSpreadsheetWorksheet = await this.ssIDs.getSheetsByTitle(tabName);
+    if (Array.isArray(workSheet)) {
+      console.log("Worksheet " + tabName + " not unique.");
+      return;
+    }
+    if (workSheet === undefined) {
+      console.log("Worksheet " + tabName + " not found.");
+      return;
+    }
+    let rows: Array<GoogleSpreadsheetRow> = await workSheet.getRows();
+    if (rows.length < 1) {
+      console.log("Rows in " + tabName + " not found.");
+      return;
+    }
+
+    this.rawEvents = [];
+    rows.forEach(row => {
+      this.rawEvents.push({
+        title:this.ssIDs.getColumnValue(row, "Session"),
+        time: this.ssIDs.getColumnValue(row, "Date & Time"),
+        end: this.ssIDs.getColumnValue(row, "End Date & Time"),
+        speaker: this.ssIDs.getColumnValue(row, "Speaker"),
+        room: this.ssIDs.getColumnValue(row, "Room"),
+        description: this.ssIDs.getColumnValue(row, "Description"),
+      });
+    });
+
     const calEvents: CalEventEmitterInterface = {
       events: [],
       rooms: {},
     };
+    // if (undefined !== data) {
+    // transform the data to make it more usable
+    calEvents.rooms = this.initializeRoomDictionary(this.rawEvents);
+    this.byRoom = this.initializeByRooms(this.rawEvents, calEvents.rooms);
+    this.events = this.transformEvents(this.rawEvents, calEvents.rooms);
+    calEvents.events = this.transformToCalEvents(this.events, calEvents.rooms);
+    this.timerEvents = this.updateTimerEvents(this.filterByRoom, this.events, this.byRoom);
 
-    this.events$ = this.getSheetData(objName);
-    this.events$.subscribe(data => {
-      if (undefined !== data) {
-        // transform the JSON returned to make it more usable
-        calEvents.rooms = this.initializeRoomDictionary(data);
-        this.byRoom = this.initializeByRooms(data, calEvents.rooms);
-        this.events = this.transformEvents(data, calEvents.rooms);
-        calEvents.events = this.transformToCalEvents(data, calEvents.rooms);
-        this.timerEvents = this.updateTimerEvents(this.filterByRoom, this.events, this.byRoom);
+    this.eventsCount = this.events.length;
 
-        this.eventsCount = this.events.length;
-        // Loop through the events and add rooms and events into the rooms
-        let lastEvent: EventInterface;
+    // Loop through the events and add rooms and events into the rooms
+    let lastEvent: EventInterface;
 
-        this.events.forEach(currentEvent => {
-          if (undefined !== currentEvent) {
-            const roomInArray: EventRoomInterface = this.byRoom[currentEvent.room.name];
-            // Check if the current event is in the future
-            if (undefined === lastEvent || currentEvent.schedule < lastEvent.schedule) {
-              lastEvent = currentEvent;
-            }
-            if (undefined !== roomInArray) {
-              roomInArray.events.push(currentEvent);
-            }
-          }
-        });
+    this.events.forEach(currentEvent => {
+      if (undefined !== currentEvent) {
+        const roomInArray: EventRoomInterface = this.byRoom[currentEvent.room.name];
+        // Check if the current event is in the future
+        if (undefined === lastEvent || currentEvent.schedule < lastEvent.schedule) {
+          lastEvent = currentEvent;
+        }
+        if (undefined !== roomInArray) {
+          roomInArray.events.push(currentEvent);
+        }
       }
-
-      this.eventsLabel = this.buildLabel(this.eventsCount, objName);
-
-      SpreadsheetDS.setLocal(this.events, this.ssIDs.getCacheName(objName));
-      SpreadsheetDS.setLocal(this.byRoom, this.ssIDs.getCacheByRoomName(objName));
-      SpreadsheetDS.setLocal([calEvents], this.ssIDs.getCacheForCalEvents(objName));
-      SpreadsheetDS.setLocal([this.timerEvents], this.ssIDs.getCacheForNextEvent(objName));
-      SpreadsheetDS.setLocal([this.filterByRoom], this.ssIDs.getCacheForFilter(objName));
-
-      this.eventsUpdated.emit(this.events);
-      this.byRoomUpdated.emit(this.byRoom);
-      this.calEventsUpdated.emit([calEvents]);
-      this.timerEventUpdated.emit([this.timerEvents]);
-      this.filterUpdated.emit([this.filterByRoom]);
     });
+    // }
+
+    this.eventsLabel = this.buildLabel(this.eventsCount, objName);
+
+    SpreadsheetDS.setLocal(this.events, this.ssIDs.getCacheName(objName));
+    SpreadsheetDS.setLocal(this.byRoom, this.ssIDs.getCacheByRoomName(objName));
+    SpreadsheetDS.setLocal([calEvents], this.ssIDs.getCacheForCalEvents(objName));
+    SpreadsheetDS.setLocal([this.timerEvents], this.ssIDs.getCacheForNextEvent(objName));
+    SpreadsheetDS.setLocal([this.filterByRoom], this.ssIDs.getCacheForFilter(objName));
+
+    this.eventsUpdated.emit(this.events);
+    this.byRoomUpdated.emit(this.byRoom);
+    this.calEventsUpdated.emit([calEvents]);
+    this.timerEventUpdated.emit([this.timerEvents]);
+    this.filterUpdated.emit([this.filterByRoom]);
   }
 
-  initializeRoomDictionary(dataReceived: Array<InputEventInterface>): RoomsDictionary {
+  transformEvents(events: Array<EventInputInterface>,
+      roomsDictionary: RoomsDictionary): Array<EventInterface> {
+    const tempArray: EventInterface[] = [];
+
+    for (const event of events) {
+      // Check if mandatory items are filled.
+      if (undefined !== event.title &&
+        undefined !== event.time &&
+        undefined !== event.end) {
+        const newEvent = this.transformEventData(event, roomsDictionary);
+        tempArray.push(newEvent);
+      }
+    }
+    return tempArray;
+  }
+
+  initializeRoomDictionary(events: Array<EventInputInterface>): RoomsDictionary {
     const tempArray: RoomsDictionary = {};
     const colorKeys: string[] = Object.keys(colors);
     let colorIndex = 0;
 
-    for (const i of dataReceived) {
-      if ((undefined !== i.gsx$room.$t) && (undefined === tempArray[i.gsx$room.$t])) {
+    for (const event of events) {
+      if ((undefined !== event.room) && (undefined === tempArray[event.room])) {
         const newRoom: RoomInterface = {
-          name: i.gsx$room.$t,
+          name: event.room,
           color: colors[colorKeys[colorIndex]],
         };
-        tempArray[i.gsx$room.$t] = newRoom;
+        tempArray[event.room] = newRoom;
         colorIndex++;
         if (colorIndex >= colorKeys.length) {
           colorIndex = 0;
@@ -145,84 +183,69 @@ export class SpreadsheetDS {
     return tempArray;
   }
 
-  transformEvents(dataReceived: Array<InputEventInterface>,
-    roomsDictionary: RoomsDictionary): Array<EventInterface> {
-    const tempArray: EventInterface[] = [];
-
-    for (const i of dataReceived) {
-      // Check if mandatory items are filled.
-      if (undefined !== i.gsx$session.$t &&
-        undefined !== i.gsx$datetime.$t &&
-        undefined !== i.gsx$enddatetime.$t) {
-        const event = this.transformEventData(i, roomsDictionary);
-        tempArray.push(event);
-      }
-    }
-    return tempArray;
-  }
-
-  initializeByRooms(dataReceived: Array<InputEventInterface>,
-    roomsDictionary: RoomsDictionary): Array<EventRoomInterface> {
+  initializeByRooms(events: Array<EventInputInterface>,
+      roomsDictionary: RoomsDictionary): Array<EventRoomInterface> {
     const tempArray: EventRoomInterface[] = [];
 
-    for (const i of dataReceived) {
-      if (undefined !== i.gsx$session.$t &&
-        undefined !== i.gsx$datetime.$t &&
-        undefined !== i.gsx$enddatetime.$t) {
-        const event = this.transformEventData(i, roomsDictionary);
-        const currentRoom: EventRoomInterface = tempArray.find(search => search.name === i.gsx$room.$t);
+    for (const event of events) {
+      if (undefined !== event.title &&
+        undefined !== event.time &&
+        undefined !== event.end) {
+        const newEvent = this.transformEventData(event, roomsDictionary);
+        const currentRoom: EventRoomInterface = tempArray.find(
+          search => search.name === event.room);
         if (undefined === currentRoom) {
           const newRoom: EventRoomInterface = {
-            name: i.gsx$room.$t,
-            color: roomsDictionary[i.gsx$room.$t].color,
-            events: [event],
+            name: event.room,
+            color: roomsDictionary[event.room].color,
+            events: [newEvent],
           };
           tempArray.push(newRoom);
         } else {
-          currentRoom.events.push(event);
+          currentRoom.events.push(newEvent);
         }
       }
     }
     return tempArray.sort((a, b) => a.name < b.name ? 0 : 1);
   }
 
-  transformEventData(i: InputEventInterface,
-    roomsDictionary: RoomsDictionary): EventInterface {
-    const endTime = new Date(i.gsx$enddatetime.$t);
+  transformEventData(event: EventInputInterface,
+      roomsDictionary: RoomsDictionary): EventInterface {
+    const endTime = new Date(event.end);
     const now = new Date;
     let upcoming = true;
     if (endTime <= now) {
       upcoming = false;
     }
 
-    const event: EventInterface = {
+    const newEvent: EventInterface = {
       // Title: i.gsx$Session.$t,
       // Schedule: i.gsx$datetime.$t,
-      title: i.gsx$session.$t,
-      schedule: new Date(i.gsx$datetime.$t),
-      end: new Date(i.gsx$enddatetime.$t),
-      time: i.gsx$time.$t,
-      room: roomsDictionary[i.gsx$room.$t],
-      speaker: i.gsx$speaker.$t,
+      title: event.title,
+      schedule: new Date(event.time),
+      end: new Date(event.end),
+      time: event.time,
+      room: roomsDictionary[event.room],
+      speaker: event.speaker,
       upcoming: upcoming,
-      description: i.gsx$description.$t,
+      description: event.description,
     };
-    return event;
+    return newEvent;
   }
 
-  transformToCalEvents(dataReceived: Array<InputEventInterface>,
-    roomsDictionary: RoomsDictionary): Array<CalendarEvent> {
+  transformToCalEvents(events: Array<EventInterface>,
+      roomsDictionary: RoomsDictionary): Array<CalendarEvent> {
     const tempArray: CalendarEvent[] = [];
-    for (const i of dataReceived) {
+    for (const event of events) {
       tempArray.push({
-        title: i.gsx$session.$t,
-        start: new Date(i.gsx$datetime.$t),
-        end: new Date(i.gsx$enddatetime.$t),
-        color: roomsDictionary[i.gsx$room.$t].color,
+        title: event.title,
+        start: new Date(event.time),
+        end: new Date(event.end),
+        color: roomsDictionary[event.room.name].color,
         meta: {
-          user: roomsDictionary[i.gsx$room.$t],
-          speaker: i.gsx$speaker.$t,
-          description: i.gsx$description.$t,
+          user: roomsDictionary[event.room.name],
+          speaker: event.speaker,
+          description: event.description,
         },
         resizable: {
           beforeStart: false,
@@ -234,7 +257,8 @@ export class SpreadsheetDS {
     return tempArray;
   }
 
-  buildLabel(eventsCount: number, objName: string) {
+  buildLabel(eventsCount: number,
+      objName: string) {
     let label = '';
     const eventName = this.ssIDs.getLabelName(objName);
 
@@ -256,7 +280,8 @@ export class SpreadsheetDS {
     return label;
   }
 
-  updateFilter(filter: string, objName: string) {
+  updateFilter(filter: string,
+      objName: string) {
     this.filterByRoom = filter;
     this.timerEvents = this.updateTimerEvents(this.filterByRoom, this.events, this.byRoom);
 
@@ -269,7 +294,9 @@ export class SpreadsheetDS {
     this.filterUpdated.emit([this.filterByRoom]);
   }
 
-  private updateTimerEvents(filter: string, events: Array<EventInterface>, byRoom: Array<EventRoomInterface>): EventTimerInterface {
+  private updateTimerEvents(filter: string,
+      events: Array<EventInterface>,
+      byRoom: Array<EventRoomInterface>): EventTimerInterface {
     const timerEvents: EventTimerInterface = {};
     if (undefined !== filter && '' !== filter) {
       const room = byRoom.find(obj => obj.name === filter);

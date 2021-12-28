@@ -1,5 +1,4 @@
-import { GoogleSpreadsheet } from 'google-spreadsheet';
-import { Observable } from 'rxjs';
+import { GoogleSpreadsheet, GoogleSpreadsheetWorksheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
 
 class ObjectClass {
   objName: string;
@@ -13,14 +12,9 @@ class ObjectClass {
 }
 
 export class SpreadsheetIDs {
-  sheet: GoogleSpreadsheet;
   dataObjects: ObjectClass[] = [];
 
   constructor() {
-    this.sheet = new GoogleSpreadsheet("1Fs4DzGAEFRDe76D1kNVaO700-Vus4Hrb4CPJeTnAp4U");
-    this.sheet.useApiKey("AIzaSyBuTzjLoCTjf_-67qELfuH4XyyZNvj60u8");
-    this.sheet.loadInfo();
-
     /* Register the sheet to be addressed */
     this.dataObjects.push({
       objName: 'events',
@@ -30,23 +24,42 @@ export class SpreadsheetIDs {
       cacheForCalEvents: 'eventsForCalCache',
       cacheForNextEvent: 'eventsNextEventCache',
       cacheForFilter: 'filterCache',
-      labelName: 'Event'
+      labelName: 'Event',
     });
   }
 
-  getSheetRows(objName: string): Observable<Array<any>> {
-    const tabName = this.getTabName(objName);
-    this.sheet.loadInfo();
-    const tab = this.sheet.sheetsByTitle(tabName);
-    const rows = tab.getRows();
-    console.log("rows:\n" + rows + "\n");
-    return rows;
+  private async initializeSheet(): Promise<GoogleSpreadsheet> {
+    let sheet = new GoogleSpreadsheet("1Fs4DzGAEFRDe76D1kNVaO700-Vus4Hrb4CPJeTnAp4U");
+    await sheet.useApiKey("AIzaSyBuTzjLoCTjf_-67qELfuH4XyyZNvj60u8");
+    await sheet.loadInfo();
+    return sheet;
   }
 
+  async printTitle() {
+    console.log("Initializing for printTitle");
+    // await this.initializeSheet();
+    let sheet = await this.initializeSheet();
+    console.log("Initialized in printTitle"); 
+    console.log("About to print the title");
+    console.log("Title: " + sheet.title);
+  }
+
+  async getSheetsByTitle(name: string): Promise<Array<GoogleSpreadsheetWorksheet>> {
+    console.log("Initializing for getSheetsByTitle");
+    let sheet: GoogleSpreadsheet = await this.initializeSheet();
+    console.log("Initialized in getSheetsByTitle"); 
+    return sheet.sheetsByTitle[name];
+  }
+
+  getColumnValue(row: GoogleSpreadsheetRow, colName: string): string {
+    let headers: Array<string> = row._sheet.headerValues;
+    let index = headers.indexOf(colName);
+    let value: string = row._rawData[index];
+    return value;
+  }
   getObjNames(): string[] {
     return this.dataObjects.map(obj => obj.objName);
   }
-
   getTabName(objName: string): string {
     const tab = this.dataObjects.find(myObj => myObj.objName === objName);
     if (undefined === tab) {
@@ -54,7 +67,6 @@ export class SpreadsheetIDs {
     }
     return tab.tabName;
   }
-
   getCacheName(objName: string): string {
     const cache = this.dataObjects.find(myObj => myObj.objName === objName);
     if (undefined === cache) {

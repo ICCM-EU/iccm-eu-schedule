@@ -39,7 +39,7 @@ export class ByRoomComponent implements OnInit {
   }
 
   refresh() {
-    this.sds.loadEvents(this.objName);
+    this.sds.triggerSheetDataUpdate(this.objName);
   }
 
   toggleUpcoming(init?: boolean) {
