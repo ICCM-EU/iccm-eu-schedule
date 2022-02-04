@@ -365,7 +365,7 @@ export class SpreadsheetDS {
   }
 
   getFirstEvent(events: Array<EventInterface>): EventInterface {
-    let firstEvent: EventInterface;
+    let firstEvent: EventInterface = undefined;
 
     events.forEach(event => {
       if (undefined !== event) {
