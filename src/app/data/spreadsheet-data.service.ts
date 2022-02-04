@@ -326,9 +326,9 @@ export class SpreadsheetDS {
       if (undefined !== event) {
         // Check if the current event is in the future
         let eventSchedule = new Date(event.schedule);
-        if (eventSchedule >= now) {
+        if (eventSchedule.getTime() >= now.getTime()) {
           // Check if the event is nearer than the current or replaces an undefined value.
-          if (undefined === nextEventTime || eventSchedule < nextEventTime) {
+          if (undefined === nextEventTime || eventSchedule.getTime() < nextEventTime.getTime()) {
             nextEventTime = eventSchedule;
           }
         }
@@ -355,7 +355,7 @@ export class SpreadsheetDS {
     events.forEach(event => {
       if (undefined !== event) {
         // Check if the current event end is in the future and it has started
-        if (new Date(event.end) >= now && new Date(event.schedule) <= now) {
+        if (event.end.getTime() >= now.getTime() && event.schedule.getTime() <= now.getTime()) {
           currentEvents.push(event);
         }
       }
@@ -371,7 +371,7 @@ export class SpreadsheetDS {
       if (undefined !== event) {
         // Check if the event is earlier than the current or replaces an undefined value.
         if (undefined === firstEvent ||
-          new Date(event.schedule) < new Date(firstEvent.schedule)) {
+          event.schedule.getTime() < firstEvent.schedule.getTime()) {
           firstEvent = event;
         }
       }

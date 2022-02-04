@@ -76,7 +76,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
             if (entry && entry.nextEvents) {
               entry.nextEvents.forEach(event => {
                 if (event && event.schedule &&
-                    (thenTime === undefined || thenTime > event.schedule)) {
+                    (thenTime === undefined || thenTime.getTime() > event.schedule.getTime())) {
                   thenTime = event.schedule;
                 }
               })
