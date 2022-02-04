@@ -60,16 +60,31 @@ export class CountdownTimerComponent implements OnInit {
     );
     this.sds.timerEventUpdated.subscribe(
       (next: Array<EventTimerInterface>) => {
+        let thenTime: Date = undefined;
         if (next != null) {
           for (const entry of next) {
-            let thenTime: Date;
-            if (entry.currentEvent && entry.currentEvent.end) {
-              thenTime = entry.currentEvent.end;
-            } else if (entry.nextEvent && entry.nextEvent.schedule) {
-              thenTime = entry.nextEvent.schedule;
+            // If the current event has an end time, use it
+            // Otherwise, use the start time of the next event to display
+            if (entry != null && entry.currentEvents) {
+              entry.currentEvents.forEach(event => {
+                if (event && event.end) {
+                  if (undefined === thenTime || thenTime > event.end) {
+                    thenTime = event.end;
+                  }
+                }
+              })
+              if (undefined === thenTime) {
+                entry.nextEvents.forEach(event => {
+                  if (event && event.schedule) {
+                    if (undefined === thenTime || thenTime > event.schedule) {
+                      thenTime = event.schedule;
+                    }
+                  }
+                })
+              }
             }
-            this.timerDisplay = TextManager.getTimerDisplay(thenTime, this.sds);
           }
+          this.timerDisplay = TextManager.getTimerDisplay(thenTime, this.sds);
         }
       }
     );

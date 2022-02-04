@@ -2,7 +2,7 @@ import { EventInterface } from './eventInterface';
 
 export interface EventTimerInterface {
   // currently running event
-  currentEvent?: EventInterface;
+  currentEvents: Array<EventInterface>;
   // Next event in the future
-  nextEvent?: EventInterface;
+  nextEvents: Array<EventInterface>;
 }

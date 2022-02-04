@@ -34,7 +34,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
       timerString: '',
     };
 
-    if (undefined === this.sds.timerEvents.nextEvent) {
+    if (this.sds.timerEvents.nextEvents.length == 0) {
       this.toggleUpcoming(false);
     } else {
       this.toggleUpcoming(true);
@@ -72,9 +72,14 @@ export class EventsComponent implements OnInit, AfterViewInit {
       (next: Array<EventTimerInterface>) => {
         if (next != null) {
           for (const entry of next) {
-            let thenTime: Date;
-            if (entry != null && entry.nextEvent && entry.nextEvent.schedule) {
-              thenTime = entry.nextEvent.schedule;
+            let thenTime: Date = undefined;
+            if (entry && entry.nextEvents) {
+              entry.nextEvents.forEach(event => {
+                if (event && event.schedule &&
+                    (thenTime === undefined || thenTime > event.schedule)) {
+                  thenTime = event.schedule;
+                }
+              })
             }
             this.timerDisplay = TextManager.getTimerDisplay(thenTime, this.sds);
           }

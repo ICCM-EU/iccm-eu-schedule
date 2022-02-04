@@ -27,7 +27,10 @@ export class SpreadsheetDS {
   rawEvents: Array<EventInputInterface> = [];
   events: Array<EventInterface> = [];
   byRoom: Array<EventRoomInterface> = [];
-  timerEvents: EventTimerInterface = {};
+  timerEvents: EventTimerInterface = {
+    currentEvents: [],
+    nextEvents: []
+  };
   filterByRoom: string;
   eventsCount = 0;
 
@@ -297,69 +300,78 @@ export class SpreadsheetDS {
   private updateTimerEvents(filter: string,
       events: Array<EventInterface>,
       byRoom: Array<EventRoomInterface>): EventTimerInterface {
-    const timerEvents: EventTimerInterface = {};
+    const timerEvents: EventTimerInterface = {
+      currentEvents: [],
+      nextEvents: []
+    };
     if (undefined !== filter && '' !== filter) {
       const room = byRoom.find(obj => obj.name === filter);
       if (undefined !== room) {
-        timerEvents.nextEvent = this.getNextEvent(room.events);
-        timerEvents.currentEvent = this.getCurrentEvent(room.events);
+        timerEvents.nextEvents = this.getNextEvents(room.events);
+        timerEvents.currentEvents = this.getCurrentEvents(room.events);
       }
     } else {
-      timerEvents.nextEvent = this.getNextEvent(events);
-      timerEvents.currentEvent = this.getCurrentEvent(events);
+      timerEvents.nextEvents = this.getNextEvents(events);
+      timerEvents.currentEvents = this.getCurrentEvents(events);
     }
     return timerEvents;
   }
 
-  getNextEvent(events: Array<EventInterface>): EventInterface {
+  getNextEvents(events: Array<EventInterface>): Array<EventInterface> {
     const now = new Date();
-    let nextEvent: EventInterface;
+    let nextEventTime: Date = undefined;
+    let nextEvents: Array<EventInterface>;
 
     events.forEach(event => {
       if (undefined !== event) {
         // Check if the current event is in the future
-        if (new Date(event.schedule) >= now) {
+        let eventSchedule = new Date(event.schedule);
+        if (eventSchedule >= now) {
           // Check if the event is nearer than the current or replaces an undefined value.
-          if (undefined === nextEvent ||
-            new Date(event.schedule) < new Date(nextEvent.schedule)) {
-            nextEvent = event;
+          if (undefined === nextEventTime || eventSchedule < nextEventTime) {
+            nextEventTime = eventSchedule;
           }
         }
       }
     });
 
-    return nextEvent;
+    events.forEach(event => {
+      if (undefined !== event) {
+        // Check if the current event is in the future
+        if (new Date(event.schedule) == nextEventTime) {
+          nextEvents.push(event);
+        }
+      }
+    });
+
+    return nextEvents;
   }
 
-  getCurrentEvent(events: Array<EventInterface>): EventInterface {
+  getCurrentEvents(events: Array<EventInterface>): Array<EventInterface> {
     const now = new Date();
-    let currentEvent: EventInterface;
+    let currentEvents: Array<EventInterface>;
 
     events.forEach(event => {
       if (undefined !== event) {
         // Check if the current event end is in the future and it has started
         if (new Date(event.end) >= now && new Date(event.schedule) <= now) {
-          // Check if the event end is earlier than the current or replaces an undefined value.
-          if (undefined === currentEvent ||
-            new Date(event.end) < new Date(currentEvent.end)) {
-            currentEvent = event;
-          }
+          currentEvents.push(event);
         }
       }
     });
 
-    return currentEvent;
+    return currentEvents;
   }
 
   getFirstEvent(events: Array<EventInterface>): EventInterface {
     let firstEvent: EventInterface;
 
-    events.forEach(currentEvent => {
-      if (undefined !== currentEvent) {
+    events.forEach(event => {
+      if (undefined !== event) {
         // Check if the event is earlier than the current or replaces an undefined value.
         if (undefined === firstEvent ||
-          new Date(currentEvent.schedule) < new Date(firstEvent.schedule)) {
-          firstEvent = currentEvent;
+          new Date(event.schedule) < new Date(firstEvent.schedule)) {
+          firstEvent = event;
         }
       }
     });
@@ -368,15 +380,19 @@ export class SpreadsheetDS {
   }
 
   transformJsonToEventTimerInterfaceArray(events: Array<EventTimerInterface>): Array<EventTimerInterface> {
-    events.forEach(entry => {
-      if (undefined !== entry && null !== entry) {
-        if (undefined !== entry.currentEvent && null !== entry.currentEvent) {
-          entry.currentEvent.schedule = new Date(entry.currentEvent.schedule);
-          entry.currentEvent.end = new Date(entry.currentEvent.end);
+    events.forEach(eventTimer => {
+      if (undefined !== eventTimer && null !== eventTimer) {
+        if (undefined !== eventTimer.currentEvents && null !== eventTimer.currentEvents) {
+          eventTimer.currentEvents.forEach(event => {
+            event.schedule = new Date(event.schedule);
+            event.end = new Date(event.end);
+          })
         }
-        if (undefined !== entry.nextEvent && null !== entry.nextEvent) {
-          entry.nextEvent.schedule = new Date(entry.nextEvent.schedule);
-          entry.nextEvent.end = new Date(entry.nextEvent.end);
+        if (undefined !== eventTimer.nextEvents && null !== eventTimer.nextEvents) {
+          eventTimer.nextEvents.forEach(event => {
+            event.schedule = new Date(event.schedule);
+            event.end = new Date(event.end);
+          })
         }
       }
     });

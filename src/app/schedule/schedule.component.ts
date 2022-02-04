@@ -17,7 +17,7 @@ export class ScheduleComponent implements OnInit {
   events: CalendarEvent[] = [];
   users: RoomsDictionary = {};
   roomCount = 0;
-  nextEvent: EventInterface;
+  nextEvents: Array<EventInterface>;
   firstEvent: EventInterface;
 
   initialViewDate: Date = new Date();
@@ -37,7 +37,7 @@ export class ScheduleComponent implements OnInit {
       (newData: EventInterface[]) => {
         const events: Array<EventInterface> = newData;
         // Initialize
-        this.nextEvent = this.sds.getNextEvent(events);
+        this.nextEvents = this.sds.getNextEvents(events);
         this.firstEvent = this.sds.getFirstEvent(events);
       }
     );
@@ -56,8 +56,8 @@ export class ScheduleComponent implements OnInit {
               this.users = data.rooms;
 
               this.roomCount = Object.keys(this.users).length;
-              if (undefined !== this.nextEvent) {
-                this.viewDate = startOfDay(this.nextEvent.schedule);
+              if (this.nextEvents.length !== 0) {
+                this.viewDate = startOfDay(this.nextEvents[0].schedule);
               } else {
                 // Fallback to first event
                 if (undefined !== this.firstEvent) {

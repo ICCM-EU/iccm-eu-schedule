@@ -21,25 +21,31 @@
   </div>
 
   <div class="counter">
-    <div class="event-details">
-      <ng-container *ngIf="this.sds.timerEvents.currentEvent">
-        <span class="event-time">
-          {{ this.sds.timerEvents.currentEvent.schedule | date:'HH:mm' }}-{{ this.sds.timerEvents.currentEvent.end | date:'HH:mm' }}:
-        </span>
-        <span class="event-title">
-          {{ this.sds.timerEvents.currentEvent.title }}
-        </span>
-      </ng-container>
-    </div>
+    <ng-container *ngFor="let event of this.sds.timerEvents.currentEvents">
+      <div class="event-details">
+        <ng-container *ngIf="event">
+          <span class="event-time">
+            {{ event.schedule | date:'HH:mm' }}-{{ event.end | date:'HH:mm' }}:
+          </span>
+          <span class="event-title">
+            {{ event.title }}
+          </span>
+        </ng-container>
+      </div>
+    </ng-container>
+ 
     <div class="central-counter {{ timerDisplay.timerCssClass }}" [style.font-size]="counterFontSize"
       (window:resize)="onResize($event.target?.innerWidth)">{{ timerDisplay.timerString }}</div>
-    <div *ngIf="this.sds.timerEvents.nextEvent" class="event-details">
-      <span class="event-time">
-        {{ this.sds.timerEvents.nextEvent.schedule | date:'HH:mm' }}:
-      </span>
-      <span class="event-title">
-        {{ this.sds.timerEvents.nextEvent.title }}
-      </span>
-    </div>
+
+    <ng-container *ngFor="let event of this.sds.timerEvents.nextEvents">
+      <div *ngIf="event" class="event-details">
+        <span class="event-time">
+          {{ event.schedule | date:'HH:mm' }}:
+        </span>
+        <span class="event-title">
+          {{ event.title }}
+        </span>
+      </div>
+    </ng-container>
   </div>
 </div>
