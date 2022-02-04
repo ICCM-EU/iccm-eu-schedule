@@ -67,9 +67,9 @@ export class CountdownTimerComponent implements OnInit {
             // Otherwise, use the start time of the next event to display
             if (entry != null && entry.currentEvents) {
               entry.currentEvents.forEach(event => {
-                
+
                 if (event && event.end) {
-                  if (undefined === thenTime || thenTime > event.end) {
+                  if (undefined === thenTime || thenTime.getTime() > event.end.getTime()) {
                     thenTime = event.end;
                   }
                 }
@@ -77,7 +77,7 @@ export class CountdownTimerComponent implements OnInit {
               if (undefined === thenTime) {
                 entry.nextEvents.forEach(event => {
                   if (event && event.schedule) {
-                    if (undefined === thenTime || thenTime > event.schedule) {
+                    if (undefined === thenTime || thenTime.getTime() > event.schedule.getTime()) {
                       thenTime = event.schedule;
                     }
                   }
