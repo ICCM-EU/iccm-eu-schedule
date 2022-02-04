@@ -350,7 +350,7 @@ export class SpreadsheetDS {
 
   getCurrentEvents(events: Array<EventInterface>): Array<EventInterface> {
     const now = new Date();
-    let currentEvents: Array<EventInterface>;
+    let currentEvents: Array<EventInterface> = [];
 
     events.forEach(event => {
       if (undefined !== event) {
