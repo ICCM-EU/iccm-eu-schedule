@@ -320,7 +320,7 @@ export class SpreadsheetDS {
   getNextEvents(events: Array<EventInterface>): Array<EventInterface> {
     const now = new Date();
     let nextEventTime: Date = undefined;
-    let nextEvents: Array<EventInterface>;
+    let nextEvents: Array<EventInterface> = [];
 
     events.forEach(event => {
       if (undefined !== event) {
@@ -336,9 +336,10 @@ export class SpreadsheetDS {
     });
 
     events.forEach(event => {
-      if (undefined !== event) {
+      if (undefined !== event && undefined !== event.schedule) {
         // Check if the current event is in the future
-        if (new Date(event.schedule) == nextEventTime) {
+        let eventDate: Date = new Date(event.schedule);
+        if (eventDate.getTime() == nextEventTime.getTime()) {
           nextEvents.push(event);
         }
       }

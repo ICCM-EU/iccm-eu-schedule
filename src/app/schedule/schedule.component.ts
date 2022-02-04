@@ -17,7 +17,7 @@ export class ScheduleComponent implements OnInit {
   events: CalendarEvent[] = [];
   users: RoomsDictionary = {};
   roomCount = 0;
-  nextEvents: Array<EventInterface>;
+  nextEvents: Array<EventInterface> = [];
   firstEvent: EventInterface;
 
   initialViewDate: Date = new Date();
