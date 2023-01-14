@@ -3,7 +3,7 @@
 # project name within https://<your-account>.github.io/GITHUB_PROJECT_NAME
 GITHUB_PROJECT_NAME=iccm-eu-schedule
 # Also update the spreadsheet ID in src/app/data/spreadsheetIDs.ts
-YEAR_NAME=2022
+YEAR_NAME=2023
 
 all:
 	npm run build -- --configuration production --output-path docs/$(YEAR_NAME) --base-href /$(GITHUB_PROJECT_NAME)/$(YEAR_NAME)/
