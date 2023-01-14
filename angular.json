@@ -114,6 +114,5 @@
         }
       }
     }
-  },
-  "defaultProject": "google-sheet-events-list"
+  }
 }
