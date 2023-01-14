@@ -6,7 +6,7 @@ GITHUB_PROJECT_NAME=iccm-eu-schedule
 YEAR_NAME=2022
 
 all:
-	ng build --configuration production --output-path docs/$(YEAR_NAME) --base-href /$(GITHUB_PROJECT_NAME)/$(YEAR_NAME)/
+	npm run build -- --configuration production --output-path docs/$(YEAR_NAME) --base-href /$(GITHUB_PROJECT_NAME)/$(YEAR_NAME)/
 	cp docs/$(YEAR_NAME)/index.html docs/$(YEAR_NAME)/404.html
 	sed 's/###YEAR_NAME###/$(YEAR_NAME)/g' docs/index.html.in > docs/index.html
 	# Omit Test Data

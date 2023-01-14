@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ChangeDetectorRef, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, ChangeDetectorRef, OnInit, ElementRef } from '@angular/core';
 import { CalendarUtils, CalendarWeekViewComponent, DateAdapter, CalendarEventTitleFormatter, CalendarEvent } from 'angular-calendar';
 import { DayViewSchedulerInterface } from './dayViewSchedulerInterface';
 import { DayViewSchedulerCalendarUtils } from './dayViewSchedulerCalendarUtils';
@@ -46,8 +46,8 @@ export class DayViewSchedulerComponent extends CalendarWeekViewComponent impleme
   eventWidth: number;
   eventWidthPx: string;
 
-  constructor(cdr: ChangeDetectorRef, utils: CalendarUtils, dateAdapter: DateAdapter) {
-    super(cdr, utils, '', dateAdapter);
+  constructor(cdr: ChangeDetectorRef, utils: CalendarUtils, dateAdapter: DateAdapter, element: ElementRef<HTMLElement>) {
+    super(cdr, utils, '', dateAdapter, element);
 
     this.daysInWeek = 1;
     this.hourSegmentHeight = DayViewSchedulerCalendarUtils.gethourSegmentHeight(window.innerHeight);
