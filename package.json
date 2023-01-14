@@ -11,13 +11,15 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/compiler": "^14.2.12",
-    "@angular/core": "^14.2.12",
+    "@angular/cli": "^15.1.1",
+    "@angular/compiler": "^15.1.0",
+    "@angular/compiler-cli": "^15.1.0",
+    "@angular/core": "^15.1.0",
     "@types/sprintf-js": "^1.1.2",
-    "angular-calendar": "^0.28.16",
+    "angular-calendar": "^0.31.0",
     "assert": "^2.0.0",
     "bootstrap-css-only": "^4.4.1",
-    "calendar-utils": "^0.9.0",
+    "calendar-utils": "^0.10.4",
     "child_process": "^1.0.2",
     "crypto-browserify": "^3.12.0",
     "date-fns": "^2.29.3",
@@ -43,9 +45,8 @@
     "tls": "^0.0.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^13.1.1",
-    "@angular/cli": "^13.3.10",
-    "@types/node": "^16.18.11",
+    "@angular-devkit/build-angular": "^15.1.1",
+    "@types/node": "^18.11.18",
     "angular-ide": "^0.9.77"
   },
   "browser": {
