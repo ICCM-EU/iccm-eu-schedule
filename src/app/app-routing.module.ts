@@ -8,8 +8,7 @@ const routerOptions: ExtraOptions = {
     scrollOffset: [0, 0],
     preloadingStrategy: PreloadAllModules,
     useHash: true,
-    initialNavigation: 'enabled',
-    relativeLinkResolution: 'legacy'
+    initialNavigation: 'enabled'
 };
 
 const appRoutes: Routes = [
