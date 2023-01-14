@@ -11,8 +11,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/compiler": "^13.3.12",
-    "@angular/core": "^13.3.12",
+    "@angular/compiler": "^14.2.12",
+    "@angular/core": "^14.2.12",
     "@types/sprintf-js": "^1.1.2",
     "angular-calendar": "^0.28.16",
     "assert": "^2.0.0",
