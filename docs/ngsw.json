@@ -1,0 +1,93 @@
+{
+  "configVersion": 1,
+  "timestamp": 1673958861937,
+  "index": "/iccm-eu-schedule/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/iccm-eu-schedule/169.9a6b9a65accef54f.js",
+        "/iccm-eu-schedule/433.15240c8ae5685f1b.js",
+        "/iccm-eu-schedule/808.f87a807a749a4cdc.js",
+        "/iccm-eu-schedule/829.74ed495e2a179eb6.js",
+        "/iccm-eu-schedule/881.a54c2d3aaf4bf11b.js",
+        "/iccm-eu-schedule/common.59f3cd6a0691dc15.js",
+        "/iccm-eu-schedule/favicon.ico",
+        "/iccm-eu-schedule/index.html",
+        "/iccm-eu-schedule/main.9508d756c7b41eb1.js",
+        "/iccm-eu-schedule/polyfills.eeafd07b22453a16.js",
+        "/iccm-eu-schedule/runtime.958ecbbe6aa9b46d.js",
+        "/iccm-eu-schedule/styles.52674f2e91186c29.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/iccm-eu-schedule/assets/icons/icon-128x128.png",
+        "/iccm-eu-schedule/assets/icons/icon-144x144.png",
+        "/iccm-eu-schedule/assets/icons/icon-152x152.png",
+        "/iccm-eu-schedule/assets/icons/icon-192x192.png",
+        "/iccm-eu-schedule/assets/icons/icon-384x384.png",
+        "/iccm-eu-schedule/assets/icons/icon-512x512.png",
+        "/iccm-eu-schedule/assets/icons/icon-72x72.png",
+        "/iccm-eu-schedule/assets/icons/icon-96x96.png",
+        "/iccm-eu-schedule/assets/sheet-export.json"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/iccm-eu-schedule/169.9a6b9a65accef54f.js": "554c3479b76330d02310e7f6a287244e69426757",
+    "/iccm-eu-schedule/433.15240c8ae5685f1b.js": "fb3b1ec513bd8d3c65cf78aa44611e1fb3edd2a5",
+    "/iccm-eu-schedule/808.f87a807a749a4cdc.js": "9eb13ffc9f319e43089c1665a37513eba4d2d81e",
+    "/iccm-eu-schedule/829.74ed495e2a179eb6.js": "684f799c4e8ae8b28497c45df519900f9cb26bae",
+    "/iccm-eu-schedule/881.a54c2d3aaf4bf11b.js": "12253a4a4c05d1e47f60341859bae7be65a148ff",
+    "/iccm-eu-schedule/assets/icons/icon-128x128.png": "40c6cf7530800f06fbb3ac13740f82ff53aff963",
+    "/iccm-eu-schedule/assets/icons/icon-144x144.png": "e3b259e659372bf4f7d83666302de34530657758",
+    "/iccm-eu-schedule/assets/icons/icon-152x152.png": "8e08e0b4620652e12366e4bdb75dc5208d2370f2",
+    "/iccm-eu-schedule/assets/icons/icon-192x192.png": "0fbfd4b08fdf457851773b67a3e8fe54d5154819",
+    "/iccm-eu-schedule/assets/icons/icon-384x384.png": "9acb6564056abde2187b78f9f4a3fb99dee7a8c9",
+    "/iccm-eu-schedule/assets/icons/icon-512x512.png": "72df2e7dc8bcfb67015d9a2afb93ec043596f84a",
+    "/iccm-eu-schedule/assets/icons/icon-72x72.png": "f5eb4389b1c8d04af08974686d4c663e5c78a8ae",
+    "/iccm-eu-schedule/assets/icons/icon-96x96.png": "bbe62e795ad71f483a97185566bdad60cd052f10",
+    "/iccm-eu-schedule/assets/sheet-export.json": "909dcf05469253ac514507a017438b3b6920ca14",
+    "/iccm-eu-schedule/common.59f3cd6a0691dc15.js": "0fe475b9309de26cecbbd51311125485166f4b30",
+    "/iccm-eu-schedule/favicon.ico": "0cbf3ab920f5d5d6ab8f3ae55c13edb3f33e3239",
+    "/iccm-eu-schedule/index.html": "8d6a64d6be369fa306ba791b4bf02db26119ec34",
+    "/iccm-eu-schedule/main.9508d756c7b41eb1.js": "cf334c0bd1df8545082b047e6fb95979b5570ed4",
+    "/iccm-eu-schedule/polyfills.eeafd07b22453a16.js": "e09631579a0ce4d2b1cd93d0a0f628328b32d3e2",
+    "/iccm-eu-schedule/runtime.958ecbbe6aa9b46d.js": "8a2be8b1de136cb18d7507800f6db95bf9785d7e",
+    "/iccm-eu-schedule/styles.52674f2e91186c29.css": "2f7dae9961f131d5d09612d9cfe1afb643e7d00b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
