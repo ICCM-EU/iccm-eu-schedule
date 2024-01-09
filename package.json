@@ -33,7 +33,7 @@
     "font-awesome": "^4.7.0",
     "fs": "^0.0.1-security",
     "fs-web": "^1.0.1",
-    "google-spreadsheet": "^3.3.0",
+    "google-spreadsheet": "^4.1.1",
     "highlight.js": "^11.7.0",
     "http-browserify": "^1.7.0",
     "https": "^1.0.0",
