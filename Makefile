@@ -16,6 +16,9 @@ all:
 	@echo "https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch"
 	@echo "make project available at https://<user_name>.github.io/$(GITHUB_PROJECT_NAME)/"
 
+npm-install:
+	npm install
+
 update-packages:
 	npm audit fix
 

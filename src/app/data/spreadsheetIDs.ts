@@ -29,7 +29,7 @@ export class SpreadsheetIDs {
   }
 
   private async initializeSheet(): Promise<GoogleSpreadsheet> {
-    let sheet = new GoogleSpreadsheet("1KVpvfMJ_1McXz87qZVbdZ6bz79qEcB7KoTM9oB9aj04");
+    let sheet = new GoogleSpreadsheet("1IAmw8VKOdTHSRzwtoQC8WMBs9pO50TTP1-7F3y2ZERY");
     await sheet.useApiKey("AIzaSyBuTzjLoCTjf_-67qELfuH4XyyZNvj60u8");
     await sheet.loadInfo();
     return sheet;
