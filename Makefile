@@ -23,7 +23,7 @@ update-packages:
 	npm audit fix
 
 update-angular:
-	npm run ng-update
+	npm run ng update
 
 serve:
 	npm run serve
