@@ -1,6 +1,7 @@
 # Reference commands for publishing.
 
-TARGET_SUBDIR=dev
+# Subdirectory including trailing /
+TARGET_SUBDIR=dev/
 # project name within https://<your-account>.github.io/GITHUB_PROJECT_NAME
 GITHUB_PROJECT_NAME=iccm-eu-schedule/$(TARGET_SUBDIR)
 # Also update the spreadsheet ID in src/app/data/spreadsheetIDs.ts
