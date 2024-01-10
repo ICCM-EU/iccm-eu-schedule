@@ -341,12 +341,7 @@ ${error.stack}`;
       const url = this.adapter.normalizeUrl(req.url);
       if (this.urls.indexOf(url) !== -1 || this.patterns.some((pattern) => pattern.test(url))) {
         const cache = await this.cache;
-        let cachedResponse;
-        try {
-          cachedResponse = await cache.match(req, this.config.cacheQueryOptions);
-        } catch (error) {
-          throw new SwCriticalError(`Cache is throwing while looking for a match: ${error}`);
-        }
+        const cachedResponse = await cache.match(req, this.config.cacheQueryOptions);
         if (cachedResponse !== void 0) {
           if (this.hashes.has(url)) {
             return cachedResponse;
@@ -523,12 +518,7 @@ ${error.stack}`;
       await this.urls.reduce(async (previous, url) => {
         await previous;
         const req = this.adapter.newRequest(url);
-        let alreadyCached = false;
-        try {
-          alreadyCached = await cache.match(req, this.config.cacheQueryOptions) !== void 0;
-        } catch (error) {
-          throw new SwCriticalError(`Cache is throwing while looking for a match in a PrefetchAssetGroup: ${error}`);
-        }
+        const alreadyCached = await cache.match(req, this.config.cacheQueryOptions) !== void 0;
         if (alreadyCached) {
           return;
         }
@@ -565,12 +555,7 @@ ${error.stack}`;
       await this.urls.reduce(async (previous, url) => {
         await previous;
         const req = this.adapter.newRequest(url);
-        let alreadyCached = false;
-        try {
-          alreadyCached = await cache.match(req, this.config.cacheQueryOptions) !== void 0;
-        } catch (error) {
-          throw new SwCriticalError(`Cache is throwing while looking for a match in a LazyAssetGroup: ${error}`);
-        }
+        const alreadyCached = await cache.match(req, this.config.cacheQueryOptions) !== void 0;
         if (alreadyCached) {
           return;
         }
@@ -898,8 +883,8 @@ ${error.stack}`;
       this.manifest = manifest;
       this.manifestHash = manifestHash;
       this.hashTable = /* @__PURE__ */ new Map();
-      this._okay = true;
       this.indexUrl = this.adapter.normalizeUrl(this.manifest.index);
+      this._okay = true;
       Object.keys(manifest.hashTable).forEach((url) => {
         this.hashTable.set(adapter2.normalizeUrl(url), manifest.hashTable[url]);
       });
@@ -1032,7 +1017,7 @@ ${error.stack}`;
   };
 
   // bazel-out/darwin_arm64-fastbuild-ST-2e5f3376adb5/bin/packages/service-worker/worker/src/debug.mjs
-  var SW_VERSION = "17.0.8";
+  var SW_VERSION = "15.1.0";
   var DEBUG_LOG_BUFFER_SIZE = 100;
   var DebugHandler = class {
     constructor(driver, adapter2) {
@@ -1237,8 +1222,8 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ "Content-Type": "text/plain" }
       this.lastUpdateCheck = null;
       this.scheduledNavUpdateCheck = false;
       this.loggedInvalidOnlyIfCachedRequest = false;
-      this.controlTable = this.db.open("control");
       this.ngswStatePath = this.adapter.parseUrl("ngsw/state", this.scope.registration.scope).path;
+      this.controlTable = this.db.open("control");
       this.scope.addEventListener("install", (event) => {
         event.waitUntil(this.scope.skipWaiting());
       });
@@ -1429,6 +1414,12 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ "Content-Type": "text/plain" }
       this.clientVersionMap.set(client.id, this.latestHash);
       await this.sync();
       const current = this.versions.get(this.latestHash);
+      const notice = {
+        type: "UPDATE_ACTIVATED",
+        previous,
+        current: this.mergeHashWithAppData(current.manifest, this.latestHash)
+      };
+      client.postMessage(notice);
       return true;
     }
     async handleFetch(event) {
@@ -1525,6 +1516,7 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ "Content-Type": "text/plain" }
           await this.scheduleInitialization(this.versions.get(hash));
         } catch (err) {
           this.debugger.log(err, `initialize: schedule init of ${hash}`);
+          return false;
         }
       }));
     }
