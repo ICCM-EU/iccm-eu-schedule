@@ -1,0 +1,93 @@
+{
+  "configVersion": 1,
+  "timestamp": 1704917170050,
+  "index": "/iccm-eu-schedule/dev/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/iccm-eu-schedule/dev/111.7695ea35583d612e.js",
+        "/iccm-eu-schedule/dev/192.bcc5dab70d98f4bd.js",
+        "/iccm-eu-schedule/dev/420.074bd3ea9547840e.js",
+        "/iccm-eu-schedule/dev/530.5bbefbeeb002ab29.js",
+        "/iccm-eu-schedule/dev/923.f64ad2b4cc539afc.js",
+        "/iccm-eu-schedule/dev/common.c372e2d240a0f44f.js",
+        "/iccm-eu-schedule/dev/favicon.ico",
+        "/iccm-eu-schedule/dev/index.html",
+        "/iccm-eu-schedule/dev/main.186c43368c3e05ba.js",
+        "/iccm-eu-schedule/dev/polyfills.3d3f21d46d6cc085.js",
+        "/iccm-eu-schedule/dev/runtime.74aa0378b2a5a6ac.js",
+        "/iccm-eu-schedule/dev/styles.1820c0a9d283a14a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/iccm-eu-schedule/dev/assets/icons/icon-128x128.png",
+        "/iccm-eu-schedule/dev/assets/icons/icon-144x144.png",
+        "/iccm-eu-schedule/dev/assets/icons/icon-152x152.png",
+        "/iccm-eu-schedule/dev/assets/icons/icon-192x192.png",
+        "/iccm-eu-schedule/dev/assets/icons/icon-384x384.png",
+        "/iccm-eu-schedule/dev/assets/icons/icon-512x512.png",
+        "/iccm-eu-schedule/dev/assets/icons/icon-72x72.png",
+        "/iccm-eu-schedule/dev/assets/icons/icon-96x96.png",
+        "/iccm-eu-schedule/dev/assets/sheet-export.json"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/iccm-eu-schedule/dev/111.7695ea35583d612e.js": "05e66c0a8271f5ed744bc9efbe598b63ea73ea1f",
+    "/iccm-eu-schedule/dev/192.bcc5dab70d98f4bd.js": "8d32f6425db7b02a2d8bc62aa7da598ce1633f3f",
+    "/iccm-eu-schedule/dev/420.074bd3ea9547840e.js": "12415fef623f36d4987bf5f6a664d4e2a4145d14",
+    "/iccm-eu-schedule/dev/530.5bbefbeeb002ab29.js": "4d388a00fd69b286e3dd099bbceb5f779920cf5e",
+    "/iccm-eu-schedule/dev/923.f64ad2b4cc539afc.js": "c540f6ac3a2672cf2bc3a195f14b02ee66c1cf83",
+    "/iccm-eu-schedule/dev/assets/icons/icon-128x128.png": "40c6cf7530800f06fbb3ac13740f82ff53aff963",
+    "/iccm-eu-schedule/dev/assets/icons/icon-144x144.png": "e3b259e659372bf4f7d83666302de34530657758",
+    "/iccm-eu-schedule/dev/assets/icons/icon-152x152.png": "8e08e0b4620652e12366e4bdb75dc5208d2370f2",
+    "/iccm-eu-schedule/dev/assets/icons/icon-192x192.png": "0fbfd4b08fdf457851773b67a3e8fe54d5154819",
+    "/iccm-eu-schedule/dev/assets/icons/icon-384x384.png": "9acb6564056abde2187b78f9f4a3fb99dee7a8c9",
+    "/iccm-eu-schedule/dev/assets/icons/icon-512x512.png": "72df2e7dc8bcfb67015d9a2afb93ec043596f84a",
+    "/iccm-eu-schedule/dev/assets/icons/icon-72x72.png": "f5eb4389b1c8d04af08974686d4c663e5c78a8ae",
+    "/iccm-eu-schedule/dev/assets/icons/icon-96x96.png": "bbe62e795ad71f483a97185566bdad60cd052f10",
+    "/iccm-eu-schedule/dev/assets/sheet-export.json": "909dcf05469253ac514507a017438b3b6920ca14",
+    "/iccm-eu-schedule/dev/common.c372e2d240a0f44f.js": "31d676bc96b0fa9ccffaf62bb301302e0ef0b8df",
+    "/iccm-eu-schedule/dev/favicon.ico": "0cbf3ab920f5d5d6ab8f3ae55c13edb3f33e3239",
+    "/iccm-eu-schedule/dev/index.html": "fcbaa83368c2f88fe2e55759fb07694a28c5d2e8",
+    "/iccm-eu-schedule/dev/main.186c43368c3e05ba.js": "2533699fd530fe70696782a3872c9d4a392f3506",
+    "/iccm-eu-schedule/dev/polyfills.3d3f21d46d6cc085.js": "9f08cdf441fce4b0da6815fe079b9e48d753ff01",
+    "/iccm-eu-schedule/dev/runtime.74aa0378b2a5a6ac.js": "ce023d63696a9e92b703ae25ec2f9bc027af3b22",
+    "/iccm-eu-schedule/dev/styles.1820c0a9d283a14a.css": "10fec60e9e2d2e463783ad840e0db5ec6d66ff15"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

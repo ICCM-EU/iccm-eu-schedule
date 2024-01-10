@@ -1,0 +1,434 @@
+{
+  "spreadsheetId": "1Fs4DzGAEFRDe76D1kNVaO700-Vus4Hrb4CPJeTnAp4U",
+  "properties": {
+    "title": "ICCM-EU-2022",
+    "locale": "de_DE",
+    "autoRecalc": "HOUR",
+    "timeZone": "Europe/Berlin",
+    "defaultFormat": {
+      "backgroundColor": {
+        "red": 1,
+        "green": 1,
+        "blue": 1
+      },
+      "padding": {
+        "top": 2,
+        "right": 3,
+        "bottom": 2,
+        "left": 3
+      },
+      "verticalAlignment": "BOTTOM",
+      "wrapStrategy": "OVERFLOW_CELL",
+      "textFormat": {
+        "foregroundColor": {},
+        "fontFamily": "arial,sans,sans-serif",
+        "fontSize": 10,
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "foregroundColorStyle": {
+          "rgbColor": {}
+        }
+      },
+      "backgroundColorStyle": {
+        "rgbColor": {
+          "red": 1,
+          "green": 1,
+          "blue": 1
+        }
+      }
+    }
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 2066329710,
+        "title": "Home",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 2,
+          "columnCount": 5
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 262858790,
+        "title": "Sessions",
+        "index": 1,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 49,
+          "columnCount": 18,
+          "frozenRowCount": 1,
+          "frozenColumnCount": 1
+        }
+      },
+      "conditionalFormats": [
+        {
+          "ranges": [
+            {
+              "sheetId": 262858790,
+              "startRowIndex": 31,
+              "endRowIndex": 32,
+              "startColumnIndex": 1,
+              "endColumnIndex": 2
+            },
+            {
+              "sheetId": 262858790,
+              "startRowIndex": 31,
+              "endRowIndex": 32,
+              "startColumnIndex": 3,
+              "endColumnIndex": 4
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "CUSTOM_FORMULA",
+              "values": [
+                {
+                  "userEnteredValue": "=ODER($B32=#REF!;$B32=#REF!)"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.8,
+                "green": 0.8,
+                "blue": 0.8
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.8,
+                  "green": 0.8,
+                  "blue": 0.8
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 262858790,
+              "startRowIndex": 43,
+              "endRowIndex": 44,
+              "startColumnIndex": 1,
+              "endColumnIndex": 2
+            },
+            {
+              "sheetId": 262858790,
+              "startRowIndex": 43,
+              "endRowIndex": 44,
+              "startColumnIndex": 3,
+              "endColumnIndex": 4
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "CUSTOM_FORMULA",
+              "values": [
+                {
+                  "userEnteredValue": "=ODER($B44=#REF!;$B44=#REF!)"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.8,
+                "green": 0.8,
+                "blue": 0.8
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.8,
+                  "green": 0.8,
+                  "blue": 0.8
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 262858790,
+              "startRowIndex": 1,
+              "endRowIndex": 49,
+              "startColumnIndex": 1,
+              "endColumnIndex": 2
+            },
+            {
+              "sheetId": 262858790,
+              "startRowIndex": 1,
+              "endRowIndex": 49,
+              "startColumnIndex": 3,
+              "endColumnIndex": 4
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "CUSTOM_FORMULA",
+              "values": [
+                {
+                  "userEnteredValue": "=ODER($B2=#REF!;$B2=#REF!)"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.8,
+                "green": 0.8,
+                "blue": 0.8
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.8,
+                  "green": 0.8,
+                  "blue": 0.8
+                }
+              }
+            }
+          }
+        }
+      ],
+      "basicFilter": {
+        "range": {
+          "sheetId": 262858790,
+          "startRowIndex": 0,
+          "endRowIndex": 49,
+          "startColumnIndex": 0,
+          "endColumnIndex": 17
+        },
+        "sortSpecs": [
+          {
+            "dimensionIndex": 9,
+            "sortOrder": "ASCENDING"
+          },
+          {
+            "dimensionIndex": 0,
+            "sortOrder": "ASCENDING"
+          },
+          {
+            "dimensionIndex": 4,
+            "sortOrder": "ASCENDING"
+          },
+          {
+            "dimensionIndex": 1,
+            "sortOrder": "ASCENDING"
+          }
+        ],
+        "criteria": {
+          "0": {},
+          "4": {},
+          "5": {},
+          "8": {},
+          "9": {},
+          "10": {}
+        },
+        "filterSpecs": [
+          {
+            "columnIndex": 0,
+            "filterCriteria": {}
+          },
+          {
+            "columnIndex": 4,
+            "filterCriteria": {}
+          },
+          {
+            "columnIndex": 5,
+            "filterCriteria": {}
+          },
+          {
+            "columnIndex": 9,
+            "filterCriteria": {}
+          },
+          {
+            "columnIndex": 10,
+            "filterCriteria": {}
+          },
+          {
+            "columnIndex": 8,
+            "filterCriteria": {}
+          }
+        ]
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1117045301,
+        "title": "Workshops",
+        "index": 2,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 9,
+          "columnCount": 14,
+          "frozenRowCount": 1
+        }
+      },
+      "basicFilter": {
+        "range": {
+          "sheetId": 1117045301,
+          "startRowIndex": 0,
+          "endRowIndex": 9,
+          "startColumnIndex": 0,
+          "endColumnIndex": 14
+        },
+        "criteria": {
+          "11": {}
+        },
+        "filterSpecs": [
+          {
+            "columnIndex": 11,
+            "filterCriteria": {}
+          }
+        ]
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 820103561,
+        "title": "BOFs",
+        "index": 3,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 9,
+          "columnCount": 7,
+          "frozenRowCount": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1746557164,
+        "title": "Speakers",
+        "index": 4,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 12,
+          "columnCount": 9,
+          "frozenRowCount": 1,
+          "frozenColumnCount": 1
+        }
+      },
+      "basicFilter": {
+        "range": {
+          "sheetId": 1746557164,
+          "startRowIndex": 0,
+          "endRowIndex": 8,
+          "startColumnIndex": 0,
+          "endColumnIndex": 9
+        },
+        "sortSpecs": [
+          {
+            "dimensionIndex": 0,
+            "sortOrder": "ASCENDING"
+          }
+        ]
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 2014678634,
+        "title": "Parallel Slots",
+        "index": 5,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 15,
+          "columnCount": 5
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1075732279,
+        "title": "Category",
+        "index": 6,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 13,
+          "columnCount": 6
+        }
+      },
+      "basicFilter": {
+        "range": {
+          "sheetId": 1075732279,
+          "startRowIndex": 0,
+          "endRowIndex": 13,
+          "startColumnIndex": 0,
+          "endColumnIndex": 6
+        },
+        "sortSpecs": [
+          {
+            "dimensionIndex": 0,
+            "sortOrder": "ASCENDING"
+          }
+        ]
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1117438059,
+        "title": "All-Workshops",
+        "index": 7,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 2,
+          "columnCount": 2
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1354490830,
+        "title": "Travel",
+        "index": 8,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 2,
+          "columnCount": 6
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 438582119,
+        "title": "Venue",
+        "index": 9,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 11,
+          "columnCount": 6
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 276154991,
+        "title": "Travel-Directions",
+        "index": 10,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 2,
+          "columnCount": 3
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 98237327,
+        "title": "App: Metadata",
+        "index": 11,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26
+        },
+        "hidden": true
+      }
+    }
+  ],
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1Fs4DzGAEFRDe76D1kNVaO700-Vus4Hrb4CPJeTnAp4U/edit"
+}
