@@ -42,7 +42,7 @@ export class DayViewSchedulerComponent extends CalendarWeekViewComponent impleme
   @Output() userChanged = new EventEmitter();
 
   txtMgr = new TextManager();
-  view: DayViewSchedulerInterface;
+  declare view: DayViewSchedulerInterface;
   eventWidth: number;
   eventWidthPx: string;
 

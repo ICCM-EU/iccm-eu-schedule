@@ -76,7 +76,7 @@ export class SpreadsheetDS {
   async triggerSheetDataUpdate(objName: string) {
     // await this.ssIDs.printSheetTitle();
     const tabName = this.ssIDs.getTabName(objName);
-    let workSheet: GoogleSpreadsheetWorksheet = await this.ssIDs.getSheetsByTitle(tabName);
+    let workSheet: GoogleSpreadsheetWorksheet = await this.ssIDs.getSheetByTitle(tabName);
     if (Array.isArray(workSheet)) {
       console.log("Worksheet " + tabName + " not unique.");
       return;

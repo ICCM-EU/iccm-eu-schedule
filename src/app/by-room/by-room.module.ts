@@ -4,7 +4,7 @@ import { SharedModule } from '../shared.module';
 import { ByRoomComponent } from './by-room.component';
 import { ByRoomRoutingModule } from './by-room-routing.module';
 
-import { OrderModule } from 'ngx-order-pipe';
+import { NgxOrderPipe } from '../core/orderBy';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { OrderModule } from 'ngx-order-pipe';
   imports: [
     ByRoomRoutingModule,
     SharedModule,
-    OrderModule,
+    NgxOrderPipe,
   ]
 })
 export class ByRoomModule { }

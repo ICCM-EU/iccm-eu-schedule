@@ -4,7 +4,7 @@ import { SharedModule } from '../shared.module';
 import { ScheduleComponent } from './schedule.component';
 import { ScheduleRoutingModule } from './schedule-routing.module';
 
-import { OrderModule } from 'ngx-order-pipe';
+import { NgxOrderPipe } from '../core/orderBy';
 
 import { CalendarModule, DateAdapter, CalendarDateFormatter, CalendarNativeDateFormatter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
@@ -20,7 +20,7 @@ import { CustomDateFormatter } from './customDateFormatter';
   imports: [
     ScheduleRoutingModule,
     SharedModule,
-    OrderModule,
+    NgxOrderPipe,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
